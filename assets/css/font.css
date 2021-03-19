@@ -2,19 +2,19 @@
 /** Gordita **/
 @font-face {
   font-family: 'Gordita-Regular';
-  src: local("Gordita  Regular"), local("Gordita--Regular"), url("/assets/fonts/Gordita/Gordita-Regular.woff2") format("woff2"), url("/assets/fonts/Gordita/Gordita-Regular.woff") format("woff"), url("/assets/fonts/Gordita/Gordita-Regular.ttf") format("truetype");
+  src: local("Gordita  Regular"), local("Gordita--Regular"), url("../fonts/Gordita/Gordita-Regular.woff2") format("woff2"), url("../fonts/Gordita/Gordita-Regular.woff") format("woff"), url("../fonts/Gordita/Gordita-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gordita-Medium';
-  src: local("Gordita  Medium"), local("Gordita--Medium"), url("/assets/fonts/Gordita/Gordita-Medium.woff2") format("woff2"), url("/assets/fonts/Gordita/Gordita-Medium.woff") format("woff"), url("/assets/fonts/Gordita/Gordita-Medium.ttf") format("truetype");
+  src: local("Gordita  Medium"), local("Gordita--Medium"), url("../fonts/Gordita/Gordita-Medium.woff2") format("woff2"), url("../fonts/Gordita/Gordita-Medium.woff") format("woff"), url("../fonts/Gordita/Gordita-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gordita-Bold';
-  src: local("Gordita  Bold"), local("Gordita--Bold"), url("/assets/fonts/Gordita/Gordita-Bold.woff2") format("woff2"), url("/assets/fonts/Gordita/Gordita-Bold.woff") format("woff"), url("/assets/fonts/Gordita/Gordita-Bold.ttf") format("truetype");
+  src: local("Gordita  Bold"), local("Gordita--Bold"), url("../fonts/Gordita/Gordita-Bold.woff2") format("woff2"), url("../fonts/Gordita/Gordita-Bold.woff") format("woff"), url("../fonts/Gordita/Gordita-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
@@ -22,8 +22,8 @@
 /** Philosopher-Regular **/
 @font-face {
   font-family: 'Philosopher-Regular';
-  src: url("/assets/fonts/Philosopher/Philosopher-Regular.eot");
-  src: local("☺"), url("/assets/fonts/Philosopher/Philosopher-Regular.woff") format("woff"), url("/assets/fonts/Philosopher/Philosopher-Regular.ttf") format("truetype"), url("/assets/fonts/Philosopher/Philosopher-Regular.svg") format("svg");
+  src: url("../fonts/Philosopher/Philosopher-Regular.eot");
+  src: local("☺"), url("../fonts/Philosopher/Philosopher-Regular.woff") format("woff"), url("../fonts/Philosopher/Philosopher-Regular.ttf") format("truetype"), url("../fonts/Philosopher/Philosopher-Regular.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 

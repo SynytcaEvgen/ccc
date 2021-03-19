@@ -790,7 +790,6 @@ main section button{
           left: 50%;
           transform: translate(80%, -50%);
           z-index: 2;
-  
           .text_contetn p {
             color: $color_ivert;
             @include adaptiv-font(54, 32);
@@ -881,7 +880,16 @@ main section button{
   }
   .button-container{
     text-align: center;
-  }  
+  }
+  &.title{
+    .prod-slider-container {
+  
+     .button-next,
+     .button-prev{
+       top: 47%;
+      }  
+    }
+  }
   .prod-slider-container {
      position: unset;
      padding-bottom: 24px;
@@ -1288,6 +1296,112 @@ footer{
     }
   }
 }
+// history_page_start
+.banner {
+  &.hist {
+    .container {
+      position: relative;
+      .desc_banner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo-wrapper{
+          padding: 5px 24px 5px 0;
+          border-right: 3px solid $color_ivert;
+          svg{
+            width: 200px;
+            height: 66px;
+            fill: $color_ivert;
+          }
+        }
+        .text_content {
+          padding: 0 0 0 25px;
+          p{
+            font-family: $gordita_medium;
+            font-size: 50px;
+            line-height: 40px;
+            color: $color_ivert;
+          }
+        }
+      }
+      .img-wrapper {
+        max-height: 600px;
+        &::after{
+          content: '';
+          background-color: rgba(0, 0, 0, 0.13);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.promotion.hist {
+  &.right{
+    .container {
+      .promo-wrapper {
+        flex-direction: row-reverse;
+      }
+    }  
+  }
+}
+
+
+.container {
+}
+
+.promo-items {
+}
+.promo-img {
+}
+.promo-text {
+}
+.promo-text-header {
+}
+.det-page {
+}
+.promo-text-content {
+}
+.promo-text-goods {
+}
+.goods-wrapper {
+}
+.prod-card-container {
+}
+.sale {
+}
+.best-saler {
+}
+.prod-banner-wrapper {
+}
+.img-wrapper {
+}
+.promo-wrapp {
+}
+.favorit {
+}
+.price-wrap {
+}
+.price {
+}
+.discrption-goods {
+}
+.btn-promo-goods {
+}
+
+
+
+
+
+// history_page_end
 
 
 
