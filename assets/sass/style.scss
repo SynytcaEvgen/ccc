@@ -51,7 +51,7 @@ $maxWidth: 1920;
     );
   }
   @media (min-width: 767px) {
-    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
   }
 }
 // remove this style before production ----->>>>
@@ -111,6 +111,9 @@ label {
 .line-decor {
   height: 1px;
   background-color: $color_line_dec;
+  position: relative;
+  z-index: 6;
+  pointer-events: none;
 }
 body.modal {
     overflow: hidden;
@@ -152,7 +155,8 @@ h4{
 .promo_line {
   background-color: $color_promo_bg;
   max-height: 30px;
-  .promo_text, .promo_text_mob {
+  .promo_text, .promo_text_mob,
+  .promo_text a {
     color: $color_ivert;
     text-align: center;
     font-family: $gordita_medium;
@@ -160,6 +164,14 @@ h4{
     line-height: 20px;
     padding: 5px 0;
   }
+  .promo_text a{
+    text-decoration: underline;
+    &:hover {
+      color: $color-action-h;
+    }
+
+  }
+  
   .promo_mob{
     display: none;
   }
@@ -169,7 +181,7 @@ main section button{
   background-color: $color_ivert;
   border: 1px solid $color_promo_bg;
   border-radius: 2px;
-  padding: 10px 32px;
+  padding: 14px 32px;
   transition: 0.3s ease;
   &:hover{
     border: 1px solid $color-action-h;
@@ -219,11 +231,11 @@ main section button{
           stroke: $color-action-h;
         }
       &.close{
-        right: 19px;
+        right: 15px;
         
       }
       &.search{
-        left: 1.2%;
+        left: 1.4%;
         
       }
     }
@@ -231,7 +243,7 @@ main section button{
       width: 100%;
       border: none;
       background-color: $color-bg-footer;
-      padding: 16px 48px;
+      padding: 14px 48px;
       box-sizing: border-box;
       &:focus svg{
         stroke: $color-action-h;
@@ -243,12 +255,12 @@ main section button{
 .basket-preview-container {
   position: absolute;
   right: -1px;
-  top: 47px;
+  top: 42px;
   z-index: 10;
   background-color: $color_ivert;
   border: 1px solid $color_line_dec;
   border-radius: 2px;
-  padding: 24px;
+  padding: 19px 24px;
   width: 362px;
   opacity: 0;
   visibility: hidden;
@@ -261,7 +273,7 @@ main section button{
       .goods-items {
         border-bottom: 1px solid $color_line_dec;
         display: flex;
-        padding: 0 0 16px;
+        padding: 0 0 18px;
         margin: 0 0 16px;
         .img-wrapper {
           height: 90px;
@@ -274,8 +286,8 @@ main section button{
           position: relative;
           svg{
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 2px;
+            right: -5px;
             fill: none;
             stroke: $color_text;
             width: 20px;
@@ -285,6 +297,8 @@ main section button{
           .titel {
             color: $color-goods-des;
             line-height: 20px;
+            font-size: 12px;
+            padding-bottom: 3px;
           }
           .details {
             display: flex;
@@ -292,9 +306,11 @@ main section button{
             line-height: 20px;
             div{
               line-height: 20px;
+              font-size: 12px;
             }
             span{
               line-height: 20px;
+              font-size: 12px;
             }
           }
           .price-per {
@@ -302,12 +318,12 @@ main section button{
               justify-content: space-between;
               line-height: 20px;
               .quatity {
-                
+                font-size: 12px;
               }
               .price span {
                 font-family: $gordita_medium;
                 line-height: 20px;
-                
+                font-size: 12px;
               }
           }
         }
@@ -631,6 +647,7 @@ main section button{
       display: inline-block;
       margin-right: 32px;
       border-bottom: 2px solid transparent;
+      z-index: 6;
       &:last-child> {
         margin-right: 0;
         a {
@@ -651,18 +668,20 @@ main section button{
            background-color: $color_ivert;
            position: absolute;
            width:100%;
-           top: 47px;
+           top: 46px;
            left: 0;
            right: 0;
-           padding: 24px calc((100vw - 1320px) / 2) 73px;
+           padding: 47px calc((100vw - 1320px) / 2) 73px;
            z-index: 5;
            border-bottom: 1px solid $color_line_dec;
            .cat-wrapper {
              display: flex;
              .categ {
                min-width: 196px;
+               margin-right: 16px;
                .titel {
                  font-family: $gordita_medium;
+                 padding-bottom: 5px;
                }
                p a{
                  line-height: 33px;
@@ -683,7 +702,8 @@ main section button{
            .promo-brand-wrapper {
                display: flex;
                justify-content: space-between;
-               padding-right: 12px;
+               padding-right: 20px;
+               padding-top: 5px;
                .brand-container {
                  .img-wrapper {
                    margin: 0 8px;
@@ -719,9 +739,11 @@ main section button{
   .logo {
     max-width: 90px;
     max-height: 30px;
+    margin-right: 50px;
     img {
       width: 100%;
       height: 100%;
+      
     }
   }
 }
@@ -734,23 +756,22 @@ main section button{
       margin-right: 32px;
       border-bottom: 2px solid transparent;
       transition: 0.3s ease;
+      &:hover{
+        a{
+          color: $color-action-h;
+          transition: 0.3s ease;
+        }
+        .icon svg{
+          stroke: $color-action-h;
+          transition: 0.3s ease;
+        }
+      }
       a {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-bottom: 5px;
-        .icon_title {
-          transition: 0.3s ease;
-          &:hover {
-            color: $color-action-h;
-            transition: 0.3s ease;
-          }
-        }
-      }
-      &:hover .icon svg {
-        stroke: $color-action-h;
-        transition: 0.3s ease;
+        // padding-bottom: 5px;
       }
       &:hover,
       &.active {
@@ -778,7 +799,7 @@ main section button{
   }
 }
 .banner {
-  padding-bottom: 40px;
+  padding-bottom: 37px;
   .slider_container{
     .slider-wrapp {
       .slider_items {
@@ -788,13 +809,15 @@ main section button{
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(80%, -50%);
+          transform: translate(52%, -50%);
           z-index: 2;
           .text_contetn p {
             color: $color_ivert;
-            @include adaptiv-font(54, 32);
+            // @include adaptiv-font(54, 32);
+            font-size: 54px;
             line-height: 60px;
             margin-bottom: 16px;
+            font-family: $gordita_bold;
   
           }
         }
@@ -802,7 +825,7 @@ main section button{
     }
     .swiper-pagination.slider_pagination{
         position: unset;
-        bottom: -23px;
+        margin-top: 5px;
         .swiper-pagination-bullet.swiper-pagination-bullet-active{
             background-color: $color_promo_bg;
             border: 1px solid $color_bullet;
@@ -849,13 +872,12 @@ main section button{
              font-size: 20px;
              line-height: 32px;
              max-width: 180px;
-
+             padding-bottom: 22px;
            }
            a{
              text-decoration: underline;
              transition: 0.3s ease;
              &:hover{
-               text-decoration: none;
                color: $color-action;
                transition: 0.3s ease;
              }
@@ -870,13 +892,22 @@ main section button{
 }
 
 .prod-slider {
-  padding-bottom: 40px;
+  padding-bottom: 39px;
+  &.custom{
+    padding-bottom: 58px;
+  }
+  &.title{
+    padding-bottom: 17px;
+  }
   .container{
     position: relative;
   }
   .prod-slider-title{
     padding-bottom: 32px;
     text-align: center;
+    h2{
+      text-transform: uppercase;
+    }
   }
   .button-container{
     text-align: center;
@@ -897,8 +928,8 @@ main section button{
       &::after{
         content: '';
       }
-      top: 38%;
-      right: -37px;
+      top: 37%;
+      right: -40px;
       &.swiper-button-disabled{
         transform: scale(0);
         transition: 1s ease;
@@ -931,7 +962,7 @@ main section button{
       img{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: none;
       }
     }
     .promo-wrapp {
@@ -941,7 +972,7 @@ main section button{
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 8px;
+      padding: 8px 10px 0 8px;
       .best-saler {
         background-color: $color_ivert;        
         max-width: 38px;
@@ -953,7 +984,7 @@ main section button{
           font-family: $gordita_bold;
           font-size: 10px;
           line-height: 1.6;
-          padding: 8px 3px
+          padding: 8px 8px
         }
       }
       .favorit{
@@ -978,7 +1009,7 @@ main section button{
 
   }
   .price-wrap {
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     .price {     
       font-family: $gordita_medium;
       font-size: 12px;
@@ -1022,6 +1053,9 @@ main section button{
   }
 }
 .promo-banner {
+  &.custom{
+    padding-top: 9px;
+  }
   padding-bottom: 32px;
   .banner-wrapper {
       position: relative;
@@ -1031,7 +1065,7 @@ main section button{
         img{
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: none;
         }
      }
       .content-wrapper {
@@ -1045,7 +1079,7 @@ main section button{
           @include adaptiv-font(80, 40);
           @include adaptiv-line-height(90, 45);
           color: $color_ivert;
-          padding: 50px 0;
+          padding: 97px 0 51px;
           white-space: nowrap;
           text-transform: uppercase;
         }
@@ -1065,18 +1099,21 @@ main section button{
   } 
 }
 .reason-buy {
-  padding-bottom: 72px;
+  padding-bottom: 49px;
   .reason-buy-container {
     border-top: 1px solid $color-line-border;
+
     .reason-buy-title {
       text-align: center;
-      padding: 32px;
+      padding: 40px 0 32px;
       text-transform: uppercase;
     }
     .reason-buy-wrapper {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: flex-start;
+      max-width: 1245px;
+      margin: auto;
       .reason-buy-items {
         .img-wrapper {
           text-align: center;
@@ -1088,6 +1125,7 @@ main section button{
           }
         }
         .content {
+          padding-top: 15px;
             p {
               text-align: center;
               &.small_text{
@@ -1100,7 +1138,7 @@ main section button{
   }
 }
 .seo-text {
-  padding-bottom: 83px;
+  padding-bottom: 76px;
   .seo-text-wrapper {
     padding-top: 40px;
     border-top: 1px solid $color-line-border;
@@ -1127,7 +1165,7 @@ footer{
 .sec-top {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 24px;
+  padding-bottom: 19px;
   .logo-wrapper {
     width: 200px;
     height: 67px;
@@ -1140,7 +1178,9 @@ footer{
   }
   .footer-content {
     display: flex;
+    padding-right: 19px;
     .titel-list {
+      padding-bottom: 4px;
       p{
         font-family: $gordita_medium;
       }
@@ -1150,7 +1190,10 @@ footer{
       min-width: 200px;
     
          .list-items {
-           transition: 0.3s ease;
+           padding: 4px 0;
+           a{
+             transition: 0.3s ease;
+           }
            &.open-time{
              display: none;
            }
@@ -1168,7 +1211,7 @@ footer{
          .social-item {
            display: flex;
            min-width: 200px;
-           padding-top: 7px;
+           padding-top: 9px;
            .social-items{
              margin-right: 10px;
              &:last-child a svg,
@@ -1203,7 +1246,7 @@ footer{
     li.mail::before{
       content: '';
       position: absolute;
-      background-image: url(/assets/img/mail-icon.png);
+      background-image: url(../img/mail-icon.png);
       background-repeat: no-repeat;
       width: 16px;
       height: 12px;
@@ -1214,7 +1257,7 @@ footer{
      li.phone::before{
        content: '';
        position: absolute;
-       background-image: url(/assets/img/phone-icon.png);
+       background-image: url(../img/phone-icon.png);
        background-repeat: no-repeat;
        width: 16px;
        height: 16px;
@@ -1232,7 +1275,9 @@ footer{
 }
 .pay-var {
       display: flex;
-      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      padding-left: 194px;
       .wrapp-mc {
         margin-right: 21px;
       }
@@ -1241,24 +1286,32 @@ footer{
 .sec-buttom {
   border-top: 1px solid $color_line_dec;
   .wrapper-bottom {
-    padding: 24px 0 16px;
+    padding: 30px 0 16px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     
   }
   .develop-wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     .develop {
       margin-right: 48px;
+      a{
+        text-decoration: underline;
+        transition: .3s ease;
+        &:hover{
+          color: $color-action-h;
+          transition: .3s ease;
+        }
+      }
     }
   }
   .lang-wrapper {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     .lang {
-      padding-right: 24px;
+      padding-right: 25px;
     }
   } 
   .select-lang {
@@ -1266,11 +1319,12 @@ footer{
     padding-right: 24px;
     padding-bottom: 11px;
     border-bottom: 1px solid #666;
+    margin-top: -6px;
     cursor: pointer;
     &::after{
       content: '';
       position: absolute;
-      background-image: url(/assets/img/arrow-lang.png);
+      background-image: url(../img/arrow-lang.png);
       background-repeat: no-repeat;
       width: 16px;
       height: 8px;
@@ -1280,11 +1334,12 @@ footer{
     .lang-item {
       .lang-items {
         position: relative;
-        padding-left: 25px;
+        padding: 0 8px 0 24px;
+
         &::before{
           content: '';
           position: absolute;
-          background-image: url(/assets/img/ru-lang.png);
+          background-image: url(../img/ru-lang.png);
           background-repeat: no-repeat;
           width: 16px;
           height: 17px;
