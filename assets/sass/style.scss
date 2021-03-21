@@ -671,7 +671,7 @@ main section button{
            top: 46px;
            left: 0;
            right: 0;
-           padding: 47px calc((100vw - 1320px) / 2) 73px;
+           padding: 41px calc((100vw - 1320px) / 2) 73px;
            z-index: 5;
            border-bottom: 1px solid $color_line_dec;
            .cat-wrapper {
@@ -1386,6 +1386,10 @@ footer{
       }
       .img-wrapper {
         max-height: 600px;
+        position: relative;
+        img{
+          width: 100%;
+        }
         &::after{
           content: '';
           background-color: rgba(0, 0, 0, 0.13);
@@ -1407,55 +1411,56 @@ footer{
       }
     }  
   }
+  .container {
+     .promo-items {
+        .promo-img {
+          max-width: 642px;
+          max-height: 700px;
+        }
+     }
+     .promo-text {
+       max-width: 556px;
+       .promo-text-header {
+         .det-page {
+           padding: 0 0 24px;
+         }
+       }
+       .promo-text-content {
+         padding: 0 0 24px;
+         p{
+           text-align: center;
+         }
+       }
+       .promo-text-goods {
+         .goods-wrapper {
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           padding-bottom: 24px;
+           .prod-card-container {
+             max-width: 200px;
+             .prod-banner-wrapper {
+               .img-wrapper {
+                 max-width: 200px;
+                 max-height: 300px;
+               }
+               .promo-wrapp {
+                 padding: 15px 25px 0;
+                 justify-content: flex-end;
+               }
+             }
+           }  
+         }
+         .btn-promo-goods {
+           display: block;
+           margin: 0 auto;
+           padding: 17px 32px;
+           width: 328px;
+         }
+       }
+     }
+  }
 }
-
-
-.container {
-}
-
-.promo-items {
-}
-.promo-img {
-}
-.promo-text {
-}
-.promo-text-header {
-}
-.det-page {
-}
-.promo-text-content {
-}
-.promo-text-goods {
-}
-.goods-wrapper {
-}
-.prod-card-container {
-}
-.sale {
-}
-.best-saler {
-}
-.prod-banner-wrapper {
-}
-.img-wrapper {
-}
-.promo-wrapp {
-}
-.favorit {
-}
-.price-wrap {
-}
-.price {
-}
-.discrption-goods {
-}
-.btn-promo-goods {
-}
-
-
-
-
-
 // history_page_end
 
 

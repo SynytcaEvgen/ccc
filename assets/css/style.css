@@ -495,7 +495,7 @@ main section button {
           top: 46px;
           left: 0;
           right: 0;
-          padding: 47px calc((100vw - 1320px) / 2) 73px;
+          padding: 41px calc((100vw - 1320px) / 2) 73px;
           z-index: 5;
           border-bottom: 1px solid #e8e8e8; }
           .menu_items.active > .sub_menu .sub_menu_items:hover .sub_sub_menu .cat-wrapper, .menu_items.active > .sub_menu .sub_menu_items.active .sub_sub_menu .cat-wrapper {
@@ -1020,7 +1020,10 @@ footer {
         line-height: 40px;
         color: #fff; }
   .banner.hist .container .img-wrapper {
-    max-height: 600px; }
+    max-height: 600px;
+    position: relative; }
+    .banner.hist .container .img-wrapper img {
+      width: 100%; }
     .banner.hist .container .img-wrapper::after {
       content: '';
       background-color: rgba(0, 0, 0, 0.13);
@@ -1032,3 +1035,34 @@ footer {
 
 .promotion.hist.right .container .promo-wrapper {
   flex-direction: row-reverse; }
+
+.promotion.hist .container .promo-items .promo-img {
+  max-width: 642px;
+  max-height: 700px; }
+
+.promotion.hist .container .promo-text {
+  max-width: 556px; }
+  .promotion.hist .container .promo-text .promo-text-header .det-page {
+    padding: 0 0 24px; }
+  .promotion.hist .container .promo-text .promo-text-content {
+    padding: 0 0 24px; }
+    .promotion.hist .container .promo-text .promo-text-content p {
+      text-align: center; }
+  .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 24px; }
+    .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container {
+      max-width: 200px; }
+      .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container .prod-banner-wrapper .img-wrapper {
+        max-width: 200px;
+        max-height: 300px; }
+      .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container .prod-banner-wrapper .promo-wrapp {
+        padding: 15px 25px 0;
+        justify-content: flex-end; }
+  .promotion.hist .container .promo-text .promo-text-goods .btn-promo-goods {
+    display: block;
+    margin: 0 auto;
+    padding: 17px 32px;
+    width: 328px; }

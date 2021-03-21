@@ -87,5 +87,8 @@ function init() {
   $('.mob_sub_menu_items').click(function () {
     $(this).toggleClass('active');
   });
+  $('.promo_mob svg').click(function () {
+    $(this).parent().css('height', '0');
+  });
 
 };
