@@ -99,9 +99,11 @@ $color-price-sale: #E90000;
        min-width: 150px;
        margin-right: 5px;
    }
-   .sub_sub_menu .cat-wrapper .categ {
-    
-}
+   .promotion.hist .container .promo-text{
+       max-width: calc(100vw / 2);
+       margin: 0 25px;
+   }
+
 }
 @media only screen and (max-width: 1024px) {
     .prod-slider .prod-slider-container .button-next,
@@ -142,6 +144,29 @@ $color-price-sale: #E90000;
         max-width: 200px;
         max-height: 225px;
         overflow: hidden;
+    }
+    .promotion.hist .container .promo-wrapper,
+    .promotion.hist.right .container .promo-wrapper{
+        flex-direction: column;
+    }
+    .prod-slider .prod-slider-title{
+        text-align: left;
+        padding-bottom: 8px;
+    }
+    .prod-slider.hist.title{
+        padding: 20px 0 24px;
+    }
+    .promotion.hist .container .promo-text{
+        max-width: 642px;
+        margin: 0;
+    }
+    .promotion.hist .container .promo-text .promo-text-header .det-page{
+        text-align: left;
+        padding: 24px 0;
+    }
+    .promotion.hist .container .promo-text .promo-text-content p{
+        max-width: 100%;
+        text-align: left;
     }
     
 }
@@ -202,6 +227,9 @@ $color-price-sale: #E90000;
     }
     .banner .slider_container .slider-wrapp .slider_items .desc_banner{
        transform: translate(-50%, -50%);
+    }
+    .prod-card-container .prod-banner-wrapper .img-wrapper img{
+        object-fit: contain;
     }
     footer{
         padding: 0;
@@ -340,8 +368,12 @@ $color-price-sale: #E90000;
                 font-size: 22px;
                 line-height: 22px;
                 color: $color_text;
+                padding-bottom: 0;
             }
         } 
+    }
+    section.info .container .info-frame{
+        flex-direction: column;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -356,6 +388,7 @@ $color-price-sale: #E90000;
     .log_wrapper .logo{
         max-width: 80px;
         max-height: 27px;
+        margin-right: 5px;
     }
     .promo_line {
         .promo_text{
@@ -520,9 +553,39 @@ $color-price-sale: #E90000;
         padding: 90px 0;
 
     }
+    .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper{
+        justify-content: space-between;
+    }
+    .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container{
+        margin: 1px;
+        max-width: 169px;
+    }
+    .promotion.hist .container .promo-text .promo-text-goods .btn-promo-goods{
+        width: 100%;
+    }
+    section.info .container .info-frame .info-content-wrapper > .title{
+        font-size: 13px;
+        line-height: 23px;
+    }
+    section.info .container .info-frame .info-content-wrapper .info-text.delivery .delivery-wrapper{
+        flex-direction: column;
+        padding: 0;
+        .delivery-items{
+            padding-bottom: 24px;
+        }
+
+    }
+
 }
 @media only screen and (max-width: 374px) {
     .menu_mobile .mobile-menu-wrapper .menu_item > .menu_items > a{
         padding: 0 12px;
+    }
+    .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container{
+        max-width: 150px;
+    }
+    section.info .container .info-frame .info-content-wrapper > .title{
+        font-size: 12px;
+        line-height: 23px;
     }
 }
