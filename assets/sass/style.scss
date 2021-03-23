@@ -92,20 +92,21 @@ $maxWidth: 1920;
 }
 
 // <<<<<<------remove this style before production
-a,
-p,
-button,
-input,
-span,
-textarea, h1, h2, h3, h4,
-button,
-li,
-label {
-  font-family: $gordita_regular;
-  color: $color_text;
-  font-size: $parg_size;
-  line-height: $parg_size_lh;
-  white-space: normal;
+body{
+  a,
+  p,
+  button,
+  input,
+  span,
+  textarea, h1, h2, h3, h4,
+  li,
+  label {
+    font-family: $gordita_regular;
+    color: $color_text;
+    font-size: $parg_size;
+    line-height: $parg_size_lh;
+    white-space: normal;
+  }
 }
 
 .line-decor {
@@ -155,6 +156,7 @@ h4{
 .promo_line {
   background-color: $color_promo_bg;
   max-height: 30px;
+  position: relative;
   .promo_text, .promo_text_mob,
   .promo_text a {
     color: $color_ivert;
@@ -166,12 +168,25 @@ h4{
   }
   .promo_text a{
     text-decoration: underline;
+    transition: 0.3s ease;
     &:hover {
       color: $color-action-h;
+      transition: 0.3s ease;
     }
 
   }
-  
+  >svg{
+    stroke: #fff;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 16px;
+    top: 3px;
+    cursor: pointer; 
+    &:hover{
+      stroke: $color-action-h;
+    }
+  }
   .promo_mob{
     display: none;
   }
@@ -181,7 +196,7 @@ main section button{
   background-color: $color_ivert;
   border: 1px solid $color_promo_bg;
   border-radius: 2px;
-  padding: 14px 32px;
+  padding: 11px 31px;
   transition: 0.3s ease;
   &:hover{
     border: 1px solid $color-action-h;
@@ -255,15 +270,16 @@ main section button{
 .basket-preview-container {
   position: absolute;
   right: -1px;
-  top: 42px;
+  top: 40px;
   z-index: 10;
   background-color: $color_ivert;
   border: 1px solid $color_line_dec;
   border-radius: 2px;
-  padding: 19px 24px;
+  padding: 24px 24px;
   width: 362px;
   opacity: 0;
   visibility: hidden;
+  transition: 0.3s ease;
   &.active{
     opacity: 1;
     visibility: visible;
@@ -275,6 +291,7 @@ main section button{
         display: flex;
         padding: 0 0 18px;
         margin: 0 0 16px;
+        cursor: pointer;
         .img-wrapper {
           height: 90px;
           width: 60px;
@@ -293,6 +310,11 @@ main section button{
             width: 20px;
             height: 20px;
             cursor: pointer;
+            transition: 0.3s ease;
+            &:hover{
+              stroke: $color-action-h;
+              transition: 0.3s ease;
+            }
           }
           .titel {
             color: $color-goods-des;
@@ -344,7 +366,7 @@ main section button{
     background-color: $color-action;
     font-family: $gordita_medium;
     color: $color_ivert;
-    padding: 13px 0;
+    padding: 10px 0;
     border-radius: 2px;
     &:hover{
       background-color: $color-action-h;
@@ -406,7 +428,7 @@ main section button{
   .search-wrapper {
     position: relative;
     .form {
-      &:hover .search{
+      &:focus-within .search{
           opacity: 0;
           visibility: hidden;
           transition: all 0.3s ease;
@@ -414,7 +436,7 @@ main section button{
       .search{ 
         position: absolute;
         top: 50%;
-        right: 50%;
+        right: 53%;
         transform: translate(0, -50%);
         stroke: $color_text;
         width: 24px;
@@ -423,17 +445,12 @@ main section button{
       }
       .search-line {
         border: none;
-        padding: 15px 24px;
+        padding: 15px 17px;
         background-color: $color-line-border;
         width: 100%;
         text-align: center;
         &:focus{
           text-align: left;
-        }
-        &:focus ~ .search{
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s ease;
         }
       }
     }
@@ -469,10 +486,11 @@ main section button{
            display: block;
            width: 100%;
            left: 0;
-           top: 23px;
+           top: 22.5px;
+           z-index: -1;
            .mob_sub_menu_items{
              position: relative;
-             padding: 12px 0;
+             padding: 10px 0;
              border-bottom: 1px solid $color_line_dec;
              &:first-child{
                border-top: 1px solid $color_line_dec;
@@ -756,22 +774,16 @@ main section button{
       margin-right: 32px;
       border-bottom: 2px solid transparent;
       transition: 0.3s ease;
-      &:hover{
-        a{
-          color: $color-action-h;
-          transition: 0.3s ease;
-        }
-        .icon svg{
-          stroke: $color-action-h;
-          transition: 0.3s ease;
-        }
+      &:hover .basket-preview-container{
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s ease;
       }
       a {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // padding-bottom: 5px;
       }
       &:hover,
       &.active {
@@ -781,6 +793,34 @@ main section button{
       .icon{
         max-width: 24px;
         max-height: 24px;
+        position: relative;
+        .icon_quantity{
+          transform: scale(0);
+          transition: 0.3s ease;
+          position: absolute;
+          color: $color_ivert;
+          font-size: 8px;
+          top:-9px;
+          right: -4px;
+          z-index: 3;
+          text-align: center;
+          &::after{
+            content: '';
+            position: absolute;
+            background-color: $color_promo_bg;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            top:50%;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+          }
+          &.active{
+            transform: scale(1);
+            transition: 0.3s ease;
+          }
+        }
       }
       .icon svg {
         width: 24px;
@@ -829,6 +869,7 @@ main section button{
         .swiper-pagination-bullet.swiper-pagination-bullet-active{
             background-color: $color_promo_bg;
             border: 1px solid $color_bullet;
+            margin: 0 6px;
         }
         .swiper-pagination-bullet{
           background-color: unset;
@@ -1045,9 +1086,7 @@ main section button{
   }
   .discrption-goods {
     p{
-      text-overflow: ellipsis;
       overflow: hidden;
-      white-space: nowrap;
       color: $color-goods-des;
     }
   }
@@ -1062,10 +1101,22 @@ main section button{
       .img-wrapper {
         max-width: 1300px;
         max-height: 600px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            background-color: rgba(12, 4, 0, 0.2);
+        }
         img{
           width: 100%;
           height: 100%;
-          object-fit: none;
+          object-fit: cover;
+          position: relative;
+          
         }
      }
       .content-wrapper {
@@ -1118,10 +1169,26 @@ main section button{
         .img-wrapper {
           text-align: center;
           height: 56px;
-          img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+          .free_shipping{
+            width: 79px;
+            height: 56px;
+            fill: $color_text; 
+          }
+          .high_quality{
+            width: 46px;
+            height: 46px;
+            fill: none;
+            stroke: $color_text;
+          }
+          ._day{
+            width: 53px;
+            height: 56px;
+            fill: $color_text;
+          }
+          .return{
+            width: 42px;
+            height: 56px;
+            fill: $color_text; 
           }
         }
         .content {
@@ -1221,7 +1288,6 @@ footer{
              a svg{
                width: 24px;
                height: 24px;
-               fill: none;
                stroke: $color_text;
                transition: 0.3s ease;
                &:hover{
@@ -1290,7 +1356,9 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    
+    .copy-block p{
+      color: $color-goods-des;
+    }
   }
   .develop-wrapper {
     display: flex;
@@ -1335,7 +1403,7 @@ footer{
       .lang-items {
         position: relative;
         padding: 0 8px 0 24px;
-
+        font-family: $gordita_medium;
         &::before{
           content: '';
           position: absolute;
@@ -1595,7 +1663,7 @@ section.info {
               .payment-items{
                 border-top: 1px solid $color_line_dec;
                 border-bottom: 1px solid $color_line_dec;
-                padding: 16px 0;
+                padding: 16px 0; 
                 .title{
                   position: relative;
                   &::after,
@@ -1607,28 +1675,56 @@ section.info {
                       height: 1px;
                       right: 0;
                       top: 50%;
-                      transform: translate(0, -50%);
+                      transform: translate(-50%, -50%);
                       transition: all 0.3s ease-in-out;     
                   }
                   &::before {
-                      transform: rotate(0deg);   
+                      transform: rotate(0deg);
+                      transition: all 0.5s ease-in-out;   
                   }
                   &::after {
-                    transform: rotate(90deg); 
+                    transform: rotate(90deg);
+                    transition: all 0.3s ease-in-out; 
+                  }
+                  &.active{
+                    &::before {
+                      transform: rotate(-180deg);
+                      transition: all 0.5s ease-in-out;   
+                    }
+                    &::after {
+                      transform: rotate(0deg);
+                      transition: all 0.3s ease-in-out; 
+                    }
+                    
                   }
                 }
-                .paymeny-desc{}
-                .pay-var{
-                  padding: 0;
-                  justify-content: flex-start;
-                  .wrapp-mc {
-                    border: 1px solid $color_line_dec;
-                    margin: 0;
+                .paymeny-desc{
+                  max-height: 0;
+                  overflow: hidden;
+                  transition: all 0.3s ease-in-out;
+                  p{
+                    padding: 16px 0;
                   }
-                  .wrapp-visa {
-                    border: 1px solid $color_line_dec
+                  .pay-var{
+                     padding: 0 0 8px 0;
+                     justify-content: flex-start;
+                     .wrapp-mc {
+                       margin: 0;
+                     }
+                     >div{
+                       border: 1px solid $color_line_dec; 
+                       position: relative;
+                       width: 80px;
+                       height: 60px;
+                       img{
+                        position: absolute;
+                        top:50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                       }
+                     }
                   }
-                }
+                }     
               }
             }
           }

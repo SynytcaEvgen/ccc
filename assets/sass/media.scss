@@ -178,6 +178,10 @@ $color-price-sale: #E90000;
     }
 }
 @media only screen and (max-width: 900px) {
+    .head_wrapper{
+        align-items: center;
+        padding: 11px 0 9px;
+    }
     .sub_menu_wrapp,
     .nav_wrapper{
         display: none;
@@ -261,20 +265,23 @@ $color-price-sale: #E90000;
                           transition: all 0.3s ease-in-out;     
                       }
                       &::before {
-                          transform: rotate(0deg);   
+                          transform: rotate(0deg);
+                          transition: all 0.5s ease-in-out;   
                       }
                       &::after {
                         transform: rotate(90deg);
-                        
+                        transition: all 0.3s ease-in-out;
                       }
                       
                    }
                    .accordion-input{
                          &:checked~.head::before{
-                             transform: rotate(-45deg);
+                             transform: rotate(-180deg);
+                             transition: all 0.5s ease-in-out;  
                          }
                          &:checked~.head::after{
-                             transform: rotate(45deg);
+                             transform: rotate(0deg);
+                             transition: all 0.3s ease-in-out;
                          }
                          &:checked~.list-item{
                              display: block;
@@ -346,6 +353,7 @@ $color-price-sale: #E90000;
         right: 0;
         left: 0;
         transform: translate(-50%, 0);
+        width: 343px;
     }
     .banner.hist .container .desc_banner{
         position: relative;
@@ -375,11 +383,15 @@ $color-price-sale: #E90000;
     section.info .container .info-frame{
         flex-direction: column;
     }
+    section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title{
+        font-size: 13px;
+        line-height: 23px;
+    }
 }
 @media only screen and (max-width: 767px) {
     main section button{
          width: 100%;
-         padding: 14px 0;
+         padding: 13px 0;
       
     }  
     .container {
@@ -390,8 +402,14 @@ $color-price-sale: #E90000;
         max-height: 27px;
         margin-right: 5px;
     }
+    .promotion{
+        padding-bottom: 0;
+    }
     .promo_line {
         .promo_text{
+            display: none;
+        }
+        >svg{
             display: none;
         }
         .promo_mob{
@@ -429,9 +447,11 @@ $color-price-sale: #E90000;
              .desc_banner {
                .text_contetn p {
                    text-align: center;
+                   font-size: 32px;
+
                }
                button {
-                   padding: 5px 32px 4px;
+                   padding: 4px 31px 3px;
                    font-size: 10px;
                    line-height: 16px;
                }
@@ -492,6 +512,7 @@ $color-price-sale: #E90000;
 
     }
     .reason-buy {
+        padding-bottom: 32px;
         .reason-buy-container {   
             text-align: center; 
             .reason-buy-title {
@@ -505,15 +526,35 @@ $color-price-sale: #E90000;
                .reason-buy-items {
                   display: flex;
                   align-items: center;
+                  margin-bottom: 25px;
+                  &:last-child{
+                      margin-bottom: 0;
+                  }
                   &:last-child .img-wrapper{
                      padding-left: 9px;
                   }
-            
-                  margin-bottom: 35px;
+                  
                  .img-wrapper {
                    max-width: 36px;
                    margin-right: 20px;
                    height: unset;
+                   .free_shipping{
+                       width: 36px;
+                       height: 26px;
+                   }
+                   .high_quality{
+                       width: 36px;
+                       height: 36px;
+                   }
+                   ._day{
+                       width: 34px;
+                       height: 36px;
+                   }
+                   .return{
+                       width: 27px;
+                       height: 36px;
+                   }
+
                  }
                  .content {
                      p {
@@ -526,6 +567,9 @@ $color-price-sale: #E90000;
             }
           }
        }
+    }
+    .prod-slider.title{
+        padding-bottom: 0;
     }
     .seo-text .seo-text-wrapper .seo-text-items:first-child{
        padding-right: 0px;
@@ -540,6 +584,31 @@ $color-price-sale: #E90000;
     .seo-text .seo-text-wrapper .seo-text-items {
         max-width: 100%;
     } 
+    .prod-card-container .discrption-goods p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .prod-card-container.sale .price-wrap .price:first-child{
+        padding-right: 8px;
+    }
+    .prod-card-container .prod-banner-wrapper{
+        padding-bottom: 8px;
+    }
+    .promo-banner .banner-wrapper .content-wrapper h2{
+        min-width: 400px;
+    }
+    .promo-banner.custom{
+        padding-top: 0;
+    }
+    .promo-banner{
+        padding-bottom: 16px;
+    }
+    .prod-slider.custom{
+        padding-bottom: 24px;
+    }
+    .reason-buy .reason-buy-container .reason-buy-title{
+        padding: 24px 0;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -550,8 +619,18 @@ $color-price-sale: #E90000;
     .promo-banner .banner-wrapper .content-wrapper h2{
         white-space: normal;
         min-width: 300px;
-        padding: 90px 0;
-
+        padding: 0;
+    }
+    .promo-banner .banner-wrapper .content-wrapper{
+        bottom: 32px;
+        top: unset;
+        transform: translate(-50%, 0);
+    }
+    .promo-banner .banner-wrapper .content-wrapper h2{
+        padding-bottom: 93px;
+    }
+    .promo-banner.custom .banner-wrapper .content-wrapper h2{
+        padding-bottom: 71px;
     }
     .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper{
         justify-content: space-between;
@@ -574,6 +653,9 @@ $color-price-sale: #E90000;
             padding-bottom: 24px;
         }
 
+    }
+    .prod-card-container .prod-banner-wrapper .img-wrapper{
+        max-width: 162px;
     }
 
 }
