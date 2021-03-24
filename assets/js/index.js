@@ -4,7 +4,10 @@ function init() {
     let swiperBanner = new Swiper('.slider_container.swiper-container', {
       spaceBetween: 30,
       loop: true,
-      // grabCursor: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: '.swiper-pagination',
           clickable: true, 
@@ -95,6 +98,22 @@ function init() {
       	newsContent.text(newsText.slice(0, size) + ' ...');
     };
   };
+  function openPopUp(elem) {
+    $(elem).addClass('active');  
+    $('body').addClass('modal');
+  };
+  function closePopUp(elem) {
+    $(elem).removeClass('active');  
+    $('body').removeClass('modal');
+  };
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Поле является обязательным",
+    remote: "Поле является обязательным",
+    email: "Введите корректный электронный адрес",
+  });
+  function validatorForm(elem) {
+    $(elem).validate();
+  };
   $('.features_items .search').click(function () {
         if ($(window).width() >= 900){
           $('header .search-header-line').toggleClass('active');
@@ -144,4 +163,34 @@ function init() {
   menuAccordionMover();
   accEngine('.acc-open');
   sliceSentence(34, '.discrption-goods > p');
+  validatorForm("#sign-in");
+  validatorForm("#reset-pass");
+  $('.close-popup').click(function () {
+    closePopUp('.popup.active');
+  });
+  $('.features_items .autorization').click(function (){
+    openPopUp('#popup-sign-in');
+  });
+  $('#popup-sign-in .link_wrapper a').click(function (e) {
+    e.preventDefault();
+    closePopUp('.popup.active');
+    openPopUp('#popup-reset-pass');
+  });
+  $('.lang-wrapper .select-lang').click(function () {
+     $(this).toggleClass('active');
+     $(this).children().last().toggleClass('active');
+  })
+  $('.menu_mobile .search-line').change(function () {
+    if ($(this).val().length > 0) {
+      $(this).addClass('enter');
+      $('.menu_mobile .search').addClass('enter');
+    } else {
+      if ($('.menu_mobile .search').hasClass('enter')) {
+        $('.menu_mobile .search').removeClass('enter');
+        $(this).removeClass('enter');
+      } else {
+        return
+      }
+    }
+  })
 };

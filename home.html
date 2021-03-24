@@ -17,11 +17,86 @@
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/index.js"></script>
 
 </head>
-
 <body>
+    <!-- Pop_up sing up -->
+    <div id="popup-sign-in" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="close-popup">
+                    <svg>
+                        <use href="assets/sprite/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <h4 class="header-popup">Авторизоваться</h4>
+                <form id="sign-in" class="form" method="POST">
+                    <div class="input_wrap">
+                        <input type="email" placeholder="Электронная почта" required>
+                    </div>
+                    <div class="input_wrap end"> 
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <div class="sub-input_wrap">
+                        <input type="submit" value="Авторизоваться">
+                    </div>
+                </form>
+                <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
+                <div class="social-sing-wrapp">
+                    <p>Войти с помощью соцсетей</p>
+                    <div class="icon-wrapper">
+                        <div class="icon-items">
+                            <a href="#">
+                              <svg class="facebook">
+                                  <use href="assets/sprite/sprite.svg#face-sign"></use>
+                              </svg>
+                            </a>
+                        </div>
+                        <div class="icon-items">
+                            <a href="#">
+                               <svg class="vk">
+                                   <use href="assets/sprite/sprite.svg#vk-sign"></use>
+                               </svg>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-up-wrapper">
+                    <button class="sign-up-btn">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pop_up sing up -->
+    
+    <!-- Pop_up pass reset -->
+    <div id="popup-reset-pass" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="close-popup">
+                    <svg>
+                        <use href="assets/sprite/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <h4 class="header-popup">Сброс пароля</h4>
+                <div class="text-content">
+                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса пароля</p>
+                </div>
+                <form id="reset-pass" class="form" method="POST">
+                    <div class="input_wrap end">
+                        <input type="email" placeholder="Электронная почта" required>
+                    </div>
+                    <div class="sub-input_wrap">
+                        <input type="submit" value="Сбросить пароль">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Pop_up pass reset -->
+
     <!--Header start section-->
     <header>
         <div class="promo_line">
@@ -945,7 +1020,9 @@
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="#"><img src="assets/img/Logo.png" alt="logo"></a>
+                        <svg>
+                            <use href="assets/sprite/sprite.svg#logo"></use>
+                        </svg>
                     </div>
                 </div>
                 <div class="features_site_wrapper">
@@ -1064,7 +1141,9 @@
         <div class="menu_mobile">
             <div class="mobile-header-container">
                 <div class="logo-wrapper">
-                    <a href="#"><img src="assets/img/Logo.png" alt="logo"></a>
+                        <svg class="logo">
+                           <use href="assets/sprite/sprite.svg#logo"></use>
+                        </svg>
                 </div>
                 <svg class="close">
                     <use href="assets/sprite/sprite.svg#close"></use>
@@ -1330,7 +1409,7 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
                                             <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
@@ -1668,7 +1747,7 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
                                             <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
@@ -2006,7 +2085,7 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
                                             <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
@@ -3123,8 +3202,18 @@
                             <p>Свяжитесь с нами</p>
                         </div>
                         <ul class="list-item">
-                            <li class="list-items mail"><a href="mailto:info@ccc.ru">info@ccc.ru</a></li>
-                            <li class="list-items phone"><a href="tel:+75559852526">+7 (555) 985 25 26</a></li>
+                            <li class="list-items mail">
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#email-icon"></use>
+                                </svg>
+                                <a href="mailto:info@ccc.ru">info@ccc.ru</a>
+                            </li>
+                            <li class="list-items phone">
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#phone-icon"></use>
+                                </svg>
+                                <a href="tel:+75559852526">+7 (555) 985 25 26</a>
+                            </li>
                             <li class="list-items open-time">Пн-Пт: 9:00-17:00</li>
                     </div>
                 </div>
@@ -3144,6 +3233,25 @@
                             <div class="select-lang">
                                 <ul class="lang-item">
                                     <li class="lang-items">RU</li>
+                                </ul>
+                                <ul class="all-lang-item">
+                                    <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ru">RU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -3167,6 +3275,25 @@
                             <div class="select-lang">
                                 <ul class="lang-item">
                                     <li class="lang-items">RU</li>
+                                </ul>
+                                <ul class="all-lang-item">
+                                    <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ru">RU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
                                 </ul>
                             </div>
                         </div>

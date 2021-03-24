@@ -108,7 +108,23 @@ body{
     white-space: normal;
   }
 }
-
+body {
+  input{
+    border: 1px solid $color_line_dec;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    color: $color-goods-des; 
+  }
+  input[type="submit"]{
+    border: none;
+  }
+  input:valid,
+  input:focus{
+    color: $color_text
+  }
+}
+body 
 .line-decor {
   height: 1px;
   background-color: $color_line_dec;
@@ -121,29 +137,29 @@ body.modal {
 }
 body{
   overflow-x: hidden;
-}
-h1, h2{
+  h1, h2{
   font-size: 16px;
   line-height: 26px;
   font-family: $gordita_medium;
-}
-h1.det-page{
-  font-size: 20px;
-  line-height: 1.5;
-  font-family: $gordita_medium;
-}
-h2.det-page{
-  font-size: 40px;
-  line-height: 1;
-  font-family: $philosopher_regular;
-}
-h3{
-  font-family: $gordita_medium;
-  font-size: 14px;
-  line-height: 24px;
-}
-h4{
-  font-family: $gordita_medium;
+  }
+  h1.det-page{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: $gordita_medium;
+  }
+  h2.det-page{
+    font-size: 40px;
+    line-height: 1;
+    font-family: $philosopher_regular;
+  }
+  h3{
+    font-family: $gordita_medium;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  h4{
+    font-family: $gordita_medium;
+  }
 }
 .visually-hidden{
     clip: rect(0 0 0 0);
@@ -191,12 +207,151 @@ h4{
     display: none;
   }
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  .popup__wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    .popup__content {
+      position: relative;
+      margin: 0 auto;
+      width: 346px;
+      padding: 16px;
+      background-color: $color_ivert;
+      .close-popup{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 17px;
+        padding-right: 14px;
+        cursor: pointer;
+        &:hover svg{
+          stroke: $color-action-h;
+          transition: 0.3s ease;
+        }
+        svg{
+          stroke: $color_promo_bg;
+          width: 20px;
+          height: 20px;
+          transition: 0.3s ease;
+        }
+      }
+      .header-popup{
+        text-transform: uppercase;
+        font-family: $gordita_medium;
+        padding-bottom: 16px;
+      }
+      .text-content{
+        padding-bottom: 27px;
+      }
+      .form{
+        padding: 0 0 10px;
+        .input_wrap{
+          display: flex;
+          flex-direction: column;
+          padding: 0 0 37px;
+          &.end{
+            padding: 0 0 24px;
+          }
+          label.error{
+            color:#EB001B;
+            font-size: 11px;
+            line-height: 12px;
+          }
+        }
+        .sub-input_wrap{
+          
+          input{
+            width: 100%;
+            color: $color_ivert;
+            font-family: $gordita_medium;
+            padding: 10px 0;
+            background-color: $color-action-h;
+            border-radius: 2px;
+          }
+          input:hover{
+            background-color: $color-action;
+
+          }
+        }
+      }
+      .link_wrapper{
+        text-align: center;
+        padding-bottom: 24px;
+        a{
+        }
+      }
+      .social-sing-wrapp{
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color_line_dec;
+        margin-bottom: 24px;
+        p{
+          text-align: center;
+          font-size: 12px;
+          line-height: 23px;
+          font-family: $gordita_medium;
+          padding-bottom: 10px;
+        }
+        .icon-wrapper{
+          display: flex;
+          justify-content: center;
+          .icon-items{
+            a:hover svg{
+              fill: $color-action-h;
+              transition: 0.3s ease;
+            }
+            margin: 0 8px;
+            svg{
+              fill: $color_promo_bg;
+              transition: 0.3s ease;
+            }
+            .facebook{
+              width: 10px;
+              height: 20px;
+            }
+            .vk{
+              width: 23px;
+              height: 13px;
+            }
+          }
+        }
+      }
+      .sign-up-wrapper{
+        .sign-up-btn{
+           font-family: $gordita_medium;
+           border: 1px solid $color_promo_bg;
+           padding: 12px 0;
+           width: 100%;
+           background-color: transparent;
+           border-radius: 2px;
+        }
+      }
+    } 
+  }
+}
 main section button{
   font-family: $gordita_medium;
   background-color: $color_ivert;
   border: 1px solid $color_promo_bg;
   border-radius: 2px;
-  padding: 11px 31px;
+  padding: 9px 31px;
   transition: 0.3s ease;
   &:hover{
     border: 1px solid $color-action-h;
@@ -270,7 +425,7 @@ main section button{
 .basket-preview-container {
   position: absolute;
   right: -1px;
-  top: 40px;
+  top: 42px;
   z-index: 10;
   background-color: $color_ivert;
   border: 1px solid $color_line_dec;
@@ -401,12 +556,13 @@ main section button{
       margin: 0 auto;
       max-width: 80px;
       max-height: 27px;
-      img{
-        width: 100%;
-        height: 100%;
+      svg.logo{
+        width: 80px;
+        height: 27px;
+        fill: $color_text;
       }
     }
-    svg{
+    >svg.close{
       position: absolute;
       top: 50%;
       right: 0;
@@ -428,10 +584,10 @@ main section button{
   .search-wrapper {
     position: relative;
     .form {
-      &:focus-within .search{
-          opacity: 0;
-          visibility: hidden;
-          transition: all 0.3s ease;
+      &:focus-within .search,
+      .enter.search{
+          transform: translate(-560%, -50%);
+          transition: 0.6s ease;
       }
       .search{ 
         position: absolute;
@@ -442,15 +598,18 @@ main section button{
         width: 24px;
         height: 24px;
         fill: none;
+        transition: 0.6s ease;
       }
       .search-line {
         border: none;
         padding: 15px 17px;
-        background-color: $color-line-border;
+        background-color: $color-bg-footer;
         width: 100%;
         text-align: center;
-        &:focus{
+        &:focus,
+        &.enter{
           text-align: left;
+          padding-left: 55px;
         }
       }
     }
@@ -463,7 +622,7 @@ main section button{
     .menu_item{
       display: flex;
       justify-content: space-between;
-      padding-bottom: 64px;
+      // padding-bottom: 64px;
       position: relative;
       >.menu_items{
         padding: 10px 0;
@@ -499,6 +658,9 @@ main section button{
                text-transform: uppercase;
                font-family: $gordita_medium;
                padding: 0 16px;
+             }
+             &.accent>a{
+               color: $color-action-h;
              }
              svg{
                 position: absolute;
@@ -629,7 +791,7 @@ main section button{
           }
           >a {
             color: $color_menu_non;
-            font-family: $gordita_medium;
+            font-family: $gordita_bold;
             text-transform: uppercase;
             padding-bottom: 7px;
             transition: color 0.3s ease;
@@ -686,7 +848,7 @@ main section button{
            background-color: $color_ivert;
            position: absolute;
            width:100%;
-           top: 46px;
+           top: 45px;
            left: 0;
            right: 0;
            padding: 41px calc((100vw - 1320px) / 2) 73px;
@@ -758,10 +920,10 @@ main section button{
     max-width: 90px;
     max-height: 30px;
     margin-right: 50px;
-    img {
-      width: 100%;
-      height: 100%;
-      
+    svg {
+      width: 90px;
+      height: 30px;
+      fill: $color_text;
     }
   }
 }
@@ -849,12 +1011,11 @@ main section button{
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(52%, -50%);
+          transform: translate(52%, -53%);
           z-index: 2;
           .text_contetn p {
             color: $color_ivert;
-            // @include adaptiv-font(54, 32);
-            font-size: 54px;
+            @include adaptiv-font(54, 32);
             line-height: 60px;
             margin-bottom: 16px;
             font-family: $gordita_bold;
@@ -1308,28 +1469,52 @@ footer{
     .list-items{
       position: relative;
       padding-left: 25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      cursor: pointer;
     }
-    li.mail::before{
-      content: '';
-      position: absolute;
-      background-image: url(../img/mail-icon.png);
-      background-repeat: no-repeat;
-      width: 16px;
-      height: 12px;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
+    li.mail{
+      position: relative;
+      svg{
+        position: absolute;
+        left: 0;
+        fill: none;
+        stroke: $color_text;
+        width: 16px;
+        height: 12px;
+        margin-right: 9px;
+        transition: 0.3s ease;
+      }
+      &:hover svg{
+        stroke: $color-action-h;
+        transition: 0.3s ease;
+      }
+      &:hover a{
+        color: $color-action-h;
+        transition: 0.3s ease;
+      }
+      
     }
-     li.phone::before{
-       content: '';
-       position: absolute;
-       background-image: url(../img/phone-icon.png);
-       background-repeat: no-repeat;
-       width: 16px;
-       height: 16px;
-       top: 50%;
-       left: 0;
-       transform: translate(0, -50%);
+     li.phone{
+       position: relative;
+       svg{
+        position: absolute;
+        left: 0;
+        fill: $color_text;
+        stroke: none;
+        width: 16px;
+        height: 16px;
+        margin-right: 9px;
+       }
+       &:hover svg{
+        fill: $color-action-h;
+        transition: 0.3s ease;
+      }
+      &:hover a{
+        color: $color-action-h;
+        transition: 0.3s ease;
+      }
      }
   }
     
@@ -1398,6 +1583,13 @@ footer{
       height: 8px;
       right: 0;
       top: 25%;
+      transition: 0.3s ease;
+    }
+    &.active{
+          &::after{
+          transform: rotate(180deg);
+          transition: 0.3s ease;
+        }
     }
     .lang-item {
       .lang-items {
@@ -1415,6 +1607,39 @@ footer{
           top: 50%;
           transform: translate(0, -50%);
         }
+      }
+    }
+    .all-lang-item{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s ease;
+      bottom: 35px;
+      right: 0;
+      max-height: 300px;
+      width: 100%;
+      min-width: 60px;
+      overflow-y: scroll;
+      background-color: $color_ivert;
+      z-index: 999;
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s ease;
+      }
+      .all-lang-items a{
+        display: block;
+        padding: 10px 0px 10px 10px;
+        font-size: 14px;
+        line-height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+        &:hover{
+          background-color: #f2f2f2;
+        }
+
       }
     }
   }

@@ -209,7 +209,7 @@ $color-price-sale: #E90000;
           background-color: #000;
           position: absolute;
           width: 100%;
-          height: 2px;
+          height: 1px;
           left: 0;
           transition: all 0.3s ease-in-out;
         }
@@ -223,9 +223,10 @@ $color-price-sale: #E90000;
           background-color: #000;
           position: absolute;
           width: 100%;
-          height: 2px;
+          height: 1px;
           left: 0;
-          top: 5px;
+          top: 50%;
+          transform: translate(0, -50%);
           transition: all 0.3s ease-in-out;
         }
     }
@@ -341,19 +342,30 @@ $color-price-sale: #E90000;
                   padding-top: 16px;
                   .list-items{
                       margin-bottom: 16px;
-                      .open-time{
+                      &.open-time{
                       padding: 0;
+                      display: block;
                      }
                   }       
               }
           }
        }   
     }
+    .sec-top .footer-content .list-item .list-items{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .sec-top .footer-content .social-wrapper .social-item .social-items{
+        margin-right: 26px;
+    }
     .basket-preview-container{
-        right: 0;
-        left: 0;
-        transform: translate(-50%, 0);
+        right: 50%;
+        top: 78px;
+        transform: translate(50%, 0);
         width: 343px;
+    }
+    .features_site_wrapper .features_site{
+        position: unset;
     }
     .banner.hist .container .desc_banner{
         position: relative;
@@ -387,6 +399,15 @@ $color-price-sale: #E90000;
         font-size: 13px;
         line-height: 23px;
     }
+    .mob_block .wrappre_sec-bottom .copy-block p,
+    .mob_block .wrappre_sec-bottom .copy-block p span,
+    .mob_block .wrappre_sec-bottom .copy-block p a{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .mob_block{
+        padding-bottom: 16px;
+    }
 }
 @media only screen and (max-width: 767px) {
     main section button{
@@ -401,6 +422,10 @@ $color-price-sale: #E90000;
         max-width: 80px;
         max-height: 27px;
         margin-right: 5px;
+        svg{
+            width: 80px;
+            height: 27px;
+        }
     }
     .promotion{
         padding-bottom: 0;
@@ -424,6 +449,11 @@ $color-price-sale: #E90000;
                 position: absolute;
                 right: 4px;
             }
+        }
+    }
+    .features_site_wrapper .features_site .features_items{
+        &:hover{
+            border-bottom: transparent;
         }
     }
     .features_site_wrapper .features_site .features_items .icon_title{
@@ -461,7 +491,7 @@ $color-price-sale: #E90000;
       }
     }
     .features_site_wrapper .features_site .features_items{
-        margin-right: 8px;
+        margin-right: 12px;
     }
     .banner{
         .container{
@@ -571,6 +601,9 @@ $color-price-sale: #E90000;
     .prod-slider.title{
         padding-bottom: 0;
     }
+    .seo-text{
+        padding-bottom: 24px;
+    }
     .seo-text .seo-text-wrapper .seo-text-items:first-child{
        padding-right: 0px;
        padding-bottom: 24px;
@@ -584,6 +617,13 @@ $color-price-sale: #E90000;
     .seo-text .seo-text-wrapper .seo-text-items {
         max-width: 100%;
     } 
+    .seo-text .seo-text-wrapper{
+        padding-top: 24px;
+    }
+    .seo-text .seo-text-wrapper .seo-text-items .title h3{
+        font-size: 13px;
+        line-height: 23px;
+    }
     .prod-card-container .discrption-goods p{
         font-size: 12px;
         line-height: 20px;
@@ -608,6 +648,13 @@ $color-price-sale: #E90000;
     }
     .reason-buy .reason-buy-container .reason-buy-title{
         padding: 24px 0;
+    }
+    .reason-buy .reason-buy-container .reason-buy-wrapper .reason-buy-items .content{
+        padding-top: 0;
+    }
+    .prod-slider .prod-slider-title h2{
+        line-height: 23px;
+        font-size: 13px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -669,5 +716,8 @@ $color-price-sale: #E90000;
     section.info .container .info-frame .info-content-wrapper > .title{
         font-size: 12px;
         line-height: 23px;
+    }
+    .basket-preview-container{
+        width: 300px;
     }
 }

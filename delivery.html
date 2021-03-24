@@ -22,18 +22,98 @@
 </head>
 
 <body>
+    <!-- Pop_up sing up -->
+    <div id="popup-sign-in" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="close-popup">
+                    <svg>
+                        <use href="assets/sprite/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <h4 class="header-popup">Авторизоваться</h4>
+                <form id="sign-in" class="form" method="POST">
+                    <div class="input_wrap">
+                        <input type="email" placeholder="Электронная почта" required>
+                    </div>
+                    <div class="input_wrap end">
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <div class="sub-input_wrap">
+                        <input type="submit" value="Авторизоваться">
+                    </div>
+                </form>
+                <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
+                <div class="social-sing-wrapp">
+                    <p>Войти с помощью соцсетей</p>
+                    <div class="icon-wrapper">
+                        <div class="icon-items">
+                            <a href="#">
+                                <svg class="facebook">
+                                    <use href="assets/sprite/sprite.svg#face-sign"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="icon-items">
+                            <a href="#">
+                                <svg class="vk">
+                                    <use href="assets/sprite/sprite.svg#vk-sign"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign-up-wrapper">
+                    <button class="sign-up-btn">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pop_up sing up -->
+    
+    <!-- Pop_up pass reset -->
+    <div id="popup-reset-pass" class="popup">
+        <div class="popup__wrapper">
+            <div class="popup__content">
+                <div class="close-popup">
+                    <svg>
+                        <use href="assets/sprite/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <h4 class="header-popup">Сброс пароля</h4>
+                <div class="text-content">
+                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса
+                        пароля</p>
+                </div>
+                <form id="reset-pass" class="form" method="POST">
+                    <div class="input_wrap end">
+                        <input type="email" placeholder="Электронная почта" required>
+                    </div>
+                    <div class="sub-input_wrap">
+                        <input type="submit" value="Сбросить пароль">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Pop_up pass reset -->
+
     <!--Header start section-->
     <header>
         <div class="promo_line">
             <p class="promo_text">Киберпонедельник! Скидки до 50% на все до 30/11 + бесплатная доставка.
                 <a href="#">Проверьте это!</a>
             </p>
+            <svg>
+                <use href="assets/sprite/sprite.svg#close"></use>
+            </svg>
             <div class="promo_mob">
                 <p class="promo_text_mob">Киберпонедельник! Скидки до 50%</p>
                 <svg>
                     <use href="assets/sprite/sprite.svg#close"></use>
                 </svg>
             </div>
+    
         </div>
         <div class="container menu_wrapp">
             <div class="head_wrapper">
@@ -941,7 +1021,9 @@
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="#"><img src="assets/img/Logo.png" alt="logo"></a>
+                        <svg>
+                            <use href="assets/sprite/sprite.svg#logo"></use>
+                        </svg>
                     </div>
                 </div>
                 <div class="features_site_wrapper">
@@ -976,6 +1058,7 @@
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#favorit"></use>
                                     </svg>
+                                    <div class="icon_quantity">0</div>
                                 </div>
                                 <div class="icon_title">
                                     Избранное
@@ -988,6 +1071,7 @@
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#basket"></use>
                                     </svg>
+                                    <div class="icon_quantity">0</div>
                                 </div>
                                 <div class="icon_title">
                                     Корзина
@@ -1014,7 +1098,6 @@
                                                     <div class="price">
                                                         <span>3500&#8381;/шт.</span>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </li>
@@ -1036,7 +1119,7 @@
                                                     <div class="price">
                                                         <span>3500&#8381;/шт.</span>
                                                     </div>
-
+    
                                                 </div>
                                             </div>
                                         </li>
@@ -1050,16 +1133,18 @@
                             </div>
                         </li>
                     </ul>
-
+    
                 </div>
-
+    
             </div>
         </div>
         <div class="line-decor"></div>
         <div class="menu_mobile">
             <div class="mobile-header-container">
                 <div class="logo-wrapper">
-                    <a href="#"><img src="assets/img/Logo.png" alt="logo"></a>
+                    <svg class="logo">
+                        <use href="assets/sprite/sprite.svg#logo"></use>
+                    </svg>
                 </div>
                 <svg class="close">
                     <use href="assets/sprite/sprite.svg#close"></use>
@@ -1144,7 +1229,7 @@
                                         </li>
                                         <li class="mob_sub_menu_items">
                                             <a href="#">Обувь</a>
-                                            <div class="mob_sub_sub_menu" hidden>
+                                            <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
                                                     <div class="categ">
                                                         <p class="titel">Популярные категории</p>
@@ -1205,7 +1290,7 @@
                                         </li>
                                         <li class="mob_sub_menu_items">
                                             <a href="#">Аксессуары</a>
-                                            <div class="mob_sub_sub_menu" hidden>
+                                            <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
                                                     <div class="categ">
                                                         <p class="titel">Популярные категории</p>
@@ -1266,7 +1351,7 @@
                                         </li>
                                         <li class="mob_sub_menu_items">
                                             <a href="#">Бренды</a>
-                                            <div class="mob_sub_sub_menu" hidden>
+                                            <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
                                                     <div class="categ">
                                                         <p class="titel">Популярные категории</p>
@@ -1325,9 +1410,9 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
-                                            <div class="mob_sub_sub_menu" hidden>
+                                            <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
                                                     <div class="categ">
                                                         <p class="titel">Популярные категории</p>
@@ -1391,21 +1476,21 @@
                                         </div>
                                         <ul class="social-item">
                                             <li class="social-items">
-                                                <a href="https://www.facebook.com">
+                                                <a href="https://www.facebook.com" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://www.instagram.com/">
+                                                <a href="https://www.instagram.com/" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://vk.com">
+                                                <a href="https://vk.com" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#vk"></use>
                                                     </svg>
@@ -1663,7 +1748,7 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
                                             <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
@@ -1731,19 +1816,19 @@
                                             <li class="social-items">
                                                 <a href="https://www.facebook.com">
                                                     <svg>
-                                                        <use href="assets/sprite/sprite.svg#facebook"></use>
+                                                        <use href="assets/sprite/sprite.svg#facebook" target="_blank"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://www.instagram.com/">
+                                                <a href="https://www.instagram.com/" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://vk.com">
+                                                <a href="https://vk.com" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#vk"></use>
                                                     </svg>
@@ -2001,7 +2086,7 @@
                                                 <use href="assets/sprite/sprite.svg#arrow_r"></use>
                                             </svg>
                                         </li>
-                                        <li class="mob_sub_menu_items">
+                                        <li class="mob_sub_menu_items accent">
                                             <a href="#">Sale</a>
                                             <div class="mob_sub_sub_menu">
                                                 <div class="cat-wrapper">
@@ -2067,21 +2152,21 @@
                                         </div>
                                         <ul class="social-item">
                                             <li class="social-items">
-                                                <a href="https://www.facebook.com">
+                                                <a href="https://www.facebook.com" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#facebook"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://www.instagram.com/">
+                                                <a href="https://www.instagram.com/" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#instagram"></use>
                                                     </svg>
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://vk.com">
+                                                <a href="https://vk.com" target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#vk"></use>
                                                     </svg>
@@ -2111,7 +2196,7 @@
                 </div>
             </div>
         </div>
-
+    
     </header>
     <!--Header end section-->
 
@@ -2245,7 +2330,7 @@
                                     <li class="list-items"><a href="#">Безопасные покупки с ССС</a></li>
                                 </ul>
                             </div>
-
+    
                         </div>
                     </nav>
                 </div>
@@ -2285,21 +2370,21 @@
                         </div>
                         <ul class="social-item">
                             <li class="social-items">
-                                <a href="https://www.facebook.com">
+                                <a href="https://www.facebook.com" target="_blank">
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#facebook"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social-items">
-                                <a href="https://www.instagram.com/">
+                                <a href="https://www.instagram.com/" target="_blank">
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#instagram"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="social-items">
-                                <a href="https://vk.com">
+                                <a href="https://vk.com" target="_blank">
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#vk"></use>
                                     </svg>
@@ -2312,8 +2397,18 @@
                             <p>Свяжитесь с нами</p>
                         </div>
                         <ul class="list-item">
-                            <li class="list-items mail"><a href="mailto:info@ccc.ru">info@ccc.ru</a></li>
-                            <li class="list-items phone"><a href="tel:+75559852526">+7 (555) 985 25 26</a></li>
+                            <li class="list-items mail">
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#email-icon"></use>
+                                </svg>
+                                <a href="mailto:info@ccc.ru">info@ccc.ru</a>
+                            </li>
+                            <li class="list-items phone">
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#phone-icon"></use>
+                                </svg>
+                                <a href="tel:+75559852526">+7 (555) 985 25 26</a>
+                            </li>
                             <li class="list-items open-time">Пн-Пт: 9:00-17:00</li>
                     </div>
                 </div>
@@ -2327,12 +2422,31 @@
                     <div class="wrappre_sec-bottom">
                         <div class="copy-block">
                             <p>Copyright © CCC 2021</p>
-                            <p><span>Разработка сайта - </span><a href="https://fact.digital">ФАКТ</a></p>
+                            <p><span>Разработка сайта - </span><a href="https://fact.digital" target="_blank">ФАКТ</a></p>
                         </div>
                         <div class="lang-wrapper">
                             <div class="select-lang">
                                 <ul class="lang-item">
                                     <li class="lang-items">RU</li>
+                                </ul>
+                                <ul class="all-lang-item">
+                                    <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ru">RU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -2347,7 +2461,8 @@
                         <div class="wrapp-visa"><img src="assets/img/visa.png" alt="visa"></div>
                     </div>
                     <div class="develop-wrapper">
-                        <div class="develop"><span>Разработка сайта - </span><a href="https://fact.digital">ФАКТ</a>
+                        <div class="develop"><span>Разработка сайта - </span><a href="https://fact.digital"
+                                target="_blank">ФАКТ</a>
                         </div>
                         <div class="lang-wrapper">
                             <div class="lang">
@@ -2356,6 +2471,25 @@
                             <div class="select-lang">
                                 <ul class="lang-item">
                                     <li class="lang-items">RU</li>
+                                </ul>
+                                <ul class="all-lang-item">
+                                    <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ru">RU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
                                 </ul>
                             </div>
                         </div>
