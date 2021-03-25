@@ -22,7 +22,7 @@ main {
   height: 80px;
   display: block; }
   .not_prod .log_wrapper .logo {
-    margin: 30px auto;
+    margin: 16px auto;
     max-width: 200px; }
     .not_prod .log_wrapper .logo a {
       display: block; }
@@ -382,10 +382,18 @@ main section button {
         line-height: 20px; }
         .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .quatity {
           font-size: 12px; }
-        .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .price span {
-          font-family: "Gordita-Medium", sans-serif;
+        .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .price-wrapper span {
           line-height: 20px;
           font-size: 12px; }
+        .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .price-wrapper .b-price {
+          font-family: "Gordita-Medium", sans-serif; }
+        .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .price-wrapper .b-price_new {
+          font-family: "Gordita-Medium", sans-serif;
+          padding-right: 10px;
+          color: #E90000; }
+        .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .price-per .price-wrapper .b-price_old {
+          color: #666;
+          text-decoration: line-through; }
   .basket-preview-container .goods-cost {
     display: flex;
     justify-content: space-between;
@@ -856,12 +864,15 @@ main section button {
     text-align: center; }
     .prod-slider .prod-slider-title h2 {
       text-transform: uppercase; }
+      .prod-slider .prod-slider-title h2:hover {
+        color: #e9500e;
+        cursor: pointer; }
   .prod-slider .button-container {
     text-align: center; }
   .prod-slider.title .prod-slider-container .button-next,
   .prod-slider.title .prod-slider-container .button-prev {
     cursor: pointer;
-    top: 47%; }
+    top: 51%; }
   .prod-slider .prod-slider-container {
     position: unset;
     padding-bottom: 24px; }
@@ -1337,12 +1348,13 @@ footer {
     flex-direction: row-reverse; }
   .promotion.hist .container .promo-items .promo-img {
     max-width: 642px;
-    max-height: 700px; }
+    max-height: 700px;
+    background: none; }
   .promotion.hist .container .promo-text {
     max-width: 556px;
     margin: 0 58px; }
     .promotion.hist .container .promo-text .promo-text-header .det-page {
-      padding: 5px 0 24px;
+      padding: 27px 0 24px;
       text-align: center; }
     .promotion.hist .container .promo-text .promo-text-content {
       padding: 0 0 24px; }
@@ -1365,14 +1377,20 @@ footer {
             max-height: 300px; }
           .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container .prod-banner-wrapper .promo-wrapp {
             padding: 15px 25px 0; }
+        .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container .price-wrap span {
+          font-size: 13px;
+          line-height: 21px; }
+        .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container .discrption-goods p {
+          font-size: 12px;
+          line-height: 20px; }
     .promotion.hist .container .promo-text .promo-text-goods .btn-promo-goods {
       display: block;
       margin: 0 auto;
-      padding: 17px 32px;
+      padding: 12px 32px;
       width: 328px; }
 
 .prod-slider.hist.title {
-  padding: 20px 0 25px; }
+  padding: 20px 0 24px; }
 
 section.info .container .breadcrumb-wrapper {
   padding: 8px 0 16px; }

@@ -74,7 +74,7 @@ main{
     height: 80px;
     display: block;
     .logo {
-      margin: 30px auto;
+      margin: 16px auto;
       max-width: 200px;
       a{
         display: block;
@@ -104,7 +104,6 @@ main{
     }
   }
 }
-
 // <<<<<<------remove this style before production
 body{
   a,
@@ -516,11 +515,24 @@ main section button{
               .quatity {
                 font-size: 12px;
               }
-              .price span {
-                font-family: $gordita_medium;
-                line-height: 20px;
-                font-size: 12px;
-              }
+              .price-wrapper{
+                span {
+                 line-height: 20px;
+                 font-size: 12px;
+                } 
+                .b-price{
+                   font-family: $gordita_medium;
+                }
+                .b-price_new{
+                  font-family: $gordita_medium;
+                  padding-right: 10px;
+                  color: $color-price-sale;
+                }
+                .b-price_old{
+                  color: $color-goods-des;
+                  text-decoration: line-through;
+                }
+              } 
           }
         }
       }
@@ -1147,6 +1159,10 @@ main section button{
     text-align: center;
     h2{
       text-transform: uppercase;
+      &:hover{
+        color: $color-action-h;
+        cursor: pointer;
+      }
     }
   }
   .button-container{
@@ -1157,7 +1173,7 @@ main section button{
      .button-next,
      .button-prev{
        cursor: pointer;
-       top: 47%;
+       top: 51%;
       
       }  
     }
@@ -1773,6 +1789,7 @@ footer{
         .promo-img {
           max-width: 642px;
           max-height: 700px;
+          background: none;
         }
      }
      .promo-text {
@@ -1780,7 +1797,7 @@ footer{
        margin: 0 58px;
        .promo-text-header {
          .det-page {
-           padding: 5px 0 24px;
+           padding: 27px 0 24px;
            text-align: center;
          }
        }
@@ -1806,18 +1823,26 @@ footer{
                padding-bottom: 8px;
                .img-wrapper {
                  max-width: 200px;
-                 max-height: 300px;
+                 max-height: 300px; 
                }
                .promo-wrapp {
                  padding: 15px 25px 0;
                }
+             }
+             .price-wrap span{
+               font-size: 13px;
+               line-height: 21px;
+             }
+             .discrption-goods p{
+                font-size: 12px;
+                line-height: 20px;
              }
            }  
          }
          .btn-promo-goods {
            display: block;
            margin: 0 auto;
-           padding: 17px 32px;
+           padding: 12px 32px;
            width: 328px;
          }
        }
@@ -1825,7 +1850,7 @@ footer{
   }
 }
 .prod-slider.hist.title{
-  padding: 20px 0 25px;
+  padding: 20px 0 24px;
 }
 // history_page_end
 
