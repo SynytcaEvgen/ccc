@@ -88,4 +88,7 @@
         <path d="M3.33333 3.77778L8.1052 7.11111L12.6667 3.77778M1 1L15 1L15 11L1 11L1 1Z" stroke-linecap="round"
             stroke-linejoin="round" />
     </symbol>
+    <symbol id="arrow-slid" viewBox="0 0 20 18">
+        <path d="M11 17L19 9M19 9L11 1M19 9L1 9" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>

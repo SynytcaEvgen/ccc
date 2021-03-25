@@ -99,7 +99,7 @@
     <!-- Pop_up pass reset -->
 
     <!--Header start section-->
-    <header>
+    <header class="lock_header">
         <div class="promo_line">
             <p class="promo_text">Киберпонедельник! Скидки до 50% на все до 30/11 + бесплатная доставка.
                 <a href="#">Проверьте это!</a>
@@ -2430,13 +2430,10 @@
         </section>  
         <section class="prod-slider hist title">
             <div class="container">
-                <div class="prod-slider-title">
-                    <h2>Посмотреть всю коллекцию</h2>
-                </div>
                 <div class="prod-slider-container swiper-container">
                     <div class="prod-slider-wrapper swiper-wrapper">
                         <div class="prod-slider-intems swiper-slide">
-                            <div class="prod-card-container sale best-saler">
+                            <div class="prod-card-container best-saler">
                                 <div class="prod-banner-wrapper">
                                     <div class="img-wrapper"><img src="assets/img/prod-slider-1.jpg"
                                             alt="Сапоги Jenny Fairy WS5205-01 Бежевые"></div>
@@ -2450,8 +2447,8 @@
                                     </div>
                                 </div>
                                 <div class="price-wrap">
-                                    <span class="price">3490 &#8381;</span>
-                                    <span class="price">5990 &#8381;</span>
+                                    <span class="price_new">3490 &#8381;</span>
+                                    <span class="price_old">5990 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2473,7 +2470,6 @@
                                     </div>
                                 </div>
                                 <div class="price-wrap">
-                                    <span class="price">3490 &#8381;</span>
                                     <span class="price">3490 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
@@ -2497,7 +2493,6 @@
                                 </div>
                                 <div class="price-wrap">
                                     <span class="price">3490 &#8381;</span>
-                                    <span class="price">3490 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2505,7 +2500,7 @@
                             </div>
                         </div>
                         <div class="prod-slider-intems swiper-slide">
-                            <div class="prod-card-container sale">
+                            <div class="prod-card-container">
                                 <div class="prod-banner-wrapper">
                                     <div class="img-wrapper"><img src="assets/img/prod-slider-3.jpg"
                                             alt="Сапоги Jenny Fairy WS5205-01 Бежевые"></div>
@@ -2519,8 +2514,8 @@
                                     </div>
                                 </div>
                                 <div class="price-wrap">
-                                    <span class="price">3490 &#8381;</span>
-                                    <span class="price">5990 &#8381;</span>
+                                    <span class="price_new">3490 &#8381;</span>
+                                    <span class="price_old">5990 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2543,7 +2538,6 @@
                                 </div>
                                 <div class="price-wrap">
                                     <span class="price">3490 &#8381;</span>
-                                    <span class="price">5990 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2551,7 +2545,7 @@
                             </div>
                         </div>
                         <div class="prod-slider-intems swiper-slide">
-                            <div class="prod-card-container sale">
+                            <div class="prod-card-container">
                                 <div class="prod-banner-wrapper">
                                     <div class="img-wrapper"><img src="assets/img/prod-slider-1.jpg"
                                             alt="Сапоги Jenny Fairy WS5205-01 Бежевые"></div>
@@ -2565,8 +2559,8 @@
                                     </div>
                                 </div>
                                 <div class="price-wrap">
-                                    <span class="price">3490 &#8381;</span>
-                                    <span class="price">5990 &#8381;</span>
+                                    <span class="price_new">3490 &#8381;</span>
+                                    <span class="price_old">5990 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2574,7 +2568,7 @@
                             </div>
                         </div>
                         <div class="prod-slider-intems swiper-slide">
-                            <div class="prod-card-container sale">
+                            <div class="prod-card-container">
                                 <div class="prod-banner-wrapper">
                                     <div class="img-wrapper"><img src="assets/img/prod-slider-1.jpg"
                                             alt="Сапоги Jenny Fairy WS5205-01 Бежевые"></div>
@@ -2588,8 +2582,8 @@
                                     </div>
                                 </div>
                                 <div class="price-wrap">
-                                    <span class="price">3490 &#8381;</span>
-                                    <span class="price">5990 &#8381;</span>
+                                    <span class="price_new">3490 &#8381;</span>
+                                    <span class="price_old">5990 &#8381;</span>
                                 </div>
                                 <div class="discrption-goods">
                                     <p>Сапоги Jenny Fairy WS5205-01 Бежевые</p>
@@ -2599,11 +2593,18 @@
                     </div>
                     <!-- Add Arrows -->
                     <div class="swiper-button-next button-next">
-                        <img src="assets/img/arrow_slider.png" alt="arrow_slide">
+                        <svg>
+                            <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                        </svg>
                     </div>
                     <div class="swiper-button-prev button-prev">
-                        <img src="assets/img/arrow_slider.png" alt="arrow_slide">
+                        <svg>
+                            <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                        </svg>
                     </div>
+                </div>
+                <div class="button-container">
+                    <button>Узнать больше</button>
                 </div>
             </div>
         </section>

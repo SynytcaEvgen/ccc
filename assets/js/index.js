@@ -114,6 +114,14 @@ function init() {
   function validatorForm(elem) {
     $(elem).validate();
   };
+  function addHover(elem) { 
+    $(elem).addClass('in-hover'); 
+  };
+  function removeHover(elem) { 
+    $(elem).removeClass('in-hover'); 
+  };
+
+  
   $('.features_items .search').click(function () {
         if ($(window).width() >= 900){
           $('header .search-header-line').toggleClass('active');
@@ -162,7 +170,7 @@ function init() {
   });
   menuAccordionMover();
   accEngine('.acc-open');
-  sliceSentence(34, '.discrption-goods > p');
+  sliceSentence(33, '.discrption-goods > p');
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
   $('.close-popup').click(function () {
@@ -191,6 +199,27 @@ function init() {
       } else {
         return
       }
+    }
+  });
+  $(".sub_menu_items > a").hover(function () {
+    addHover(this.parentElement);
+  }, function () {
+    removeHover(this.parentElement);
+  });
+  $(".menu_items > a").hover(function () {
+    addHover(this);
+  }, function () {
+    removeHover(this);
+   });
+  $(".features_items > a").hover(function () {
+    addHover(this.parentElement);
+  }, function () {
+    removeHover(this.parentElement);
+  });
+  let heightHeader = $('header').height();
+  $(window).click(function () {
+    if ($('header').height() < heightHeader) {
+      $('main').css('padding', $('header').height() + 'px');
     }
   })
 };

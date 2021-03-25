@@ -54,6 +54,20 @@ $maxWidth: 1920;
     line-height: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
   }
 }
+header{
+  transition: 0.5s ease;
+  &.lock_header{
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    background-color: $color_ivert;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+}
+main{
+  padding-top: 140px;
+}
 // remove this style before production ----->>>>
 .not_prod {
   .log_wrapper {
@@ -447,6 +461,10 @@ main section button{
         padding: 0 0 18px;
         margin: 0 0 16px;
         cursor: pointer;
+        &:hover .goods-desc .titel{
+          color: $color-action-h;
+          transition: 0.3s ease;
+        }
         .img-wrapper {
           height: 90px;
           width: 60px;
@@ -476,6 +494,7 @@ main section button{
             line-height: 20px;
             font-size: 12px;
             padding-bottom: 3px;
+            transition: 0.3s ease;
           }
           .details {
             display: flex;
@@ -796,10 +815,14 @@ main section button{
             padding-bottom: 7px;
             transition: color 0.3s ease;
           }
-          &.active>a,
-          &:hover>a {
+          &.active>a{
             color: $color_text;
             border-bottom: 2px solid $color_text;
+            transition: color 0.3s ease;
+          } 
+          >a.in-hover{
+            color: $color-action-h;
+            border-bottom: 2px solid $color-action-h;
             transition: color 0.3s ease;
           }
         }
@@ -840,8 +863,8 @@ main section button{
       }
       &:hover,
       &.active{
-        border-bottom: 2px solid $color_text;
         position: static;
+        border-bottom: 2px solid $color_text;
         .sub_sub_menu {
            display: flex;
            justify-content: space-between;
@@ -908,6 +931,10 @@ main section button{
             }
         }
       }
+      &.in-hover{
+        border-bottom: 2px solid $color-action-h;
+        color: $color-action-h;
+      }
       .sub_sub_menu{
         display: none;
       }
@@ -952,6 +979,17 @@ main section button{
         border-bottom: 2px solid $color_text;
         transition: 0.3s ease;
       }
+      &.in-hover{
+        border-bottom: 2px solid $color-action-h;
+        a{
+          .icon svg{
+            stroke: $color-action-h;
+          }
+          .icon_title{
+            color: $color-action-h;
+          }
+        }
+      } 
       .icon{
         max-width: 24px;
         max-height: 24px;
@@ -1116,10 +1154,11 @@ main section button{
   }
   &.title{
     .prod-slider-container {
-  
      .button-next,
      .button-prev{
+       cursor: pointer;
        top: 47%;
+      
       }  
     }
   }
@@ -1127,29 +1166,52 @@ main section button{
      position: unset;
      padding-bottom: 24px;
     .button-next{
+      max-width: 18px;
+      max-height: 16px;
       &::after{
         content: '';
       }
       top: 37%;
       right: -40px;
+      transition: 0.3s ease;
       &.swiper-button-disabled{
         transform: scale(0);
         transition: 1s ease;
       }
+      svg{
+         stroke: $color_text;
+         width: 18px;
+         height: 16px;
+      }
+      &:hover svg{
+          stroke: $color-action-h;
+          transition: 0.3s ease;
+      }
     }
     .button-prev{
+      max-width: 18px;
+      max-height: 16px;
       &::after{
         content: '';
       }
       top: 38%;
       transform: rotate(180deg);
       left: -37px;
+      transition: 0.3s ease;
       &.swiper-button-disabled{
         transform: scale(0);
         transition: 1s ease;
       }
+      svg{
+         stroke: $color_text;
+         width: 18px;
+         height: 16px;
+      }
+      &:hover svg{
+          stroke: $color-action-h;
+          transition: 0.3s ease;
+      }
     }
-    
   }
 }
 .prod-card-container {
@@ -1216,26 +1278,21 @@ main section button{
       font-family: $gordita_medium;
       font-size: 12px;
       line-height: 20px;
-      &:first-child{
-      display: none;
     }
-      
+    .price_new{
+      display: inline-block;
+      font-family: $gordita_medium;
+      font-size: 12px;
+      padding-right: 14px;
+      color: $color-price-sale;
+      line-height: 20px;
     }
-  }
-  &.sale {
-     .price-wrap {
-       .price {     
-         &:first-child{
-           display: inline-block;
-           padding-right: 14px;
-           color: $color-price-sale;
-         }
-         &:last-child{
-           color: $color-goods-des;
-           text-decoration: line-through;
-         }
-       }
-     }
+    .price_old{
+      color: $color-goods-des;
+      font-size: 12px;
+      text-decoration: line-through;
+      line-height: 20px;
+    }
   }
   &.best-saler {
     .promo-wrapp{
@@ -1249,6 +1306,9 @@ main section button{
     p{
       overflow: hidden;
       color: $color-goods-des;
+      &:hover{
+        color: $color-action-h;
+      }
     }
   }
 }

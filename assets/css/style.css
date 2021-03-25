@@ -5,6 +5,19 @@
 /*--colors--*/
 /*--var--*/
 /*--var--*/
+header {
+  transition: 0.5s ease; }
+  header.lock_header {
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+    background-color: #fff;
+    width: 100%;
+    transition: 0.5s ease; }
+
+main {
+  padding-top: 140px; }
+
 .not_prod .log_wrapper {
   height: 80px;
   display: block; }
@@ -323,6 +336,9 @@ main section button {
     padding: 0 0 18px;
     margin: 0 0 16px;
     cursor: pointer; }
+    .basket-preview-container .goods-wrapper .goods-item .goods-items:hover .goods-desc .titel {
+      color: #e9500e;
+      transition: 0.3s ease; }
     .basket-preview-container .goods-wrapper .goods-item .goods-items .img-wrapper {
       height: 90px;
       width: 60px;
@@ -348,7 +364,8 @@ main section button {
         color: #666;
         line-height: 20px;
         font-size: 12px;
-        padding-bottom: 3px; }
+        padding-bottom: 3px;
+        transition: 0.3s ease; }
       .basket-preview-container .goods-wrapper .goods-item .goods-items .goods-desc .details {
         display: flex;
         justify-content: space-between;
@@ -589,10 +606,13 @@ main section button {
       text-transform: uppercase;
       padding-bottom: 7px;
       transition: color 0.3s ease; }
-    .menu_wrapp .nav_wrapper .menu .menu_item > .menu_items.active > a,
-    .menu_wrapp .nav_wrapper .menu .menu_item > .menu_items:hover > a {
+    .menu_wrapp .nav_wrapper .menu .menu_item > .menu_items.active > a {
       color: #222222;
       border-bottom: 2px solid #222222;
+      transition: color 0.3s ease; }
+    .menu_wrapp .nav_wrapper .menu .menu_item > .menu_items > a.in-hover {
+      color: #e9500e;
+      border-bottom: 2px solid #e9500e;
       transition: color 0.3s ease; }
 
 .menu_items > .sub_menu {
@@ -621,8 +641,8 @@ main section button {
         font-family: "Gordita-Medium", sans-serif;
         padding-bottom: 1px; }
       .menu_items.active > .sub_menu .sub_menu_items:hover, .menu_items.active > .sub_menu .sub_menu_items.active {
-        border-bottom: 2px solid #222222;
-        position: static; }
+        position: static;
+        border-bottom: 2px solid #222222; }
         .menu_items.active > .sub_menu .sub_menu_items:hover .sub_sub_menu, .menu_items.active > .sub_menu .sub_menu_items.active .sub_sub_menu {
           display: flex;
           justify-content: space-between;
@@ -669,6 +689,9 @@ main section button {
                 font-family: "Gordita-Medium", sans-serif; }
                 .menu_items.active > .sub_menu .sub_menu_items:hover .sub_sub_menu .promo-brand-wrapper .brand-container .brand a:hover, .menu_items.active > .sub_menu .sub_menu_items.active .sub_sub_menu .promo-brand-wrapper .brand-container .brand a:hover {
                   color: #e9500e; }
+      .menu_items.active > .sub_menu .sub_menu_items.in-hover {
+        border-bottom: 2px solid #e9500e;
+        color: #e9500e; }
       .menu_items.active > .sub_menu .sub_menu_items .sub_sub_menu {
         display: none; }
 
@@ -700,6 +723,12 @@ main section button {
     .features_site_wrapper .features_site .features_items:hover, .features_site_wrapper .features_site .features_items.active {
       border-bottom: 2px solid #222222;
       transition: 0.3s ease; }
+    .features_site_wrapper .features_site .features_items.in-hover {
+      border-bottom: 2px solid #e9500e; }
+      .features_site_wrapper .features_site .features_items.in-hover a .icon svg {
+        stroke: #e9500e; }
+      .features_site_wrapper .features_site .features_items.in-hover a .icon_title {
+        color: #e9500e; }
     .features_site_wrapper .features_site .features_items .icon {
       max-width: 24px;
       max-height: 24px;
@@ -831,27 +860,48 @@ main section button {
     text-align: center; }
   .prod-slider.title .prod-slider-container .button-next,
   .prod-slider.title .prod-slider-container .button-prev {
+    cursor: pointer;
     top: 47%; }
   .prod-slider .prod-slider-container {
     position: unset;
     padding-bottom: 24px; }
     .prod-slider .prod-slider-container .button-next {
+      max-width: 18px;
+      max-height: 16px;
       top: 37%;
-      right: -40px; }
+      right: -40px;
+      transition: 0.3s ease; }
       .prod-slider .prod-slider-container .button-next::after {
         content: ''; }
       .prod-slider .prod-slider-container .button-next.swiper-button-disabled {
         transform: scale(0);
         transition: 1s ease; }
+      .prod-slider .prod-slider-container .button-next svg {
+        stroke: #222222;
+        width: 18px;
+        height: 16px; }
+      .prod-slider .prod-slider-container .button-next:hover svg {
+        stroke: #e9500e;
+        transition: 0.3s ease; }
     .prod-slider .prod-slider-container .button-prev {
+      max-width: 18px;
+      max-height: 16px;
       top: 38%;
       transform: rotate(180deg);
-      left: -37px; }
+      left: -37px;
+      transition: 0.3s ease; }
       .prod-slider .prod-slider-container .button-prev::after {
         content: ''; }
       .prod-slider .prod-slider-container .button-prev.swiper-button-disabled {
         transform: scale(0);
         transition: 1s ease; }
+      .prod-slider .prod-slider-container .button-prev svg {
+        stroke: #222222;
+        width: 18px;
+        height: 16px; }
+      .prod-slider .prod-slider-container .button-prev:hover svg {
+        stroke: #e9500e;
+        transition: 0.3s ease; }
 
 .prod-card-container {
   max-width: 247px;
@@ -905,21 +955,26 @@ main section button {
       font-family: "Gordita-Medium", sans-serif;
       font-size: 12px;
       line-height: 20px; }
-      .prod-card-container .price-wrap .price:first-child {
-        display: none; }
-  .prod-card-container.sale .price-wrap .price:first-child {
-    display: inline-block;
-    padding-right: 14px;
-    color: #E90000; }
-  .prod-card-container.sale .price-wrap .price:last-child {
-    color: #666;
-    text-decoration: line-through; }
+    .prod-card-container .price-wrap .price_new {
+      display: inline-block;
+      font-family: "Gordita-Medium", sans-serif;
+      font-size: 12px;
+      padding-right: 14px;
+      color: #E90000;
+      line-height: 20px; }
+    .prod-card-container .price-wrap .price_old {
+      color: #666;
+      font-size: 12px;
+      text-decoration: line-through;
+      line-height: 20px; }
   .prod-card-container.best-saler .promo-wrapp .best-saler {
     visibility: visible;
     opacity: 1; }
   .prod-card-container .discrption-goods p {
     overflow: hidden;
     color: #666; }
+    .prod-card-container .discrption-goods p:hover {
+      color: #e9500e; }
 
 .promo-banner {
   padding-bottom: 32px; }
