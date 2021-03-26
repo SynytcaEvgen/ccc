@@ -242,4 +242,12 @@ function init() {
   goToCurrency('.price');
   goToCurrency('.price_new');
   goToCurrency('.price_old');
+  $('.filter-header').click(function () {
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+
+  });
+  $('.more-less-filter').click(function () {
+    $(this).toggleClass('active');
+  })
 };

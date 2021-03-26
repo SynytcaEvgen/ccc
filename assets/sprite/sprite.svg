@@ -91,4 +91,7 @@
     <symbol id="arrow-slid" viewBox="0 0 20 18">
         <path d="M11 17L19 9M19 9L11 1M19 9L1 9" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol id="arrow-select" viewBox="0 0 16 9">
+        <path d="M1 1L8 8L15 1" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
 </svg>

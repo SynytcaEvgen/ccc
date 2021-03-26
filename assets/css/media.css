@@ -160,7 +160,8 @@
         font-family: "Gordita-Medium", sans-serif;
         display: block;
         padding: 16px 0;
-        position: relative; }
+        position: relative;
+        cursor: pointer; }
         .footer-mobile-content .accordion-wrapp .accordion-item .accordion-item-lable label::after, .footer-mobile-content .accordion-wrapp .accordion-item .accordion-item-lable label::before {
           content: "";
           background-color: #222222;
@@ -271,7 +272,10 @@
     font-size: 12px;
     line-height: 20px; }
   .mob_block {
-    padding-bottom: 16px; } }
+    padding-bottom: 16px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px 16px; } }
 
 @media only screen and (max-width: 767px) {
   main section button {
@@ -444,7 +448,56 @@
     left: 12px;
     background-color: #fff;
     padding: 0 24px;
-    margin-bottom: -13px; } }
+    margin-bottom: -13px; }
+  .banner.catalog {
+    padding-bottom: 8px; }
+  .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
+    padding-bottom: 4px; }
+  .reason-buy.caralog {
+    padding-top: 0; }
+  .prod-slider.title.promo {
+    padding-bottom: 0; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .promo-wrapp {
+    padding: 4px 4px 0; }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .promo-wrapp .favorit {
+      margin-top: 6px;
+      margin-right: 6px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn {
+    max-width: 160px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner button {
+    max-width: 136px;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 8px 0; }
+  .catalog .container .nav-wrapper {
+    display: flex;
+    justify-content: flex-start; }
+    .catalog .container .nav-wrapper .nav-header {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .catalog .container .nav-wrapper .nav-header h1 {
+        padding-right: 4px; }
+      .catalog .container .nav-wrapper .nav-header span {
+        display: block; }
+  .catalog .container .catalog-wrapper .header-find-goods,
+  .catalog .container .cat-pagination-wrapper .goods-per-page-wrapper {
+    display: none; }
+  .catalog .container .goods-gallery-block {
+    padding-bottom: 37px; }
+  .catalog .container .cat-pagination-wrapper {
+    justify-content: center; }
+  .catalog .container .cat-pagination-wrapper .pagination-container {
+    justify-content: center;
+    align-items: center; }
+    .catalog .container .cat-pagination-wrapper .pagination-container.top {
+      display: none; }
+    .catalog .container .cat-pagination-wrapper .pagination-container .pagin-previous p,
+    .catalog .container .cat-pagination-wrapper .pagination-container .pagin-next p {
+      display: none; }
+    .catalog .container .cat-pagination-wrapper .pagination-container .pagin-numb .mob-page {
+      display: block;
+      padding-right: 36px; } }
 
 @media only screen and (max-width: 480px) {
   .promo-banner .banner-wrapper .img-wrapper {
@@ -504,7 +557,17 @@
   .promotion.hist {
     padding-bottom: 24px; }
   .prod-slider.hist.title {
-    padding: 16px 0 0; } }
+    padding: 16px 0 0; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px 4px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper {
+    margin-bottom: 0;
+    max-height: 64px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn {
+    max-width: 105px; }
+  .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container:hover .prod-banner-wrapper {
+    margin-bottom: 72px; } }
 
 @media only screen and (max-width: 375px) {
   .promotion.hist .container .promo-wrapper .promo-items .promo-img {

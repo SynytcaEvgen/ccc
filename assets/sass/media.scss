@@ -253,6 +253,7 @@ $color-price-sale: #E90000;
                       display: block;
                       padding: 16px 0;
                       position: relative;
+                      cursor: pointer;
                       &::after,
                       &::before{
                           content: "";
@@ -408,6 +409,11 @@ $color-price-sale: #E90000;
     .mob_block{
         padding-bottom: 16px;
     }
+    .catalog .container .goods-gallery-block .goods-gallery-grid{
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px 16px;
+    }
+
 }
 @media only screen and (max-width: 767px) {
     main section button{
@@ -670,6 +676,83 @@ $color-price-sale: #E90000;
         padding: 0 24px;
         margin-bottom: -13px;
     }
+    .banner.catalog{
+        padding-bottom: 8px;
+    }
+    .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan{
+        padding-bottom: 4px;
+    }
+    .reason-buy.caralog{
+        padding-top: 0;
+    }
+    .prod-slider.title.promo{
+        padding-bottom: 0;
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .promo-wrapp{
+        padding: 4px 4px 0;
+        .favorit{
+            margin-top: 6px;
+            margin-right: 6px;
+        }
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn{
+        max-width: 160px;
+       
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner button{
+            max-width: 136px;
+            font-size: 10px;
+            line-height: 16px;
+            padding: 8px 0;
+    }
+    .catalog{
+       .container{
+         .nav-wrapper{
+             display: flex;
+             justify-content: flex-start;
+             .nav-header{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               h1{
+                   padding-right: 4px;
+               }
+               span{
+                   display: block;
+               }
+            }
+        }
+        }
+    }
+    .catalog .container .catalog-wrapper .header-find-goods,
+    .catalog .container .cat-pagination-wrapper .goods-per-page-wrapper{
+        display: none;
+    }
+    .catalog .container .goods-gallery-block{
+        padding-bottom: 37px;
+    }
+    .catalog .container .cat-pagination-wrapper{
+        justify-content: center;
+    }
+    .catalog .container .cat-pagination-wrapper .pagination-container{
+        justify-content: center;
+        align-items: center;
+        &.top{
+            display: none;
+        }
+        .pagin-previous,
+        .pagin-next{
+            p{
+                display: none;
+            }
+        }
+        .pagin-numb{
+            .mob-page{
+                display: block;
+                padding-right:36px;
+            }
+        }
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -753,6 +836,21 @@ $color-price-sale: #E90000;
     }
     .prod-slider.hist.title{
         padding: 16px 0 0;
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 16px 4px;
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper{
+        margin-bottom: 0;
+        max-height: 64px;
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn{
+        max-width: 105px;
+       
+    }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container:hover .prod-banner-wrapper{
+        margin-bottom: 72px;
     }
         
 }
