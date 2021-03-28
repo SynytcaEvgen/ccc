@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="assets/css/reset_html.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/material-icons.css">
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
     <script src="assets/js/index.js"></script>
 </head>
 <body>
@@ -2240,12 +2243,258 @@
                                    </svg>
                                </div>                      
                                <div class="content-filter">
-                                   <ul class="filter-item">
-                                       <li class="filter-items"><a href="">По алфавиту</a></li>
-                                       <li class="filter-items"><a href="">По популярности</a></li>
-                                       <li class="filter-items"><a href="">Цена по убыванию </a></li>
-                                       <li class="filter-items"><a href="">Цена по возрастанию</a></li>
-                                   </ul>
+                                   <div class="filter-item">
+                                       <div class="filter-items"><a href="">По алфавиту</a></div>
+                                       <div class="filter-items"><a href="">По популярности</a></div>
+                                       <div class="filter-items"><a href="">Цена по убыванию </a></div>
+                                       <div class="filter-items"><a href="">Цена по возрастанию</a></div>
+                                   </div>
+                               </div>
+                           </div>
+                            <div class="filter-items">
+                               <div class="filter-header">
+                                   <p>Цена</p>
+                                   <svg>
+                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                   </svg>
+                               </div>                      
+                               <div class="content-filter">
+                                   <div class="filter-item">
+                                       <input type="range" class="price-slider">
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                            <div class="filter-items">
+                               <div class="filter-header">
+                                   <p>Размер</p>
+                                   <svg>
+                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                   </svg>
+                               </div>                      
+                               <div class="content-filter size">
+                                   <div class="filter-item">
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-36">
+                                            <label for="size-36" class="desc-check">36</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-37">
+                                            <label for="size-37" class="desc-check">37</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-38">
+                                            <label for="size-38" class="desc-check">38</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-39">
+                                            <label for="size-39" class="desc-check">39</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-40">
+                                            <label for="size-40" class="desc-check">40</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-41">
+                                            <label for="size-41" class="desc-check">41</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-42">
+                                            <label for="size-42" class="desc-check">42</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-43">
+                                            <label for="size-43" class="desc-check">43</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-44">
+                                            <label for="size-44" class="desc-check">44</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-45">
+                                            <label for="size-45" class="desc-check">45</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-46">
+                                            <label for="size-46" class="desc-check">46</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-47">
+                                            <label for="size-47" class="desc-check">47</label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check size" id="size-48">
+                                            <label for="size-48" class="desc-check">48</label>
+                                       </div>
+                                   </div>
+                                   <div class="btn-wrapper">
+                                       <button class="filter-btn no-active">Применить</button>
+                                       <div class="state-select">
+                                           <a href="#" class="reser-select">Очистить фильтр</a>
+                                           <span class="numb-select">(<span>0</span>)</span>
+                                       </div>
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                            <div class="filter-items">
+                               <div class="filter-header">
+                                   <p>Цвет</p>
+                                   <svg>
+                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                   </svg>
+                               </div>                      
+                                <div class="content-filter color">
+                                   <div class="filter-item">
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color beige" id="color-beige">
+                                            <label for="color-beige" class="desc-check" data-color="beige">
+                                                <span class="color-name">Бежевый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color white" id="color-white">
+                                            <label for="color-white" class="desc-check" data-color="white">
+                                                <span class="color-name">Белый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color burgundy" id="color-burgundy">
+                                            <label for="color-burgundy" class="desc-check" data-color="burgundy">
+                                                <span class="color-name">Бордовый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color brown" id="color-brown">
+                                            <label for="color-brown" class="desc-check" data-color="brown">
+                                                <span class="color-name">Коричневый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color black" id="color-black">
+                                            <label for="color-black" class="desc-check" data-color="black">
+                                                <span class="color-name">Чёрный</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color red" id="color-red">
+                                            <label for="color-red" class="desc-check" data-color="red">
+                                                <span class="color-name">Красный</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color purple" id="color-purple">
+                                            <label for="color-purple" class="desc-check" data-color="purple">
+                                                <span class="color-name">Фиолетовый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color plumbaginous" id="color-plumbaginous">
+                                            <label for="color-plumbaginous" class="desc-check" data-color="plumbaginous">
+                                                <span class="color-name">Графитовый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color khaki" id="color-khaki">
+                                            <label for="color-khaki" class="desc-check" data-color="khaki">
+                                                <span class="color-name">Хаки</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color mix" id="color-mix">
+                                            <label for="color-mix" class="desc-check" data-color="mix">
+                                                <span class="color-name">Микс</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color blue" id="color-blue">
+                                            <label for="color-blue" class="desc-check" data-color="blue">
+                                                <span class="color-name">Синий</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color olive" id="color-olive">
+                                            <label for="color-olive" class="desc-check" data-color="olive">
+                                                <span class="color-name">Оливковый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color orange" id="color-orange">
+                                            <label for="color-orange" class="desc-check" data-color="orange">
+                                                <span class="color-name">Оранжевый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color pink" id="color-pink">
+                                            <label for="color-pink" class="desc-check" data-color="pink">
+                                                <span class="color-name">Розовый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color silver" id="color-silver">
+                                            <label for="color-silver" class="desc-check" data-color="silver">
+                                                <span class="color-name">Серебро</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color gray" id="color-gray">
+                                            <label for="color-gray" class="desc-check" data-color="gray">
+                                                <span class="color-name">Серый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color turquoise" id="color-turquoise">
+                                            <label for="color-turquoise" class="desc-check" data-color="turquoise">
+                                                <span class="color-name">Бирюзовый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color green" id="color-green">
+                                            <label for="color-green" class="desc-check" data-color="green">
+                                                <span class="color-name">Зелёны</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color gold" id="color-gold">
+                                            <label for="color-gold" class="desc-check" data-color="gold">
+                                                <span class="color-name">Золото</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                       <div class="filter-items">
+                                            <input type="checkbox" class="box-check color yellow" id="color-yellow">
+                                            <label for="color-yellow" class="desc-check" data-color="yellow">
+                                                <span class="color-name">Жёлтый</span>
+                                                <span class="color-holder"></span>
+                                            </label>
+                                       </div>
+                                   </div>
+                                   <div class="btn-wrapper">
+                                       <button class="filter-btn no-active">Применить</button>
+                                       <div class="state-select">
+                                           <a href="#" class="reser-select">Очистить фильтр</a>
+                                           <span class="numb-select">(<span>0</span>)</span>
+                                       </div>
+                                       
+                                   </div>
                                </div>
                            </div>
                        </div>
@@ -2317,7 +2566,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2353,7 +2602,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2389,7 +2638,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2425,7 +2674,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2461,7 +2710,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2500,7 +2749,7 @@
                                         <div class="min-img">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2536,7 +2785,7 @@
                                         <div class="min-img">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2582,7 +2831,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2618,7 +2867,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2654,7 +2903,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">
@@ -2690,7 +2939,7 @@
                                         <p>Лодочки Gino Rossi DCK310-EP2-0695-9900-0-1111111111</p>
                                     </div>
                                     <div class="preview-wrapper">
-                                        <div class="min-img">
+                                        <div class="min-img select">
                                             <img src="assets/img/min-cat-goods-01.jpg" alt="min-cat-goods">
                                         </div>
                                         <div class="min-img">

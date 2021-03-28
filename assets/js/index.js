@@ -124,7 +124,7 @@ function init() {
   function removeHover(elem) { 
     $(elem).removeClass('in-hover'); 
   };
-   function goToCurrency(elem) {
+  function goToCurrency(elem) {
     let numberToFormat = document.querySelectorAll(elem);
     for (let i = 0; i < numberToFormat.length; i++ ) {
        let toNumb = +numberToFormat[i].innerHTML;
@@ -132,7 +132,36 @@ function init() {
        numberToFormat[i].innerHTML = formatNum;
     }
   };
-  
+  let count = 0;
+  function checkBoxEngine(elem) {
+    $(elem).change(function () {
+    if ($(this).prop('checked')) {
+      count++;
+    } else {
+      count--;
+    }
+    chechBtn(this);
+    $(this).parentsUntil('.content-filter').next('.btn-wrapper').children('.state-select').children('.numb-select').children('span').html(count);
+  });
+  };
+  function chechBtn(elem) {
+    if (count > 0) {
+      $(elem).parentsUntil('.content-filter').next('.btn-wrapper').children('.filter-btn').removeClass('no-active');
+      $(elem).parent('.filter-items').parentsUntil('.filter-items').prev().addClass('select');
+    } else {
+      $(elem).parentsUntil('.content-filter').next('.btn-wrapper').children('.filter-btn').addClass('no-active');
+      $(elem).parent('.filter-items').parentsUntil('.filter-items').prev().removeClass('select');
+    }
+  }
+  function resetSelect(elem, box) {
+    $(elem).click(function (e) {
+      e.preventDefault();
+      $(box).prop('checked', false);
+      $(elem).next('.numb-select').children('span').html(0);
+      count = 0;
+      chechBtn(box);
+    });
+  };
   $('.features_items .search').click(function () {
         if ($(window).width() >= 900){
           $('header .search-header-line').toggleClass('active');
@@ -243,11 +272,50 @@ function init() {
   goToCurrency('.price_new');
   goToCurrency('.price_old');
   $('.filter-header').click(function () {
-    $(this).toggleClass('active');
-    $(this).next().toggleClass('active');
-
+    
+    if (!$(this).hasClass('active')) {
+      $('.filter-header').removeClass('active');
+      $('.filter-header').next().removeClass('active');
+      $('.lock-pointer').remove();
+      if ($(this).hasClass('no-active')) {
+        return false;
+      } else {
+        $(this).addClass('active');
+        $(this).next().addClass('active');
+        $("<div class='lock-pointer'></div>").appendTo("body");
+      }
+    } else {
+      $('.lock-pointer').remove();
+      $(this).removeClass('active');
+      $(this).next().removeClass('active');
+      
+    }
+  });
+  $(document).click(function (e) {
+    console.log(e.target)
+    if (e.target.classList.contains('lock-pointer')) {
+      $('.filter-header').removeClass('active');
+      $('.filter-header').next().removeClass('active');
+      $('.lock-pointer').remove();
+    };
   });
   $('.more-less-filter').click(function () {
     $(this).toggleClass('active');
-  })
+    $(this).children().toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).parent().addClass('open');
+    } else {
+      $(this).parent().removeClass('open');
+    }
+  });
+  checkBoxEngine('.box-check.size');
+  resetSelect('.content-filter.size .reser-select', '.box-check.size');
+  $(".price-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 100000,
+        from: 0,
+        to: 100000
+    });
+
 };
