@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/material-icons.css">
     <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="assets/js/index.js"></script>
 </head>
 <body>
@@ -2233,279 +2235,520 @@
                    </div>
                </div>
                <div class="filter-wrapper">
-                   <div class="filter-continer">
-                       <div class="filter-item">
-                           <div class="filter-items">
-                               <div class="filter-header">
-                                   <p>Сортировка</p>
-                                   <svg>
-                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
-                                   </svg>
-                               </div>                      
-                               <div class="content-filter">
-                                   <div class="filter-item">
-                                       <div class="filter-items"><a href="">По алфавиту</a></div>
-                                       <div class="filter-items"><a href="">По популярности</a></div>
-                                       <div class="filter-items"><a href="">Цена по убыванию </a></div>
-                                       <div class="filter-items"><a href="">Цена по возрастанию</a></div>
-                                   </div>
-                               </div>
-                           </div>
+                   <div class="descktop-filter-container">
+                    <div class="filter-continer">
+                        <div class="filter-item">
                             <div class="filter-items">
-                               <div class="filter-header">
-                                   <p>Цена</p>
-                                   <svg>
-                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
-                                   </svg>
-                               </div>                      
-                               <div class="content-filter">
-                                   <div class="filter-item">
-                                       <input type="range" class="price-slider">
-                                       
-                                   </div>
-                               </div>
-                           </div>
+                                <div class="filter-header">
+                                    <p>Сортировка</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter">
+                                    <div class="filter-item">
+                                        <div class="filter-items"><a href="">По алфавиту</a></div>
+                                        <div class="filter-items"><a href="">По популярности</a></div>
+                                        <div class="filter-items"><a href="">Цена по убыванию </a></div>
+                                        <div class="filter-items"><a href="">Цена по возрастанию</a></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="filter-items">
-                               <div class="filter-header">
-                                   <p>Размер</p>
-                                   <svg>
-                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
-                                   </svg>
-                               </div>                      
-                               <div class="content-filter size">
-                                   <div class="filter-item">
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-36">
-                                            <label for="size-36" class="desc-check">36</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-37">
-                                            <label for="size-37" class="desc-check">37</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-38">
-                                            <label for="size-38" class="desc-check">38</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-39">
-                                            <label for="size-39" class="desc-check">39</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-40">
-                                            <label for="size-40" class="desc-check">40</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-41">
-                                            <label for="size-41" class="desc-check">41</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-42">
-                                            <label for="size-42" class="desc-check">42</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-43">
-                                            <label for="size-43" class="desc-check">43</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-44">
-                                            <label for="size-44" class="desc-check">44</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-45">
-                                            <label for="size-45" class="desc-check">45</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-46">
-                                            <label for="size-46" class="desc-check">46</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-47">
-                                            <label for="size-47" class="desc-check">47</label>
-                                       </div>
-                                       <div class="filter-items">
-                                            <input type="checkbox" class="box-check size" id="size-48">
-                                            <label for="size-48" class="desc-check">48</label>
-                                       </div>
-                                   </div>
-                                   <div class="btn-wrapper">
-                                       <button class="filter-btn no-active">Применить</button>
-                                       <div class="state-select">
-                                           <a href="#" class="reser-select">Очистить фильтр</a>
-                                           <span class="numb-select">(<span>0</span>)</span>
-                                       </div>
-                                       
-                                   </div>
-                               </div>
-                           </div>
+                                <div class="filter-header">
+                                    <p>Цена</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter price-range">
+                                    <div class="range-slider">
+                                        <input type="text" class="js-range-slider" value="" />
+                                    </div>
+                                    <div class="extra-controls">
+                                        <div class="input-range-wrapper"><input type="text" class="js-input-from" value="0" /></div>
+                                        <div class="input-range-wrapper"><input type="text" class="js-input-to" value="0" /></div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn price-range">Применить</button>
+                                    </div>
+                                </div>
+                    
+                            </div>
                             <div class="filter-items">
-                               <div class="filter-header">
-                                   <p>Цвет</p>
-                                   <svg>
-                                       <use href="assets/sprite/sprite.svg#arrow-select"></use>
-                                   </svg>
-                               </div>                      
+                                
+                            </div>
+                            <div class="filter-items">
+                                <div class="filter-header">
+                                    <p>Цвет</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
                                 <div class="content-filter color">
-                                   <div class="filter-item">
-                                       <div class="filter-items">
+                                    <div class="filter-item">
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color beige" id="color-beige">
                                             <label for="color-beige" class="desc-check" data-color="beige">
                                                 <span class="color-name">Бежевый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color white" id="color-white">
                                             <label for="color-white" class="desc-check" data-color="white">
                                                 <span class="color-name">Белый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color burgundy" id="color-burgundy">
                                             <label for="color-burgundy" class="desc-check" data-color="burgundy">
                                                 <span class="color-name">Бордовый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color brown" id="color-brown">
                                             <label for="color-brown" class="desc-check" data-color="brown">
                                                 <span class="color-name">Коричневый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color black" id="color-black">
                                             <label for="color-black" class="desc-check" data-color="black">
                                                 <span class="color-name">Чёрный</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color red" id="color-red">
                                             <label for="color-red" class="desc-check" data-color="red">
                                                 <span class="color-name">Красный</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color purple" id="color-purple">
                                             <label for="color-purple" class="desc-check" data-color="purple">
                                                 <span class="color-name">Фиолетовый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color plumbaginous" id="color-plumbaginous">
                                             <label for="color-plumbaginous" class="desc-check" data-color="plumbaginous">
                                                 <span class="color-name">Графитовый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color khaki" id="color-khaki">
                                             <label for="color-khaki" class="desc-check" data-color="khaki">
                                                 <span class="color-name">Хаки</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color mix" id="color-mix">
                                             <label for="color-mix" class="desc-check" data-color="mix">
                                                 <span class="color-name">Микс</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color blue" id="color-blue">
                                             <label for="color-blue" class="desc-check" data-color="blue">
                                                 <span class="color-name">Синий</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color olive" id="color-olive">
                                             <label for="color-olive" class="desc-check" data-color="olive">
                                                 <span class="color-name">Оливковый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color orange" id="color-orange">
                                             <label for="color-orange" class="desc-check" data-color="orange">
                                                 <span class="color-name">Оранжевый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color pink" id="color-pink">
                                             <label for="color-pink" class="desc-check" data-color="pink">
                                                 <span class="color-name">Розовый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color silver" id="color-silver">
                                             <label for="color-silver" class="desc-check" data-color="silver">
                                                 <span class="color-name">Серебро</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color gray" id="color-gray">
                                             <label for="color-gray" class="desc-check" data-color="gray">
                                                 <span class="color-name">Серый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color turquoise" id="color-turquoise">
                                             <label for="color-turquoise" class="desc-check" data-color="turquoise">
                                                 <span class="color-name">Бирюзовый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color green" id="color-green">
                                             <label for="color-green" class="desc-check" data-color="green">
                                                 <span class="color-name">Зелёны</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color gold" id="color-gold">
                                             <label for="color-gold" class="desc-check" data-color="gold">
                                                 <span class="color-name">Золото</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                       <div class="filter-items">
+                                        </div>
+                                        <div class="filter-items">
                                             <input type="checkbox" class="box-check color yellow" id="color-yellow">
                                             <label for="color-yellow" class="desc-check" data-color="yellow">
                                                 <span class="color-name">Жёлтый</span>
                                                 <span class="color-holder"></span>
                                             </label>
-                                       </div>
-                                   </div>
-                                   <div class="btn-wrapper">
-                                       <button class="filter-btn no-active">Применить</button>
-                                       <div class="state-select">
-                                           <a href="#" class="reser-select">Очистить фильтр</a>
-                                           <span class="numb-select">(<span>0</span>)</span>
-                                       </div>
-                                       
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn no-active">Применить</button>
+                                        <div class="state-select">
+                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <span class="numb-select">(<span>0</span>)</span>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-items">
+                                <div class="filter-header">
+                                    <p>Категория</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter cat_f">
+                                    <div class="filter-item">
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="baleriny">
+                                            <label for="baleriny" class="desc-check">Baleriny</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="botki">
+                                            <label for="botki" class="desc-check">Botki</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="czółenka">
+                                            <label for="czółenka" class="desc-check">Czółenka</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="klapki">
+                                            <label for="klapki" class="desc-check">Klapki</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="półbuty">
+                                            <label for="półbuty" class="desc-check">Półbuty</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="sandały">
+                                            <label for="sandały" class="desc-check">Sandały</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check cat_f" id="trzewiki">
+                                            <label for="trzewiki" class="desc-check">Trzewiki</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn no-active">Применить</button>
+                                        <div class="state-select">
+                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <span class="numb-select">(<span>0</span>)</span>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-items">
+                                <div class="filter-header">
+                                    <p>Бренд</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter brand">
+                                    <div class="filter-item">
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="tailor">
+                                            <label for="tailor" class="desc-check">Tailor</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="puma">
+                                            <label for="puma" class="desc-check">Puma</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="new-balance">
+                                            <label for="new-balance" class="desc-check">New Balance</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="reebok">
+                                            <label for="reebok" class="desc-check">Reebok</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="skechers">
+                                            <label for="skechers" class="desc-check">Skechers</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check brand" id="lasocki">
+                                            <label for="lasocki" class="desc-check">Lasocki</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn no-active">Применить</button>
+                                        <div class="state-select">
+                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <span class="numb-select">(<span>0</span>)</span>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-items">
+                                <div class="filter-header">
+                                    <p>Материал</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter material">
+                                    <div class="filter-item">
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-1">
+                                            <label for="material-1" class="desc-check">Еко кожа</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-2">
+                                            <label for="material-2" class="desc-check">Лакированная кожа</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-3">
+                                            <label for="material-3" class="desc-check">Нубук</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-4">
+                                            <label for="material-4" class="desc-check">Кожа</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-5">
+                                            <label for="material-5" class="desc-check">Замша</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="material-6">
+                                            <label for="material-6" class="desc-check">Высококачественные материалы</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn no-active">Применить</button>
+                                        <div class="state-select">
+                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <span class="numb-select">(<span>0</span>)</span>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-items">
+                                <div class="filter-header">
+                                    <p>Высота каблука</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                    </svg>
+                                </div>
+                                <div class="content-filter material">
+                                    <div class="filter-item">
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="extra-small">
+                                            <label for="extra-small" class="desc-check">0 см - 3 см</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="small">
+                                            <label for="small" class="desc-check">3 см - 5 см</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="normal">
+                                            <label for="normal" class="desc-check">5 см - 8 см</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="large">
+                                            <label for="large" class="desc-check">8 см - 10 см</label>
+                                        </div>
+                                        <div class="filter-items">
+                                            <input type="checkbox" class="box-check material" id="extra-large">
+                                            <label for="extra-large" class="desc-check">больше 10 см</label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <button class="filter-btn no-active">Применить</button>
+                                        <div class="state-select">
+                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <span class="numb-select">(<span>0</span>)</span>
+                                        </div>
+                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-less-filter">
+                        <div class="more-filter active">
+                            <p>Больше фильтров</p>
+                        </div>
+                        <div class="less-filter">
+                            <p>Меньше фильтров</p>
+                        </div>
+                    </div>
                    </div>
-                   <div class="more-less-filter">
-                       <div class="more-filter active">
-                           <p>Больше фильтров</p> 
+                   <div class="mobile-filter-container">
+                     <div class="sort-btn">
+                            <div class="filter-header">
+                                <p>Сортировка</p>
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                                </svg>
+                            </div>
+                            <div class="content-filter modal-fiter">
+                                <div class="title-filter">
+                                    <p>Сортировка</p>
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#close"></use>
+                                    </svg>
+                                </div>
+                                <div class="filter-item">
+                                    <div class="filter-items"><a href="">По алфавиту</a></div>
+                                    <div class="filter-items"><a href="">По популярности</a></div>
+                                    <div class="filter-items"><a href="">Цена по убыванию </a></div>
+                                    <div class="filter-items"><a href="">Цена по возрастанию</a></div>
+                                </div>
+                            </div>
+                     </div>
+                     <div class="filter-btn">
+                        <div class="filter-header">
+                            <p>Фильтр</p>
+                            <svg>
+                                <use href="assets/sprite/sprite.svg#arrow-select"></use>
+                            </svg>
                         </div>
-                       <div class="less-filter">
-                          <p>Меньше фильтров</p> 
+                        <div class="content-filter  modal-fiter" >
+                            <div class="title-filter">
+                                <p>Фильтр</p>
+                                <svg>
+                                    <use href="assets/sprite/sprite.svg#close"></use>
+                                </svg>
+                            </div>
+                            <div class="mob-filter-item">
+                                <div class="mob-filter-items">
+                                    <div class="mob-filter-header">
+                                        <p>Цена</p>
+                                    </div>
+                                    <div class="content-filter price-range">
+                                        <div class="range-slider">
+                                            <input type="text" class="js-range-slider" value="" />
+                                        </div>
+                                        <div class="extra-controls">
+                                            <div class="input-range-wrapper"><input type="text" class="js-input-from" value="0" /></div>
+                                            <div class="input-range-wrapper"><input type="text" class="js-input-to" value="0" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mob-filter-items">
+                                    <div class="mob-filter-header">
+                                        <p>Размер</p>
+                                    </div>
+                                    <div class="content-filter size">
+                                        <div class="filter-item">
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-36">
+                                                <label for="size-36" class="desc-check">36</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-37">
+                                                <label for="size-37" class="desc-check">37</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-38">
+                                                <label for="size-38" class="desc-check">38</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-39">
+                                                <label for="size-39" class="desc-check">39</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-40">
+                                                <label for="size-40" class="desc-check">40</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-41">
+                                                <label for="size-41" class="desc-check">41</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-42">
+                                                <label for="size-42" class="desc-check">42</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-43">
+                                                <label for="size-43" class="desc-check">43</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-44">
+                                                <label for="size-44" class="desc-check">44</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-45">
+                                                <label for="size-45" class="desc-check">45</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-46">
+                                                <label for="size-46" class="desc-check">46</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-47">
+                                                <label for="size-47" class="desc-check">47</label>
+                                            </div>
+                                            <div class="filter-items">
+                                                <input type="checkbox" class="box-check size" id="size-48">
+                                                <label for="size-48" class="desc-check">48</label>
+                                            </div>
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <button class="filter-btn no-active">Применить</button>
+                                            <div class="state-select">
+                                                <a href="#" class="reser-select">Очистить фильтр</a>
+                                                <span class="numb-select">(<span>0</span>)</span>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                     </div>
                    </div>
                </div> 
                <div class="catalog-wrapper">
@@ -2514,7 +2757,7 @@
                            <p>Найденные товары:</p><span class="f-quantity">12757</span>
                         </div>
                 </div>
-                <div class="cat-pagination-wrapper">
+                <div class="cat-pagination-wrapper top">
                     <div class="goods-per-page-wrapper">
                         <p>Товаров на странице:</p>
                         <a href="#" class="active">25</a>
@@ -3531,7 +3774,7 @@
                     <div class="wrappre_sec-bottom">
                         <div class="copy-block">
                             <p>Copyright © CCC 2021</p>
-                            <p><span>Разработка сайта - </span><a href="https://fact.digital" target="_blank">ФАКТ</a></p>
+                            <!-- <p><span>Разработка сайта - </span><a href="https://fact.digital" target="_blank">ФАКТ</a></p> -->
                         </div>
                         <div class="lang-wrapper">
                             <div class="select-lang">
@@ -3570,7 +3813,7 @@
                         <div class="wrapp-visa"><img src="assets/img/visa.png" alt="visa"></div>
                     </div>
                     <div class="develop-wrapper">
-                        <div class="develop"><span>Разработка сайта - </span><a href="https://fact.digital" target="_blank">ФАКТ</a>
+                        <!-- <div class="develop"><span>Разработка сайта - </span><a href="https://fact.digital" target="_blank">ФАКТ</a> -->
                         </div>
                         <div class="lang-wrapper">
                             <div class="lang">

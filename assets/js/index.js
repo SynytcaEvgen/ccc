@@ -163,16 +163,74 @@ function init() {
     });
   };
   $('.features_items .search').click(function () {
-        if ($(window).width() >= 900){
-          $('header .search-header-line').toggleClass('active');
-          $(this).parent().toggleClass('active');
-        } else {
-            $('.menu_mobile').addClass('active');  
-            $('body').addClass('modal');
-            $('.search-wrapper .form > input').focus();
-       };
+    if ($(window).width() >= 900) {
+      $('header .search-header-line').toggleClass('active');
+      $(this).parent().toggleClass('active');
+    } else {
+      $('.menu_mobile').addClass('active');
+      $('body').addClass('modal');
+      $('.search-wrapper .form > input').focus();
+    };
   });
-
+  function initRangeSlider() { 
+    var $range = $(".js-range-slider"),
+    $inputFrom = $(".js-input-from"),
+    $inputTo = $(".js-input-to"),
+    instance,
+    min = 0,
+    max = 100000,
+    from = 0,
+    to = 0;
+    $range.ionRangeSlider({
+    	  skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 0,
+        to: 100000,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+    
+    function updateInputs (data) {
+    	from = data.from;
+        to = data.to;
+        
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);	
+    }
+    
+    $inputFrom.on("input", function () {
+        var val = $(this).prop("value");
+        
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+        
+        instance.update({
+            from: val
+        });
+    });
+    
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+        
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+        
+        instance.update({
+            to: val
+        });
+    });
+  };
   $('.search-header-line svg.close').click(function () {
     $('header .search-header-line').removeClass('active');
     $('.features_items').removeClass('active');
@@ -271,11 +329,10 @@ function init() {
   goToCurrency('.price');
   goToCurrency('.price_new');
   goToCurrency('.price_old');
-  $('.filter-header').click(function () {
-    
+  $('.descktop-filter-container .filter-header').click(function () {
     if (!$(this).hasClass('active')) {
-      $('.filter-header').removeClass('active');
-      $('.filter-header').next().removeClass('active');
+      $('.descktop-filter-container .filter-header').removeClass('active');
+      $('.descktop-filter-container .filter-header').next().removeClass('active');
       $('.lock-pointer').remove();
       if ($(this).hasClass('no-active')) {
         return false;
@@ -292,7 +349,6 @@ function init() {
     }
   });
   $(document).click(function (e) {
-    console.log(e.target)
     if (e.target.classList.contains('lock-pointer')) {
       $('.filter-header').removeClass('active');
       $('.filter-header').next().removeClass('active');
@@ -308,14 +364,27 @@ function init() {
       $(this).parent().removeClass('open');
     }
   });
+  initRangeSlider();
   checkBoxEngine('.box-check.size');
+  checkBoxEngine('.box-check.color');
   resetSelect('.content-filter.size .reser-select', '.box-check.size');
-  $(".price-slider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 100000,
-        from: 0,
-        to: 100000
-    });
+  resetSelect('.content-filter.color .reser-select', '.box-check.color');
+  (function($){
+        $(window).on("load",function(){
+          $(".descktop-filter-container .content-filter .filter-item").mCustomScrollbar({
+             theme:"my-theme"
+          });
+        });
+  })(jQuery);
+  $('.mobile-filter-container .filter-header').click(function () {
+    openPopUp($(this).next());
+  });
+  $('.modal-fiter .title-filter svg').click(function () {
+    closePopUp('.modal-fiter');
+  });
+  $('.mob-filter-header').click(function () {
+    $(this).toggleClass('active');
+    $(this).parent().toggleClass('active');
 
+  })
 };
