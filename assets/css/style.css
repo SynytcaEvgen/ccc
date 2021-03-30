@@ -114,6 +114,10 @@ input.box-check {
     background-color: #e9500e;
     border-color: #e9500e; }
 
+.mob-check-items input.box-check.color:checked + .desc-check::after {
+  transform: translate(-50%, -50%) scale(1);
+  transition: .3s ease-in-out; }
+
 .desc-check {
   position: relative;
   padding-left: 29px;
@@ -924,7 +928,7 @@ main section button {
         font-family: "Gordita-Bold", sans-serif; }
         @media (max-width: 767px) {
           .banner .slider_container .slider-wrapp .slider_items .desc_banner .text_contetn p {
-            font-size: calc( 32px + 37.4 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 32px + 37.4 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner .slider_container .slider-wrapp .slider_items .desc_banner .text_contetn p {
             font-size: calc(32px + 22 * (100vw / 1920)); } }
@@ -1154,13 +1158,13 @@ main section button {
         text-transform: uppercase; }
         @media (max-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
-            font-size: calc( 40px + 68 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 40px + 68 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
             font-size: calc(40px + 40 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
-            line-height: calc( 45px + 76.5 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 45px + 76.5 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
             line-height: calc(45px + 45 * (100vw / 1920)); } }
@@ -1666,7 +1670,7 @@ section.info .container .info-frame {
     position: relative; }
     @media (max-width: 767px) {
       .banner.catalog .container .banner-wrapper .img-wrapper {
-        height: calc( 106px + 397.8 * ((100vw - 320px) / 1920)); } }
+        height: calc( 106px + 397.8 * ((100vw - 320px) / 1920)); } }
     @media (min-width: 767px) {
       .banner.catalog .container .banner-wrapper .img-wrapper {
         height: calc(106px + 234 * (100vw / 1920)); } }
@@ -1686,13 +1690,13 @@ section.info .container .info-frame {
         white-space: nowrap; }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
-            font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
             font-size: calc(13px + 19 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
-            line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
             line-height: calc(23px + 17 * (100vw / 1920)); } }
@@ -1703,13 +1707,13 @@ section.info .container .info-frame {
         white-space: nowrap; }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
-            font-size: calc( 10px + 10.2 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 10px + 10.2 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
             font-size: calc(10px + 6 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
-            line-height: calc( 16px + 20.4 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 16px + 20.4 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
             line-height: calc(16px + 12 * (100vw / 1920)); } }
@@ -2155,13 +2159,13 @@ section.info .container .info-frame {
               padding-bottom: 27px; }
               @media (max-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
-                  font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
+                  font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
               @media (min-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
                   font-size: calc(13px + 19 * (100vw / 1920)); } }
               @media (max-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
-                  line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
+                  line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
               @media (min-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
                   line-height: calc(23px + 17 * (100vw / 1920)); } }

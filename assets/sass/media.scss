@@ -531,6 +531,9 @@ $color-price-sale: #E90000;
                      }
                    .mob-filter-header{
                        position: relative;
+                       display: flex;
+                       flex-wrap: wrap;
+                       padding-right: 30px;
                        p{
                          font-family: $gordita_medium;
                        }
@@ -635,7 +638,11 @@ $color-price-sale: #E90000;
     .mob-modal-btn {
         display: flex;
         justify-content: space-between;
-        padding: 0 16px 16px 16px;
+        padding: 16px;
+        position: fixed;
+        background-color: $color_ivert;
+        width: 100%;
+        bottom: 0;
         .modal-reset {
             font-family: $gordita_medium;
             font-size: 13px;
@@ -654,11 +661,17 @@ $color-price-sale: #E90000;
                  &:hover{
                      border-color: $color_text;
                      color: $color_text;
+                     span{
+                       color: $color_text;  
+                     }
                  }
             }
             &:hover{
                 border-color: $color-action-h;
                 color: $color-action-h;
+                span{
+                   color: $color-action-h; 
+                }
             }
             span{
                 font-family: inherit;
@@ -691,40 +704,46 @@ $color-price-sale: #E90000;
     }
     .content-filter.color{
         .mob-check-item-color{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-        
+             display: grid;
+             grid-template-columns: repeat(4, 1fr);
+             grid-template-rows: repeat(auto, 1fr);
+             grid-gap: 24px 16px;
         }
         .mob-check-items{
-            
+            max-width: 69px;
+            max-height: 60px;
             label[data-color] {
                 display: flex;
-                flex-direction: column;
+                flex-direction: column-reverse;
                 position: relative;
+                padding-left: 0;
                 &::after {
                     font-family: $material-icon;
-                    content: '\e5ca';
-                    // position: absolute;
-                
-                    width: 44px;
-                    height: 44px;
-                    color: $color_ivert;
-                    border: 1px solid transparent;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    transition: .3s ease-in-out;
+                    content: '\e5ca';               
+                    font-size: 24px;
+                    top: 37%;
+                    left: 50%;
                 }
                 .color-holder {
                     width: 44px;
                     height: 44px;
-                    top:0;
+                    top:unset;
+                    left: unset;
+                    position: relative;
+                    transform: unset;
                     border-radius: 2px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                .color-name{
+                    font-size: 9px;
+                    line-height: 16px;
+                    text-align: center;
                 }
             }
         }
     }
+
 
     
 
@@ -1022,14 +1041,9 @@ $color-price-sale: #E90000;
     .catalog{
        .container{
          .nav-wrapper{
-             display: flex;
-             justify-content: flex-start;
-             border-color: transparent;
-             flex-direction: column;
-             align-items: flex-start;
              .nav-header{
                display: flex;
-               justify-content: center;
+               justify-content: flex-start;
                align-items: center;
                h1{
                    padding-right: 4px;
@@ -1171,6 +1185,9 @@ $color-price-sale: #E90000;
     }
     .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container:hover .prod-banner-wrapper{
         margin-bottom: 72px;
+    }
+    .catalog .container .nav-wrapper .sub-nav .sub-nav-item{
+        overflow-x: scroll;
     }
         
 }

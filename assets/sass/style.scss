@@ -194,13 +194,16 @@ input.box-check {
       transform: translate(0, -50%) scale(1);
       transition: .3s ease-in-out;
     }
-
     +.desc-check::before {
       transition: .3s ease-in-out;
       background-color: $color-action-h;
       border-color: $color-action-h;
     }
   }
+}
+.mob-check-items input.box-check.color:checked +.desc-check::after{
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s ease-in-out;
 }
 .desc-check {
   position: relative;
