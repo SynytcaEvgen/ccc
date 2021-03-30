@@ -71,7 +71,7 @@ header{
   &.lock_header{
     position: fixed;
     top: 0;
-    z-index: 999999;
+    z-index: 9999;
     background-color: $color_ivert;
     width: 100%;
     transition: 0.3s ease;
@@ -3607,26 +3607,154 @@ section.info {
 .doods-detail{
   .container{
     .goods-frame{
+      padding-top: 24px;
       display: flex;
+      justify-content: space-between;
       .gallery-wrapper{
+        max-width: 876px;
+        margin-right: 8px;
         .grid-frame-img{
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          grid-gap: 16px;
-          grid-template-areas:
-              "head "
-              "minw minw ";
-          .items-grid{
-            &.big{
-              grid-area: head;
-            }
-            &.min{
-              grid-area: minw;
-            }
+          .grid-row-one{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 16px;
+          }
+          .grid-row-two {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap:16px;
           }
         }
       }
+      .goods-detail-wrapper{
+         max-width: 360px;
+         margin-left: 8px;
+         .description-goods{
+           .brand{
+             a{
+               font-family: $gordita_medium;
+               text-decoration: underline;
+             }
+             padding-bottom: 4px;
+           }
+           .price-wrapper{
+             display: flex;
+             padding-bottom: 16px;
+             .price_new{
+               font-family: $gordita_bold;
+               font-size: 16px;
+               line-height: 1.5;
+               padding-right: 8px;
+               color: $color-price-sale;
+
+             }
+             .price_old{
+               color: #757575;
+               text-decoration: line-through;
+             }
+           }
+           
+
+         }
+         .color-goods {
+           padding-bottom: 16px;
+           .title {
+             p,span{
+               font-size: 12px;
+               line-height: 20px;
+             }
+             padding-bottom: 8px;
+           }
+           .color-preview-wrapper{
+             display: flex;
+             .items{
+               max-width: 60px;
+               height: 90px;
+               margin-right: 4px;
+               &.current{
+                 border: 1px solid $color_text;
+               }
+               img{
+                 width: 100%;
+                 height: 100%;
+                 object-fit: cover;
+               }
+
+             } 
+           }
+         }
+         .sizes-goods{
+           padding-bottom: 16px;
+           .title {
+             p, span{
+               font-size: 12px;
+               line-height: 20px;
+             }
+             padding-bottom: 8px;
+           }
+           .size-holder{
+             display: flex;
+             flex-wrap: wrap;
+             padding-bottom: 8px;
+             .size-items{
+               padding: 10px 0;
+               margin: -1px;
+               border-radius: 2px;
+               border: 1px solid $color_line_dec;
+               width: 73px;
+               transition: .5s ease-in-out;
+               cursor: pointer;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               &:hover{
+                 border-color: $color_text;
+                 transition: .5s ease-in-out;
+
+               }
+             }
+           }
+           .link-to a{
+              font-size: 12px;
+              line-height: 20px;
+              font-family: $gordita_medium;
+              text-decoration: underline;
+           }
+         }
+         .btn-wrapper{
+           display: flex;
+           justify-content: space-between;
+           padding-bottom: 33px;
+           .btn-to-card{
+             border-radius: 2px;
+             border-color: $color-action-h;
+             background-color: $color-action-h;
+             color: $color_ivert;
+             min-width: 294px;
+             &:hover{
+               border-color: $color-action;
+               background-color: $color-action;
+             }
+           }
+           .add-to-favorit{
+             border: 1px solid $color_text;
+             border-radius: 2px;
+             width: 50px;
+             height: 50px;
+             display: flex;
+             justify-items: center;
+             align-items: center;
+             svg{
+               display: block;
+               margin: 0 auto;
+               width: 20px;
+               height: 18px;
+               fill: none;
+               stroke: $color_text;
+             }
+           }
+         }
+    }
     }
   }
 }
