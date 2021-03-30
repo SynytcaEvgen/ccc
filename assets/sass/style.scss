@@ -2150,74 +2150,6 @@ section.info {
             }
           }
           &.payment{
-            .payment-wrapper{
-              .payment-items{
-                border-top: 1px solid $color_line_dec;
-                border-bottom: 1px solid $color_line_dec;
-                padding: 16px 0; 
-                .title{
-                  position: relative;
-                  &::after,
-                  &::before{
-                      content: "";
-                      background-color: $color_text;
-                      position: absolute;
-                      width: 12px;
-                      height: 1px;
-                      right: 0;
-                      top: 50%;
-                      transform: translate(-50%, -50%);
-                      transition: all 0.3s ease-in-out;     
-                  }
-                  &::before {
-                      transform: rotate(0deg);
-                      transition: all 0.3s ease-in-out;   
-                  }
-                  &::after {
-                    transform: rotate(90deg);
-                    transition: all 0.3s ease-in-out; 
-                  }
-                  &.active{
-                    &::before {
-                      transform: rotate(-180deg);
-                      transition: all 0.3s ease-in-out;   
-                    }
-                    &::after {
-                      transform: rotate(0deg);
-                      transition: all 0.3s ease-in-out; 
-                    }
-                    
-                  }
-                }
-                .paymeny-desc{
-                  max-height: 0;
-                  overflow: hidden;
-                  transition: all 0.3s ease-in-out;
-                  p{
-                    padding: 16px 0;
-                  }
-                  .pay-var{
-                     padding: 0 0 8px 0;
-                     justify-content: flex-start;
-                     .wrapp-mc {
-                       margin: 0;
-                     }
-                     >div{
-                       border: 1px solid $color_line_dec; 
-                       position: relative;
-                       width: 80px;
-                       height: 60px;
-                       img{
-                        position: absolute;
-                        top:50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                       }
-                     }
-                  }
-                }     
-              }
-            }
           }
           .text-items {
             padding-bottom: 24px;
@@ -2230,7 +2162,76 @@ section.info {
     }
   }
 }
-// info_page_end
+.payment-wrapper{
+  .payment-items{
+    border-top: 1px solid $color_line_dec;
+    border-bottom: 1px solid $color_line_dec;
+    padding: 16px 0; 
+    .title{
+      position: relative;
+      cursor: pointer;
+      &::after,
+      &::before{
+          content: "";
+          background-color: $color_text;
+          position: absolute;
+          width: 12px;
+          height: 1px;
+          right: 0;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s ease-in-out;     
+      }
+      &::before {
+          transform: rotate(0deg);
+          transition: all 0.3s ease-in-out;   
+      }
+      &::after {
+        transform: rotate(90deg);
+        transition: all 0.3s ease-in-out; 
+      }
+      &.active{
+        &::before {
+          transform: rotate(-180deg);
+          transition: all 0.3s ease-in-out;   
+        }
+        &::after {
+          transform: rotate(0deg);
+          transition: all 0.3s ease-in-out; 
+        }
+        
+      }
+    }
+    .paymeny-desc{
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      p{
+        padding: 16px 0;
+      }
+      .pay-var{
+         padding: 0 0 8px 0;
+         justify-content: flex-start;
+         .wrapp-mc {
+           margin: 0;
+         }
+         >div{
+           border: 1px solid $color_line_dec; 
+           position: relative;
+           width: 80px;
+           height: 60px;
+           img{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+           }
+         }
+      }
+    }     
+  }
+}
+    // info_page_end
 // Catalog_page_start
 .banner.catalog{
   padding-bottom: 16px;
@@ -2911,4 +2912,723 @@ section.info {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//account page here
+.account-blocks{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.account-block{
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  background: #f8f8f8;
+  border-radius: 2px;
+  &.my-orders{
+    width: 625px;
+  }
+  &.my-info{
+    width: 326px;
+  }
+  &.my-favorits{
+    width: 100%;
+  }
+}
+
+.account-block__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 2px solid #fff;
+  .title{
+    font-family: $gordita_medium;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_text;
+  }
+  .more-link{
+    font-size: 13px;
+    text-decoration: underline;
+    line-height: 23px;
+  }
+}
+.account-blocks__content{
+  padding: 16px;
+  .goods-gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 24px 16px;
+    .goods-items .prod-card-container {
+      max-width: unset;
+      position: relative;
+      .prod-banner-wrapper {
+        padding-bottom: 0;
+        .img-wrapper {
+          max-width: unset;
+          max-height: unset;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      .descr-wrapper {
+        width: 100%;
+        margin-bottom: 14px;
+        max-height: 46px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.orders-list{
+  .item{
+    font-family: $gordita_regular;
+    font-size: 13px;
+    line-height: 23px;
+    background-color: #fff;
+    .item-header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #f8f8f8;
+      padding: 8px 16px;
+      .item-meta{
+        white-space: normal;
+      }
+      .item-status{
+        font-size: 12px;
+        font-family: $gordita_medium;
+        line-height: 22px;
+      }
+      .item-date{
+        font-size: 12px;
+        line-height: 22px;
+      }
+    }
+    .item-action{
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .item-action__link{
+        text-decoration: underline;
+      }
+    }
+    &+.item{
+      margin-top: 8px;
+    }
+  }
+}
+.user-meta_list .item{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 23px;
+  font-family: $gordita_regular;
+  margin:8px 0 16px;
+  .key{
+    color: #666666;
+  }
+}
+
+.account-info-form{
+  .columns{
+    display: flex;
+    justify-content: space-between;
+    &+.columns{
+      padding-top: 30px;
+      border-top: 1px solid #E8E8E8;
+    }
+    .col{
+      width: calc(50% - 20px);
+    }
+    .input-wrap{
+      margin-bottom: 22px;
+      label{
+        display: block;
+        font-size: 11px;
+        line-height: 1;
+        color: $color_goods-des;
+        margin-bottom: 6px;
+        font-family: $gordita_regular;
+      }
+      input{
+        width: 100%;
+        display: block;
+        &[type=date]{
+          height: 24px;
+        }
+      }
+      &.radio-wrap{
+        display: flex;
+      }
+    }
+  }
+  .password-note{
+    font-size: 12px;
+    line-height: 22px;
+    color: $color_text;
+    font-family: $gordita_regular;
+    margin-bottom: 40px;
+
+  }
+}
+
+//detail_start
+.doods-detail{
+  .container{
+    .goods-frame{
+      display: flex;
+      .gallery-wrapper{
+        .grid-frame-img{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-gap: 16px;
+          grid-template-areas:
+              "head "
+              "minw minw ";
+          .items-grid{
+            &.big{
+              grid-area: head;
+            }
+            &.min{
+              grid-area: minw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//detail_end
 

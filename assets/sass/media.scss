@@ -532,8 +532,6 @@ $color-price-sale: #E90000;
                    .mob-filter-header{
                        position: relative;
                        display: flex;
-                       flex-wrap: wrap;
-                       padding-right: 30px;
                        p{
                          font-family: $gordita_medium;
                        }
@@ -1222,4 +1220,447 @@ $color-price-sale: #E90000;
     .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .filter-header{
         width: 140px;
     }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1300px) {
+  .account-block{
+    &.my-info{
+      width: calc(40% - 24px);
+    }
+    &.my-orders{
+       width: calc(60% - 24px);
+     }
+  }
+  .orders-list .item .item-header{
+    flex-wrap: wrap;
+    .item-meta{
+      width: 100%;
+      margin-bottom: 4px;
+    }
+  }
+}
+@media screen and (max-width: 1199px){
+  .account-blocks{
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .account-block{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .account-block{
+    &.my-info{
+      width: 100%;
+    }
+    &.my-orders{
+      width: 100%;
+    }
+  }
+  .account-block__header {
+    .title{
+      font-size: 13px;
+    }
+  }
 }

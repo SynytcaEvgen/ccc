@@ -1610,59 +1610,61 @@ section.info .container .info-frame {
           max-width: 79px;
           max-height: 56px;
           margin-bottom: 15px; }
-    section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items {
-      border-top: 1px solid #e8e8e8;
-      border-bottom: 1px solid #e8e8e8;
-      padding: 16px 0; }
-      section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title {
-        position: relative; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title::after, section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title::before {
-          content: "";
-          background-color: #222222;
-          position: absolute;
-          width: 12px;
-          height: 1px;
-          right: 0;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          transition: all 0.3s ease-in-out; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title::before {
-          transform: rotate(0deg);
-          transition: all 0.3s ease-in-out; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title::after {
-          transform: rotate(90deg);
-          transition: all 0.3s ease-in-out; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title.active::before {
-          transform: rotate(-180deg);
-          transition: all 0.3s ease-in-out; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .title.active::after {
-          transform: rotate(0deg);
-          transition: all 0.3s ease-in-out; }
-      section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc {
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc p {
-          padding: 16px 0; }
-        section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc .pay-var {
-          padding: 0 0 8px 0;
-          justify-content: flex-start; }
-          section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc .pay-var .wrapp-mc {
-            margin: 0; }
-          section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc .pay-var > div {
-            border: 1px solid #e8e8e8;
-            position: relative;
-            width: 80px;
-            height: 60px; }
-            section.info .container .info-frame .info-content-wrapper .info-text.payment .payment-wrapper .payment-items .paymeny-desc .pay-var > div img {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%); }
     section.info .container .info-frame .info-content-wrapper .info-text .text-items {
       padding-bottom: 24px; }
       section.info .container .info-frame .info-content-wrapper .info-text .text-items .text-content {
         line-height: 25px; }
+
+.payment-wrapper .payment-items {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 16px 0; }
+  .payment-wrapper .payment-items .title {
+    position: relative;
+    cursor: pointer; }
+    .payment-wrapper .payment-items .title::after, .payment-wrapper .payment-items .title::before {
+      content: "";
+      background-color: #222222;
+      position: absolute;
+      width: 12px;
+      height: 1px;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out; }
+    .payment-wrapper .payment-items .title::before {
+      transform: rotate(0deg);
+      transition: all 0.3s ease-in-out; }
+    .payment-wrapper .payment-items .title::after {
+      transform: rotate(90deg);
+      transition: all 0.3s ease-in-out; }
+    .payment-wrapper .payment-items .title.active::before {
+      transform: rotate(-180deg);
+      transition: all 0.3s ease-in-out; }
+    .payment-wrapper .payment-items .title.active::after {
+      transform: rotate(0deg);
+      transition: all 0.3s ease-in-out; }
+  .payment-wrapper .payment-items .paymeny-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; }
+    .payment-wrapper .payment-items .paymeny-desc p {
+      padding: 16px 0; }
+    .payment-wrapper .payment-items .paymeny-desc .pay-var {
+      padding: 0 0 8px 0;
+      justify-content: flex-start; }
+      .payment-wrapper .payment-items .paymeny-desc .pay-var .wrapp-mc {
+        margin: 0; }
+      .payment-wrapper .payment-items .paymeny-desc .pay-var > div {
+        border: 1px solid #e8e8e8;
+        position: relative;
+        width: 80px;
+        height: 60px; }
+        .payment-wrapper .payment-items .paymeny-desc .pay-var > div img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
 
 .banner.catalog {
   padding-bottom: 16px; }
@@ -2187,3 +2189,147 @@ section.info .container .info-frame {
   top: 0;
   left: 0;
   z-index: 4; }
+
+.account-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px; }
+
+.account-block {
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  background: #f8f8f8;
+  border-radius: 2px; }
+  .account-block.my-orders {
+    width: 625px; }
+  .account-block.my-info {
+    width: 326px; }
+  .account-block.my-favorits {
+    width: 100%; }
+
+.account-block__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 2px solid #fff; }
+  .account-block__header .title {
+    font-family: "Gordita-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #222222; }
+  .account-block__header .more-link {
+    font-size: 13px;
+    text-decoration: underline;
+    line-height: 23px; }
+
+.account-blocks__content {
+  padding: 16px; }
+  .account-blocks__content .goods-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 24px 16px; }
+    .account-blocks__content .goods-gallery-grid .goods-items .prod-card-container {
+      max-width: unset;
+      position: relative; }
+      .account-blocks__content .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper {
+        padding-bottom: 0; }
+        .account-blocks__content .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .img-wrapper {
+          max-width: unset;
+          max-height: unset; }
+          .account-blocks__content .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .img-wrapper img {
+            object-fit: cover; }
+      .account-blocks__content .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper {
+        width: 100%;
+        margin-bottom: 14px;
+        max-height: 46px;
+        overflow: hidden;
+        margin-top: 8px; }
+
+.orders-list .item {
+  font-family: "Gordita-Regular", sans-serif;
+  font-size: 13px;
+  line-height: 23px;
+  background-color: #fff; }
+  .orders-list .item .item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #f8f8f8;
+    padding: 8px 16px; }
+    .orders-list .item .item-header .item-meta {
+      white-space: normal; }
+    .orders-list .item .item-header .item-status {
+      font-size: 12px;
+      font-family: "Gordita-Medium", sans-serif;
+      line-height: 22px; }
+    .orders-list .item .item-header .item-date {
+      font-size: 12px;
+      line-height: 22px; }
+  .orders-list .item .item-action {
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .orders-list .item .item-action .item-action__link {
+      text-decoration: underline; }
+  .orders-list .item + .item {
+    margin-top: 8px; }
+
+.user-meta_list .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 23px;
+  font-family: "Gordita-Regular", sans-serif;
+  margin: 8px 0 16px; }
+  .user-meta_list .item .key {
+    color: #666666; }
+
+.account-info-form .columns {
+  display: flex;
+  justify-content: space-between; }
+  .account-info-form .columns + .columns {
+    padding-top: 30px;
+    border-top: 1px solid #E8E8E8; }
+  .account-info-form .columns .col {
+    width: calc(50% - 20px); }
+  .account-info-form .columns .input-wrap {
+    margin-bottom: 22px; }
+    .account-info-form .columns .input-wrap label {
+      display: block;
+      font-size: 11px;
+      line-height: 1;
+      color: #666;
+      margin-bottom: 6px;
+      font-family: "Gordita-Regular", sans-serif; }
+    .account-info-form .columns .input-wrap input {
+      width: 100%;
+      display: block; }
+      .account-info-form .columns .input-wrap input[type=date] {
+        height: 24px; }
+    .account-info-form .columns .input-wrap.radio-wrap {
+      display: flex; }
+
+.account-info-form .password-note {
+  font-size: 12px;
+  line-height: 22px;
+  color: #222222;
+  font-family: "Gordita-Regular", sans-serif;
+  margin-bottom: 40px; }
+
+.doods-detail .container .goods-frame {
+  display: flex; }
+  .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 16px;
+    grid-template-areas: "head " "minw minw "; }
+    .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img .items-grid.big {
+      grid-area: head; }
+    .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img .items-grid.min {
+      grid-area: minw; }

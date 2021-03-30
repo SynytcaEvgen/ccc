@@ -369,9 +369,7 @@
         overflow: visible; }
       .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .mob-filter-item .mob-filter-items .mob-filter-header {
         position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        padding-right: 30px; }
+        display: flex; }
         .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .mob-filter-item .mob-filter-items .mob-filter-header p {
           font-family: "Gordita-Medium", sans-serif; }
         .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .mob-filter-item .mob-filter-items .mob-filter-header::after, .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .mob-filter-item .mob-filter-items .mob-filter-header::before {
@@ -845,3 +843,28 @@
   .catalog .container .filter-wrapper .mobile-filter-container .sort-btn .filter-header,
   .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .filter-header {
     width: 140px; } }
+
+@media screen and (max-width: 1300px) {
+  .account-block.my-info {
+    width: calc(40% - 24px); }
+  .account-block.my-orders {
+    width: calc(60% - 24px); }
+  .orders-list .item .item-header {
+    flex-wrap: wrap; }
+    .orders-list .item .item-header .item-meta {
+      width: 100%;
+      margin-bottom: 4px; } }
+
+@media screen and (max-width: 1199px) {
+  .account-blocks {
+    margin-right: -16px;
+    margin-left: -16px; }
+  .account-block {
+    margin-right: 0;
+    margin-left: 0; }
+  .account-block.my-info {
+    width: 100%; }
+  .account-block.my-orders {
+    width: 100%; }
+  .account-block__header .title {
+    font-size: 13px; } }
