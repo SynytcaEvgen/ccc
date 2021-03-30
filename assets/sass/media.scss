@@ -3,6 +3,7 @@ $gordita_regular: "Gordita-Regular", sans-serif;
 $gordita_medium: "Gordita-Medium", sans-serif;
 $gordita_bold: "Gordita-Bold", sans-serif;
 $philosopher_regular: "Philosopher-Regular", sans-serif;
+$material-icon: "Material Icons";
 /*--fonts--*/
 /*--colors--*/
 $color_text: #222222;
@@ -512,8 +513,10 @@ $color-price-sale: #E90000;
                 }
             }
             .filter-btn{
+               .modal-fiter{
+                   overflow-x: scroll;
+               }
               .mob-filter-item{
-                overflow-x: scroll;
                 .mob-filter-items{
                      padding: 12px 16px 12px 16px;
                      border-bottom: 1px solid $color_line_dec;
@@ -562,6 +565,11 @@ $color-price-sale: #E90000;
                    }
                    .content-filter{
                        padding-top: 25px;
+                       &.size{
+                           .mob-check-item{
+                               max-height: 200px;
+                           }
+                       }
                    }
                    .extra-controls{
                      display: flex;
@@ -624,6 +632,101 @@ $color-price-sale: #E90000;
     .catalog .container .catalog-wrapper{
         margin-top: 0;
     }
+    .mob-modal-btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px 16px 16px;
+        .modal-reset {
+            font-family: $gordita_medium;
+            font-size: 13px;
+            line-height: 23px;
+            color: $color_text;
+            border: 1px solid $color_text;
+            border-radius: 2px;
+            padding: 10px 12px;
+            max-width: 163px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.no-active {
+                 opacity: 0.5;
+                 cursor: not-allowed;
+                 &:hover{
+                     border-color: $color_text;
+                     color: $color_text;
+                 }
+            }
+            &:hover{
+                border-color: $color-action-h;
+                color: $color-action-h;
+            }
+            span{
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+        .modal-submit {
+            border: none;
+            background-color: $color-action-h;
+            color: $color_ivert;
+            border-radius: 2px;
+            max-width: 163px;
+            &.no-active {
+                opacity: 0.5;
+                cursor: not-allowed;
+                &:hover {
+                    background-color: $color-action-h;
+                }
+            }
+            &:hover{
+                background-color: $color-action;
+            }
+            
+        }
+       
+    }
+    .mob-check-items{
+        padding-bottom: 16px;
+    }
+    .content-filter.color{
+        .mob-check-item-color{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        
+        }
+        .mob-check-items{
+            
+            label[data-color] {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                &::after {
+                    font-family: $material-icon;
+                    content: '\e5ca';
+                    // position: absolute;
+                
+                    width: 44px;
+                    height: 44px;
+                    color: $color_ivert;
+                    border: 1px solid transparent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .3s ease-in-out;
+                }
+                .color-holder {
+                    width: 44px;
+                    height: 44px;
+                    top:0;
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+
+    
 
 }
 @media only screen and (max-width: 767px) {
@@ -1097,5 +1200,9 @@ $color-price-sale: #E90000;
     }
     .basket-preview-container{
         width: 300px;
+    }
+    .catalog .container .filter-wrapper .mobile-filter-container .sort-btn .filter-header,
+    .catalog .container .filter-wrapper .mobile-filter-container .filter-btn .filter-header{
+        width: 140px;
     }
 }

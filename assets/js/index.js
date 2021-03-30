@@ -374,6 +374,9 @@ function init() {
           $(".descktop-filter-container .content-filter .filter-item").mCustomScrollbar({
              theme:"my-theme"
           });
+          $(".mobile-filter-container .content-filter .mob-check-item").mCustomScrollbar({
+             theme:"my-theme"
+          });
         });
   })(jQuery);
   $('.mobile-filter-container .filter-header').click(function () {
@@ -385,6 +388,5 @@ function init() {
   $('.mob-filter-header').click(function () {
     $(this).toggleClass('active');
     $(this).parent().toggleClass('active');
-
-  })
+  });
 };
