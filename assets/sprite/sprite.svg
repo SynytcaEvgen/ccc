@@ -94,4 +94,7 @@
     <symbol id="arrow-select" viewBox="0 0 16 9">
         <path d="M1 1L8 8L15 1" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
+    <symbol id="burger-menu" viewBox="0 0 22 13">
+        <path d="M1 0.5H21M1 6.5H21M1 12.5H21" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>

@@ -253,35 +253,17 @@ $color-price-sale: #E90000;
         display: block;
     }
     .burger-menu {
-        position: relative;
-        width: 20px;
-        height: 12px;
         cursor: pointer;
-        &::after,
-        &::before {
-          content: "";
-          background-color: #000;
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          left: 0;
-          transition: all 0.3s ease-in-out;
-        }
-        &::before {
-          top: 0;
-        }
-        &::after {
-          bottom: 0;
-        }
-        span {
-          background-color: #000;
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          left: 0;
-          top: 50%;
-          transform: translate(0, -50%);
-          transition: all 0.3s ease-in-out;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        svg{
+            stroke: $color_text;
+            width: 20px;
+            height: 12px;
         }
     }
     .banner .slider_container .slider-wrapp .slider_items .desc_banner{
