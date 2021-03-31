@@ -39,7 +39,7 @@
                 <h4 class="header-popup">Авторизоваться</h4>
                 <form id="sign-in" class="form" method="POST">
                     <div class="input_wrap">
-                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="email" placeholder="Электронная почта" required >
                     </div>
                     <div class="input_wrap end"> 
                         <input type="password" placeholder="Пароль" required>
@@ -2198,19 +2198,19 @@
                 </div>
             </div>
         </div>
-        <div class="preview-header-goods" hidden                   >
+        <div class="preview-header-goods container">
            <div class="decs-goods">
                <div class="img-wrapper">
                    <img src="assets/img/goods_mini.jpg" alt="mini-goods">
                </div>
-               <div class="goods-name">Ботильоны Sergio Bardine</div>
+               <div class="goods-name"><p class="font-mini">Ботильоны Sergio Bardine</p></div>
                <div class="price-wrapper">
-                   <span class="price_new">3490</span>
-                   <span class="price_old">5990</span>
+                   <span class="price_new font-mini">3490</span>
+                   <span class="price_old font-mini">5990</span>
                 </div>
            </div>      
-            <div class="btn-wrapper">
-                <button class="btn-to-card">Добавить в корзину</button>
+            <div class="btn-wrapper-card mini">
+                <button class="btn-to-card font-mini">Добавить в корзину</button>
                 <div class="add-to-favorit">
                     <svg>
                         <use href="assets/sprite/sprite.svg#favorit"></use>
@@ -2218,8 +2218,6 @@
                 </div>
             </div>
         </div>
-         
-
     </header>
     <!--Header end section-->
 
@@ -2231,7 +2229,7 @@
                     <div class="gallery-wrapper">
                         <div class="grid-frame-img">
                             <div class="grid-row-one">
-                               <div class="items-grid">
+                               <div class="items-grid addeptive">
                                    <a href="assets/img/goods_b-1.jpg" data-fancybox="goods-gallery" data-caption>
                                        <img src="assets/img/goods_b-1.jpg" alt="goods_photo" />
                                    </a>
@@ -2243,23 +2241,44 @@
                                </div>
                             </div>
                             <div class="grid-row-two">
-                                <div class="items-grid min-l">
+                                <div class="items-grid">
                                     <a href="assets/img/goods_3.jpg" data-fancybox="goods-gallery" data-caption>
                                         <img src="assets/img/goods_3.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
-                                <div class="items-grid min-c">
+                                <div class="items-grid">
                                     <a href="assets/img/goods_2.jpg" data-fancybox="goods-gallery" data-caption>
                                         <img src="assets/img/goods_2.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
-                                <div class="items-grid min-r">
+                                <div class="items-grid">
                                     <a href="assets/img/goods_1.jpg" data-fancybox="goods-gallery" data-caption>
                                         <img src="assets/img/goods_1.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
                             </div>  
                         </div>
+                        <div class="gallery-mob-container swiper-container">
+                            <div class="gallery-mob-wrapper swiper-wrapper">
+                                <div class="items-grid swiper-slide">
+                                        <img src="assets/img/goods_b-1.jpg" alt="goods_photo" />
+                                </div>
+                                <div class="items-grid swiper-slide">
+                                        <img src="assets/img/goods_b-2.jpg" alt="goods_photo" />
+                                </div>
+                                <div class="items-grid swiper-slide">
+                                        <img src="assets/img/goods_3.jpg" alt="goods_photo" />
+                                </div>
+                                <div class="items-grid swiper-slide">
+                                        <img src="assets/img/goods_2.jpg" alt="goods_photo" />
+                                </div>
+                                <div class="items-grid swiper-slide">
+                                        <img src="assets/img/goods_1.jpg" alt="goods_photo" />
+                                </div>
+                            </div> 
+                            <div class="goods-pagination"></div>
+                        </div>
+                        
                     </div>
                     <div class="goods-detail-wrapper">
                         <div class="description-goods">
@@ -2318,7 +2337,7 @@
                             </div>
                             <div class="link-to"><a href="#">Таблица размеров</a></div>
                         </div>
-                        <div class="btn-wrapper">
+                        <div class="btn-wrapper-card">
                             <button class="btn-to-card">Добавить в корзину</button>
                             <div class="add-to-favorit">
                                 <svg>
@@ -2355,7 +2374,7 @@
                                 <div class="paymeny-desc">
                                   <p>Для доставки доступны транспортные компании. Подробнее о доставке на странице по <a href="#">ссылке</a>.</p>
                                   <div class="return-wrap">
-                                      <div class="title">Удобный возврат товара</div>
+                                      <div class="title-return"><p>Удобный возврат товара</p></div>
                                        <div class="return-items">
                                             <div class="img-wrapper">
                                                 <svg class="_day">
@@ -2382,18 +2401,23 @@
                             <div class="payment-items">
                                 <h3 class="title acc-open">O бренде</h3>
                                 <div class="paymeny-desc">
-                                    <div class="img-brand">
-                                        <img src="assets/img/brand_img_1.jpg" alt="brand_img">
+                                    <div class="brand-wrapper">
+                                        <div class="img-brand">
+                                            <img src="assets/img/brand_img_1.jpg" alt="brand_img">
+                                        </div>
+                                        <div class="content">
+                                            <p>
+                                                <a href="#">Sergio Bardi</a> - итальянская компания, специализирующаяся на производстве женской и мужской обуви.
+                                                Бренд предлагает
+                                                элегантную, функциональную и удобную обувь из натуральной и экологической кожи. Серджио Барди славится
+                                                материалами
+                                                лучшего качества и разнообразием моделей. Их неподвластный времени стиль сочетается с последними тенденциями и
+                                                современным дизайном. Комфорт, качество и превосходный итальянский дизайн выделяются среди главных достоинств
+                                                обуви
+                                                Sergio Bardi.
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <p>
-                                            <a href="#">Sergio Bardi</a> - итальянская компания, специализирующаяся на производстве женской и мужской обуви. Бренд предлагает
-                                            элегантную, функциональную и удобную обувь из натуральной и экологической кожи. Серджио Барди славится материалами
-                                            лучшего качества и разнообразием моделей. Их неподвластный времени стиль сочетается с последними тенденциями и
-                                            современным дизайном. Комфорт, качество и превосходный итальянский дизайн выделяются среди главных достоинств обуви
-                                            Sergio Bardi.
-                                        </p>
-                                    </div> 
                                 </div>
                             </div>
                         </div>
