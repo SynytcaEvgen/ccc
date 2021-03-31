@@ -282,7 +282,7 @@ label[data-color] {
   width: 100%;
   height: 100%;
   background-color: rgba(34, 34, 34, 0.6);
-  z-index: 9999;
+  z-index: 999999;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -357,7 +357,7 @@ label[data-color] {
             color: #e9500e;
             transition: 0.3s ease-in-out; }
       .popup .popup__wrapper .popup__content .social-sing-wrapp {
-        padding-bottom: 24px;
+        padding-bottom: 19px;
         border-bottom: 1px solid #e8e8e8;
         margin-bottom: 24px; }
         .popup .popup__wrapper .popup__content .social-sing-wrapp p {
@@ -374,7 +374,9 @@ label[data-color] {
           -ms-flex-pack: center;
           justify-content: center; }
           .popup .popup__wrapper .popup__content .social-sing-wrapp .icon-wrapper .icon-items {
-            margin: 0 8px; }
+            margin: 0 8px;
+            display: flex;
+            align-items: center; }
             .popup .popup__wrapper .popup__content .social-sing-wrapp .icon-wrapper .icon-items a:hover svg {
               fill: #e9500e;
               transition: 0.3s ease; }

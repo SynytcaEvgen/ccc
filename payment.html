@@ -14,10 +14,17 @@
     <link rel="stylesheet" href="assets/css/reset_html.css">
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/material-icons.css">
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/index.js"></script>
 
 </head>
@@ -33,15 +40,15 @@
                     </svg>
                 </div>
                 <h4 class="header-popup">Авторизоваться</h4>
-                <form id="sign-in" class="form" method="POST">
+                <form id="sign-in" class="form" method="POST" action="">
                     <div class="input_wrap">
                         <input type="email" placeholder="Электронная почта" required>
                     </div>
-                    <div class="input_wrap end">
-                        <input type="password" placeholder="Пароль" required>
+                    <div class="input_wrap end"> 
+                        <input type="password" placeholder="Пароль" required name="psword">
                     </div>
                     <div class="sub-input_wrap">
-                        <input type="submit" value="Авторизоваться">
+                        <input type="submit" value="Авторизоваться" >
                     </div>
                 </form>
                 <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
@@ -50,17 +57,17 @@
                     <div class="icon-wrapper">
                         <div class="icon-items">
                             <a href="#">
-                                <svg class="facebook">
-                                    <use href="assets/sprite/sprite.svg#face-sign"></use>
-                                </svg>
+                              <svg class="facebook">
+                                  <use href="assets/sprite/sprite.svg#face-sign"></use>
+                              </svg>
                             </a>
                         </div>
                         <div class="icon-items">
                             <a href="#">
-                                <svg class="vk">
-                                    <use href="assets/sprite/sprite.svg#vk-sign"></use>
-                                </svg>
-                            </a>
+                               <svg class="vk">
+                                   <use href="assets/sprite/sprite.svg#vk-sign"></use>
+                               </svg>
+                            </a> 
                         </div>
                     </div>
                 </div>
@@ -83,8 +90,7 @@
                 </div>
                 <h4 class="header-popup">Сброс пароля</h4>
                 <div class="text-content">
-                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса
-                        пароля</p>
+                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса пароля</p>
                 </div>
                 <form id="reset-pass" class="form" method="POST">
                     <div class="input_wrap end">
@@ -114,7 +120,7 @@
                     <use href="assets/sprite/sprite.svg#close"></use>
                 </svg>
             </div>
-    
+
         </div>
         <div class="container menu_wrapp">
             <div class="head_wrapper">
@@ -1018,7 +1024,9 @@
                 <div class="log_wrapper">
                     <div class="burg-wrap">
                         <div class="burger-menu">
-                            <span></span>
+                            <svg>
+                              <use href="assets/sprite/sprite.svg#burger-menu"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="logo">
@@ -1132,18 +1140,18 @@
                             </div>
                         </li>
                     </ul>
-    
+
                 </div>
-    
+
             </div>
         </div>
         <div class="line-decor"></div>
         <div class="menu_mobile">
             <div class="mobile-header-container">
                 <div class="logo-wrapper">
-                    <svg class="logo">
-                        <use href="assets/sprite/sprite.svg#logo"></use>
-                    </svg>
+                        <svg class="logo">
+                           <use href="assets/sprite/sprite.svg#logo"></use>
+                        </svg>
                 </div>
                 <svg class="close">
                     <use href="assets/sprite/sprite.svg#close"></use>
@@ -1475,7 +1483,7 @@
                                         </div>
                                         <ul class="social-item">
                                             <li class="social-items">
-                                                <a href="https://www.facebook.com" target="_blank">
+                                                <a href="https://www.facebook.com"  target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#facebook"></use>
                                                     </svg>
@@ -2151,7 +2159,7 @@
                                         </div>
                                         <ul class="social-item">
                                             <li class="social-items">
-                                                <a href="https://www.facebook.com" target="_blank">
+                                                <a href="https://www.facebook.com"  target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#facebook"></use>
                                                     </svg>
@@ -2165,7 +2173,7 @@
                                                 </a>
                                             </li>
                                             <li class="social-items">
-                                                <a href="https://vk.com" target="_blank">
+                                                <a href="https://vk.com"  target="_blank">
                                                     <svg>
                                                         <use href="assets/sprite/sprite.svg#vk"></use>
                                                     </svg>
@@ -2195,7 +2203,7 @@
                 </div>
             </div>
         </div>
-    
+
     </header>
     <!--Header end section-->
 

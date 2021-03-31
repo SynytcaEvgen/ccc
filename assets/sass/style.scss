@@ -403,7 +403,7 @@ label[data-color] {
   width: 100%;
   height: 100%;
   background-color: rgba(34, 34, 34, 0.6);
-  z-index: 9999;
+  z-index: 999999;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -500,7 +500,7 @@ label[data-color] {
         }
       }
       .social-sing-wrapp{
-        padding-bottom: 24px;
+        padding-bottom: 19px;
         border-bottom: 1px solid $color_line_dec;
         margin-bottom: 24px;
         p{
@@ -523,6 +523,8 @@ label[data-color] {
               transition: 0.3s ease;
             }
             margin: 0 8px;
+            display: flex;
+            align-items: center;
             svg{
               fill: $color_promo_bg;
               transition: 0.3s ease;

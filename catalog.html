@@ -25,7 +25,7 @@
     <script src="assets/js/index.js"></script>
 </head>
 <body>
-    <!-- Pop_up sing up -->
+   <!-- Pop_up sing up -->
     <div id="popup-sign-in" class="popup">
         <div class="popup__wrapper">
             <div class="popup__content">
@@ -35,15 +35,15 @@
                     </svg>
                 </div>
                 <h4 class="header-popup">Авторизоваться</h4>
-                <form id="sign-in" class="form" method="POST">
+                <form id="sign-in" class="form" method="POST" action="">
                     <div class="input_wrap">
                         <input type="email" placeholder="Электронная почта" required>
                     </div>
                     <div class="input_wrap end"> 
-                        <input type="password" placeholder="Пароль" required>
+                        <input type="password" placeholder="Пароль" required name="psword">
                     </div>
                     <div class="sub-input_wrap">
-                        <input type="submit" value="Авторизоваться">
+                        <input type="submit" value="Авторизоваться" >
                     </div>
                 </form>
                 <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
@@ -1019,7 +1019,9 @@
                 <div class="log_wrapper">
                     <div class="burg-wrap">
                         <div class="burger-menu">
-                            <span></span>
+                            <svg>
+                              <use href="assets/sprite/sprite.svg#burger-menu"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="logo">

@@ -886,6 +886,7 @@ $color-price-sale: #E90000;
         margin-left: 0;
     }
     .promotion .container .promo-wrapper .promo-items {
+        width: 100%;
         .promo-content{
            position: relative;
            left: unset;
@@ -905,7 +906,8 @@ $color-price-sale: #E90000;
         .promo-img{
             margin-bottom: 27px;
             max-width: 100%;
-            max-height: 100%;
+            height: calc(100vw - 32px);
+            overflow: hidden;
         }
 
     }
@@ -933,7 +935,7 @@ $color-price-sale: #E90000;
                       margin-bottom: 0;
                   }
                   &:last-child .img-wrapper{
-                     padding-left: 9px;
+                     padding-left: 4px;
                   }
                   
                  .img-wrapper {
@@ -1201,9 +1203,7 @@ $color-price-sale: #E90000;
          max-width: 100%;
          max-height: 343px;
          margin: 0 auto;
-    }
-    .promotion .container .promo-wrapper .promo-items .promo-img{
-         max-height: 100%;
+         overflow: hidden;
     }
     .promo-banner .banner-wrapper .content-wrapper h2{
         white-space: normal;
@@ -1259,7 +1259,7 @@ $color-price-sale: #E90000;
         padding: 4px 7px 5px;
     }
     .banner.hist .container .desc_banner .text_content{
-       margin-top: -5px;
+       margin-top: -2px;
     }
     .banner.hist .container .img-wrapper{
         height: 173px;

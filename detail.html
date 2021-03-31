@@ -37,15 +37,15 @@
                     </svg>
                 </div>
                 <h4 class="header-popup">Авторизоваться</h4>
-                <form id="sign-in" class="form" method="POST">
+                <form id="sign-in" class="form" method="POST" action="">
                     <div class="input_wrap">
-                        <input type="email" placeholder="Электронная почта" required >
+                        <input type="email" placeholder="Электронная почта" required>
                     </div>
                     <div class="input_wrap end"> 
-                        <input type="password" placeholder="Пароль" required>
+                        <input type="password" placeholder="Пароль" required name="psword">
                     </div>
                     <div class="sub-input_wrap">
-                        <input type="submit" value="Авторизоваться">
+                        <input type="submit" value="Авторизоваться" >
                     </div>
                 </form>
                 <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
@@ -1021,7 +1021,9 @@
                 <div class="log_wrapper">
                     <div class="burg-wrap">
                         <div class="burger-menu">
-                            <span></span>
+                            <svg>
+                              <use href="assets/sprite/sprite.svg#burger-menu"></use>
+                            </svg>
                         </div>
                     </div>
                     <div class="logo">
@@ -2198,26 +2200,7 @@
                 </div>
             </div>
         </div>
-        <div class="preview-header-goods container">
-           <div class="decs-goods">
-               <div class="img-wrapper">
-                   <img src="assets/img/goods_mini.jpg" alt="mini-goods">
-               </div>
-               <div class="goods-name"><p class="font-mini">Ботильоны Sergio Bardine</p></div>
-               <div class="price-wrapper">
-                   <span class="price_new font-mini">3490</span>
-                   <span class="price_old font-mini">5990</span>
-                </div>
-           </div>      
-            <div class="btn-wrapper-card mini">
-                <button class="btn-to-card font-mini">Добавить в корзину</button>
-                <div class="add-to-favorit">
-                    <svg>
-                        <use href="assets/sprite/sprite.svg#favorit"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
+
     </header>
     <!--Header end section-->
 

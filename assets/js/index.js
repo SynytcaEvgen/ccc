@@ -305,11 +305,17 @@ function init() {
   menuAccordionMover();
   accEngine('.acc-open');
   if ($(window).width() <= 480) {
-      sliceSentence(33, '.discrption-goods > p');
-      sliceSentence(33, '.promotion.hist .discrption-goods > p');
+    if ($('.discrption-goods').hasClass('hist')) {
+      sliceSentence(40, '.discrption-goods.hist > p');
     } else {
       sliceSentence(33, '.discrption-goods > p');
-      sliceSentence(28, '.promotion.hist .discrption-goods > p');
+    }
+  } else {
+    if ($('.discrption-goods').hasClass('hist')) {
+      sliceSentence(28, '.discrption-goods.hist > p');
+    } else {
+      sliceSentence(33, '.discrption-goods > p');
+    }
     };
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
