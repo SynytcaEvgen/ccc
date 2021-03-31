@@ -63,10 +63,10 @@ function init() {
   let swiperGoods = new Swiper('.gallery-mob-container.swiper-container', {
     spaceBetween: 30,
     loop: true,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 3500,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: '.goods-pagination',
         clickable: true, 

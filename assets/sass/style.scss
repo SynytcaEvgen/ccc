@@ -511,7 +511,11 @@ label[data-color] {
           padding-bottom: 10px;
         }
         .icon-wrapper{
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center;
           .icon-items{
             a:hover svg{
@@ -875,7 +879,7 @@ main section button{
            display: block;
            width: 100%;
            left: 0;
-           top: 22.5px;
+           top: 22px;
            z-index: -1;
            .mob_sub_menu_items{
              position: relative;
@@ -3631,6 +3635,9 @@ section.info {
 }
 //detail_start
 .doods-detail{
+  .gallery-mob-container{
+        display: none;
+  }
   .container{
     .goods-frame{
       padding-top: 24px;
@@ -3660,9 +3667,6 @@ section.info {
             }
           }
         }
-      }
-      .gallery-mob-container{
-        display: none;
       }
       .goods-detail-wrapper{
          max-width: 360px;

@@ -367,7 +367,11 @@ label[data-color] {
           font-family: "Gordita-Medium", sans-serif;
           padding-bottom: 10px; }
         .popup .popup__wrapper .popup__content .social-sing-wrapp .icon-wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
           justify-content: center; }
           .popup .popup__wrapper .popup__content .social-sing-wrapp .icon-wrapper .icon-items {
             margin: 0 8px; }
@@ -655,7 +659,7 @@ main section button {
         display: block;
         width: 100%;
         left: 0;
-        top: 22.5px;
+        top: 22px;
         z-index: -1; }
         .menu_mobile .mobile-menu-wrapper .menu_item > .active .mob_sub_menu .mob_sub_menu_items {
           position: relative;
@@ -2345,6 +2349,9 @@ section.info .container .info-frame {
   font-family: "Gordita-Regular", sans-serif;
   margin-bottom: 40px; }
 
+.doods-detail .gallery-mob-container {
+  display: none; }
+
 .doods-detail .container .goods-frame {
   padding-top: 24px;
   padding-bottom: 70px;
@@ -2366,8 +2373,6 @@ section.info .container .info-frame {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-  .doods-detail .container .goods-frame .gallery-mob-container {
-    display: none; }
   .doods-detail .container .goods-frame .goods-detail-wrapper {
     max-width: 360px;
     margin-left: 8px; }
