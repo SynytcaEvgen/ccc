@@ -59,6 +59,20 @@ function init() {
 		  },
     });
   /*Slider swiper prod-slider end*/
+  /*Slider swiper goods-card start*/
+  let swiperGoods = new Swiper('.gallery-mob-container.swiper-container', {
+    spaceBetween: 30,
+    loop: true,
+    // autoplay: {
+    //   delay: 3500,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      el: '.goods-pagination',
+        clickable: true, 
+    },
+  });
+  /*Slider swiper goods-card end*/
   function menuAccordionMover() {
     let acc = document.querySelectorAll(".accordion-btn");
     for (let i = 0; i < acc.length; i++) {
@@ -116,7 +130,19 @@ function init() {
     email: "Введите корректный электронный адрес",
   });
   function validatorForm(elem) {
-    $(elem).validate();
+    $(elem).validate({
+       rules: {
+         psword: {
+           required: true,
+           minlength: 6,
+         }
+      },
+      messages: {
+        psword: {
+          minlength: 'Минимальная длина пароля 6 символов'
+        }
+      },
+    });
   };
   function addHover(elem) { 
     $(elem).addClass('in-hover'); 
@@ -355,7 +381,11 @@ function init() {
       $('.lock-pointer').remove();
       $(this).removeClass('active');
       $(this).next().removeClass('active');
-      
+    }
+  });
+  $(document).click(function (e) {
+    if (e.target.classList.contains('popup__wrapper')) {
+      closePopUp('.popup.active');
     }
   });
   $(document).click(function (e) {
@@ -431,7 +461,6 @@ function init() {
     $('.modal-submit').addClass('no-active');
 
   });
-  
 };
 
 
