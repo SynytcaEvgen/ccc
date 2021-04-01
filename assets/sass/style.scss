@@ -207,6 +207,17 @@ input.box-check {
     }
   }
 }
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.6);
+  z-index: 9;
+  opacity: 1;
+  visibility: visible;
+}
 .mob-check-items input.box-check.color:checked +.desc-check::after{
       transform: translate(-50%, -50%) scale(1);
       transition: .3s ease-in-out;
@@ -581,17 +592,16 @@ main section button{
   display: none;
 } 
 .search-header-line {
-  position: absolute;
+  position: relative;
+  margin: 25px 0;
+  margin-top: -7px;
   width: 100%;
-  z-index: 2;
+  z-index: 7;
   max-height: 48px;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  display: none;
+  background-color: $color_ivert;
   &.active{
-    transition: all 0.3s ease-in-out;
-    visibility: visible;
-    opacity: 1;
+    display: block;
   }
   .search-wrapper{
     position: relative;   
@@ -943,7 +953,11 @@ main section button{
                      }
                      p a{
                        font-family: $gordita_medium;
+                       &:hover{
+                         color: $color-action-h;
+                       }
                      }
+
                      a{
                        line-height: 40px;
                        &:hover{
@@ -1064,10 +1078,11 @@ main section button{
     display: block;
     position: absolute;
     left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1300px;
     width: 100%;
     padding-top: 20px;
-    padding-left: calc((100vw - 1320px) / 2);
-    padding-right: calc((100vw - 1320px) / 2);
     .sub_menu_items {
       display: inline-block;
       margin-right: 32px;
@@ -1096,7 +1111,7 @@ main section button{
            top: 45px;
            left: 0;
            right: 0;
-           padding: 41px calc((100vw - 1320px) / 2) 73px;
+           padding: 41px 0px 73px;
            z-index: 5;
            border-bottom: 1px solid $color_line_dec;
            .cat-wrapper {
@@ -1111,13 +1126,20 @@ main section button{
                p a{
                  line-height: 33px;
                  font-family: $gordita_medium;
+                 transition: 0.3s ease-in-out;
+                 &:hover{
+                   color: $color-action-h;
+                   transition: 0.3s ease-in-out;
+                 }
                }
                .categ_item {
                  .categ_items {
                    line-height: 33px;
                    a{
+                     transition: 0.3s ease-in-out;
                      &:hover{
                        color: $color-action-h;
+                       transition: 0.3s ease-in-out;
                      }
                    }
                  }
@@ -1291,10 +1313,22 @@ main section button{
             background-color: $color_promo_bg;
             border: 1px solid $color_bullet;
             margin: 0 6px;
+            transition: 0.3s ease-in-out;
+            &:hover{
+              border-color: $color-action-h;
+              transition: 0.3s ease-in-out;
+              opacity: 1;
+            }
         }
         .swiper-pagination-bullet{
           background-color: unset;
           border: 1px solid $color_bullet;
+          transition: 0.3s ease-in-out;
+          &:hover{
+            border-color: $color-action-h;
+            transition: 0.3s ease-in-out;
+            opacity: 1;
+          }
         }
     }
  }
@@ -1968,10 +2002,14 @@ footer{
         }
       }
       .img-wrapper {
-        max-height: 600px;
+        width: 100%;
+        height: calc(100vw * (600 / 1920));
         position: relative;
+        overflow: hidden;
         img{
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         &::after{
           content: '';
@@ -2047,6 +2085,7 @@ footer{
              .discrption-goods p{
                 font-size: 12px;
                 line-height: 20px;
+                word-wrap: break-word;
              }
            }  
          }
@@ -3937,12 +3976,17 @@ header{
     font-size: 12px;
   }
   .preview-header-goods{
-     display: flex;
+     display: none;
      justify-content: space-between;
      align-items: center;
-     padding-bottom: 4px;
-    //  height: 0;
-    //  overflow: hidden;
+     padding-bottom: 4px;   
+     &.active{
+       opacity: 1;
+       height: auto;
+       overflow: visible;
+       display: flex;
+       
+     }
     .decs-goods{
       display: flex;
       justify-content: center;

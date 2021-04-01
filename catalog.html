@@ -25,7 +25,7 @@
     <script src="assets/js/index.js"></script>
 </head>
 <body>
-   <!-- Pop_up sing up -->
+    <!-- Pop_up sing up -->
     <div id="popup-sign-in" class="popup">
         <div class="popup__wrapper">
             <div class="popup__content">
@@ -37,13 +37,13 @@
                 <h4 class="header-popup">Авторизоваться</h4>
                 <form id="sign-in" class="form" method="POST" action="">
                     <div class="input_wrap">
-                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="email" placeholder="Электронная почта" name="email_n" required>
                     </div>
-                    <div class="input_wrap end"> 
+                    <div class="input_wrap end">
                         <input type="password" placeholder="Пароль" required name="psword">
                     </div>
                     <div class="sub-input_wrap">
-                        <input type="submit" value="Авторизоваться" >
+                        <input type="submit" value="Авторизоваться">
                     </div>
                 </form>
                 <div class="link_wrapper"><a href="#" class="reset-pass">Не можете вспомнить пароль?</a></div>
@@ -52,17 +52,17 @@
                     <div class="icon-wrapper">
                         <div class="icon-items">
                             <a href="#">
-                              <svg class="facebook">
-                                  <use href="assets/sprite/sprite.svg#face-sign"></use>
-                              </svg>
+                                <svg class="facebook">
+                                    <use href="assets/sprite/sprite.svg#face-sign"></use>
+                                </svg>
                             </a>
                         </div>
                         <div class="icon-items">
                             <a href="#">
-                               <svg class="vk">
-                                   <use href="assets/sprite/sprite.svg#vk-sign"></use>
-                               </svg>
-                            </a> 
+                                <svg class="vk">
+                                    <use href="assets/sprite/sprite.svg#vk-sign"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -85,11 +85,12 @@
                 </div>
                 <h4 class="header-popup">Сброс пароля</h4>
                 <div class="text-content">
-                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса пароля</p>
+                    <p>Если этот адрес электронной почты был зарегистрирован на нашем портале, вы получите ссылку для сброса
+                        пароля</p>
                 </div>
                 <form id="reset-pass" class="form" method="POST">
                     <div class="input_wrap end">
-                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="email" placeholder="Электронная почта" name="email_n" required>
                     </div>
                     <div class="sub-input_wrap">
                         <input type="submit" value="Сбросить пароль">
@@ -4097,25 +4098,25 @@
                                 <ul class="lang-item">
                                     <li class="lang-items">RU</li>
                                 </ul>
-                            <ul class="all-lang-item">
-                                <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
-                                <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
-                                <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
-                                <li class="all-lang-items current"><a href="#">RU</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
-                                <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
-                            </ul>
+                               <ul class="all-lang-item">
+                                    <li class="all-lang-items"><a href="https://ccc.eu/pl/">PL</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/en/">EN</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/at/">AT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/bg/">BG</a></li>
+                                    <li class="all-lang-items"><a href="https://shop.ccc.eu/hr/">HR</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/cz/">CZ</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">EE</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/hu/">HU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LV</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/en/">LT</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/md">MD</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ro/">RO</a></li>
+                                    <li class="all-lang-items current"><a href="#">RU</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/rs">RS</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/sk/">SK</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/si/">SI</a></li>
+                                    <li class="all-lang-items"><a href="https://ccc.eu/ua/">UA</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>

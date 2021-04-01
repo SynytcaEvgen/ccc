@@ -39,7 +39,7 @@
                 <h4 class="header-popup">Авторизоваться</h4>
                 <form id="sign-in" class="form" method="POST" action="">
                     <div class="input_wrap">
-                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="email" placeholder="Электронная почта" name="email_n" required>
                     </div>
                     <div class="input_wrap end"> 
                         <input type="password" placeholder="Пароль" required name="psword">
@@ -91,7 +91,7 @@
                 </div>
                 <form id="reset-pass" class="form" method="POST">
                     <div class="input_wrap end">
-                        <input type="email" placeholder="Электронная почта" required>
+                        <input type="email" placeholder="Электронная почта" name="email_n" required>
                     </div>
                     <div class="sub-input_wrap">
                         <input type="submit" value="Сбросить пароль">
@@ -2248,36 +2248,47 @@
                     </div>
                 </div>
                 <div class="goods-pagination"></div>
+                 <div class="goods_nav">
+                     <div class="return_arrow">
+                        <svg>
+                            <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                        </svg>
+                     </div>
+                     <div class="promo-block">
+                         <span class="promo_new">Новинка</span>
+                     </div>
+                 </div>
+
             </div>
             <div class="container">
                 <div class="goods-frame">
                     <div class="gallery-wrapper">
                         <div class="grid-frame-img">
-                            <div class="grid-row-one">
+                            <div class="grid-row-one"> 
                                <div class="items-grid addeptive">
-                                   <a href="assets/img/goods_b-1.jpg" data-fancybox="goods-gallery" data-caption>
+                                   <a href="assets/img/goods_b-1.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                        <img src="assets/img/goods_b-1.jpg" alt="goods_photo" />
                                    </a>
                                </div>
                                <div class="items-grid">
-                                   <a href="assets/img/goods_b-2.jpg" data-fancybox="goods-gallery" data-caption>
+                                   <a href="assets/img/goods_b-2.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                        <img src="assets/img/goods_b-2.jpg" alt="goods_photo" />
                                    </a>
                                </div>
                             </div>
                             <div class="grid-row-two">
                                 <div class="items-grid">
-                                    <a href="assets/img/goods_3.jpg" data-fancybox="goods-gallery" data-caption>
+                                    <a href="assets/img/goods_3.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_3.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
                                 <div class="items-grid">
-                                    <a href="assets/img/goods_2.jpg" data-fancybox="goods-gallery" data-caption>
+                                    <a href="assets/img/goods_2.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_2.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
                                 <div class="items-grid">
-                                    <a href="assets/img/goods_1.jpg" data-fancybox="goods-gallery" data-caption>
+                                    <a href="assets/img/goods_1.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_1.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
@@ -2341,7 +2352,7 @@
                             </div>
                             <div class="link-to"><a href="#">Таблица размеров</a></div>
                         </div>
-                        <div class="btn-wrapper-card">
+                        <div class="btn-wrapper-card" id="btn-watch">
                             <button class="btn-to-card">Добавить в корзину</button>
                             <div class="add-to-favorit">
                                 <svg>

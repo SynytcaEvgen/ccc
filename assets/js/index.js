@@ -108,14 +108,7 @@ function init() {
       $(elem).removeClass(add);
     };
   };
-  function sliceSentence(q, sentence) {
-    let size = q,
-    newsContent= $(sentence),
-    newsText = newsContent.text();
-      if(newsText.length > size){
-      	newsContent.text(newsText.slice(0, size) + ' ...');
-    };
-  };
+  
   function openPopUp(elem) {
     $(elem).addClass('active');  
     $('body').addClass('modal');
@@ -129,13 +122,17 @@ function init() {
     remote: "Поле является обязательным",
     email: "Введите корректный электронный адрес",
   });
+  $.validator.addMethod("EMAIL", function(value, element) {
+      return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
+  }, "Введите корректный электронный адрес");
   function validatorForm(elem) {
     $(elem).validate({
-       rules: {
-         psword: {
-           required: true,
-           minlength: 6,
-         }
+      rules: {
+        psword: {
+          required: true,
+          minlength: 6,
+        },
+        email_n:"required EMAIL",
       },
       messages: {
         psword: {
@@ -257,10 +254,20 @@ function init() {
           });
         });
   })(jQuery);
+  function come(elem) {
+    var docViewTop = $(window).scrollTop(),
+      docViewBottom = docViewTop + $(window).height(),
+      elemTop = $(elem).offset().top,
+      elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
    $('.features_items .search').click(function () {
     if ($(window).width() >= 900) {
       $('header .search-header-line').toggleClass('active');
       $(this).parent().toggleClass('active');
+      $('body').toggleClass('modal');
+      $('body').toggleClass('overlay');
     } else {
       $('.menu_mobile').addClass('active');
       $('body').addClass('modal');
@@ -270,6 +277,8 @@ function init() {
   $('.search-header-line svg.close').click(function () {
     $('header .search-header-line').removeClass('active');
     $('.features_items').removeClass('active');
+    $('body').removeClass('modal');
+    $('body').removeClass('overlay');
   });
   $('.burger-menu').click(function () {
     $('.menu_mobile').addClass('active');  
@@ -304,26 +313,28 @@ function init() {
   });
   menuAccordionMover();
   accEngine('.acc-open');
-  if ($(window).width() <= 374) {
-    if ($('.discrption-goods').hasClass('hist')) {
-      sliceSentence(35, '.discrption-goods.hist > p');
-    } else {
-      sliceSentence(33, '.discrption-goods > p');
-    } 
-  }
-  else if ($(window).width() <= 480) {
-    if ($('.discrption-goods').hasClass('hist')) {
-      sliceSentence(40, '.discrption-goods.hist > p');
-    } else {
-      sliceSentence(33, '.discrption-goods > p');
-    }
-  } else {
-    if ($('.discrption-goods').hasClass('hist')) {
-      sliceSentence(28, '.discrption-goods.hist > p');
-    } else {
-      sliceSentence(33, '.discrption-goods > p');
-    }
+  function sliceSentence(q, sentence) {
+    let size = q,
+      newsContent = document.querySelectorAll(sentence);
+    for (let i = 0; i < newsContent.length; i++) {
+      if (newsContent[i].outerText.length > size) {
+         	newsContent[i].innerHTML = newsContent[i].outerText.slice(0, size) + ' ...';
+      };
     };
+  };
+  
+    if ($(window).width() <= 357) {
+      sliceSentence(34, '.discrption-goods-s > p');
+      sliceSentence(33, '.discrption-goods > p'); 
+    }
+    else if ($(window).width() <= 480 && $(window).width() >= 357) {
+        sliceSentence(38, '.discrption-goods-s > p');
+        sliceSentence(33, '.discrption-goods > p');
+    } else {
+       sliceSentence(27, '.discrption-goods-s > p');
+       sliceSentence(33, '.discrption-goods > p'); 
+    };
+  
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
   $('.close-popup').click(function () {
@@ -474,6 +485,26 @@ function init() {
     $('.modal-submit').addClass('no-active');
 
   });
+  // checkLength('discrption-goods');
+  if (!$('#btn-watch')) {
+    console.log(true);
+     $(document).scroll(function () {
+    if (come('#btn-watch')) {
+      $('.preview-header-goods').removeClass('active');
+    } else {
+      $('.preview-header-goods').addClass('active')
+    }
+  });
+  };
+  $(".modal_gallery").fancybox({
+  helpers : { 
+   overlay: {
+    opacity: 1, // or the opacity you want 
+    css: {'background-color': '#fff'} // or your preferred hex color value
+   } // overlay 
+  } // helpers
+}); // fancybox
+  
 };
 
 
