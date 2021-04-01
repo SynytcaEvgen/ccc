@@ -497,13 +497,25 @@ function init() {
   });
   };
   $(".modal_gallery").fancybox({
-  helpers : { 
-   overlay: {
-    opacity: 1, // or the opacity you want 
-    css: {'background-color': '#fff'} // or your preferred hex color value
-   } // overlay 
-  } // helpers
-}); // fancybox
+    buttons: ['close'],
+    btnTpl: {
+			close:
+				'<button data-fancybox-close class="btn-fancybox">' +
+					 '<svg>' +
+				      '<use href="assets/sprite/sprite.svg#close"></use>' +
+				   '</svg>'+
+				"</button>",
+			arrowLeft:
+				'<button data-fancybox-prev class="btn-fancybox-arrow prev">' +
+					'<i class="icon-arrow-logn-think"></i>' +
+				"</button>",
+			arrowRight:
+				'<button data-fancybox-next class="btn-fancybox-arrow">' +
+					'<i class="icon-arrow-logn-think"></i>' +
+				"</button>",
+    },
+    
+  });
   
 };
 

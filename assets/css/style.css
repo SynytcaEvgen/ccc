@@ -2653,3 +2653,17 @@ header .preview-header-goods {
       header .preview-header-goods .btn-wrapper-card.mini .add-to-favorit svg {
         width: 12px;
         height: 10px; }
+
+.btn-fancybox {
+  background-color: transparent; }
+  .btn-fancybox svg {
+    width: 22px;
+    height: 22px;
+    stroke: red; }
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 1 !important;
+  background-color: #fff; }
+
+.fancybox-slide--image {
+  padding: 0 !important; }
