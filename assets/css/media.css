@@ -894,8 +894,6 @@
 @media only screen and (max-width: 374px) {
   .menu_mobile .mobile-menu-wrapper .menu_item > .menu_items > a {
     padding: 0 12px; }
-  .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container {
-    max-width: 150px; }
   section.info .container .info-frame .info-content-wrapper > .title {
     font-size: 12px;
     line-height: 23px; }

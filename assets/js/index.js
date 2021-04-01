@@ -304,7 +304,14 @@ function init() {
   });
   menuAccordionMover();
   accEngine('.acc-open');
-  if ($(window).width() <= 480) {
+  if ($(window).width() <= 374) {
+    if ($('.discrption-goods').hasClass('hist')) {
+      sliceSentence(35, '.discrption-goods.hist > p');
+    } else {
+      sliceSentence(33, '.discrption-goods > p');
+    } 
+  }
+  else if ($(window).width() <= 480) {
     if ($('.discrption-goods').hasClass('hist')) {
       sliceSentence(40, '.discrption-goods.hist > p');
     } else {
