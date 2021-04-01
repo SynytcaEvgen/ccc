@@ -63,10 +63,15 @@ function init() {
   let swiperGoods = new Swiper('.gallery-mob-container.swiper-container', {
     spaceBetween: 30,
     loop: true,
-    // autoplay: {
-    //   delay: 3500,
-    //   disableOnInteraction: false,
-    // },
+    centeredSlides: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
     pagination: {
       el: '.goods-pagination',
         clickable: true, 
@@ -486,36 +491,83 @@ function init() {
 
   });
   // checkLength('discrption-goods');
-  if (!$('#btn-watch')) {
-    console.log(true);
+  if ($('#btn-watch')) {
      $(document).scroll(function () {
-    if (come('#btn-watch')) {
-      $('.preview-header-goods').removeClass('active');
-    } else {
-      $('.preview-header-goods').addClass('active')
-    }
-  });
+      if (come('#btn-watch')) {
+         $('.preview-header-goods').removeClass('active');
+      } else {
+         $('.preview-header-goods').addClass('active')
+       }
+     });
   };
-  $(".modal_gallery").fancybox({
-    buttons: ['close'],
-    btnTpl: {
-			close:
-				'<button data-fancybox-close class="btn-fancybox">' +
-					 '<svg>' +
-				      '<use href="assets/sprite/sprite.svg#close"></use>' +
-				   '</svg>'+
-				"</button>",
-			arrowLeft:
-				'<button data-fancybox-prev class="btn-fancybox-arrow prev">' +
-					'<i class="icon-arrow-logn-think"></i>' +
-				"</button>",
-			arrowRight:
-				'<button data-fancybox-next class="btn-fancybox-arrow">' +
-					'<i class="icon-arrow-logn-think"></i>' +
-				"</button>",
-    },
+  function initGoodSilder() {
     
+  }
+  let mobGallSlider = document.querySelector('.gall-wrapp-main'),
+    closeGallery = document.querySelector('.gall-close-btn');
+  
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('gall-wrapp-main')) {
+      mobGallSlider.classList.remove('open');
+    } else { return}
+  })
+  
+  closeGallery.addEventListener('click', function () {
+    mobGallSlider.classList.remove('open');
   });
+  
+    document.querySelector('#slide-1').addEventListener('click', function (e) {
+      e.preventDefault();
+    mobGallSlider.classList.add('open');
+    swiperGoods.slideTo(1, 0);
+    });
+  document.querySelector('#slide-2').addEventListener('click', function (e) {
+      e.preventDefault();
+    mobGallSlider.classList.add('open');
+    swiperGoods.slideTo(2, 0);
+  });
+  document.querySelector('#slide-3').addEventListener('click', function (e) {
+      e.preventDefault();
+    mobGallSlider.classList.add('open');
+    swiperGoods.slideTo(3, 0);
+  });
+  document.querySelector('#slide-4').addEventListener('click', function (e) {
+      e.preventDefault();
+    mobGallSlider.classList.add('open');
+    swiperGoods.slideTo(4, 0);
+  });
+  document.querySelector('#slide-5').addEventListener('click', function (e) {
+      e.preventDefault();
+    mobGallSlider.classList.add('open');
+    swiperGoods.slideTo(5, 0);
+  });
+  
+  
+  // $(".modal_gallery").fancybox({
+  //   buttons: ['close'],
+  //   infobar: false,
+  //   btnTpl: {
+	// 		close:
+	// 			'<button data-fancybox-close class="btn-fancybox">' +
+	// 				 '<svg>' +
+	// 			      '<use href="assets/sprite/sprite.svg#close"></use>' +
+	// 			   '</svg>'+
+	// 			"</button>",
+	// 		arrowLeft:
+	// 			'<button data-fancybox-prev class="btn-fancybox-arrow prev">' +
+	// 				'<svg>' +
+	// 			      '<use href="assets/sprite/sprite.svg#arrow-slid"></use>' +
+	// 			   '</svg>'+
+	// 			"</button>",
+	// 		arrowRight:
+	// 			'<button data-fancybox-next class="btn-fancybox-arrow">' +
+	// 				'<svg>' +
+	// 			      '<use href="assets/sprite/sprite.svg#arrow-slid"></use>' +
+	// 			   '</svg>'+
+	// 			"</button>",
+  //   },
+    
+  // });
   
 };
 

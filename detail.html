@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="assets/css/material-icons.css">
     <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
     <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css"> -->
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/jquery.validate.min.js"></script>
     <script src="assets/js/ion.rangeSlider.min.js"></script>
     <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- <script src="assets/js/jquery.fancybox.min.js"></script> -->
     <script src="assets/js/index.js"></script>
 </head>
 <body>
@@ -2229,7 +2229,8 @@
     <!--Content start section-->
     <main>
         <section class="doods-detail">
-            <div class="gallery-mob-container swiper-container">
+            <div class="gall-wrapp-main">
+                <div class="gallery-mob-container swiper-container">
                 <div class="gallery-mob-wrapper swiper-wrapper">
                     <div class="items-grid swiper-slide">
                         <img src="assets/img/goods_b-1.jpg" alt="goods_photo" />
@@ -2248,6 +2249,22 @@
                     </div>
                 </div>
                 <div class="goods-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next gall-mob-button-next">
+                    <svg>
+                       <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                    </svg>
+                </div>
+                <div class="swiper-button-prev gall-mob-button-prev">
+                    <svg>
+                      <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                    </svg>
+                </div>
+                <div class="gall-close-btn">
+                        <svg>
+ 			              <use href="assets/sprite/sprite.svg#close"></use>
+			            </svg>
+                </div>
                  <div class="goods_nav">
                      <div class="return_arrow">
                         <svg>
@@ -2258,36 +2275,38 @@
                          <span class="promo_new">Новинка</span>
                      </div>
                  </div>
+            </div>
 
             </div>
+            
             <div class="container">
                 <div class="goods-frame">
                     <div class="gallery-wrapper">
                         <div class="grid-frame-img">
                             <div class="grid-row-one"> 
-                               <div class="items-grid addeptive">
+                               <div class="items-grid addeptive" id="slide-1">
                                    <a href="assets/img/goods_b-1_zoom.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                        <img src="assets/img/goods_b-1.jpg" alt="goods_photo" />
                                    </a>
                                </div>
-                               <div class="items-grid">
+                               <div class="items-grid" id="slide-2">
                                    <a href="assets/img/goods_b-2.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                        <img src="assets/img/goods_b-2.jpg" alt="goods_photo" />
                                    </a>
                                </div>
                             </div>
                             <div class="grid-row-two">
-                                <div class="items-grid">
+                                <div class="items-grid" id="slide-3">
                                     <a href="assets/img/goods_3.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_3.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
-                                <div class="items-grid">
+                                <div class="items-grid" id="slide-4">
                                     <a href="assets/img/goods_2.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_2.jpg" alt="goods_photo" />
                                     </a>
                                 </div>
-                                <div class="items-grid">
+                                <div class="items-grid" id="slide-5">
                                     <a href="assets/img/goods_1.jpg" class="modal_gallery" data-fancybox="gal-mod" data-caption>
                                         <img src="assets/img/goods_1.jpg" alt="goods_photo" />
                                     </a>

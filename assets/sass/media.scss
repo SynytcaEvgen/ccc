@@ -1162,8 +1162,12 @@ $color-price-sale: #E90000;
       }
     }
     .doods-detail{
+       .gall-wrapp-main{
+           opacity: 1;
+           visibility: visible;
+           position: relative;
+       }
        .gallery-mob-container{
-          display: block;
           max-height: 540px;
           position: relative;
           .items-grid{

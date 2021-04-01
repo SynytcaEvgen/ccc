@@ -793,8 +793,11 @@
   .btn-wrapper-card .btn-to-card {
     margin-right: 16px;
     min-width: unset; }
+  .doods-detail .gall-wrapp-main {
+    opacity: 1;
+    visibility: visible;
+    position: relative; }
   .doods-detail .gallery-mob-container {
-    display: block;
     max-height: 540px;
     position: relative; }
     .doods-detail .gallery-mob-container .items-grid {
