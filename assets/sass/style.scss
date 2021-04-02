@@ -559,6 +559,12 @@ label[data-color] {
            width: 100%;
            background-color: transparent;
            border-radius: 2px;
+           transition: 0.3s ease-in-out;
+           &:hover{
+             border-color: $color-action-h;
+             color: $color-action-h;
+             transition: 0.3s ease-in-out;
+           }
         }
       }
     } 
@@ -919,31 +925,30 @@ main section button{
                 width: 16px;
                 height: 16px;
                 fill: none;
-                transition: 0.3s ease;
+                transition: 0.5s ease;
                 &:hover{
                   stroke: $color-action-h;
                   fill: $color-action-h;
-                  transition: 0.3s ease;
+                  transition: 0.5s ease;
                 }
              }
              .mob_sub_sub_menu{
-                height: 0;
-                overflow: hidden;
-                opacity: 0;
-                transition: 0.3s ease;
-               
+                position: absolute;
+                background-color: $color_ivert;
+                width: 100%;
+                left: -450px;
+                z-index: 5;
+                transition: left 0.5s ease-in-out;
              }
              &.active{
                svg{
-                 transform: rotate(90deg);
-                 transition: 0.3s ease;
+                 transform: rotate(180deg);
+                 transition: 0.5s ease;
                }
                .mob_sub_sub_menu{
                  padding: 16px 16px 0;
-                 height: auto;
-                 overflow: visible;
-                 opacity: 1;
-                 transition: 0.3s ease;
+                 transition: left 0.5s ease-in-out;
+                 left: 0px;
                  .cat-wrapper{
                    .categ{
                      padding-bottom: 10px;
@@ -1936,9 +1941,7 @@ footer{
       bottom: 35px;
       right: 0;
       max-height: 300px;
-      width: 100%;
-      min-width: 60px;
-      overflow-y: scroll;
+      width: 60px;
       background-color: $color_ivert;
       z-index: 999;
       &.active{
@@ -1948,7 +1951,7 @@ footer{
       }
       .all-lang-items a{
         display: block;
-        padding: 10px 0px 10px 10px;
+        padding: 10px 0px 0px 10px;
         font-size: 14px;
         line-height: 24px;
         overflow: hidden;
@@ -1956,11 +1959,14 @@ footer{
         text-overflow: ellipsis;
         box-sizing: border-box;
         &:hover{
-          background-color: #f2f2f2;
+          color: $color-action-h;
         }
       }
       .all-lang-items.current a{
-        background-color: #f2f2f2;
+        color: $color-action-h;
+      }
+      .mCSB_inside>.mCSB_container {
+         margin-right: 22px;
       }
     }
   }
@@ -3510,7 +3516,7 @@ section.info {
 
 
 
-//account page here
+//account pages here
 .account-blocks{
   display: flex;
   flex-wrap: wrap;
@@ -3664,6 +3670,68 @@ section.info {
       }
       &.radio-wrap{
         display: flex;
+        align-items: flex-end;
+
+        .radio-label{
+          position: relative;
+          cursor: pointer;
+          margin-bottom: 0;
+          padding-top: 17px;
+          font-size: 0;
+          line-height: 0;
+          input{
+            position: absolute;
+            visibility: hidden;
+          }
+          span{
+            position: relative;
+            margin-right: 40px;
+            padding-left: 37px;
+            line-height: 23px;
+            font-size: 13px;
+            &:before{
+              content: '';
+              display: inline-block;
+              border: 1px solid #222222;
+              width: 18px;
+              height: 18px;
+              border-radius: 9px;
+              box-sizing: border-box;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+            &:after{
+              content: '';
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              border-radius: 4px;
+              box-sizing: border-box;
+              position: absolute;
+              left: 5px;
+              top: 5px;
+              background: #E9500E;
+              visibility: hidden;
+            }
+          }
+          &:hover{
+            span:before{
+              border-color: #E9500E;
+            }
+          }
+          input:checked{
+            &+span{
+              font-family: $gordita_medium;
+              &:before{
+                border-color: #E9500E;
+              }
+              &:after{
+                visibility: visible;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -3673,7 +3741,417 @@ section.info {
     color: $color_text;
     font-family: $gordita_regular;
     margin-bottom: 40px;
+  }
+  .form-actions{
+    .submit-btn{
+      background-color: #E9500E;
+      color: #fff;
+      border-color: #e9500e;
+      &:hover{
+        background-color: #cf470c;
+      }
+    }
+    .cancel-btn{
+      border-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}
+.catalog{
+  &.info{
+    padding-bottom: 0;
+    .container {
+      .catalog-wrapper,
+      .goods-gallery-block{
+        padding-bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
 
+}
+.account-orders{
+  width: 975px;
+  max-width: 100%;
+  .account-orders__nav{
+    display: flex;
+    .nav-item{
+      margin-right: 32px;
+      margin-bottom: 16px;
+      a{
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 33px;
+        text-decoration: underline;
+        &:hover{
+          color: $color-action-h;
+        }
+      }
+      &.active a{
+        color: $color-action-h;
+        font-family: $gordita_bold;
+        text-decoration: none;
+      }
+    }
+  }
+  .orders-list{
+    .item{
+      border-radius: 2px;
+      border: 1px solid #E8E8E8;
+      margin-bottom: 16px;
+      overflow: hidden;
+      .item-header {
+        background: #FAFAFA;
+        border-bottom: 1px solid #E8E8E8;
+        .item-date{
+          width: 85px;
+          text-align: right;
+          color: #989695;
+        }
+        .item-status{
+          margin-left: auto;
+          &.done{
+            color: #358D3F;
+          }
+          &.canceled{
+            color: #989695;
+          }
+        }
+      }
+    }
+  }
+}
+
+.registration-form{
+  padding-bottom: 24px;
+  width: 467px;
+  max-width: 100%;
+  .top-label{
+    font-size: 11px;
+    line-height: 11px;
+    margin-bottom: 9px;
+    font-family: $gordita_regular;
+    color: $color-goods-des;
+  }
+  .input-wrap{
+    margin-bottom: 39px;
+    input{
+      width: 100%;
+    }
+    &.radio-wrap {
+      display: flex;
+      align-items: flex-end;
+
+      .radio-label {
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 0;
+        font-size: 0;
+        line-height: 0;
+
+        input {
+          position: absolute;
+          visibility: hidden;
+        }
+
+        span {
+          position: relative;
+          margin-right: 40px;
+          padding-left: 37px;
+          line-height: 23px;
+          font-size: 13px;
+
+          &:before {
+            content: '';
+            display: inline-block;
+            border: 1px solid #222222;
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+
+          &:after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: #E9500E;
+            visibility: hidden;
+          }
+        }
+
+        &:hover {
+          span:before {
+            border-color: #E9500E;
+          }
+        }
+
+        input:checked {
+          & + span {
+            font-family: $gordita_medium;
+
+            &:before {
+              border-color: #E9500E;
+            }
+
+            &:after {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+  .acceptance{
+    margin-bottom: 40px;
+    p{
+      font-size: 11px;
+      line-height: 24px;
+    }
+    p+p{
+      margin-top: 8px;
+    }
+  }
+  .checkbox-label{
+    cursor: pointer;
+    display: block;
+    a{
+      text-decoration: underline;
+    }
+    input{
+      position: absolute;
+      visibility: hidden;
+      &:checked+span{
+        &:after{
+          transform: scale(1);
+          transition: .3s ease-in-out;
+        }
+        &:before{
+          transition: .3s ease-in-out;
+          background-color: #e9500e;
+          border-color: #e9500e;
+        }
+      }
+    }
+    &>span{
+      display: block;
+      position: relative;
+      padding-left: 29px;
+      line-height: 24px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        border: 1px solid #222222;
+      }
+      &:after{
+        font-family: "Material Icons";
+        content: '\e5ca';
+        position: absolute;
+        top: 2px;
+        left: 0;
+        transform: scale(0);
+        width: 18px;
+        height: 18px;
+        color: #fff;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s ease-in-out;
+      }
+    }
+  }
+  .submit-btn{
+    background-color: $color-action-h;
+    color: #fff;
+    border: none;
+    &:hover{
+      background-color: $color-action;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+.account-single-order{
+  width: 975px;
+  max-width: 100%;
+  .page-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .back-link{
+    span{
+      text-decoration: underline;
+    }
+    svg{
+      position: relative;
+      width: 12px;
+      height: 10px;
+      transform: rotate(180deg);
+      margin-right: 8px;
+    }
+  }
+  .order-meta{
+    margin: 24px 0;
+    .meta-item{
+      overflow: hidden;
+      border: 1px solid #E8E8E8;
+      border-radius: 2px;
+      &+.meta-item{
+        margin-top: 8px;
+      }
+      .meta-item__header{
+        padding: 16px;
+        background: #FAFAFA;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .meta-title{
+          font-family: $gordita_medium;
+          font-size: 13px;
+          line-height: 23px;
+        }
+        .order-quantity{
+          margin-left: auto;
+          font-size: 13px;
+          line-height: 24px;
+          font-family: $gordita_regular;
+        }
+        .order-summ{
+          font-size: 13px;
+          line-height: 24px;
+          font-family: $gordita_medium;
+          margin-left: 24px;
+        }
+      }
+      .meta-item__content{
+        border-top: 1px solid #E8E8E8;
+        padding: 16px;
+        &>p{
+          margin-bottom: 4px;
+        }
+        .pay-btn{
+          border: none;
+          color: #fff;
+          background-color: $color_action-h;
+          &:hover{
+            background-color: $color-action;
+          }
+        }
+        .order-info,.flex{
+          display: flex;
+          justify-content: space-between;
+          .item{
+            span{
+              display: block;
+            }
+            span:first-child{
+              color: #666666;
+            }
+            .item-status{
+              font-family: $gordita_medium;
+            }
+          }
+        }
+        .single-order-actions{
+          .cancel-btn{
+            border: none;
+            text-decoration: underline;
+            font-family: $gordita_regular;
+          }
+          .repeat-btn{
+            border: none;
+            color: #fff;
+            background-color: $color_action-h;
+            &:hover{
+              background-color: $color-action;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-rows__head{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #666;
+    font-family: $gordita_regular;
+    font-size: 12px;
+    line-height: 22px;
+    .product{
+      width: 385px;
+    }
+    .product-price{
+      width: 150px;
+    }
+    .product-quantity{
+      width: 150px;
+    }
+    .product-total{
+      width: 150px;
+    }
+  }
+  .product-rows{
+    .p-row{
+      display: flex;
+      padding: 16px 0;
+      border-top: 1px solid #E8E8E8;
+      font-family: $gordita_regular;
+      &:last-child{
+        padding-bottom: 0;
+      }
+      .col{
+        display: flex;
+        align-items: center;
+      }
+      .thumb{
+        width: 75px;
+        min-width: 75px;
+        margin-right: 24px;
+        img{
+          max-width: 100%;
+        }
+      }
+      .col{
+        width: 100%;
+        justify-content: space-between;
+        .name{
+          width: 286px;
+          .p-name{
+            font-family: $gordita_medium;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 16px;
+          }
+        }
+        .price{
+          width: 150px;
+          font-family: $gordita_medium;
+        }
+        .quantity{
+          width: 150px;
+        }
+        .total{
+          width: 150px;
+          font-family: $gordita_medium;
+        }
+      }
+    }
   }
 }
 //detail_start
@@ -4169,3 +4647,4 @@ header{
 
 //detail_end
 
+//account pages end

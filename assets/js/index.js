@@ -264,6 +264,10 @@ function init() {
           $(".mobile-filter-container .content-filter .mob-check-item").mCustomScrollbar({
              theme:"my-theme"
           });
+          $(".all-lang-item").mCustomScrollbar({
+             theme:"my-theme"
+          });
+          
         });
   })(jQuery);
   function come(elem) {
@@ -309,7 +313,16 @@ function init() {
     $(this).addClass('active');
   });
   $('.mob_sub_menu_items').click(function () {
-    $(this).toggleClass('active');
+    if ($('.mob_sub_menu_items').hasClass('active')) {
+      $('.mob_sub_menu_items').removeClass('active');
+      $(this).addClass('active');
+    } else;
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).addClass('active');
+    };
+    
   });
   $('.promo_line svg').click(function () {
     $(this).parent().css('height', '0');
@@ -498,8 +511,7 @@ function init() {
     $('.modal-submit').addClass('no-active');
 
   });
-  // checkLength('discrption-goods');
-  if ($('#btn-watch')) {
+  if ($('#btn-watch').length > 0) {
      $(document).scroll(function () {
       if (come('#btn-watch')) {
          $('.preview-header-goods').removeClass('active');
@@ -508,50 +520,52 @@ function init() {
        }
      });
   };
+  
   let mobGallSlider = document.querySelector('.gall-wrapp-main'),
-      closeGallery = document.querySelector('.gall-close-btn');
-  document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('gall-wrapp-main')) {
-      mobGallSlider.classList.remove('open');
-      document.body.classList.remove('modal')
-    } else {return}
-  })
-  
-  closeGallery.addEventListener('click', function () {
-    mobGallSlider.classList.remove('open');
-    document.body.classList.remove('modal');
-  });
-  
-  document.querySelector('#slide-1').addEventListener('click', function (e) {
-    e.preventDefault();
-    mobGallSlider.classList.add('open');
-    document.body.classList.add('modal');
-    swiperGoods.slideTo(1, 0);
+    closeGallery = document.querySelector('.gall-close-btn');
+  if (mobGallSlider) {
+      document.addEventListener('click', function (e) {
+       if (e.target.classList.contains('gall-wrapp-main')) {
+          mobGallSlider.classList.remove('open');
+          document.body.classList.remove('modal')
+       } else { return };
     });
-  document.querySelector('#slide-2').addEventListener('click', function (e) {
-    e.preventDefault();
-    mobGallSlider.classList.add('open');
-    document.body.classList.add('modal');
-    swiperGoods.slideTo(2, 0);
-  });
-  document.querySelector('#slide-3').addEventListener('click', function (e) {
-    e.preventDefault();
-    mobGallSlider.classList.add('open');
-    document.body.classList.add('modal');
-    swiperGoods.slideTo(3, 0);
-  });
-  document.querySelector('#slide-4').addEventListener('click', function (e) {
-    e.preventDefault();
-    mobGallSlider.classList.add('open');
-    document.body.classList.add('modal');
-    swiperGoods.slideTo(4, 0);
-  });
-  document.querySelector('#slide-5').addEventListener('click', function (e) {
-    e.preventDefault();
-    mobGallSlider.classList.add('open');
-    document.body.classList.add('modal');
-    swiperGoods.slideTo(5, 0);
-  });  
+    closeGallery.addEventListener('click', function () {
+      mobGallSlider.classList.remove('open');
+      document.body.classList.remove('modal');
+    });
+    
+    document.querySelector('#slide-1').addEventListener('click', function (e) {
+      e.preventDefault();
+      mobGallSlider.classList.add('open');
+      document.body.classList.add('modal');
+      swiperGoods.slideTo(1, 0);
+      });
+    document.querySelector('#slide-2').addEventListener('click', function (e) {
+      e.preventDefault();
+      mobGallSlider.classList.add('open');
+      document.body.classList.add('modal');
+      swiperGoods.slideTo(2, 0);
+    });
+    document.querySelector('#slide-3').addEventListener('click', function (e) {
+      e.preventDefault();
+      mobGallSlider.classList.add('open');
+      document.body.classList.add('modal');
+      swiperGoods.slideTo(3, 0);
+    });
+    document.querySelector('#slide-4').addEventListener('click', function (e) {
+      e.preventDefault();
+      mobGallSlider.classList.add('open');
+      document.body.classList.add('modal');
+      swiperGoods.slideTo(4, 0);
+    });
+    document.querySelector('#slide-5').addEventListener('click', function (e) {
+      e.preventDefault();
+      mobGallSlider.classList.add('open');
+      document.body.classList.add('modal');
+      swiperGoods.slideTo(5, 0);
+    });  
+  } else { return };
 };
 
 
