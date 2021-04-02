@@ -283,18 +283,23 @@ function init() {
       $('header .search-header-line').toggleClass('active');
       $(this).parent().toggleClass('active');
       $('body').toggleClass('modal');
-      $('body').toggleClass('overlay');
+      if ($('body>div').hasClass('overlay')) {
+        $('.overlay').remove();
+      } else {
+        $('<div class="overlay"></div>').prependTo('body');
+      }
     } else {
       $('.menu_mobile').addClass('active');
       $('body').addClass('modal');
       $('.search-wrapper .form > input').focus();
-    };
+     };
+     return false
   });
   $('.search-header-line svg.close').click(function () {
     $('header .search-header-line').removeClass('active');
     $('.features_items').removeClass('active');
     $('body').removeClass('modal');
-    $('body').removeClass('overlay');
+    $('.overlay').remove();
   });
   $('.burger-menu').click(function () {
     $('.menu_mobile').addClass('active');  
