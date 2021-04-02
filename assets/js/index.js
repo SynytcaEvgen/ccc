@@ -294,7 +294,7 @@ function init() {
       $('.search-wrapper .form > input').focus();
      };
      return false
-  });
+   });
   $('.search-header-line svg.close').click(function () {
     $('header .search-header-line').removeClass('active');
     $('.features_items').removeClass('active');
@@ -352,8 +352,7 @@ function init() {
          	newsContent[i].innerHTML = newsContent[i].innerHTML.slice(0, size) + ' ...';
       };
     };
-  };
-  
+  };    
     if ($(window).width() <= 357) {
       sliceSentence(34, '.discrption-goods-s > p');
       sliceSentence(33, '.discrption-goods > p'); 
@@ -448,7 +447,12 @@ function init() {
       $('.filter-header').removeClass('active');
       $('.filter-header').next().removeClass('active');
       $('.lock-pointer').remove();
-    };
+    } else if (e.target.classList.contains('overlay')) {
+      $('header .search-header-line').removeClass('active');
+      $('.features_items').removeClass('active');
+      $('body').removeClass('modal');
+      $('.overlay').remove();
+    }
   });
   $('.more-less-filter').click(function () {
     $(this).toggleClass('active');

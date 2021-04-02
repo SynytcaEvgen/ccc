@@ -65,6 +65,9 @@ $color-price-sale: #E90000;
         }
       }
     }
+    .news .news_grid-wrapper{
+        gap: 25px;
+    }
 }
 @media only screen and (max-width: 1199px) {
     .sec-top {          
@@ -173,6 +176,9 @@ $color-price-sale: #E90000;
     }
     .promotion.hist .container .promo-text{
         max-width: 100%;
+    }
+     .news .news_grid-wrapper{
+        gap: 15px;
     }
 }
 @media only screen and (max-width: 1023px) {
@@ -1098,19 +1104,19 @@ $color-price-sale: #E90000;
         }
     }
     .catalog .container .catalog-wrapper .header-find-goods,
-    .catalog .container .cat-pagination-wrapper .goods-per-page-wrapper{
+    .cat-pagination-wrapper .goods-per-page-wrapper{
         display: none;
     }
     .catalog .container .goods-gallery-block{
         padding-bottom: 37px;
     }
-    .catalog .container .cat-pagination-wrapper{
+    .cat-pagination-wrapper{
         justify-content: center;
         &.top{
             display: none;
         }
     }
-    .catalog .container .cat-pagination-wrapper .pagination-container{
+    .cat-pagination-wrapper .pagination-container{
         justify-content: center;
         align-items: center;
         &.top{
@@ -1128,6 +1134,9 @@ $color-price-sale: #E90000;
                 padding-right:36px;
             }
         }
+    }
+    .info-content-wrapper .info-text.news .cat-pagination-wrapper{
+        justify-content: center;
     }
     .doods-detail{
       .container{
@@ -1250,6 +1259,14 @@ $color-price-sale: #E90000;
         }
       }
     }
+    .news .news_grid-wrapper {
+        display: block;
+        padding-bottom: 16px;
+        gap: 24px;
+        .news-grid-items{
+            padding-bottom: 24px;
+        }
+    }    
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1306,13 +1323,13 @@ $color-price-sale: #E90000;
         }
     }
     .banner.hist .container .desc_banner{
-        padding: 11px 0 16px;
+        padding: 13px 0 14px;
     }
     .banner.hist .container .desc_banner .logo-wrapper{
         padding: 0px 7px 0px;
     }
     .banner.hist .container .desc_banner .text_content{
-       margin-top: -3px;
+    //    margin-top: -3px;
        display: flex;
        align-items: center;
        justify-content: center;
