@@ -3145,3 +3145,25 @@ header .preview-header-goods {
     .news .news_grid-wrapper .news-grid-items .caption-post:hover h3 {
       color: #e9500e;
       transition: 0.3s ease-in-out; }
+
+.info-content-wrapper.news-detail .news-link {
+  position: relative; }
+  .info-content-wrapper.news-detail .news-link svg {
+    width: 12px;
+    height: 10px;
+    stroke: #222222;
+    transform: rotate(180deg) translate(0, 50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transition: 0.3s ease-in-out; }
+  .info-content-wrapper.news-detail .news-link span {
+    padding-left: 20px;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out; }
+  .info-content-wrapper.news-detail .news-link:hover svg {
+    stroke: #e9500e;
+    transition: 0.3s ease-in-out; }
+  .info-content-wrapper.news-detail .news-link:hover span {
+    color: #e9500e;
+    transition: 0.3s ease-in-out; }

@@ -4165,6 +4165,37 @@ header{
     }
   }
 }
+.info-content-wrapper.news-detail{
+  .news-link{
+    position: relative;
+    svg{
+      width: 12px;
+      height: 10px;
+      stroke: $color_text;
+      transform: rotate(180deg) translate(0,50%);
+      position: absolute;
+      top:50%;
+      left: 0;
+      transition: 0.3s ease-in-out;
+    }
+    span{
+      padding-left: 20px;
+      text-decoration: underline;
+      transition: 0.3s ease-in-out;
+    }
+    &:hover{
+      svg{
+      stroke: $color-action-h;
+      transition: 0.3s ease-in-out;
+      }
+      span{
+        color: $color-action-h;
+       transition: 0.3s ease-in-out;
+      }
+    }
+     
+  }
+}
 
 
 

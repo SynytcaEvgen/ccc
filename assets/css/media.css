@@ -913,10 +913,6 @@
     padding: 13px 0 14px; }
   .banner.hist .container .desc_banner .logo-wrapper {
     padding: 2px 7px 0px; }
-  .banner.hist .container .desc_banner .text_content {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
   .banner.hist .container .img-wrapper {
     height: 173px; }
     .banner.hist .container .img-wrapper img {
