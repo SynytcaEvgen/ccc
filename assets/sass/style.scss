@@ -2163,7 +2163,7 @@ section.info {
           .info-menu-company {
             .menu-items {
               line-height: 33px;
-              &.active,
+              &.active > a,
               a:hover{
                 color: $color-action;
               }
@@ -3678,10 +3678,8 @@ section.info {
       .gall-mob-button-next {
         right: 0;
       }
-
       .gall-mob-button-prev {
         left: 0;
-
         svg {
           transform: rotate(180deg);
         }
@@ -4031,11 +4029,11 @@ section.info {
     }
   }
 }
+.font-mini {
+  line-height: 20px;
+  font-size: 12px;
+}
 header{
-  .font-mini{
-    line-height: 20px;
-    font-size: 12px;
-  }
   .preview-header-goods{
      display: none;
      justify-content: space-between;
@@ -4109,7 +4107,7 @@ header{
   .news_grid-wrapper {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
     gap: 39px;
     padding-bottom: 50px;
     .news-grid-items {
@@ -4166,6 +4164,9 @@ header{
   }
 }
 .info-content-wrapper.news-detail{
+  .news-link-wrapper{
+    padding-bottom: 16px;
+  }
   .news-link{
     position: relative;
     svg{
@@ -4175,26 +4176,64 @@ header{
       transform: rotate(180deg) translate(0,50%);
       position: absolute;
       top:50%;
-      left: 0;
-      transition: 0.3s ease-in-out;
+      left: 0px;
+      transition: stroke 0.3s ease-in-out;
+      transition: left 0.5s ease-in-out;
     }
     span{
       padding-left: 20px;
       text-decoration: underline;
-      transition: 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
     }
     &:hover{
       svg{
       stroke: $color-action-h;
-      transition: 0.3s ease-in-out;
+      transition: stroke 0.3s ease-in-out;
+      left: -5px;
+      transition: left 0.5s ease-in-out;
       }
       span{
         color: $color-action-h;
-       transition: 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out;
       }
     }
      
   }
+  .caption-post.news-detail{
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .news-post-data{
+    color: $color_menu_non;
+    padding-bottom: 24px;
+  }
+  .info-text{
+    .img-wrapper{
+      width: 100%;
+      padding-bottom: 24px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .text-wrapper{
+      p{
+        padding-bottom: 16px;
+      }
+      padding-bottom: 24px;
+    }
+    .news-more-wrapper {
+      .title p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        font-family: $gordita_medium;
+        padding-bottom: 16px;
+      }
+    }
+  }
+  
 }
 
 
