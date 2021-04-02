@@ -3678,9 +3678,16 @@ section.info {
 }
 //detail_start
 .doods-detail{
-  .gall-wrapp-main.open{
-    opacity: 1;
-    visibility: visible;
+  .gall-wrapp-main{
+     .swiper-button-prev::after,
+     .swiper-button-next::after {
+       content: '';
+       display: none;
+     }
+  }
+  .gall-wrapp-main.load{
+    opacity: 0;
+    visibility: hidden;
     transition: 0.4s ease-in-out;
     position: fixed;
     left: 0;
@@ -3695,12 +3702,10 @@ section.info {
       position: relative;
       background-color: $color-bg-footer;
       .gallery-mob-wrapper {
-
         .items-grid {
           display: flex;
           justify-content: center;
           align-items: center;
-
           img {
             max-width: 1300px;
             height: 100%;
@@ -3781,10 +3786,9 @@ section.info {
       }
     }
   }
-  .gall-wrapp-main{
-        position: fixed;
-        opacity: 0;
-        visibility: hidden;
+  .gall-wrapp-main.load.open{
+        opacity: 1;
+        visibility: visible;
         .swiper-button-prev::after,
         .swiper-button-next::after {
           content: '';
@@ -3813,6 +3817,7 @@ section.info {
             gap:16px;
           }
           .items-grid{
+            cursor: pointer;
             img{
               width: 100%;
               height: 100%;

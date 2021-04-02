@@ -974,7 +974,7 @@ main section button {
         font-family: "Gordita-Bold", sans-serif; }
         @media (max-width: 767px) {
           .banner .slider_container .slider-wrapp .slider_items .desc_banner .text_contetn p {
-            font-size: calc( 32px + 37.4 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 32px + 37.4 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner .slider_container .slider-wrapp .slider_items .desc_banner .text_contetn p {
             font-size: calc(32px + 22 * (100vw / 1920)); } }
@@ -1214,13 +1214,13 @@ main section button {
         text-transform: uppercase; }
         @media (max-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
-            font-size: calc( 40px + 68 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 40px + 68 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
             font-size: calc(40px + 40 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
-            line-height: calc( 45px + 76.5 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 45px + 76.5 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .promo-banner .banner-wrapper .content-wrapper h2 {
             line-height: calc(45px + 45 * (100vw / 1920)); } }
@@ -1739,7 +1739,7 @@ section.info .container .info-frame {
     position: relative; }
     @media (max-width: 767px) {
       .banner.catalog .container .banner-wrapper .img-wrapper {
-        height: calc( 106px + 397.8 * ((100vw - 320px) / 1920)); } }
+        height: calc( 106px + 397.8 * ((100vw - 320px) / 1920)); } }
     @media (min-width: 767px) {
       .banner.catalog .container .banner-wrapper .img-wrapper {
         height: calc(106px + 234 * (100vw / 1920)); } }
@@ -1759,13 +1759,13 @@ section.info .container .info-frame {
         white-space: nowrap; }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
-            font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
             font-size: calc(13px + 19 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
-            line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan {
             line-height: calc(23px + 17 * (100vw / 1920)); } }
@@ -1776,13 +1776,13 @@ section.info .container .info-frame {
         white-space: nowrap; }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
-            font-size: calc( 10px + 10.2 * ((100vw - 320px) / 1920)); } }
+            font-size: calc( 10px + 10.2 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
             font-size: calc(10px + 6 * (100vw / 1920)); } }
         @media (max-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
-            line-height: calc( 16px + 20.4 * ((100vw - 320px) / 1920)); } }
+            line-height: calc( 16px + 20.4 * ((100vw - 320px) / 1920)); } }
         @media (min-width: 767px) {
           .banner.catalog .container .banner-wrapper .desc_banner .text_contetn .slogan-note {
             line-height: calc(16px + 12 * (100vw / 1920)); } }
@@ -2228,13 +2228,13 @@ section.info .container .info-frame {
               padding-bottom: 27px; }
               @media (max-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
-                  font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
+                  font-size: calc( 13px + 32.3 * ((100vw - 320px) / 1920)); } }
               @media (min-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
                   font-size: calc(13px + 19 * (100vw / 1920)); } }
               @media (max-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
-                  line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
+                  line-height: calc( 23px + 28.9 * ((100vw - 320px) / 1920)); } }
               @media (min-width: 767px) {
                 .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn .slogan {
                   line-height: calc(23px + 17 * (100vw / 1920)); } }
@@ -2388,9 +2388,14 @@ section.info .container .info-frame {
   font-family: "Gordita-Regular", sans-serif;
   margin-bottom: 40px; }
 
-.doods-detail .gall-wrapp-main.open {
-  opacity: 1;
-  visibility: visible;
+.doods-detail .gall-wrapp-main .swiper-button-prev::after,
+.doods-detail .gall-wrapp-main .swiper-button-next::after {
+  content: '';
+  display: none; }
+
+.doods-detail .gall-wrapp-main.load {
+  opacity: 0;
+  visibility: hidden;
   transition: 0.4s ease-in-out;
   position: fixed;
   left: 0;
@@ -2399,82 +2404,81 @@ section.info .container .info-frame {
   width: 100%;
   height: 100%;
   z-index: 999994; }
-  .doods-detail .gall-wrapp-main.open .gallery-mob-container {
+  .doods-detail .gall-wrapp-main.load .gallery-mob-container {
     max-width: 1300px;
     height: 100%;
     position: relative;
     background-color: #FAFAFA; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gallery-mob-wrapper .items-grid {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gallery-mob-wrapper .items-grid {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gallery-mob-wrapper .items-grid img {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gallery-mob-wrapper .items-grid img {
         max-width: 1300px;
         height: 100%;
         object-fit: cover; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-prev,
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-next {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-prev,
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-next {
       position: absolute;
       top: 50%;
       margin: 0 27px; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-prev:hover svg,
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-next:hover svg {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-prev:hover svg,
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-next:hover svg {
         stroke: #e9500e;
         transition: .3s ease-in-out; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-prev svg,
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-next svg {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-prev svg,
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-next svg {
         width: 27px;
         height: 24px;
         stroke: #222222;
         transition: .3s ease-in-out; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-next {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-next {
       right: 0; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-prev {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-prev {
       left: 0; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-mob-button-prev svg {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-mob-button-prev svg {
         transform: rotate(180deg); }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .swiper-button-prev::after,
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .swiper-button-next::after {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .swiper-button-prev::after,
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .swiper-button-next::after {
       content: ''; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-close-btn {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-close-btn {
       position: absolute;
       top: 0;
       right: 0;
       margin: 29px;
       z-index: 5;
       cursor: pointer; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-close-btn:hover svg {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-close-btn:hover svg {
         stroke: #e9500e;
         transition: .3s ease-in-out; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .gall-close-btn svg {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .gall-close-btn svg {
         width: 22px;
         height: 22px;
         stroke: #222222;
         transition: .3s ease-in-out; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .goods-pagination {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .goods-pagination {
       position: absolute;
       text-align: center;
       z-index: 5;
       bottom: 0;
       padding-bottom: 16px; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .goods-pagination .swiper-pagination-bullet {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .goods-pagination .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
         opacity: 1;
         background-color: #fff;
         margin: 0 32px; }
-      .doods-detail .gall-wrapp-main.open .gallery-mob-container .goods-pagination .swiper-pagination-bullet-active {
+      .doods-detail .gall-wrapp-main.load .gallery-mob-container .goods-pagination .swiper-pagination-bullet-active {
         background-color: transparent;
         border: 2px solid #fff; }
-    .doods-detail .gall-wrapp-main.open .gallery-mob-container .goods_nav {
+    .doods-detail .gall-wrapp-main.load .gallery-mob-container .goods_nav {
       display: none; }
 
-.doods-detail .gall-wrapp-main {
-  position: fixed;
-  opacity: 0;
-  visibility: hidden; }
-  .doods-detail .gall-wrapp-main .swiper-button-prev::after,
-  .doods-detail .gall-wrapp-main .swiper-button-next::after {
+.doods-detail .gall-wrapp-main.load.open {
+  opacity: 1;
+  visibility: visible; }
+  .doods-detail .gall-wrapp-main.load.open .swiper-button-prev::after,
+  .doods-detail .gall-wrapp-main.load.open .swiper-button-next::after {
     content: '';
     display: none; }
 
@@ -2495,10 +2499,12 @@ section.info .container .info-frame {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px; }
-    .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img .items-grid img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
+    .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img .items-grid {
+      cursor: pointer; }
+      .doods-detail .container .goods-frame .gallery-wrapper .grid-frame-img .items-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
   .doods-detail .container .goods-frame .goods-detail-wrapper {
     max-width: 360px;
     margin-left: 8px; }

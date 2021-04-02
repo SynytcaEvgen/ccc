@@ -113,6 +113,13 @@ function init() {
       $(elem).removeClass(add);
     };
   };
+  function addRemoveClass_767(elem, add) {
+    if ($(window).width() >= 767) {
+      $(elem).addClass(add);
+    } else {
+      $(elem).removeClass(add);
+    };
+  };
   
   function openPopUp(elem) {
     $(elem).addClass('active');  
@@ -309,12 +316,13 @@ function init() {
     $(this).parent().css('visibility', 'hidden');
   });
   addRemoveClass('.info-frame .info-content-wrapper>.title','accordion-btn');
-  addRemoveClass('section.info .info-menu-wrapper','accordion');
+  addRemoveClass('section.info .info-menu-wrapper', 'accordion');
+  addRemoveClass_767('.gall-wrapp-main', 'load');
   $(window).resize(function () {
     addRemoveClass('.info-frame .info-content-wrapper>.title','accordion-btn');
     addRemoveClass('section.info .container .info-frame .info-menu-wrapper', 'accordion');
     menuAccordionMover();
-    
+    addRemoveClass_767('.gall-wrapp-main', 'load');
   });
   menuAccordionMover();
   accEngine('.acc-open');
@@ -322,8 +330,8 @@ function init() {
     let size = q,
       newsContent = document.querySelectorAll(sentence);
     for (let i = 0; i < newsContent.length; i++) {
-      if (newsContent[i].outerText.length > size) {
-         	newsContent[i].innerHTML = newsContent[i].outerText.slice(0, size) + ' ...';
+      if (newsContent[i].innerHTML.length > size) {
+         	newsContent[i].innerHTML = newsContent[i].innerHTML.slice(0, size) + ' ...';
       };
     };
   };
@@ -500,77 +508,51 @@ function init() {
        }
      });
   };
-  function initGoodSilder() {
-    
-  }
   let mobGallSlider = document.querySelector('.gall-wrapp-main'),
-    closeGallery = document.querySelector('.gall-close-btn');
-  
+      closeGallery = document.querySelector('.gall-close-btn');
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('gall-wrapp-main')) {
       mobGallSlider.classList.remove('open');
-    } else { return}
+      document.body.classList.remove('modal')
+    } else {return}
   })
   
   closeGallery.addEventListener('click', function () {
     mobGallSlider.classList.remove('open');
+    document.body.classList.remove('modal');
   });
   
-    document.querySelector('#slide-1').addEventListener('click', function (e) {
-      e.preventDefault();
+  document.querySelector('#slide-1').addEventListener('click', function (e) {
+    e.preventDefault();
     mobGallSlider.classList.add('open');
+    document.body.classList.add('modal');
     swiperGoods.slideTo(1, 0);
     });
   document.querySelector('#slide-2').addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
     mobGallSlider.classList.add('open');
+    document.body.classList.add('modal');
     swiperGoods.slideTo(2, 0);
   });
   document.querySelector('#slide-3').addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
     mobGallSlider.classList.add('open');
+    document.body.classList.add('modal');
     swiperGoods.slideTo(3, 0);
   });
   document.querySelector('#slide-4').addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
     mobGallSlider.classList.add('open');
+    document.body.classList.add('modal');
     swiperGoods.slideTo(4, 0);
   });
   document.querySelector('#slide-5').addEventListener('click', function (e) {
-      e.preventDefault();
+    e.preventDefault();
     mobGallSlider.classList.add('open');
+    document.body.classList.add('modal');
     swiperGoods.slideTo(5, 0);
-  });
-  
-  
-  // $(".modal_gallery").fancybox({
-  //   buttons: ['close'],
-  //   infobar: false,
-  //   btnTpl: {
-	// 		close:
-	// 			'<button data-fancybox-close class="btn-fancybox">' +
-	// 				 '<svg>' +
-	// 			      '<use href="assets/sprite/sprite.svg#close"></use>' +
-	// 			   '</svg>'+
-	// 			"</button>",
-	// 		arrowLeft:
-	// 			'<button data-fancybox-prev class="btn-fancybox-arrow prev">' +
-	// 				'<svg>' +
-	// 			      '<use href="assets/sprite/sprite.svg#arrow-slid"></use>' +
-	// 			   '</svg>'+
-	// 			"</button>",
-	// 		arrowRight:
-	// 			'<button data-fancybox-next class="btn-fancybox-arrow">' +
-	// 				'<svg>' +
-	// 			      '<use href="assets/sprite/sprite.svg#arrow-slid"></use>' +
-	// 			   '</svg>'+
-	// 			"</button>",
-  //   },
-    
-  // });
-  
+  });  
 };
-
 
 
  

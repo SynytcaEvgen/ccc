@@ -797,6 +797,10 @@
     opacity: 1;
     visibility: visible;
     position: relative; }
+    .doods-detail .gall-wrapp-main .swiper-button-prev::after,
+    .doods-detail .gall-wrapp-main .swiper-button-next::after {
+      content: '';
+      display: none; }
   .doods-detail .gallery-mob-container {
     max-height: 540px;
     position: relative; }
