@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="best site Description">
+    <meta name="Keywords" content="Обувь, мода">
+    <title>Personal_Order</title>
+    @@include('./part/head_link.html')
+</head>
+
+<body>
+    @@include('./part/header.html')
+    <!--Content start section-->
+    <main>    
+        <section class="info">
+            <div class="container">
+                <div class="breadcrumb-wrapper">
+                    <ul class="breadcrumb">
+                        <li><a href="#">CCC</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Мои данные</a></li>
+                    </ul>
+                </div>
+                <div class="info-frame">
+                    <div class="info-menu-wrapper">
+                        <div class="info-menu-item">
+                            <p class="title">Личный кабинет</p>
+                            <ul class="info-menu-company">
+                                <li class="menu-items"><a href="#">Мой профиль</a></li>
+                                <li class="menu-items"><a href="#">Мои заказы</a></li>
+                                <li class="menu-items"><a href="#">Мои данные</a></li>
+                                <li class="menu-items active"><a href="#">Избранное</a></li>
+                            </ul>
+                        </div>         
+                        <div class="info-menu-item">
+                            <ul class="info-menu-company">
+                                <li class="menu-items"><a href="#">Выход</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-content-wrapper">
+                        <h1 class="title">Мои заказы</h1>
+                        <div class="account-single-order">
+                            <div class="page-action">
+                                <a href="#" class="back-link">
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                                    </svg>
+                                    <span>Вернуться к списку заказов</span>
+                                </a>
+                            </div>
+                            <div class="order-meta">
+                                <div class="meta-item">
+                                    <div class="meta-item__header">
+                                        <div class="meta-title">Заказ № 1 от 06.10.2020 13:14</div>
+                                        <div class="order-quantity">Товаров: 2</div>
+                                        <div class="order-summ">Сумма: 25 400 ₽</div>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <div class="meta-item__header">
+                                        <div class="meta-title">Информация о заказе</div>
+                                    </div>
+                                    <div class="meta-item__content">
+                                        <div class="order-info">
+                                            <div class="item">
+                                                <span>Ф.И.О.</span><span>Фомин Алексей Иванович</span>
+                                            </div>
+                                            <div class="item">
+                                                <span>Текущий статус от 10.01.2020:</span><span class="item-status">Принят, ожидается оплата</span>
+                                            </div>
+                                            <div class="item">
+                                                <span>Сумма:</span><span>25 400 ₽</span>
+                                            </div>
+                                            <div class="item single-order-actions">
+                                                <button type="button" class="repeat-btn">Повторить заказ</button>
+                                                <button type="button" class="cancel-btn">Отменить заказ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <div class="meta-item__header">
+                                        <div class="meta-title">Параметр оплаты</div>
+                                    </div>
+                                    <div class="meta-item__content">
+                                        <div class="flex">
+                                            <div class="">
+                                                <p>Оплата №1 от 10.01.2020,  Банковской картой</p>
+                                                <p>Сумма к оплате по счету: 25 000.00 ₽</p>
+                                            </div>
+                                            <button type="button" class="pay-btn">Оплатить</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <div class="meta-item__header">
+                                        <div class="meta-title">Параметр доставки</div>
+                                    </div>
+                                    <div class="meta-item__content">
+                                        <p>Отгрузка №1</p>
+                                        <p>Служба доставки: "DHL"</p>
+                                        <p>Стоимость доставки: 400 ₽ </p>
+                                        <p>Статус доставки: Отправлено</p>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <div class="meta-item__header">
+                                        <div class="meta-title">Содержимое заказа</div>
+                                    </div>
+                                    <div class="meta-item__content">
+                                        <div class="product-rows__head">
+                                            <div class="product">Товар</div>
+                                            <div class="product-price">Цена</div>
+                                            <div class="product-quantity">Количество</div>
+                                            <div class="product-total">Сумма</div>
+                                        </div>
+                                        <div class="product-rows">
+                                            <div class="p-row">
+                                                <div class="thumb"><img src="assets/img/prod-slider-4.jpg" alt=""></div>
+                                                <div class="col">
+                                                    <div class="name">
+                                                        <div class="p-name">Ботильоны Segio Bardi</div>
+                                                        <div class="attr"><span class="key">Цвет:</span><span class="value">Camel</span></div>
+                                                        <div class="attr"><span class="key">Размер:</span><span class="value">36</span></div>
+                                                    </div>
+                                                    <div class="price" data-title="Цена">4990</div>
+                                                    <div class="quantity" data-title="Количество">1 шт.</div>
+                                                    <div class="total price" data-title="Сумма">4990</div>
+                                                </div>
+                                            </div>
+                                            <div class="p-row">
+                                                <div class="thumb"><img src="assets/img/prod-slider-4.jpg" alt=""></div>
+                                                <div class="col">
+                                                    <div class="name">
+                                                        <div class="p-name">Ботильоны Segio Bardi</div>
+                                                        <div class="attr"><span class="key">Цвет:</span><span class="value">Camel</span></div>
+                                                        <div class="attr"><span class="key">Размер:</span><span class="value">36</span></div>
+                                                    </div>
+                                                    <div class="price" data-title="Цена">4990</div>
+                                                    <div class="quantity" data-title="Количество">1 шт.</div>
+                                                    <div class="total price" data-title="Сумма">4990</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-action">
+                                <a href="#" class="back-link">
+                                    <svg>
+                                        <use href="assets/sprite/sprite.svg#arrow-slid"></use>
+                                    </svg>
+                                    <span>Вернуться к списку заказов</span>
+                                </a>
+                                <div class="order-total">Итого: 44 000 р.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>                                            
+    </main>
+    <!--Content end section-->
+    @@include('./part/footer.html')
+</body>
+</html>    

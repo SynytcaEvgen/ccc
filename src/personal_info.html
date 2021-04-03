@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="best site Description">
+    <meta name="Keywords" content="Обувь, мода">
+    <title>Personal_Info</title>
+    @@include('./part/head_link.html')
+</head>
+
+<body>
+
+    @@include('./part/header.html')
+
+    <!--Content start section-->
+    <main>    
+        <section class="info">
+            <div class="container">
+                <div class="breadcrumb-wrapper">
+                    <ul class="breadcrumb">
+                        <li><a href="#">CCC</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Мои данные</a></li>
+                    </ul>
+                </div>
+                <div class="info-frame">
+                    <div class="info-menu-wrapper">
+                        <div class="info-menu-item">
+                            <p class="title">Личный кабинет</p>
+                            <ul class="info-menu-company">
+                                <li class="menu-items"><a href="#">Мой профиль</a></li>
+                                <li class="menu-items"><a href="#">Мои заказы</a></li>
+                                <li class="menu-items active"><a href="#">Мои данные</a></li>
+                                <li class="menu-items"><a href="#">Избранное</a></li>
+                            </ul>
+                        </div>         
+                        <div class="info-menu-item">
+                            <ul class="info-menu-company">
+                                <li class="menu-items"><a href="#">Выход</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-content-wrapper">
+                        <h1 class="title">Личные данные</h1>
+                        <div class="account-info-form">
+                            <form action="" method="post">
+                                <div class="columns">
+                                    <div class="col">
+                                        <div class="input-wrap"><label>Фамилия*</label><input type="text" value="Фомин"></div>
+                                        <div class="input-wrap"><label>Имя*</label><input type="text" value="Алексей"></div>
+                                        <div class="input-wrap"><label>Отчество</label><input type="text" value="Евгеньевич"></div>
+                                        <div class="input-wrap radio-wrap">
+                                            <label class="radio-label">
+                                                <input type="radio" name="sex" value="male">
+                                                <span>Мужской</span>
+                                            </label>
+                                            <label class="radio-label">
+                                                <input type="radio" name="sex" value="female">
+                                                <span>Женский</span>
+                                            </label>
+                                        </div>    
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-wrap"><label>Дата рождения</label><input type="date"></div>
+                                        <div class="input-wrap"><label>Телефон</label><input type="text" value="+7 (999) 123-45-67"></div>
+                                        <div class="input-wrap"><label>Адрес</label><input type="text"></div>
+                                        <div class="input-wrap"><label>Электронная почта</label><input type="text" placeholder="fomin@mail.com"></div>
+                                    </div>
+                                </div>
+                                <div class="columns">
+                                    <div class="col">
+                                        <div class="input-wrap"><input type="password" placeholder="Новый пароль"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="input-wrap"><input type="password" placeholder="Подтвердите пароль"></div>
+                                    </div>
+                                </div>
+                                <div class="password-note">Выбирайте надежный пароль. Не используйте в качестве пароля часто встречающиеся слова, имена или даты рождения Ваших близких, кличку собаки. <br>Допустимы к использованию символы в верхнем и нижнем регистре английского алфавита A-z, цифры 0-9, нижнее подчеркивание _, спецсимфолы @#$%^&.</div>
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">Сохранить</button>
+                                    <button type="button" class="cancel-btn">Отмена</button>
+                                </div>
+                            </form>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+        </section>                                            
+    </main>
+    <!--Content end section-->
+
+    @@include('./part/footer.html')
+
+</body>
+
+</html>    

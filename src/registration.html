@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="best site Description">
+    <meta name="Keywords" content="Обувь, мода">
+    <title>Registration</title>
+    @@include('./part/head_link.html')
+</head>
+<body>
+    @@include('./part/header.html')
+    <!--Content start section-->
+    <main>    
+        <section class="info">
+            <div class="container">
+                <div class="breadcrumb-wrapper">
+                    <ul class="breadcrumb">
+                        <li><a href="#">CCC</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Мои данные</a></li>
+                    </ul>
+                </div>
+                <div class="info-frame">
+
+                    <div class="info-content-wrapper">
+                        <h1 class="title">Регистрация</h1>
+                        <div class="registration-form">
+                            <form action="" method="post">
+                                <div class="input-wrap"><input type="text" placeholder="Фамилия*"></div>
+                                <div class="input-wrap"><input type="text" placeholder="Имя*"></div>
+                                <div class="input-wrap"><input type="text" value="Отчество"></div>
+                                <div class="top-label">Пол</div>
+                                <div class="input-wrap radio-wrap">
+                                    <label class="radio-label">
+                                        <input type="radio" name="sex" value="male" checked>
+                                        <span>Мужской</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="sex" value="female">
+                                        <span>Женский</span>
+                                    </label>
+                                </div>
+                                <div class="input-wrap"><input type="text" placeholder="Электронная почта*"></div>
+                                <div class="input-wrap"><input type="text" placeholder="Телефон"></div>
+                                <div class="input-wrap"><input type="password" placeholder="Пароль*"></div>
+                                <div class="input-wrap"><input type="password" placeholder="Подтвердите пароль*"></div>
+                                <div class="acceptance">
+                                    <p><label class="checkbox-label"><input type="checkbox" name="accept" checked><span>Ознакомлен и соглашаюсь с <a
+                                            href="#">Политикой конфиденциальности</a></span></label></p>
+                                    <p><label class="checkbox-label"><input type="checkbox" name="subscribe" checked><span>Подписаться на новости, акции и специальные предложения</span></label></p>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="submit-btn">Зарегистрироваться</button>
+                                </div>
+                            </form>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+        </section>                                            
+    </main>
+    <!--Content end section-->
+    @@include('./part/footer.html')
+</body>
+</html>    
