@@ -68,6 +68,9 @@ $color-price-sale: #E90000;
     .news .news_grid-wrapper{
         gap: 25px;
     }
+     .info-text.career .career-staff-wrapper .cart-staff-wrapper .cart-item {
+         width: calc(50% - 10px);
+     }
 }
 @media only screen and (max-width: 1199px) {
     .sec-top {          
@@ -106,6 +109,7 @@ $color-price-sale: #E90000;
            }
        }
    }
+  
 
 }
 @media only screen and (max-width: 1124px){
@@ -794,10 +798,9 @@ $color-price-sale: #E90000;
             }
         }
     }
-
-
-    
-
+    .info-text.career .banner .container {
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 767px) {
     main section button{
@@ -1297,6 +1300,28 @@ $color-price-sale: #E90000;
             padding-bottom: 0px;
         }
     }
+    section.info.career .container_career {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .info.career .container{
+        padding: 0;
+    }
+    .info-text.career .career-staff-wrapper .cart-staff-wrapper{
+        flex-direction: column;
+        .cart-item{
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 8px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .info-text.career .career-staff-wrapper{
+        padding-bottom: 24px;
+    }
+     
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1408,8 +1433,80 @@ $color-price-sale: #E90000;
     .info-text.safety .covid-info-wrapper .content .title{
         text-align: center;
     }
-    
-        
+    .info-text.career .infrom_text-wrapper .icon-inform {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-text.career .infrom_text-wrapper .icon-inform .inform_items{
+        padding-bottom: 16px;
+    }
+    .info-text.career .infrom_text-wrapper{
+        padding-bottom: 16px;
+    }
+    .info-text.career .banner .slider_container .slider-wrapp .slider_items .img-wrapper{
+        height: 173px;
+    }   
+    .info-text.career .banner .slider_container .slider-wrapp .desc_banner{
+       display: none;
+    }
+    .info-text.career{
+        .name-page {
+            display: block;
+            text-align: center;
+            padding-bottom: 16px;
+            h1{
+                line-height: 22px;
+                font-size: 22px;
+                font-weight: 500;
+                font-family: $gordita_medium;
+            }
+        }
+    }
+    section.info.career .container .info-frame .info-content-wrapper>.title{
+        margin-bottom: 16px;
+    }
+    .info-text.career .banner{
+        padding-bottom: 16px;
+    }
+    .info-text.career .infrom_text-wrapper .text-content{
+        padding-bottom: 32px;
+    }
+    .info-text.career .info-text-wrapper.promo{
+        padding: 16px;
+    }
+    .info-text.career .info-text-wrapper.promo .text-item{
+        padding-bottom: 16px;
+    }
+    .info-text.career .info-text-wrapper.promo{
+        margin-bottom: 16px;
+    }
+    .info-text.career .job-growing-line{
+        padding-bottom: 24px;
+    }
+    .info-text.career .job-advantag-wrapper{
+        flex-direction: column;
+        margin-bottom: 0;
+        .advantag-item {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            padding-bottom: 8px;
+            &:last-child{
+                padding-bottom: 0;
+            }
+            .icon{
+                margin-right: 16px;
+            }
+        }
+    }
+    .info-text.career .job-growing-line .staff-title li{
+        font-weight: 500;
+        font-family: $gordita_medium;
+        font-size: 11px;
+        line-height: 18px;
+        max-width: 86px;
+    }
 }
 @media only screen and (max-width: 375px){
     .promotion.hist .container .promo-wrapper .promo-items .promo-img{
@@ -1423,6 +1520,7 @@ $color-price-sale: #E90000;
         margin: 0;
         max-width: 169px;
     }
+    
 }
 @media only screen and (max-width: 374px) {
     .menu_mobile .mobile-menu-wrapper .menu_item > .menu_items > a{
