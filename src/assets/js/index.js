@@ -201,13 +201,13 @@ function init() {
   };
   function initRangeSlider() { 
     var $range = $(".js-range-slider"),
-    $inputFrom = $(".js-input-from"),
-    $inputTo = $(".js-input-to"),
-    instance,
-    min = 0,
-    max = 100000,
-    from = 0,
-    to = 0;
+      $inputFrom = $(".js-input-from"),
+      $inputTo = $(".js-input-to"),
+      instance,
+      min = 0,
+      max = 100000,
+      from = 0,
+      to = 0;
     $range.ionRangeSlider({
     	  skin: "round",
         type: "double",
@@ -215,8 +215,11 @@ function init() {
         max: max,
         from: 0,
         to: 100000,
+        prettify_enabled : true,
+        prettify_separator : " ",
         onStart: updateInputs,
-        onChange: updateInputs
+        onChange: updateInputs,
+        
     });
     instance = $range.data("ionRangeSlider");
     function updateInputs (data) {
@@ -376,6 +379,7 @@ function init() {
   });
   $('.features_items .autorization').click(function (){
     openPopUp('#popup-sign-in');
+    return false;
   });
   $('#popup-sign-in .link_wrapper a').click(function (e) {
     e.preventDefault();
@@ -578,7 +582,13 @@ function init() {
       document.body.classList.add('modal');
       swiperGoods.slideTo(5, 0);
     });  
-  } else { return };
+  } else { };
+  let favIcon = document.querySelectorAll('.favorit');
+  for (let i = 0; i < favIcon.length; i++) {
+    favIcon[i].addEventListener('click', function () {
+      this.classList.toggle('select');
+    });
+  };
 };
 
 

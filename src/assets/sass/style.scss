@@ -2377,7 +2377,7 @@ section.info {
       }
       .desc_banner{
         position: absolute;
-        top: 50%;
+        top: 52%;
         left: 50%;
         transform: translate(-20%, -60%);
         .text_contetn{
@@ -2490,7 +2490,7 @@ section.info {
       }
 }
 .catalog{
-  padding-bottom: 60px;
+  padding-bottom: 36px;
   .container{
     .nav-wrapper{
       padding-bottom: 16px;
@@ -2797,6 +2797,7 @@ section.info {
                      }  
                    }
                    .irs-handle{
+                     cursor: pointer;
                      top: 13px;
                      width: 12px;
                      height: 12px;
@@ -2927,7 +2928,7 @@ section.info {
             max-width: unset;
             position: relative;
             &:hover .descr-wrapper{
-              bottom: -80px;
+              bottom: -82px;
               position: absolute;
               max-height: 100%;
               padding-top: 8px;
@@ -2936,7 +2937,7 @@ section.info {
               padding-bottom: 0;
               .img-wrapper{
                 max-width: 313px;
-                @include adaptiv-height(496, 253);
+                @include adaptiv-height(469, 253);
                 line-height: 0;
                 overflow: hidden;
                 img{
@@ -2962,7 +2963,7 @@ section.info {
                 margin-top: 8px;
                 .preview-wrapper{
                   display: flex;
-                  padding: 8px 0;
+                  padding: 3px 0 8px;
                   .min-img{
                     margin-right: 4px;
                     width: 40px;
@@ -2992,7 +2993,7 @@ section.info {
             position: relative;
             max-width: 313px;
             .img-wrapper{
-              //  @include adaptiv-height(469, 252);
+               @include adaptiv-height(469, 253);
               img{
                  width: 100%;
                  height: 100%;
