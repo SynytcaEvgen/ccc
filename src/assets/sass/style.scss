@@ -696,9 +696,9 @@ main section button{
       .goods-items {
         border-bottom: 1px solid $color_line_dec;
         display: flex;
+        flex-direction: row;
         padding: 0 0 18px;
         margin: 0 0 16px;
-        cursor: pointer;
         &:hover .goods-desc .titel{
           color: $color-action-h;
           transition: 0.3s ease;
@@ -707,6 +707,12 @@ main section button{
           height: 90px;
           width: 60px;
           padding: 5px 0 0;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
         .goods-desc {
           padding-left: 8px;
@@ -1235,7 +1241,7 @@ main section button{
         visibility: visible;
         transition: 0.3s ease;
       }
-      a {
+      >a {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1312,6 +1318,16 @@ main section button{
       .slider_items {
         position: relative;
         z-index: 1;
+        .img-wrapper{
+          max-height: 600px;
+          line-height: 0;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
         .desc_banner {
           position: absolute;
           top: 50%;
@@ -1368,13 +1384,14 @@ main section button{
          .promo-img {   
            position: relative;
            max-width: 636px;
-           max-height: 637px;
+           @include adaptiv-height(637, 343);
            background: rgba(0, 0, 0, 0.2);
+           line-height: 0;
            img{
              position: relative;
              width: 100%;
              height: 100%;
-             object-fit: contain;
+             object-fit: cover;
              z-index: -1;
            }       
          }
@@ -1504,7 +1521,7 @@ main section button{
     padding-bottom: 12px;
     .img-wrapper {
       max-width: 247px;
-      max-height: 370px;
+      @include adaptiv-height(370, 243);
       img{
         width: 100%;
         height: 100%;
@@ -1530,7 +1547,8 @@ main section button{
           font-family: $gordita_bold;
           font-size: 10px;
           line-height: 1.6;
-          padding: 8px 8px
+          padding: 2px 8px 2px;
+          display: block;
         }
       }
       .favorit{
@@ -1552,7 +1570,6 @@ main section button{
        }
      }
     }
-
   }
   .price-wrap {
     padding-bottom: 2px;
@@ -1605,6 +1622,8 @@ main section button{
         max-width: 1300px;
         max-height: 600px;
         position: relative;
+        overflow: hidden;
+        line-height: 0;
         &::after{
             content: '';
             position: absolute;
@@ -2916,10 +2935,14 @@ section.info {
             .prod-banner-wrapper{
               padding-bottom: 0;
               .img-wrapper{
-                max-width: unset;
-                max-height: unset;
+                max-width: 313px;
+                @include adaptiv-height(496, 253);
+                line-height: 0;
+                overflow: hidden;
                 img{
                   object-fit: cover;
+                  width: 100%;
+                  height: 100%;
                 }
               }
               .promo-wrapp{
@@ -2942,6 +2965,15 @@ section.info {
                   padding: 8px 0;
                   .min-img{
                     margin-right: 4px;
+                    width: 40px;
+                    height: 60px;
+                    overflow: hidden;
+                    line-height: 0;
+                    img{
+                      width: 100%;
+                      height: 100%;
+                      object-fit: cover;
+                    }
                     &:last-child{
                       padding-left: 0;
                     }
