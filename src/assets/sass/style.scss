@@ -1431,7 +1431,7 @@ main section button{
      .button-next,
      .button-prev{
        cursor: pointer;
-       top: 51%;
+       top: 50%;
       
       }  
     }
@@ -1445,7 +1445,7 @@ main section button{
       &::after{
         content: '';
       }
-      top: 37%;
+      top: 40%;
       right: -40px;
       transition: 0.3s ease;
       &.swiper-button-disabled{
@@ -2164,7 +2164,7 @@ section.info {
            transition: max-height 0.8s ease-in-out, visibility 1s ease-in-out;
          }
          .info-menu-item {
-           padding-bottom: 24px;
+           padding-bottom: 54px;
            .title {
              text-transform: uppercase;
              font-family: $gordita_medium;
@@ -2230,6 +2230,11 @@ section.info {
                   max-width: 79px;
                   max-height: 56px;
                   margin-bottom: 15px;
+                  svg{
+                     width: 79px;
+                     height: 56px;
+                     fill: $color_text; 
+                  }
                 }
               }
             }
@@ -2238,6 +2243,9 @@ section.info {
           }
           .text-items {
             padding-bottom: 24px;
+            &:last-child{
+              padding-bottom: 0;
+            }
             .text-content {
                line-height: 25px;
             }  
@@ -2982,7 +2990,12 @@ section.info {
 
     }
   }
+  .prod-slider-container .button-next,
+  .prod-slider-container .button-prev{
+    top: 44.5%;
+  }
 }
+.prod-slider.title .prod-slider-container .button-next, .prod-slider.title .prod-slider-container .button-prev
 .reason-buy.caralog{
   padding-top: 30px;
   padding-bottom: 48px;
@@ -4414,6 +4427,7 @@ header{
 }
 //career-page-start
 .info-text.career{
+  max-width: 975px;
   svg{
     fill: $color-action-h;
   }

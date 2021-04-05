@@ -72,6 +72,11 @@ $color-price-sale: #E90000;
          width: calc(50% - 10px);
      }
 }
+@media only screen and (max-width: 1250px) {
+   .info-text.career .banner .container {
+      width: calc(100vw - 283px);
+   }
+}
 @media only screen and (max-width: 1199px) {
     .sec-top {          
        flex-direction: column;
@@ -1299,6 +1304,9 @@ $color-price-sale: #E90000;
         &:last-child{
             padding-bottom: 0px;
         }
+    }
+    section.info .container .info-frame .info-content-wrapper .info-text .text-items .text-content{
+        line-height: 23px;
     }
     section.info.career .container_career {
         margin-left: 16px;
