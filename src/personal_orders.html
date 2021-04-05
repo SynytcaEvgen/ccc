@@ -10,7 +10,6 @@
     <title>Personal_Orders</title>
     @@include('./part/head_link.html')
 </head>
-
 <body>
     @@include('./part/header.html')
     <!--Content start section-->
@@ -26,16 +25,16 @@
                 </div>
                 <div class="info-frame">
                     <div class="info-menu-wrapper">
-                        <div class="info-menu-item">
+                        <div class="info-menu-item person">
                             <p class="title">Личный кабинет</p>
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Мой профиль</a></li>
-                                <li class="menu-items"><a href="#">Мои заказы</a></li>
+                                <li class="menu-items active">Мои заказы</li>
                                 <li class="menu-items"><a href="#">Мои данные</a></li>
-                                <li class="menu-items active"><a href="#">Избранное</a></li>
+                                <li class="menu-items"><a href="#">Избранное</a></li>
                             </ul>
                         </div>         
-                        <div class="info-menu-item">
+                        <div class="info-menu-item divider">
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Выход</a></li>
                             </ul>
@@ -255,13 +254,13 @@
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#arrow-slid"></use>
                                     </svg>
-                                    Предыдущая
+                                    <span>Предыдущая</span>
                                 </a>
                                 <span class="counter">
-                                    <span class="currrent">1</span> из <span class="summ">14</span>
+                                    <span class="text">Страница</span><span class="current">1</span><span>из</span><span class="summ">14</span>
                                 </span>
                                 <a href="#" class="next-link">
-                                    Следующая
+                                    <span>Следующая</span>
                                     <svg>
                                         <use href="assets/sprite/sprite.svg#arrow-slid"></use>
                                     </svg>

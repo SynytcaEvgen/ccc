@@ -78,7 +78,11 @@ $maxWidth: 1920;
     width: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
   }
 }
+html{
+  height: 100%;
+}
 header{
+  flex: 0 0 auto;
   transition: 0.3s ease;
   &.lock_header{
     position: fixed;
@@ -91,6 +95,7 @@ header{
 }
 main{
   padding-top: 140px;
+  flex: 1 0 auto;
 }
 // remove this style before production ----->>>>
 .not_prod {
@@ -129,6 +134,9 @@ main{
 }
 // <<<<<<------remove this style before production
 body{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   a,
   p,
   button,
@@ -1718,12 +1726,11 @@ main section button{
 footer{
   background-color: $color-bg-footer;
   padding-top: 32px;
+  flex: 0 0 auto;
   .footer-mobile-content{
     display: none;
   }
-
 }
-
 .sec-top {
   display: flex;
   justify-content: space-between;
@@ -2165,6 +2172,9 @@ section.info {
          }
          .info-menu-item {
            padding-bottom: 54px;
+           &.person{
+             padding-bottom: 24px;
+           }
            .title {
              text-transform: uppercase;
              font-family: $gordita_medium;
@@ -2257,9 +2267,11 @@ section.info {
 }
 .payment-wrapper{
   .payment-items{
-    border-top: 1px solid $color_line_dec;
     border-bottom: 1px solid $color_line_dec;
     padding: 16px 0; 
+    &:first-child{
+      border-top: 1px solid $color_line_dec;
+    }
     .title{
       position: relative;
       cursor: pointer;
@@ -2297,7 +2309,6 @@ section.info {
           transform: rotate(0deg);
           transition: all 0.3s ease-in-out; 
         }
-        
       }
     }
     .paymeny-desc{
@@ -2306,6 +2317,7 @@ section.info {
       transition: all 0.3s ease-in-out;
       p{
         padding: 16px 0;
+        line-height: 25px;
       }
       .pay-var{
          padding: 0 0 8px 0;
@@ -2383,7 +2395,7 @@ section.info {
             line-height: 20px;
           }
           a{
-            padding: 0 16px;
+            padding: 0 8px;
             font-size: 12px;
             line-height: 20px;
             &.active{
@@ -2419,9 +2431,6 @@ section.info {
               stroke: $color-action-h;
             }
           }
-          p{
-            padding-left: 36px;
-          }
           svg{
             width: 20px;
             height: 18px;
@@ -2445,6 +2454,9 @@ section.info {
             display: none;
           }
         }
+        .pagin-previous{
+          padding-left: 36px;
+        }
         .pagin-next{
           p{
             padding-right: 36px;
@@ -2466,6 +2478,9 @@ section.info {
       border-bottom: 1px solid $color_line_dec;
       .nav-header{
         padding-bottom: 16px;
+          h1{
+            text-transform: uppercase;
+          }
           span{
             display: none;
           }
@@ -3062,6 +3077,26 @@ section.info {
       position: relative;
       .prod-banner-wrapper {
         padding-bottom: 0;
+        position: relative;
+        .more{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background: rgba(255, 255, 255, 0.35);
+          backdrop-filter: blur(4px);
+          span{
+            text-transform: uppercase;
+            font-family: $gordita_bold;
+            font-size: 13px;
+            text-decoration: underline;
+          }
+        }
         .img-wrapper {
           max-width: unset;
           max-height: unset;
@@ -3143,8 +3178,22 @@ section.info {
     .col{
       width: calc(50% - 20px);
     }
+    .top-label{
+      display: block;
+      font-size: 11px;
+      line-height: 1;
+      color: $color_goods-des;
+      margin-bottom: 6px;
+      font-family: $gordita_regular;
+    }
     .input-wrap{
       margin-bottom: 22px;
+      .datepicker-here{
+        position: relative;
+        background-image: url(../img/calendar.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 1px) 0;
+      }
       label{
         display: block;
         font-size: 11px;
@@ -3168,7 +3217,6 @@ section.info {
           position: relative;
           cursor: pointer;
           margin-bottom: 0;
-          padding-top: 17px;
           font-size: 0;
           line-height: 0;
           input{
@@ -3233,7 +3281,9 @@ section.info {
     color: $color_text;
     font-family: $gordita_regular;
     margin-bottom: 40px;
+    white-space: normal;
   }
+
   .form-actions{
     .submit-btn{
       background-color: #E9500E;
@@ -3267,14 +3317,17 @@ section.info {
   max-width: 100%;
   .account-orders__nav{
     display: flex;
+    max-width: 100%;
     .nav-item{
       margin-right: 32px;
       margin-bottom: 16px;
+      white-space: nowrap;
       a{
         text-transform: uppercase;
         font-size: 13px;
         line-height: 33px;
         text-decoration: underline;
+        white-space: nowrap;
         &:hover{
           color: $color-action-h;
         }
@@ -3313,6 +3366,7 @@ section.info {
     }
   }
 }
+
 .registration-form{
   padding-bottom: 24px;
   width: 467px;
@@ -3476,6 +3530,10 @@ section.info {
     }
   }
 }
+section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
+  padding-top: 24px;
+  border-top: 1px solid #E8E8E8;
+}
 .account-single-order{
   width: 975px;
   max-width: 100%;
@@ -3494,6 +3552,7 @@ section.info {
       height: 10px;
       transform: rotate(180deg);
       margin-right: 8px;
+      stroke: #222;
     }
   }
   .order-meta{
@@ -3586,6 +3645,7 @@ section.info {
     line-height: 22px;
     .product{
       width: 385px;
+      min-width: 385px;
     }
     .product-price{
       width: 150px;
@@ -3621,18 +3681,45 @@ section.info {
       .col{
         width: 100%;
         justify-content: space-between;
+        font-size: 12px;
         .name{
           width: 286px;
+          min-width: 286px;
+          color: #32302E;
           .p-name{
             font-family: $gordita_medium;
             font-size: 14px;
             line-height: 24px;
             margin-bottom: 16px;
+            white-space: normal;
+          }
+          .attr{
+            margin-bottom: 8px;
+            span{
+              font-size: 12px;
+              line-height: 15px;
+            }
+            &>span:first-child{
+              font-family: $gordita_medium;
+              width: 69px;
+              display: inline-block;
+            }
           }
         }
+        .price-wrap,
         .price{
           width: 150px;
           font-family: $gordita_medium;
+          .price_old{
+            color: #666666;
+            text-decoration: line-through;
+            font-family: $gordita_regular;
+            line-height: 22px;
+          }
+          .price_new{
+            color: #E90000;
+            line-height: 22px;
+          }
         }
         .quantity{
           width: 150px;
@@ -3644,7 +3731,82 @@ section.info {
       }
     }
   }
+  .order-total{
+    font-size: 14px;
+    font-family: $gordita_medium;
+  }
 }
+
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 0 26px;
+  svg{
+    width: 20px;
+    height: 18px;
+    stroke: #222222;
+  }
+  .next-link,
+  .prev-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.disabled{
+      span{
+        color: #e8e8e8;
+      }
+      svg{
+        stroke: #e8e8e8;
+      }
+      pointer-events: none;
+    }
+    &:hover{
+      span{
+        color: $color_action-h;
+      }
+      svg{
+        stroke: $color_action-h;
+      }
+    }
+  }
+  .next-link span,
+  .prev-link span{
+    display: inline-block;
+    padding: 0 36px;
+  }
+  .counter{
+    display: flex;
+    align-items: center;
+    .text{
+      display: none;
+      width: auto;
+      height: auto;
+    }
+    span{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      &+span{
+        margin-left: 4px;
+      }
+      &.current{
+        text-decoration: underline;
+        font-family: $gordita_medium;
+      }
+    }
+  }
+}
+.meta-item__content{
+  .order-total{
+    display: none;
+  }
+}
+
+//account pages end, end!
+
 //detail_start
 .doods-detail{
   .gall-wrapp-main{

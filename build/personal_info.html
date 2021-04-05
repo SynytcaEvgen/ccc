@@ -24,15 +24,16 @@
 <link rel="stylesheet" href="assets/css/material-icons.css">
 <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="assets/css/datepicker.min.css">
 <link rel="stylesheet" href="assets/css/media.css">
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/ion.rangeSlider.min.js"></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/datepicker.min.js"></script>
 <script src="assets/js/index.js"></script>
 </head>
-
 <body>
 
     <!-- Pop_up sing up -->
@@ -2225,16 +2226,16 @@
                 </div>
                 <div class="info-frame">
                     <div class="info-menu-wrapper">
-                        <div class="info-menu-item">
+                        <div class="info-menu-item person">
                             <p class="title">Личный кабинет</p>
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Мой профиль</a></li>
                                 <li class="menu-items"><a href="#">Мои заказы</a></li>
-                                <li class="menu-items active"><a href="#">Мои данные</a></li>
+                                <li class="menu-items active">Мои данные</li>
                                 <li class="menu-items"><a href="#">Избранное</a></li>
                             </ul>
                         </div>         
-                        <div class="info-menu-item">
+                        <div class="info-menu-item divider">
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Выход</a></li>
                             </ul>
@@ -2249,9 +2250,10 @@
                                         <div class="input-wrap"><label>Фамилия*</label><input type="text" value="Фомин"></div>
                                         <div class="input-wrap"><label>Имя*</label><input type="text" value="Алексей"></div>
                                         <div class="input-wrap"><label>Отчество</label><input type="text" value="Евгеньевич"></div>
+                                        <div class="top-label">Пол</div>
                                         <div class="input-wrap radio-wrap">
                                             <label class="radio-label">
-                                                <input type="radio" name="sex" value="male">
+                                                <input type="radio" name="sex" value="male" checked>
                                                 <span>Мужской</span>
                                             </label>
                                             <label class="radio-label">
@@ -2261,9 +2263,9 @@
                                         </div>    
                                     </div>
                                     <div class="col">
-                                        <div class="input-wrap"><label>Дата рождения</label><input type="date"></div>
+                                        <div class="input-wrap"><label>Дата рождения</label><input type="text" class="datepicker-here" data-date-format="dd.mm.yy" placeholder="дд.мм.гг"></div>
                                         <div class="input-wrap"><label>Телефон</label><input type="text" value="+7 (999) 123-45-67"></div>
-                                        <div class="input-wrap"><label>Адрес</label><input type="text"></div>
+                                        <div class="input-wrap"><label>Адрес</label><input type="text" value="г.Москва"></div>
                                         <div class="input-wrap"><label>Электронная почта</label><input type="text" placeholder="fomin@mail.com"></div>
                                     </div>
                                 </div>

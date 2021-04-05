@@ -24,15 +24,16 @@
 <link rel="stylesheet" href="assets/css/material-icons.css">
 <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
 <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="assets/css/datepicker.min.css">
 <link rel="stylesheet" href="assets/css/media.css">
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/ion.rangeSlider.min.js"></script>
 <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/datepicker.min.js"></script>
 <script src="assets/js/index.js"></script>
 </head>
-
 <body>
     <!-- Pop_up sing up -->
     <div id="popup-sign-in" class="popup">
@@ -2211,7 +2212,7 @@
     </header>
     <!--Header end section-->
     <!--Content start section-->
-    <main>    
+    <main>
         <section class="info">
             <div class="container">
                 <div class="breadcrumb-wrapper">
@@ -2223,16 +2224,16 @@
                 </div>
                 <div class="info-frame">
                     <div class="info-menu-wrapper">
-                        <div class="info-menu-item">
+                        <div class="info-menu-item person">
                             <p class="title">Личный кабинет</p>
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Мой профиль</a></li>
-                                <li class="menu-items"><a href="#">Мои заказы</a></li>
+                                <li class="menu-items active">Мои заказы</li>
                                 <li class="menu-items"><a href="#">Мои данные</a></li>
-                                <li class="menu-items active"><a href="#">Избранное</a></li>
+                                <li class="menu-items"><a href="#">Избранное</a></li>
                             </ul>
-                        </div>         
-                        <div class="info-menu-item">
+                        </div>
+                        <div class="info-menu-item divider">
                             <ul class="info-menu-company">
                                 <li class="menu-items"><a href="#">Выход</a></li>
                             </ul>
@@ -2267,7 +2268,8 @@
                                                 <span>Ф.И.О.</span><span>Фомин Алексей Иванович</span>
                                             </div>
                                             <div class="item">
-                                                <span>Текущий статус от 10.01.2020:</span><span class="item-status">Принят, ожидается оплата</span>
+                                                <span>Текущий статус от 10.01.2020:</span><span class="item-status">Принят,
+                                                    ожидается оплата</span>
                                             </div>
                                             <div class="item">
                                                 <span>Сумма:</span><span>25 400 ₽</span>
@@ -2286,12 +2288,12 @@
                                     <div class="meta-item__content">
                                         <div class="flex">
                                             <div class="">
-                                                <p>Оплата №1 от 10.01.2020,  Банковской картой</p>
+                                                <p>Оплата №1 от 10.01.2020, Банковской картой</p>
                                                 <p>Сумма к оплате по счету: 25 000.00 ₽</p>
                                             </div>
                                             <button type="button" class="pay-btn">Оплатить</button>
                                         </div>
-
+    
                                     </div>
                                 </div>
                                 <div class="meta-item">
@@ -2322,8 +2324,10 @@
                                                 <div class="col">
                                                     <div class="name">
                                                         <div class="p-name">Ботильоны Segio Bardi</div>
-                                                        <div class="attr"><span class="key">Цвет:</span><span class="value">Camel</span></div>
-                                                        <div class="attr"><span class="key">Размер:</span><span class="value">36</span></div>
+                                                        <div class="attr"><span class="key">Цвет:</span><span
+                                                                class="value">Camel</span></div>
+                                                        <div class="attr"><span class="key">Размер:</span><span
+                                                                class="value">36</span></div>
                                                     </div>
                                                     <div class="price" data-title="Цена">4990</div>
                                                     <div class="quantity" data-title="Количество">1 шт.</div>
@@ -2335,15 +2339,21 @@
                                                 <div class="col">
                                                     <div class="name">
                                                         <div class="p-name">Ботильоны Segio Bardi</div>
-                                                        <div class="attr"><span class="key">Цвет:</span><span class="value">Camel</span></div>
-                                                        <div class="attr"><span class="key">Размер:</span><span class="value">36</span></div>
+                                                        <div class="attr"><span class="key">Цвет:</span><span
+                                                                class="value">Camel</span></div>
+                                                        <div class="attr"><span class="key">Размер:</span><span
+                                                                class="value">36</span></div>
                                                     </div>
-                                                    <div class="price" data-title="Цена">4990</div>
+                                                    <div class="price-wrap" data-title="Цена">
+                                                        <div class="price_new">4990</div>
+                                                        <div class="price_old">4990</div>
+                                                    </div>
                                                     <div class="quantity" data-title="Количество">1 шт.</div>
                                                     <div class="total price" data-title="Сумма">4990</div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="order-total">Итого: 44 000 р.</div>
                                     </div>
                                 </div>
                             </div>
@@ -2360,7 +2370,7 @@
                     </div>
                 </div>
             </div>
-        </section>                                            
+        </section>
     </main>
     <!--Content end section-->
     <!--Footer start section-->
