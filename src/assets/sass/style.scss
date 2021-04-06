@@ -4809,3 +4809,40 @@ header{
   }
 }
 //safety-page-end
+
+
+//error pages
+.page-error{
+  text-align: center;
+  padding-top: 70px;
+  &.error500{
+    padding-top: 163px;
+    padding-bottom: 148px;
+  }
+  &__title{
+    font-family: $gordita_bold;
+    font-size: 220px;
+    line-height: 237px;
+  }
+  p{
+    font-family: $gordita_regular;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color_action-h;
+    color: #fff;
+    width: 314px;
+    height: 43px;
+    font-family: $gordita_medium;
+    font-size: 13px;
+    &:hover{
+      background-color: $color_action;
+    }
+  }
+}
+//end error pages
