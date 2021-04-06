@@ -200,6 +200,7 @@ function init() {
       chechBtn(box);
     });
   };
+  
   function initRangeSlider() { 
     var $range = $(".js-range-slider"),
       $inputFrom = $(".js-input-from"),
@@ -216,23 +217,29 @@ function init() {
         max: max,
         from: 0,
         to: 100000,
-        prettify_enabled : true,
-        prettify_separator : " ",
         onStart: updateInputs,
         onChange: updateInputs,
         
     });
     instance = $range.data("ionRangeSlider");
-    function updateInputs (data) {
-    	from = data.from;
-        to = data.to;
-        
-        $inputFrom.prop("value", from);
-        $inputTo.prop("value", to);	
+    function updateInputs(data) {
+      from = data.from;
+      to = data.to;
+      if (from !== min || to !== max) {
+        $('.filter-header.range').addClass('select')
+      } else {
+        $('.filter-header.range').removeClass('select');
+      }
+        $inputFrom.prop("value", rNumber(from));
+        $inputTo.prop("value", rNumber(to));
     }
     $inputFrom.on("input", function () {
-        var val = $(this).prop("value");
-        
+      var val = $(this).prop("value").replace(/[^0-9]/g, '');
+      if (+val > max) {
+        return $inputFrom.prop("value", rNumber(max));
+      }
+       $inputFrom.prop("value", val.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+       
         // validate
         if (val < min) {
             val = min;
@@ -243,10 +250,15 @@ function init() {
         instance.update({
             from: val
         });
+      console.log(val);
     });
     
     $inputTo.on("input", function () {
-        var val = $(this).prop("value");
+      var val = $(this).prop("value").replace(/[^0-9]/g, '');
+      if (+val > max) {
+        return $inputTo.prop("value", rNumber(max));
+      }
+      $inputTo.prop("value", val.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         
         // validate
         if (val < from) {
@@ -259,6 +271,9 @@ function init() {
             to: val
         });
     });
+  };
+  function rNumber(elem){
+    return String(elem).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
   (function($){
         $(window).on("load",function(){
@@ -285,7 +300,8 @@ function init() {
       elemBottom = elemTop + $(elem).height();
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-  }
+  };
+  
    $('.features_items .search').click(function () {
     if ($(window).width() >= 900) {
       $('header .search-header-line').toggleClass('active');
@@ -590,6 +606,7 @@ function init() {
       this.classList.toggle('select');
     });
   };
+
 };
 
 

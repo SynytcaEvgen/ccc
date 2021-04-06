@@ -2812,7 +2812,12 @@ section.info {
                  max-width: 100%;
                  .irs--round{
                    .irs{
-                     .irs-min, .irs-max, .irs-from, .irs-to{
+                     .irs-min,
+                     .irs-max,
+                     .irs-from,
+                     .irs-to,
+                     .irs--round,
+                     .irs-single{
                        display: none;
                      }  
                    }
