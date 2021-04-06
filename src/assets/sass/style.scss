@@ -87,7 +87,7 @@ header{
   &.lock_header{
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 994;
     background-color: $color_ivert;
     width: 100%;
     transition: 0.3s ease;
@@ -223,13 +223,19 @@ input.box-check {
 
   &:checked {
     +.desc-check::after {
-      transform: translate(0, -50%) scale(1);
+      transform: translate(-3%, -50%) scale(1);
       transition: .3s ease-in-out;
     }
     +.desc-check::before {
       transition: .3s ease-in-out;
       background-color: $color-action-h;
       border-color: $color-action-h;
+    }
+    // +.desc-check{
+    //   font-family: $gordita_bold;
+    // }
+    +.desc-check > span{
+      font-family: $gordita_medium
     }
   }
 }
@@ -310,10 +316,6 @@ label[data-color] {
        background-color: $color_ivert;
      }
    }
-   .desc-check[data-color='beige'] .color-holder {
-     background-color: #E2D5C5;
-   }
-
    .desc-check[data-color='burgundy'] .color-holder {
      background-color: #6F011C;
    }
@@ -344,7 +346,8 @@ label[data-color] {
 
    .desc-check[data-color='mix'] .color-holder {
      background-image: url(../img/mix-color.png);
-     background-size: contain;
+     background-size: cover;
+     background-repeat: no-repeat;
    }
 
    .desc-check[data-color='blue'] .color-holder {
@@ -1463,7 +1466,7 @@ main section button{
      .button-next,
      .button-prev{
        cursor: pointer;
-       top: 50%;
+       top: 46%;
       
       }  
     }
@@ -2160,6 +2163,9 @@ section.info {
       padding: 8px 0 16px;
       .breadcrumb{ 
         li{
+          font-size: 12px;
+          line-height: 22px;
+          font-family: $gordita_medium;
           display: inline-block;
           &::after{
             content: '›';
@@ -2209,7 +2215,7 @@ section.info {
           .info-menu-company {
             .menu-items {
               line-height: 33px;
-              &.active > a,
+              &.active,
               a:hover{
                 color: $color-action;
               }
@@ -2219,7 +2225,7 @@ section.info {
       }
       .info-content-wrapper {
         max-width: 975px;
-        padding-bottom: 24px;
+        padding-bottom: 54px;
         >.title{
           margin-bottom: 32px;
           text-transform: uppercase;
@@ -2293,17 +2299,17 @@ section.info {
   .payment-items{
     border-bottom: 1px solid $color_line_dec;
     padding: 16px 0; 
+    cursor: pointer;
     &:first-child{
       border-top: 1px solid $color_line_dec;
     }
-    .title{
-      position: relative;
-      cursor: pointer;
-      transition: 0.3s ease-in-out;
-      &:hover{
+    &:hover .title{
         color: $color-action-h;
         transition: 0.3s ease-in-out;
-      }
+    }
+    .title{
+      position: relative;
+      transition: 0.3s ease-in-out;
       &::after,
       &::before{
           content: "";
@@ -2479,8 +2485,9 @@ section.info {
             display: none;
           }
         }
-        .pagin-previous{
+        .pagin-previous p{
           padding-left: 36px;
+
         }
         .pagin-next{
           p{

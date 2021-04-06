@@ -94,10 +94,10 @@ function init() {
   };
   function accEngine(pick) {
     let acc = document.querySelectorAll(pick);
-    for (let i = 0; i < acc.length; i++) {
+    for (let i = 0; i < acc.length; i++) {    
       acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
+        this.firstElementChild.classList.toggle("active");
+        let panel = this.firstElementChild.nextElementSibling;
          if (panel.style.maxHeight) {
            panel.style.maxHeight = null;
          } else {
@@ -106,6 +106,7 @@ function init() {
        });
     }; 
   };
+  
   function addRemoveClass(elem, add) {
     if ($(window).width() <= 900) {
       $(elem).addClass(add);
@@ -350,7 +351,7 @@ function init() {
     addRemoveClass_767('.gall-wrapp-main', 'load');
   });
   menuAccordionMover();
-  accEngine('.acc-open');
+  accEngine('.payment-items');
   function sliceSentence(q, sentence) {
     let size = q,
       newsContent = document.querySelectorAll(sentence);
