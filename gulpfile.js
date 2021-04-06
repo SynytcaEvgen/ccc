@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     fileinclude = require('gulp-file-include'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    // pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
@@ -106,7 +106,7 @@ gulp.task('image:build', function (done) {
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
+            // use: [pngquant()],
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.img))

@@ -1110,8 +1110,11 @@ $color-price-sale: #E90000;
                display: flex;
                justify-content: flex-start;
                align-items: center;
+               padding-bottom: 14px;
                h1{
                    padding-right: 4px;
+                   font-size: 13px;
+                   line-height: 23px;
                }
                span{
                    display: block;
@@ -1120,6 +1123,15 @@ $color-price-sale: #E90000;
         }
         }
     }
+    .catalog .container .nav-wrapper .sub-nav .sub-nav-item .sub-nav-items{
+        padding-right: 16px;
+        a{
+        line-height: 20px;
+        font-size: 12px;
+        }
+
+    }
+     
     .catalog .container .catalog-wrapper .header-find-goods,
     .cat-pagination-wrapper .goods-per-page-wrapper{
         display: none;
