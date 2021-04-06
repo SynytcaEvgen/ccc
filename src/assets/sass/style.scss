@@ -2275,8 +2275,6 @@ section.info {
               }
             }
           }
-          &.payment{
-          }
           .text-items {
             padding-bottom: 24px;
             &:last-child{
@@ -2654,9 +2652,6 @@ section.info {
                    transition: 0.5s ease-in-out;
                  }
                }
-               .reser-selest {
-                 .numb-select {}
-               }
              }
              .filter-item{
                max-height: 200px;
@@ -2993,10 +2988,6 @@ section.info {
                     }
                   }
                 }
-                .price-wrap{
-                  
-                }
-                .discrption-goods{}
               }
           }
           .banner-wrapper{
@@ -3029,9 +3020,6 @@ section.info {
                   padding-bottom: 27px;
                 }
               }
-              button{
-                  
-              }
             }
           }
         }
@@ -3044,9 +3032,6 @@ section.info {
   .prod-slider-title{
     text-align: left;
     padding-bottom: 16px;
-    h2{
-
-    }
   }
   .prod-slider-container .button-next,
   .prod-slider-container .button-prev{
@@ -4348,10 +4333,6 @@ header{
       }
       .news-post-data {
         padding: 16px 0 4px;
-        .day-post { 
-        }
-        .hours-post { 
-        }
         span{
           color: $color_menu_non;
           font-family: $gordita_medium;
