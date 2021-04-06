@@ -4850,3 +4850,242 @@ header{
 }
 
 //end error pages
+// checkout pages
+.section-title{
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.checkout-blocks{
+  display: flex;
+  justify-content: space-between;
+  .col:first-child{
+    width: calc(100% - 411px);
+  }
+  .col:last-child{
+    width: 379px;
+    min-width: 379px;
+
+  }
+  .checkout-total{
+    background-color: #fafafa;
+    padding: 16px;
+    &__title{
+      font-family: $gordita_medium;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    &__rows{
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8e8e8;
+      margin-bottom: 25px;
+      .ct-row{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        span{
+          line-height: 23px;
+          font-size: 13px;
+          &.discount{
+            color: $color_price-sale
+          }
+        }
+        &.total{
+          span{
+            font-size: 14px;
+            font-family: $gordita_medium;
+          }
+        }
+      }
+    }
+    .coupon-form {
+      .flex{
+        display: flex;
+        margin-bottom: 8px;
+        [type=text]{
+          width: 100%;
+          background-color: transparent;
+        }
+        [type=submit]{
+          width: 50px;
+          min-width: 50px;
+          height: 43px;
+          line-height: 43px;
+          margin-left: 32px;
+          color: #fff;
+          text-transform: uppercase;
+          background-color: $color-action-h;
+          font-family: $gordita_medium;
+          font-size: 13px;
+          &:hover{
+            background-color: $color-action;
+          }
+        }
+      }
+      .form-message{
+        font-size: 12px;
+        line-height: 22px;
+        svg{
+          width: 16px;
+          height: 16px;
+          stroke: #222;
+          margin-left: 16px;
+          vertical-align: middle;
+          line-height: 1;
+        }
+        a{
+          line-height: 22px;
+        }
+        &.done{
+          color: #358D3F;
+        }
+      }
+    }
+    .btn{
+      margin-top: 32px;
+      width: 100%;
+      color: #fff;
+      background-color: $color_action-h;
+      border: none;
+      &:hover{
+        background-color: $color-action;
+      }
+    }
+  }
+  .checkout-block{
+    .title{
+      background: #FAFAFA;
+      border-radius: 2px;
+      padding: 16px 24px;
+      font-family: $gordita_bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 21px;
+    }
+    .product-rows{
+      padding-bottom: 32px;
+      &__header{
+        font-family: $gordita_regular;
+        padding: 16px 0 8px;
+        border-bottom: 1px solid #e8e8e8;
+        color: $color-goods-des;
+        font-size: 12px;
+        line-height: 22px;
+      }
+      .p-row{
+        display: flex;
+        padding: 16px 0;
+        border-bottom: 1px solid #e8e8e8;
+        .thumb{
+          width: 80px;
+          min-width: 80px;
+          margin-right: 24px;
+          img{
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        .col{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+        }
+        .p-meta{
+          .name{
+            font-family: $gordita_medium;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 16px;
+          }
+          .attributes{
+            .key,.val{
+              font-size: 12px;
+              line-height: 15px;
+            }
+            .a-row{
+              margin-top: 16px;
+              display: flex;
+              .key {
+                display: block;
+                width: 75px;
+                font-family: $gordita_medium;
+              }
+            }
+          }
+        }
+
+        .p-price{
+          width: 110px;
+          min-width: 110px;
+        }
+        .p-price{
+          margin-left: auto;
+          .price{
+            font-family: $gordita_medium;
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+        .p-quantity{
+          width: 102px;
+          border-bottom: 1px solid #e8e8e8;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          padding-bottom: 2px;
+          margin: 0 48px;
+          .col-title{
+            width: 100%;
+          }
+          input{
+            text-align: center;
+            width: calc(100% - 32px);
+            border-bottom: none;
+            font-size: 13px;
+          }
+          .increase,
+          .decrease{
+            display: block;
+            line-height: 23px;
+            cursor: pointer;
+            font-size: 0;
+              svg{
+                width: 16px;
+                height: 16px;
+                vertical-align: middle;
+              }
+          }
+        }
+        .col-title{
+          font-family: $gordita_regular;
+          color: $color-goods-des;
+          font-size: 12px;
+          line-height: 21px;
+          margin-bottom: 6px;
+        }
+      }
+    }
+    .inputs{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 0 32px;
+      .input-wrap{
+        margin-top: 39px;
+        width: calc(50% - 12px);
+        input{
+          width: 100%;
+          font-size: 13px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+  padding-bottom: 28px;
+}
+
+
+
+//end checkout pages
