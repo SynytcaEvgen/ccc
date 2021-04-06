@@ -4812,7 +4812,7 @@ header{
   }
   &__title{
     font-family: $gordita_bold;
-    font-size: 220px;
+    @include adaptiv-font(220, 100);
     line-height: 237px;
   }
   p{
@@ -4836,4 +4836,17 @@ header{
     }
   }
 }
+.prod-slider__404{
+  margin-top: 83px;
+  .prod-slider-container{
+    padding-bottom: 9px;
+  }
+}
+.prod-slider-title__404{
+  font-family: $gordita_bold;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 30px;
+}
+
 //end error pages
