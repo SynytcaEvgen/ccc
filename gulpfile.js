@@ -45,7 +45,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    // tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "ccc-shop"
@@ -138,13 +138,14 @@ gulp.task('build', gulp.series(
 ));
 
 
-gulp.task('watch', function(){
+gulp.task('watch', function(done){
     watch(path.watch.html, gulp.series('html:build'));
     watch(path.watch.style, gulp.series('style:build'));
     watch(path.watch.js, gulp.series('js:build'));
     watch(path.watch.img, gulp.series('image:build'));
     watch(path.watch.fonts, gulp.series('fonts:build'));
     watch(path.watch.svg, gulp.series('svg:build'));
+    done();
 });
 
 gulp.task('default', gulp.series('build', gulp.parallel('webserver', 'watch')));

@@ -2867,6 +2867,31 @@ section.info {
            }
          }   
         }
+        .filter-active-wrapper{
+          .filter-active-items{
+            .active-item{
+              .name-filter{
+                font-size: 10px;
+                line-height: 16px;
+              }
+              .close-filter{
+                stroke: $color_promo_bg;
+                width: 10px;
+                height: 10px;
+              }
+            }
+          }
+          .filter-active-reset-btn{
+            text-decoration: underline;
+            font-family: $gordita_medium;
+            font-weight: 500;
+            transition: 0.3s ease-in-out;
+            &:hover{
+              color: $color-action-h;
+              transition: 0.3s ease-in-out;
+            }
+          }
+        }
         
       }
       .more-less-filter{
@@ -4855,6 +4880,7 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
     .staff-title{
       display: flex;
       justify-content: space-around;
+      align-items: center;
       li{
         line-height: 21px;
         text-align: center;
