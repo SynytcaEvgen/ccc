@@ -4663,11 +4663,13 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
         p{
           text-align: center;
           line-height: 21px;
-          font-weight: 500px;
-          font-family: $gordita_medium;
+          font-family: $gordita_regular
         }
         .accent{
           color: $color-action-h;
+          font-family: $gordita_medium;
+          font-weight: 500px;
+          line-height: 21px;
         }
       }
     }
@@ -4682,6 +4684,7 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
     .measures-items{
       display: flex;
       justify-content: space-between;
+      max-width: calc(50% - 10px);
     }
     .icon{
       padding-right: 24px;
@@ -4703,6 +4706,7 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
       .measures-list{
         .items{
           padding-left: 16px;
+          padding-bottom: 10px;
           position: relative;
           line-height: 21px;
           &::before {
