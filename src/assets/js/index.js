@@ -286,7 +286,7 @@ function init() {
           $(".all-lang-item").mCustomScrollbar({
              theme:"my-theme"
           });
-          $(".account-orders__nav").mCustomScrollbar({
+          $(".account-orders__nav__var").mCustomScrollbar({
             theme:"my-theme",
             axis: "x"
           });

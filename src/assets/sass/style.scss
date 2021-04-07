@@ -4751,7 +4751,8 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
     padding-bottom: 40px;
     .container{
       padding: 0;
-      width: calc(100vw - 283px);
+      // width: calc(100vw - 283px);
+      // max-width: unset;
     }
     .slider_container{
       .slider-wrapp{
