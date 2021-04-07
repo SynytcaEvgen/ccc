@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="best site Description">
     <meta name="Keywords" content="Обувь, мода">
-    <title>Cart_closed</title>
+    <title>Cart_pvz</title>
     <meta property="og:title" content="ССС Shop">
     @@include('./part/head_link.html')
 </head>
@@ -129,7 +129,35 @@
                                 <div class="input-wrap"><input type="text" name="city" placeholder="Город *"></div>
                                 <div class="input-wrap"><input type="text" name="zip" placeholder="Индекс *"></div>
                             </div>
-                        </div>                       
+                        </div>
+                        <div class="checkout-block">
+                            <div class="title">СПОСОБЫ ДОСТАВКИ</div>
+                            <div class="inputs delivery-radio">
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОСТАМАТЫ И ПУНКТЫ ВЫДАЧИ ЗАКАЗОВ </span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>КУРЬЕРОМ БЕЗ ПРИМЕРКИ И ЧАСТИЧНОГО ВЫКУПА</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type" checked><span>КУРЬЕРОМ С ПРИМЕРКОЙ И ЧАСТИЧНЫМ ВЫКУПОМ</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОЧТА РОССИИ</span></label>
+                            </div>
+                            <div class="delivery-meta">
+                                <p>Сроки доставки: 5-7 рабочих дней.</p>
+                                <p>Стоимость доставки: 500 ₽.</p>
+                            </div>
+                            <div class="delivery-point">
+                                <a href="#" class="btn theme-btn chose-point">Выбрать пункт выдачи заказов</a>
+                            </div>
+                        </div>
+                        <div class="checkout-block">
+                            <div class="title">СПОСОБЫ ОПЛАТЫ</div>
+                            <div class="inputs pay-radio">
+                                <label class="radio-wrap"><input type="radio" checked name="payment_type"><span>БАНКОВСКОЙ КАРТОЙ НА САЙТЕ</span></label>
+                                <label class="radio-wrap"><input type="radio" name="payment_type"><span>ОПЛАТА ПРИ ПОЛУЧЕНИИ</span></label>
+                            </div>
+                            <div class="acceptance">
+                                <p><label class="checkbox-label"><input type="checkbox" name="accept" checked><span>Ознакомлен и соглашаюсь с <a
+                                        href="#">Политикой конфиденциальности</a></span></label></p>
+                                <p><label class="checkbox-label"><input type="checkbox" name="subscribe" checked><span>Подписаться на новости, акции и специальные предложения</span></label></p>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col">
@@ -151,7 +179,40 @@
         </div>
     </section>
 </main>
-
+<!-- Pop_up choose delivery point -->
+<div id="popup-delivery-point" class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div class="close-popup">
+                <svg>
+                    <use href="assets/sprite/sprite.svg#close"></use>
+                </svg>
+            </div>
+            <h4 class="header-popup">Выберите пункт выдачи</h4>
+            <div class="points-wrapper">
+                <div class="points-nav">
+                    <a href="#">На карте</a><a href="#">Списком</a>
+                </div>
+                <div class="points-flex">
+                    <div class="points-view"></div>
+                    <div class="point-meta">
+                        <div class="title">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                        <div class="point-rows">
+                            <p><span class="key">Стоимость:</span><span class="val">300 ₽</span></p>
+                            <p><span class="key">Срок доставки:</span><span class="val">4-6 рабочих дней</span></p>
+                            <p><span class="key">Город:</span><span class="val">Москва</span></p>
+                            <p><span class="key">Адрес:</span><span class="val">115230, Москва г, <br>Каширское ш, д.11, корпус 1</span></p>
+                            <p><span class="key">Время работы:</span><span class="val">Пн-Пт: 08:00 - 20:00 <br>Сб-Вс: 08:00 - 19:00</span></p>
+                            <p><span class="key">Описание:</span><span class="val">Остановка - Хлебозаводской проезд. Примерное расстояние от остановки до Отделения - 100 м. Отделение расположено в 8-этажном доме. Этаж - цоколь</span></p>
+                        </div>
+                        <button type="button" class="btn theme-btn">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pop_up chose delivery point -->
 <!--Content end section-->
 
 @@include('./part/footer.html')

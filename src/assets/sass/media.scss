@@ -2328,3 +2328,141 @@ $color-price-sale: #E90000;
   }
 }
 //account pages end, end!
+// checkout pages
+@media screen and (max-width: 1199px) {
+  .checkout-blocks{
+    flex-wrap: wrap;
+    &>.col{
+      width: 100% !important;
+    }
+    .checkout-block .inputs.delivery-radio .radio-wrap{
+      width: calc(50% - 16px);
+    }
+    .checkout-block .product-rows .p-row{
+      flex-wrap: wrap;
+      .p-summ{
+        margin-top: 6px;
+        width: 100%;
+        display: block;
+        font-family: $gordita_medium;
+        font-size: 12px;
+        line-height: 15px;
+        span{
+          font-family: $gordita_medium;
+        }
+        .key{
+          width: 75px;
+          display: inline-block;
+        }
+      }
+    }
+    .checkout-block .product-rows .p-row .col {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: calc(100% - 161px);
+      &:last-child{
+        min-width: 0;
+      }
+      .p-quantity{
+        margin-top: 27px;
+      }
+
+      .p-quantity,
+      .p-price{
+        margin-left: 0;
+      }
+      .p-price{
+        display: flex;
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 15px;
+        .price{
+          line-height: 15px;
+        }
+        &:before{
+          content: 'Цена';
+          display: inline-block;
+          width: 75px;
+          min-width: 75px;
+          font-family: $gordita_medium;
+          font-size: 12px;
+        }
+      }
+      .col-title{
+        display: none;
+      }
+
+    }
+    .checkout-block .product-rows .p-row .thumb{
+      min-width: 137px;
+      width: 137px;
+    }
+
+  }
+}
+@media screen and (max-width: 767px){
+  .checkout-blocks .checkout-block .inputs .input-wrap{
+    width: 100%;
+  }
+  .checkout-blocks .checkout-block .title{
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 16px;
+  }
+  .checkout-blocks .checkout-block .inputs.delivery-radio .radio-wrap{
+    width: calc(100% - 16px);
+    margin-bottom: 8px;
+    span{
+      padding: 0 22px;
+    }
+  }
+  .checkout-blocks .checkout-block .delivery-meta{
+    p{
+      margin: 8px 0 0;
+    }
+  }
+  .checkout-blocks .checkout-block .delivery-point{
+    .btn{
+      width: 100%;
+      margin-top: 16px;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+  }
+  .checkout-blocks .checkout-block .inputs.pay-radio .radio-wrap{
+    width: 100%;
+  }
+  .checkout-blocks .checkout-block .inputs.pay-radio{
+    padding-bottom: 16px;
+  }
+  .checkout-blocks .col:last-child{
+    min-width: 0;
+  }
+  .checkout-blocks .checkout-total{
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .checkout-blocks .checkout-block .acceptance{
+    margin-bottom: 16px;
+  }
+  .checkout-blocks .checkout-block .acceptance p{
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+  .checkout-blocks .checkout-total__rows .ct-row{
+    margin-bottom: 10px;
+  }
+  .checkout-blocks{
+    padding-bottom: 24px;
+  }
+  .checkout-blocks .checkout-block .delivery-point{
+    flex-wrap: wrap;
+  }
+  .checkout-blocks .checkout-block .delivery-point .input-wrap,
+  .checkout-blocks .checkout-block .delivery-point .input-wrap:first-child{
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+  }
+}
+//checkout end!
