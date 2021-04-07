@@ -403,6 +403,10 @@ function init() {
     closePopUp('.popup.active');
     openPopUp('#popup-reset-pass');
   });
+  $('.chose-point').click(function (e){
+    e.preventDefault();
+    openPopUp('#popup-delivery-point');
+  })
   $('.lang-wrapper .select-lang').click(function () {
      $(this).toggleClass('active');
      $(this).children().last().toggleClass('active');

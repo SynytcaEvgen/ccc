@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="best site Description">
     <meta name="Keywords" content="Обувь, мода">
-    <title>Cart_closed</title>
+    <title>Cart_courier</title>
     <meta property="og:title" content="ССС Shop">
     <meta property="og:title" content="ССС Shop">
 <meta property="og:site_name" content="ССС Shop">
@@ -2214,31 +2214,6 @@
                 </div>
             </div>
         </div>
-        <div class="header-goods-wrapper">
-            <div class="preview-header-goods container">
-                <div class="decs-goods">
-                    <div class="img-wrapper">
-                        <img src="assets/img/goods_mini.jpg" alt="mini-goods">
-                    </div>
-                    <div class="goods-name">
-                        <p class="font-mini">Ботильоны Sergio Bardine</p>
-                    </div>
-                    <div class="price-wrapper">
-                        <span class="price_new font-mini">3490</span>
-                        <span class="price_old font-mini">5990</span>
-                    </div>
-                </div>
-                <div class="btn-wrapper-card mini">
-                    <button class="btn-to-card font-mini">Добавить в корзину</button>
-                    <div class="add-to-favorit add_to_favorit">
-                        <svg>
-                            <use href="assets/sprite/sprite.svg#favorit"></use>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
     </header>
     <!--Header end section-->
 
@@ -2356,7 +2331,46 @@
                                 <div class="input-wrap"><input type="text" name="city" placeholder="Город *"></div>
                                 <div class="input-wrap"><input type="text" name="zip" placeholder="Индекс *"></div>
                             </div>
-                        </div>                       
+                        </div>
+                        <div class="checkout-block">
+                            <div class="title">СПОСОБЫ ДОСТАВКИ</div>
+                            <div class="inputs delivery-radio">
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОСТАМАТЫ И ПУНКТЫ ВЫДАЧИ ЗАКАЗОВ </span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>КУРЬЕРОМ БЕЗ ПРИМЕРКИ И ЧАСТИЧНОГО ВЫКУПА</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type" checked><span>КУРЬЕРОМ С ПРИМЕРКОЙ И ЧАСТИЧНЫМ ВЫКУПОМ</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОЧТА РОССИИ</span></label>
+                            </div>
+                            <div class="delivery-meta">
+                                <p>Сроки доставки: 5-7 рабочих дней.</p>
+                                <p>Стоимость доставки: 500 ₽.</p>
+                            </div>
+                            <div class="delivery-point address">
+                                <div class="input-wrap">
+                                    <input type="text" name="street" placeholder="Улица*" class="invalid">
+                                    <div class="error-message">Поле является обязательным</div>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" name="building" placeholder="Дом*" class="invalid">
+                                    <div class="error-message">Поле является обязательным</div>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" name="apartament" placeholder="Квартира/офис*" class="invalid">
+                                    <div class="error-message">Поле является обязательным</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-block">
+                            <div class="title">СПОСОБЫ ОПЛАТЫ</div>
+                            <div class="inputs pay-radio">
+                                <label class="radio-wrap"><input type="radio" checked name="payment_type"><span>БАНКОВСКОЙ КАРТОЙ НА САЙТЕ</span></label>
+                                <label class="radio-wrap"><input type="radio" name="payment_type"><span>ОПЛАТА ПРИ ПОЛУЧЕНИИ</span></label>
+                            </div>
+                            <div class="acceptance">
+                                <p><label class="checkbox-label"><input type="checkbox" name="accept" checked><span>Ознакомлен и соглашаюсь с <a
+                                        href="#">Политикой конфиденциальности</a></span></label></p>
+                                <p><label class="checkbox-label"><input type="checkbox" name="subscribe" checked><span>Подписаться на новости, акции и специальные предложения</span></label></p>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col">
@@ -2368,7 +2382,7 @@
                             <div class="ct-row total"><span class="key">Итоговая сумма</span><span class="val price">24000</span></div>
                         </div>
                         <form action="/" class="coupon-form" id="couponForm">
-                            <div class="flex"><input type="text" name="coupon" value="BAGS" placeholder="Купон"><input type="submit" value="ok"></div>
+                            <div class="flex"><input type="text" name="coupon"><input type="submit" value="ok"></div>
                             <p class="form-message done">BAGS - купон активирован <a href="#"><svg><use href="assets/sprite/sprite.svg#close"></use></svg></a></p>
                         </form>
                         <button type="button" class="btn">Оформить заказ</button>
