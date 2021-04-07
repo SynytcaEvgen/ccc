@@ -606,6 +606,13 @@ function init() {
       this.classList.toggle('select');
     });
   };
+  $('.size-holder .size-items').click(function () {
+    $('.size-holder .size-items').removeClass('current');
+    $(this).toggleClass('current');
+  });
+  $('.add-to-favorit').click(function () {
+    $('.add-to-favorit').toggleClass('select');
+  });
 
 };
 

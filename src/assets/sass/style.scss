@@ -96,6 +96,9 @@ header{
 main{
   padding-top: 140px;
   flex: 1 0 auto;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  padding-bottom: 0!important;
 }
 // remove this style before production ----->>>>
 .not_prod {
@@ -231,11 +234,13 @@ input.box-check {
       background-color: $color-action-h;
       border-color: $color-action-h;
     }
-    // +.desc-check{
-    //   font-family: $gordita_bold;
-    // }
+    +.desc-check{
+      font-family: $gordita_medium;
+      font-weight: 500;
+    }
     +.desc-check > span{
-      font-family: $gordita_medium
+      font-family: $gordita_medium;
+      font-weight: 500;
     }
   }
 }
@@ -258,6 +263,10 @@ input.box-check {
   position: relative;
   padding-left: 29px;
   cursor: pointer;
+  &:hover::before{
+    border-color: $color-action-h;
+    transition: 0.3s ease-in-out;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -268,6 +277,7 @@ input.box-check {
     height: 18px;
     background-color: transparent;
     border: 1px solid $color_text;
+    transition: 0.3s ease-in-out;
   }
 
   &::after {
@@ -1449,11 +1459,19 @@ main section button{
   .prod-slider-title{
     padding-bottom: 32px;
     text-align: center;
-    h2{
+    h2, .t-prod-slider{
       text-transform: uppercase;
       &:hover{
         color: $color-action-h;
-        cursor: pointer;
+      }
+    }
+    a .t-prod-slider,
+    a h2{
+      display: inline-block;
+    }
+    &.not-link{
+      h2, .t-prod-slider:hover{
+        color: $color_text;
       }
     }
   }
@@ -1568,7 +1586,6 @@ main section button{
            fill: none;
            &:hover{
              stroke: $color-action-h;
-             fill: $color-action-h;
              transition: 0.3s ease;
            }
         }
@@ -2551,11 +2568,10 @@ section.info {
       justify-content: space-between;
       height: 45px;
       position: relative;
-      transition: .3s ease-in-out;
       &.open{
         max-height: 100%;
-        transition: .3s ease-in-out;
-        height: 104px;
+        height: 100%;
+        margin-bottom: -18px;
         .filter-continer>.filter-item{
           align-content: space-between;
           height: 100%;
@@ -2861,6 +2877,15 @@ section.info {
           max-height: 45px;
           min-width: 139px;
           cursor: pointer;
+          &:hover .more-filter p{
+              color: $color-action-h;
+              transition: 0.3s ease-in-out;
+          }
+          &:hover::after,
+          &:hover::before{
+              background-color: $color-action-h;
+              transition: 0.3s ease-in-out;
+          }
           &::before{
             content: "";
             background-color: #222222;
@@ -2904,6 +2929,7 @@ section.info {
           p{
             font-family: $gordita_medium;
             white-space: nowrap;
+            transition: 0.3s ease-in-out;
           }
       }
     }
@@ -2937,6 +2963,7 @@ section.info {
             font-size: 12px;
             line-height: 20px;
             padding-right: 3px;
+            color: $color-goods-des;
           }
         }
       }
@@ -3925,7 +3952,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
         position: absolute;
         top: 0;
         right: 0;
-        margin: 29px;
+        margin: 18px;
         z-index: 5;
         cursor: pointer;
         &:hover svg{
@@ -3933,8 +3960,8 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
           transition: .3s ease-in-out;
         }
         svg {
-          width: 22px;
-          height: 22px;
+          width: 44px;
+          height: 44px;
           stroke: $color_text;
           transition: .3s ease-in-out;
         }
@@ -4006,6 +4033,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
       .goods-detail-wrapper{
          max-width: 360px;
          margin-left: 8px;
+         padding-top: 30px;
          .description-goods{
            .brand{
              a{
@@ -4017,8 +4045,6 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
                  transition: 0.3s ease-in-out;
                }
              }
-
-             padding-bottom: 4px;
            }
            .price-wrapper{
              display: flex;
@@ -4081,7 +4107,9 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
              padding-bottom: 8px;
              .size-items{
                padding: 10px 0;
-               margin: -1px;
+               margin: -0.5px;
+               position: relative;
+               z-index: 2;
                border-radius: 2px;
                border: 1px solid $color_line_dec;
                width: 73px;
@@ -4090,10 +4118,26 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
                display: flex;
                justify-content: center;
                align-items: center;
+               p{
+                 transition: .5s ease-in-out;
+                 font-family: $gordita_regular;
+               }
                &:hover{
                  border-color: $color_text;
                  transition: .5s ease-in-out;
+                 z-index: 4;
+               }
+               &.current{
+                 border-color: $color_text;
+                 transition: .5s ease-in-out;
+                 z-index: 4;
+                 p{
+                   font-weight: 500;
+                   font-family: $gordita_medium;
+                   transition: .5s ease-in-out;
 
+                 }
+                 
                }
              }
            }
@@ -4130,16 +4174,12 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
            .add-to-favorit{
              border: 1px solid $color_text;
              border-radius: 2px;
-             width: 50px;
+             min-width: 50px;
              height: 50px;
              display: flex;
              justify-items: center;
              align-items: center;
              cursor: pointer;
-             &:hover svg{
-                stroke: $color-action-h;
-                transition: 0.3s ease-in-out;
-             }
              svg{
                display: block;
                margin: 0 auto;
@@ -4148,6 +4188,28 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
                fill: none;
                stroke: $color_text;
                transition: 0.3s ease-in-out;
+             }
+             &:hover svg{
+                stroke: $color-action-h;
+                transition: 0.3s ease-in-out;
+             }
+           }
+         }
+         .payment-wrapper.detail{
+           .payment-items{
+             .title{
+               font-size: 13px;
+               line-height: 23px;
+             }
+             .paymeny-desc{
+               p a{
+                 text-decoration: underline;
+                 transition: .3s ease-in-out;
+                 &:hover{
+                   color: $color-action-h;
+                   transition: .3s ease-in-out;
+                 }
+               }
              }
            }
          }
@@ -4195,6 +4257,8 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
                  padding-left: 19px;
                   p{
                     padding: 0;
+                    font-size: 12px;
+                    line-height: 20px;
                   }
                }
             }
@@ -4212,6 +4276,16 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
            }
            .content p{
              padding-bottom: 0;
+              a{
+                 font-family: $gordita_medium;
+                 font-weight: 500;
+                 text-decoration: underline;
+                 transition: 0.3s ease-in-out;
+                 &:hover{
+                 color: $color-action-h;
+                 transition: 0.3s ease-in-out;
+                 } 
+              }
            }
          }
       }
@@ -4221,7 +4295,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
 .btn-wrapper-card{
   display: flex;
   justify-content: space-between;
-  padding-bottom: 33px;
+  padding-bottom: 16px;
   .btn-to-card{
     border-radius: 2px;
     border-color: $color-action-h;
@@ -4241,7 +4315,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   .add-to-favorit{
     border: 1px solid $color_text;
     border-radius: 2px;
-    width: 50px;
+    min-width: 50px;
     height: 50px;
     display: flex;
     justify-items: center;
@@ -4256,8 +4330,13 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
       margin: 0 auto;
       width: 20px;
       height: 18px;
-      fill: none;
+      fill: transparent;
       stroke: $color_text;
+      transition: 0.3s ease-in-out;
+    }
+    &.select svg{
+      fill: $color-action-h;
+      stroke: $color-action-h;
       transition: 0.3s ease-in-out;
     }
   }
@@ -4267,6 +4346,12 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   font-size: 12px;
 }
 header{
+  .header-goods-wrapper{
+    background-color: $color_ivert;
+    filter: drop-shadow(3px 10px 10px rgba(34, 34, 34, 0.1));
+    // position: relative;
+    z-index: 4;
+  }
   .preview-header-goods{
      display: none;
      justify-content: space-between;

@@ -200,7 +200,7 @@ $color-price-sale: #E90000;
     }
 }
 @media only screen and (max-width: 1023px) {
-    header .preview-header-goods{
+    header .header-goods-wrapper{
         position: fixed;
         bottom: 0;
         background-color: $color_ivert;
@@ -214,14 +214,15 @@ $color-price-sale: #E90000;
            .btn-to-card{
             min-width: unset;
             width: 100%;
+            max-width: 100%;
             margin-right: 16px;
            }
            .add-to-favorit{
-             width: 43px;
-             height: 43px;
+             min-width: 50px;
+             height: 50px;
              svg{
-               width: 14px;
-               height: 14px;
+               width: 20px;
+               height: 18px;
              }
            }
         }
@@ -1191,6 +1192,8 @@ $color-price-sale: #E90000;
       .container{
         .goods-frame{
             flex-direction: column;
+            padding-top: 16px;
+            padding-bottom: 40px;
           .gallery-wrapper{
               margin-right: 0;
             .grid-frame-img{
@@ -1209,6 +1212,8 @@ $color-price-sale: #E90000;
           }
           .goods-detail-wrapper{
               max-width: 100%;
+              padding-top: 0;
+              margin-left: 0;
           }
         }
       }
@@ -1216,7 +1221,9 @@ $color-price-sale: #E90000;
     .btn-wrapper-card{
       .btn-to-card{
         margin-right: 16px;
+        max-width: 277px;
         min-width: unset;
+        padding: 12px 0;
       }
     }
     .doods-detail{
@@ -1246,6 +1253,7 @@ $color-price-sale: #E90000;
           .goods-pagination{
             position: absolute;
             z-index: 10;
+            bottom: 16px;
             text-align: center;
             .swiper-pagination-bullet{
                 margin: 0 16px;
@@ -1384,6 +1392,15 @@ $color-price-sale: #E90000;
         padding: 9px 0;
         min-width: 163px;
     }
+    .doods-detail .container .goods-frame .goods-detail-wrapper .sizes-goods .size-holder .size-items{
+        width: 69px;
+        height: 44px;
+    }
+    .payment-wrapper .payment-items:hover .title,
+    .footer-mobile-content .accordion-wrapp .accordion-item .accordion-item-lable label:hover{
+        color: $color_text;
+    }
+
 
 }
 @media only screen and (max-width: 480px) {
