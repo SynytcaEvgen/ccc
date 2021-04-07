@@ -1426,9 +1426,21 @@ $color-price-sale: #E90000;
        max-width: 100%;
        max-height: 100%;
    }
-  
-
-
+   .info-text.career .infrom_text-wrapper .text-content p{
+       font-size: 14px;
+       line-height: 24px;
+   }
+   .info-text.career .banner.mod-slide{
+       padding-bottom: 23px;
+   }
+   .info-text.career .career-staff-wrapper .caption{
+       font-size: 13px;
+       line-height: 23px;
+       padding-bottom: 31px;
+   }
+   .info-text.career .career-staff-wrapper .cart-staff-wrapper .cart-item{
+       padding: 16px;
+   }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1582,7 +1594,7 @@ $color-price-sale: #E90000;
         padding: 16px;
     }
     .info-text.career .info-text-wrapper.promo .text-item{
-        padding-bottom: 16px;
+        padding-bottom: 14px;
     }
     .info-text.career .info-text-wrapper.promo{
         margin-bottom: 16px;

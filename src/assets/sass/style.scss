@@ -4749,6 +4749,9 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
   }
   .banner{
     padding-bottom: 40px;
+    &.mod-slide{
+      padding-bottom: 19px;
+    }
     .container{
       padding: 0;
       // width: calc(100vw - 283px);
@@ -4799,6 +4802,9 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
           svg{
             width: 70px;
             height: 70px;
+          }
+          svg.def-icon{
+            height: 72px;
           }
         }
         .content{
