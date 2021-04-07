@@ -1426,6 +1426,7 @@ $color-price-sale: #E90000;
        max-width: 100%;
        max-height: 100%;
    }
+  
 
 
 }
@@ -1613,6 +1614,9 @@ $color-price-sale: #E90000;
         line-height: 18px;
         max-width: 86px;
     }
+    .info-text.career .job-advantag-wrapper .advantag-item .icon-title p{
+       text-align: left;
+    }
 }
 @media only screen and (max-width: 375px){
     .promotion.hist .container .promo-wrapper .promo-items .promo-img{
@@ -1646,6 +1650,10 @@ $color-price-sale: #E90000;
     }
     .features_site_wrapper .features_site .features_items {
     margin-right: 5px;
+    }
+    .info-text.career .job-growing-line .staff-title li{
+        word-break: break-word;
+        max-width: 60px;
     }
 
 }
