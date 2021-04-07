@@ -1416,6 +1416,9 @@ $color-price-sale: #E90000;
     section.info .container .info-frame .info-content-wrapper{
         padding-bottom: 24px;
     }
+    section.info .container .info-frame .info-content-wrapper.news-detail{
+        padding-bottom: 0;
+    }
     section.info .container .info-frame .info-content-wrapper.news{
         padding-bottom: 0;
     }
