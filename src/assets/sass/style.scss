@@ -4431,6 +4431,10 @@ header{
     padding-bottom: 50px;
     .news-grid-items {
       .img-wrapper {
+        line-height: 0;
+        height: 262px;
+        max-width: 468px;
+        overflow: hidden;
         img{
           width: 100%;
           height: 100%;
