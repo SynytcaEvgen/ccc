@@ -613,6 +613,31 @@ function init() {
   $('.add-to-favorit').click(function () {
     $('.add-to-favorit').toggleClass('select');
   });
+  $('.add_to_favorit').click(function(e){
+        let button      = $(e.currentTarget)
+        let prod_id     = button.data('product_id')
+        let need_delete = (button.hasClass('select')) ? 1 : 0;
+
+        $.ajax({
+            url: '/local/ajax/favorites.php',
+            method: 'post',
+            data: {
+                favorite: prod_id,
+                delete: need_delete
+            },
+            success: function(response){
+                response = JSON.parse(response);
+
+                if(response.success) {
+                    if(need_delete) {
+                        button.removeClass('select');
+                    }else {
+                        button.addClass('select');
+                    }
+                }
+            }
+        });
+  });
 
 };
 
