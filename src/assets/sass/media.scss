@@ -216,6 +216,9 @@ $color-price-sale: #E90000;
             width: 100%;
             max-width: 100%;
             margin-right: 16px;
+            font-size: 13px;
+            line-height: 23px;
+            font-family: $gordita_medium;
            }
            .add-to-favorit{
              min-width: 50px;
@@ -1399,6 +1402,9 @@ $color-price-sale: #E90000;
     .payment-wrapper .payment-items:hover .title,
     .footer-mobile-content .accordion-wrapp .accordion-item .accordion-item-lable label:hover{
         color: $color_text;
+    }
+    body .line-decor{
+        display: none;
     }
 
 
