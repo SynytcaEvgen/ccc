@@ -1631,7 +1631,7 @@ main section button{
     height: 25px;
     p{
       color: $color-goods-des;
-       word-break: break-all;
+      //  word-break: break-all;
       &:hover{
         color: $color-action-h;
       }

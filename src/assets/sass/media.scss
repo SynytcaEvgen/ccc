@@ -1057,9 +1057,13 @@ $color-price-sale: #E90000;
         font-size: 13px;
         line-height: 23px;
     }
-    .prod-card-container .discrption-goods p{
+    .prod-card-container .discrption-goods{
+      height: 40px;
+      p{
         font-size: 12px;
         line-height: 20px;
+      }
+
     }
     .prod-card-container.sale .price-wrap .price:first-child{
         padding-right: 8px;

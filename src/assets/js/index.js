@@ -317,18 +317,21 @@ function init() {
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   };
-  function sliceSentence(sentence) {
-    let p = $(sentence),
-      divh = p.parent().height();
-    console.log(p);
-    console.log(divh);
-    console.log($(p).outerHeight());
-    console.log($(p).height());
-    while ($(p).outerHeight() > divh) {
-      let reR = $(p).text(function (index, text) {
+  function doThisF(index, text) {
           return text.replace(/\W*\s(\S)*$/, '...');
-      });
-      console.log(reR);
+          
+  }
+  function sliceSentence(sentence) {
+    let p = document.querySelectorAll(sentence);
+       
+    for (let i = 0; i < p.length; i++) {
+      let divh = 40;
+      console.log(p[i].clientHeight);
+      if (p[i].clientHeight == divh) {
+        let reR = p[i].textContent(doThisF());
+        console.log(reR);
+      
+      };
     };
   };
   sliceSentence('.discrption-goods p');
