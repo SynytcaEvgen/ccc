@@ -23,14 +23,13 @@
                     </ul>
                 </div>
                 <div class="info-frame">
-
                     <div class="info-content-wrapper">
-                        <h1 class="title">Регистрация</h1>
+                        <h1 class="title registration">Регистрация</h1>
                         <div class="registration-form">
-                            <form action="" method="post">
-                                <div class="input-wrap"><input type="text" placeholder="Фамилия*"></div>
-                                <div class="input-wrap"><input type="text" placeholder="Имя*"></div>
-                                <div class="input-wrap"><input type="text" value="Отчество"></div>
+                            <form action="" method="post" id="registration-form">
+                                <div class="input-wrap"><input type="text" placeholder="Фамилия*" required></div>
+                                <div class="input-wrap"><input type="text" placeholder="Имя*" required></div>
+                                <div class="input-wrap border-form"><input type="text" placeholder="Отчество"></div>
                                 <div class="top-label">Пол</div>
                                 <div class="input-wrap radio-wrap">
                                     <label class="radio-label">
@@ -42,10 +41,10 @@
                                         <span>Женский</span>
                                     </label>
                                 </div>
-                                <div class="input-wrap"><input type="text" placeholder="Электронная почта*"></div>
+                                <div class="input-wrap"><input type="text" placeholder="Электронная почта*" name="email_n" required></div>
                                 <div class="input-wrap"><input type="text" placeholder="Телефон"></div>
-                                <div class="input-wrap"><input type="password" placeholder="Пароль*"></div>
-                                <div class="input-wrap"><input type="password" placeholder="Подтвердите пароль*"></div>
+                                <div class="input-wrap"><input type="password" placeholder="Пароль*" name="psword" required></div>
+                                <div class="input-wrap border-end"><input type="password" placeholder="Подтвердите пароль*" name="psword_confirm" required></div>
                                 <div class="acceptance">
                                     <p><label class="checkbox-label"><input type="checkbox" name="accept" checked><span>Ознакомлен и соглашаюсь с <a
                                             href="#">Политикой конфиденциальности</a></span></label></p>

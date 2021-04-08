@@ -22,6 +22,7 @@ $color-border: #db585e;
 $color-action-h: #e9500e;
 $color-action: #cf470c;
 $color-price-sale: #E90000;
+$color-error: #EB001B;
 /*--colors--*/
 /*--var--*/
 $parg_size: 13px;
@@ -1628,9 +1629,23 @@ main section button{
   }
   .discrption-goods {
     overflow: hidden;
-    height: 25px;
+    height: 23px;
+    position: relative;
+    &.cut-word::after{
+      content: '...';
+      position: absolute;
+      bottom: -1px;
+      right: 0;
+      width: 9px;
+      height: 23px;
+      padding: 3px 3px 0;
+      background-color: $color_ivert;
+    }
     p{
       color: $color-goods-des;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       //  word-break: break-all;
       &:hover{
         color: $color-action-h;
@@ -2253,6 +2268,9 @@ section.info {
         >.title{
           margin-bottom: 32px;
           text-transform: uppercase;
+          &.registration{
+            margin-bottom: 39px;
+          }
           &.accordion-btn{
             cursor: pointer;
             position: relative;
@@ -3490,10 +3508,27 @@ section.info {
     font-family: $gordita_regular;
     color: $color-goods-des;
   }
+  .input-wrap:not(.radio-wrap) {
+    display: flex;
+    flex-direction: column;
+  }
   .input-wrap{
     margin-bottom: 39px;
+    
+    &.border-form{
+      margin-bottom: 22px;
+    }
+    label.error{
+      color: $color-error;
+      font-size: 11px;
+      line-height: 11px;
+      padding-top: 4px;
+    }
     input{
       width: 100%;
+      &.error{
+        border-color: $color-error;
+      }
     }
     &.radio-wrap {
       display: flex;
@@ -3603,11 +3638,21 @@ section.info {
       display: block;
       position: relative;
       padding-left: 29px;
-      line-height: 24px;
+      line-height: 21px;
+      font-size: 11px;
+      a{
+        font-size: inherit;
+        line-height: inherit;
+        transition: color .3s ease-in-out;
+        &:hover{
+          color: $color-action-h;
+          transition: color .3s ease-in-out;
+        }
+      }
       &:before{
         content: '';
         position: absolute;
-        top: 2px;
+        top: -2px;
         left: 0;
         width: 18px;
         height: 18px;
@@ -3618,7 +3663,7 @@ section.info {
         font-family: "Material Icons";
         content: '\e5ca';
         position: absolute;
-        top: 2px;
+        top: -2px;
         left: 0;
         transform: scale(0);
         width: 18px;

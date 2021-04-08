@@ -1466,6 +1466,34 @@ $color-price-sale: #E90000;
    .page-error{
      padding-top: 70px;
    }
+   .prod-card-container .discrption-goods p{
+     text-overflow: unset;
+     overflow: unset;
+     white-space: normal;
+   }
+   section.info .container .info-frame .info-content-wrapper>.title.registration{
+     margin-bottom: 16px;
+     cursor: default;
+     &::after{
+       content: '';
+       display: none;
+     }
+   }
+   .registration-form {
+     .input-wrap input {
+       padding-bottom: 8px;
+     }
+     padding-bottom: 0;
+   }
+   .registration-form .input-wrap.border-end{
+     margin-bottom: 27px;
+   }
+   .registration-form .acceptance{
+     margin-bottom: 24px;
+   }
+   .registration-form .submit-btn{
+     padding: 10px 0;
+   }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{

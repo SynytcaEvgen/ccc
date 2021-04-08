@@ -158,10 +158,19 @@ function init() {
           required: true,
           minlength: 6,
         },
+        psword_confirm: {
+          required: true,
+          minlength: 6,
+          equalTo : "psword",
+        },
         email_n:"required EMAIL",
       },
       messages: {
         psword: {
+          minlength: 'Минимальная длина пароля 6 символов'
+        },
+        psword_confirm: {
+          equalTo: "Пароли не совпадают",
           minlength: 'Минимальная длина пароля 6 символов'
         }
       },
@@ -317,26 +326,20 @@ function init() {
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   };
-  function doThisF(index, text) {
-          return text.replace(/\W*\s(\S)*$/, '...');
-          
-  }
-  function sliceSentence(sentence) {
-    let p = document.querySelectorAll(sentence);
-       
-    for (let i = 0; i < p.length; i++) {
-      let divh = 40;
-      console.log(p[i].clientHeight);
-      if (p[i].clientHeight == divh) {
-        let reR = p[i].textContent(doThisF());
-        console.log(reR);
-      
+  function sliceSentence(elem) {
+    $(elem).each(function (index, value) {
+      if ($(this).outerHeight() > $(this).parent().height()) {
+        console.log('hi mud');
+        $(this).parent().addClass('cut-word')
+      } else {
+        if ($(this).parent().hasClass('cut-word')) {
+          $(this).parent().removeClass('cut-word');
+        };
       };
-    };
+    });
   };
-  sliceSentence('.discrption-goods p');
   $('.features_items .search').click(function () {
-    if ($(window).width() >= 900) {
+    if ($(window).width() >= (900 - withScrollBar())) {
       $('header .search-header-line').toggleClass('active');
       $(this).parent().toggleClass('active');
       $('body').toggleClass('modal');
@@ -396,13 +399,18 @@ function init() {
   $(window).resize(function () {
     addRemoveClass('.info-frame .info-content-wrapper>.title','accordion-btn');
     addRemoveClass('section.info .container .info-frame .info-menu-wrapper', 'accordion');
-    // menuAccordionMover();
     addRemoveClass_767('.gall-wrapp-main', 'load');
+    if ($(window).width() <= (767 - withScrollBar())) {
+      sliceSentence('.discrption-goods p');
+      // return;
+    }
   });
+  sliceSentence('.discrption-goods p');
   menuAccordionMover();
   accEngine('.payment-items');
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
+  validatorForm("#registration-form");
   $('.close-popup').click(function () {
     closePopUp('.popup.active');
   });
