@@ -1441,6 +1441,10 @@ $color-price-sale: #E90000;
    .info-text.career .career-staff-wrapper .cart-staff-wrapper .cart-item{
        padding: 16px;
    }
+   .page-error.error500,
+   .page-error{
+     padding-top: 70px;
+   }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1628,6 +1632,9 @@ $color-price-sale: #E90000;
     }
     .info-text.career .job-advantag-wrapper .advantag-item .icon-title p{
        text-align: left;
+    }
+    .page-error .btn{
+      width: 100%;
     }
 }
 @media only screen and (max-width: 375px){

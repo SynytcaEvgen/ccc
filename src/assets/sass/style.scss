@@ -2902,7 +2902,8 @@ section.info {
           max-height: 45px;
           min-width: 139px;
           cursor: pointer;
-          &:hover .more-filter p{
+          &:hover .more-filter p,
+          &:hover .less-filter p{
               color: $color-action-h;
               transition: 0.3s ease-in-out;
           }
@@ -4617,6 +4618,7 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
       position: absolute;
       top: 50%;
       left: 50%;
+      z-index: 1;
       transform: translate(-50%, -50%);
       cursor: pointer;
       &:hover .svg-wrapper .play_c {
@@ -4969,17 +4971,20 @@ section.info .container .info-frame .info-content-wrapper.news-detail{
   &.error500{
     padding-top: 163px;
     padding-bottom: 148px;
+    .page-error__title{
+      padding-bottom: 12px;
+    }
   }
   &__title{
     font-family: $gordita_bold;
     @include adaptiv-font(220, 100);
-    line-height: 237px;
+    @include adaptiv-line-height(237, 117 );
   }
   p{
     font-family: $gordita_regular;
     font-size: 16px;
     line-height: 30px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
   .btn{
     display: inline-flex;
