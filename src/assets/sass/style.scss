@@ -1627,9 +1627,12 @@ main section button{
     } 
   }
   .discrption-goods {
+    overflow: hidden;
+    height: 25px;
+   
     p{
-      overflow: hidden;
       color: $color-goods-des;
+       word-break: break-all;
       &:hover{
         color: $color-action-h;
       }
@@ -2212,6 +2215,7 @@ section.info {
          margin-right: 20px;
          overflow: hidden;
          transition: max-height 0.8s ease-in-out;
+         
          &.accordion{
            margin-right: 0px;
            max-height: 0;
@@ -2244,6 +2248,9 @@ section.info {
       .info-content-wrapper {
         max-width: 975px;
         padding-bottom: 54px;
+        &.safety{
+           padding-bottom: 24px;
+         }
         >.title{
           margin-bottom: 32px;
           text-transform: uppercase;
@@ -4948,7 +4955,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
     margin-bottom: -26px;
     .advantag-item{
       width: calc(33.3333333% - 5px);
-      padding-bottom: 50px;
+      padding-bottom: 54px;
       .icon{
         text-align: center;
         svg{

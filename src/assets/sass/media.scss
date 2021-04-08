@@ -1424,9 +1424,9 @@ $color-price-sale: #E90000;
     .footer-mobile-content .accordion-wrapp .accordion-item .accordion-item-lable label:hover{
         color: $color_text;
     }
-    body .line-decor{
-        display: none;
-    }
+    // body .line-decor{
+    //     display: none;
+    // }
     section.info .container .info-frame .info-content-wrapper>.title{
         margin-bottom: 16px;
     }
@@ -1653,6 +1653,12 @@ $color-price-sale: #E90000;
     .page-error .btn{
       width: 100%;
     }
+    .info-text.career .job-growing-line .staff-title{
+      padding: 0 9px 0 10px;
+      li:nth-child(3n){
+        margin-left: -15px;
+      }
+    }
 }
 @media only screen and (max-width: 375px){
     .promotion.hist .container .promo-wrapper .promo-items .promo-img{
@@ -1689,6 +1695,12 @@ $color-price-sale: #E90000;
     .info-text.career .job-growing-line .staff-title li{
         word-break: break-word;
         max-width: 60px;
+    }
+    .info-text.career .job-growing-line .staff-title{
+      padding: 0 5px 0 1px;
+      li:nth-child(3n){
+        margin-left: 0px;
+      }
     }
 
 }
