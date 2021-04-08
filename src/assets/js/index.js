@@ -380,7 +380,7 @@ function init() {
   $(window).resize(function () {
     addRemoveClass('.info-frame .info-content-wrapper>.title','accordion-btn');
     addRemoveClass('section.info .container .info-frame .info-menu-wrapper', 'accordion');
-    menuAccordionMover();
+    // menuAccordionMover();
     addRemoveClass_767('.gall-wrapp-main', 'load');
   });
   menuAccordionMover();

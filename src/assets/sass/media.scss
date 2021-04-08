@@ -823,10 +823,21 @@ $color-price-sale: #E90000;
         width: 100%;
     }
     .info.news_det .container{
-       .container_over {
+      padding-left: 0;
+      padding-right: 0;
+      .container_over {
          padding-left: 16px;
          padding-right: 16px;
        }
+    }
+    section.info .info-frame .info-content-wrapper.news-detail .sp-title{
+      display: block;
+      &::after{
+        margin-right: 16px;
+      }
+    }
+    section.info .container .info-frame .info-menu-wrapper .info-menu-item:last-child{
+      padding-bottom: 24px;
     }
 }
 @media only screen and (max-width: 767px) {

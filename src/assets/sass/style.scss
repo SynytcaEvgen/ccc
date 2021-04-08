@@ -2218,7 +2218,10 @@ section.info {
            transition: max-height 0.8s ease-in-out, visibility 1s ease-in-out;
          }
          .info-menu-item {
-           padding-bottom: 54px;
+           padding-bottom: 24px;
+           &:last-child{
+             padding-bottom: 54px;
+           }
            &.person{
              padding-bottom: 24px;
            }
@@ -2363,6 +2366,10 @@ section.info {
       p{
         padding: 16px 0;
         line-height: 25px;
+        &.font-mini{
+          line-height: 20px;
+          font-size: 12px;
+        }
       }
       .pay-var{
          padding: 0 0 8px 0;
@@ -3410,7 +3417,6 @@ section.info {
       }
     }
   }
-
 }
 .account-orders{
   width: 975px;
@@ -4033,6 +4039,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
       .gallery-wrapper{
         max-width: 876px;
         margin-right: 8px;
+        // display: none;
         .grid-frame-img{
           .grid-row-one{
             display: grid;
@@ -4054,6 +4061,9 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
             }
           }
         }
+        // &.active{
+        //   display: block;
+        // }
       }
       .goods-detail-wrapper{
          max-width: 360px;
@@ -4507,15 +4517,13 @@ header{
     }
   }
 }
-.info.news_det .container{
-  padding-left: 0;
-  padding-right: 0;
-}
 section.info .info-frame .info-content-wrapper.news-detail{
+  .sp-title{
+    display: none;
+  }
   padding-bottom: 48px;
   .news-link-wrapper{
     padding-bottom: 16px;
-    
   }
   .news-link{
     position: relative;
@@ -4546,8 +4554,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
         color: $color-action-h;
         transition: color 0.3s ease-in-out;
       }
-    }
-     
+    }   
   }
   .caption-post.news-detail{
     padding-bottom: 5px;
@@ -4587,14 +4594,9 @@ section.info .info-frame .info-content-wrapper.news-detail{
         .news-grid-items .img-wrapper{
           padding-bottom: 0px;
         }
-
       }
-      
     }
-      
-    }
-  
-  
+  }
 }
 //news-page-end
 //safety-page-start
