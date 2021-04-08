@@ -78,6 +78,11 @@ function init() {
     },
   });
   /*Slider swiper goods-card end*/
+  function withScrollBar() {
+    let popWrap = document.querySelector('main');
+     let wScroll = window.innerWidth - popWrap.offsetWidth;
+     return wScroll;
+  }
   function menuAccordionMover() {
     let acc = document.querySelectorAll(".accordion-btn");
     for (let i = 0; i < acc.length; i++) {
@@ -106,16 +111,16 @@ function init() {
        });
     }; 
   };
-  
+  console.log(withScrollBar());
   function addRemoveClass(elem, add) {
-    if ($(window).width() <= 900) {
+    if ($(window).width() <= (900 - withScrollBar())) {
       $(elem).addClass(add);
     } else {
       $(elem).removeClass(add);
     };
   };
   function addRemoveClass_767(elem, add) {
-    if ($(window).width() >= 767) {
+    if ($(window).width() >= (767 - withScrollBar())) {
       $(elem).addClass(add);
     } else {
       $(elem).removeClass(add);
@@ -123,12 +128,21 @@ function init() {
   };
   
   function openPopUp(elem) {
+    let wScrolO = withScrollBar();
     $(elem).addClass('active');  
     $('body').addClass('modal');
+    $('body').css('padding-right', wScrolO);
+    $('header').css('padding-right', wScrolO);
+    $('header .promo_line').css('padding-right', wScrolO);
+    $('header .promo_line').css('margin-right', -wScrolO);
   };
   function closePopUp(elem) {
     $(elem).removeClass('active');  
     $('body').removeClass('modal');
+    $('body').css('padding-right', 0);
+    $('header').css('padding-right', 0);
+    $('header .promo_line').css('padding-right', 0);
+    $('header .promo_line').css('margin-right', 0);
   };
   jQuery.extend(jQuery.validator.messages, {
     required: "Поле является обязательным",

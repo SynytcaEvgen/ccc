@@ -822,6 +822,12 @@ $color-price-sale: #E90000;
     .info-text.career .banner .container {
         width: 100%;
     }
+    .info.news_det .container{
+       .container_over {
+         padding-left: 16px;
+         padding-right: 16px;
+       }
+    }
 }
 @media only screen and (max-width: 767px) {
     main section button{

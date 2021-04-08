@@ -83,14 +83,13 @@ html{
 }
 header{
   flex: 0 0 auto;
-  transition: 0.3s ease;
   &.lock_header{
     position: fixed;
     top: 0;
     z-index: 994;
     background-color: $color_ivert;
     width: 100%;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
   }
 }
 main{
@@ -4508,7 +4507,11 @@ header{
     }
   }
 }
-section.info .container .info-frame .info-content-wrapper.news-detail{
+.info.news_det .container{
+  padding-left: 0;
+  padding-right: 0;
+}
+section.info .info-frame .info-content-wrapper.news-detail{
   padding-bottom: 48px;
   .news-link-wrapper{
     padding-bottom: 16px;
