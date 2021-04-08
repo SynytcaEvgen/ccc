@@ -5602,5 +5602,63 @@ section.info .info-frame .info-content-wrapper.news-detail{
     }
   }
 }
-
 //end checkout pages
+//faq page
+.faq-columns{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .faq-main{
+    width: 100%;
+  }
+  .faq-form{
+    width: 326px;
+    min-width: 326px;
+    margin-left: 24px;
+    white-space: normal;
+    background: #FAFAFA;
+    border-radius: 2px;
+    padding: 16px;
+    .form-title{
+      font-size: 14px;
+      font-family: $gordita_medium;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+    .input-wrap{
+      margin-top: 39px;
+      input{
+        width: 100%;
+        background-color: transparent;
+      }
+    }
+    .form-note{
+      margin-top: 29px;
+      margin-bottom: 22px;
+      font-size: 12px;
+      line-height: 22px;
+      font-family: $gordita_regular;
+      a{
+        text-decoration: underline;
+      }
+    }
+    .btn{
+      width: 100%;
+    }
+  }
+}
+//end faq page
+//find shop
+.find-shop-columns{
+  display: flex;
+  align-items: flex-start;
+  .map-wrapper{
+    width: 625px;
+    min-width: 625px;
+    margin-left: 24px;
+    #pointsMap{
+      height: 479px;
+    }
+  }
+}
+//end find shop
