@@ -286,6 +286,9 @@ function init() {
           $(".all-lang-item").mCustomScrollbar({
              theme:"my-theme"
           });
+          $(".points-list__outter").mCustomScrollbar({
+            theme:"my-theme"
+          });
           $(".account-orders__nav__var").mCustomScrollbar({
             theme:"my-theme",
             axis: "x"
@@ -643,6 +646,27 @@ function init() {
         });
   });
 
+  $('.decrease').click(function (e){
+    var old = $(this).siblings('input').val();
+    if (old > 1){
+      $(this).siblings('input').val(parseInt(old) - 1);
+    }
+  })
+  $('.increase').click(function (e){
+    var old = $(this).siblings('input').val();
+    $(this).siblings('input').val(parseInt(old) + 1);
+  })
+  $('.points-nav a').click(function (e){
+    e.preventDefault();
+    $('.points-nav a.active').removeClass('active');
+    $(this).addClass('active')
+    $('.points-view .active').removeClass('active');
+    $('.'+$(this).attr('data-id')).addClass('active');
+  })
+  $('.points-list .point').click(function (e){
+    $('.points-list .point.selected').removeClass('selected');
+    $(this).addClass('selected')
+  })
 };
 
 

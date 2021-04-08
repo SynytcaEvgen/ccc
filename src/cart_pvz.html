@@ -180,7 +180,7 @@
     </section>
 </main>
 <!-- Pop_up choose delivery point -->
-<div id="popup-delivery-point" class="popup">
+<div id="popup-delivery-point" class="popup active">
     <div class="popup__wrapper">
         <div class="popup__content">
             <div class="close-popup">
@@ -191,10 +191,134 @@
             <h4 class="header-popup">Выберите пункт выдачи</h4>
             <div class="points-wrapper">
                 <div class="points-nav">
-                    <a href="#">На карте</a><a href="#">Списком</a>
+                    <a href="#" data-id="map-view">На карте</a><a href="#" class="active" data-id="list-view">Списком</a>
                 </div>
                 <div class="points-flex">
-                    <div class="points-view"></div>
+                    <div class="points-view">
+                        <div class="map-view">
+                            <form action="/" id="mapSearch" class="points-search">
+                                <input type="text" name="search" placeholder="Поиск">
+                            </form>
+                            <div id="pointsMap"></div>
+                        </div>
+                        <div class="list-view active">
+                            <form action="/" id="listSearch" class="points-search">
+                                <input type="text" name="search" placeholder="Поиск">
+                            </form>
+                            <div class="points-list__outter">
+                                <div class="points-list">
+                                    <div class="point selected">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <div class="flex">
+                                            <div class="col">
+                                                <div class="name">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
+                                                <div class="address">115230, Москва г, Каширское ш, д.11, корпус 1</div>
+                                            </div>
+                                            <div class="price">300</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="point-meta">
                         <div class="title">ПВЗ Boxberry - Москва Каширское - 75084 - С</div>
                         <div class="point-rows">
@@ -203,7 +327,7 @@
                             <p><span class="key">Город:</span><span class="val">Москва</span></p>
                             <p><span class="key">Адрес:</span><span class="val">115230, Москва г, <br>Каширское ш, д.11, корпус 1</span></p>
                             <p><span class="key">Время работы:</span><span class="val">Пн-Пт: 08:00 - 20:00 <br>Сб-Вс: 08:00 - 19:00</span></p>
-                            <p><span class="key">Описание:</span><span class="val">Остановка - Хлебозаводской проезд. Примерное расстояние от остановки до Отделения - 100 м. Отделение расположено в 8-этажном доме. Этаж - цоколь</span></p>
+                            <p class="description"><span class="key">Описание:</span><span class="val">Остановка - Хлебозаводской проезд. Примерное расстояние от остановки до Отделения - 100 м. Отделение расположено в 8-этажном доме. Этаж - цоколь</span></p>
                         </div>
                         <button type="button" class="btn theme-btn">Выбрать</button>
                     </div>
@@ -216,6 +340,111 @@
 <!--Content end section-->
 
 @@include('./part/footer.html')
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+<script>
+    ymaps.ready(init);
 
+    function init () {
+        var myMap = new ymaps.Map('pointsMap', {
+                center: [55.76, 37.64],
+                zoom: 8
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                // Чтобы метки начали кластеризоваться, выставляем опцию.
+                clusterize: true,
+                // ObjectManager принимает те же опции, что и кластеризатор.
+                gridSize: 32,
+                clusterDisableClickZoom: true
+            });
+        myMap.behaviors.disable('scrollZoom')
+        myMap.controls.remove('geolocationControl');
+        myMap.controls.remove('searchControl');
+        myMap.controls.remove('trafficControl');
+        myMap.controls.remove('typeSelector');
+        myMap.controls.remove('fullscreenControl');
+        // Чтобы задать опции одиночным объектам и кластерам,
+        // обратимся к дочерним коллекциям ObjectManager.
+        // objectManager.objects.options.set('preset', 'islands#greenDotIcon');
+        // objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+        objectManager.objects.options.set({
+            iconLayout: 'default#imageWithContent',
+            iconImageHref: 'assets/img/point.png',
+            iconImageSize: [61, 61],
+            iconImageOffset: [-30, -61],
+            iconContentOffset: [15, 15],
+            balloonOffset: [-110, -65],
+            balloonMaxWidth: 331,
+            hideIconOnBalloonOpen: false
+        });
+        myMap.geoObjects.add(objectManager);
+
+        var data = {
+            "type": "FeatureCollection",
+            "features": [
+                {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}, "properties": {"balloonContentHeader": "", "balloonContentBody": "<div class='balloon-text'>ПВЗ Boxberry - Москва Каширское - 75084 - С</div>", "balloonContentFooter": "", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+                {"type": "Feature", "id": 32, "geometry": {"type": "Point", "coordinates": [55.673873, 37.658425]}, "properties": {"balloonContentHeader": "", "balloonContentBody": "<div class='balloon-text'>ПВЗ Boxberry - Москва Каширское - 75084 - С</div>", "balloonContentFooter": "", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
+                {"type": "Feature", "id": 49, "geometry": {"type": "Point", "coordinates": [55.858585, 37.48498]}, "properties": {"balloonContentHeader": "", "balloonContentBody": "<div class='balloon-text'>ПВЗ Boxberry - Москва Каширское - 75084 - С</div>", "balloonContentFooter": "", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}}
+            ]
+        }
+            objectManager.add(data);
+
+        objectManager.objects.events
+            .add('balloonopen', function (e) {
+                var objectId = e.get('objectId'),
+                    object = objectManager.objects.getById(objectId);
+                objectManager.objects.setObjectOptions(objectId, {
+                    iconImageHref: 'assets/img/point-selected.png'
+                });
+                var newCenter = object.geometry.coordinates;
+                // console.log(newCenter);
+                myMap.setCenter(newCenter, 10, {
+                    checkZoomRange: true
+                });
+            })
+            .add('balloonclose', function (e) {
+                var objectId = e.get('objectId'),
+                    object = objectManager.objects.getById(objectId);
+                objectManager.objects.setObjectOptions(objectId,{
+                    iconImageHref: 'assets/img/point.png'
+                });
+                var newCenter = object.geometry.coordinates;
+                myMap.setCenter(newCenter);
+            })
+
+    }
+</script>
+<style>
+    [class*="-balloon"]{
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05);
+    }
+    [class*="-balloon__content"]{
+        padding: 12px 33px 0 8px;
+        max-width: 331px;
+        box-shadow: none;
+    }
+    [class*="-balloon__close"],
+    [class*="-balloon__close-button"]{
+        opacity: 1;
+        box-shadow: none;
+
+    }
+    [class*="-balloon__close-button"]{
+        width: 10px;
+        height: 10px;
+        margin-top: 7px;
+        margin-right: 7px;
+    }
+    [class*="-balloon__tail"]{
+        left: 158px;
+    }
+    .balloon-text{
+        font-family: $gordita_regular;
+        font-size: 11px;
+        line-height: 14px;
+        letter-spacing: 1px;
+    }
+</style>
 </body>
 </html>

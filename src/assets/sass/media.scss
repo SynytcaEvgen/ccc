@@ -2418,6 +2418,23 @@ $color-price-sale: #E90000;
     }
 
   }
+  #popup-delivery-point .points-flex{
+    flex-direction: column;
+  }
+  #popup-delivery-point .points-flex .point-meta{
+    margin: 16px 0 0;
+    width: 100%;
+    min-width: 0;
+  }
+  #popup-delivery-point .points-flex .point-meta .title{
+    line-height: 22px;
+  }
+  #popup-delivery-point.popup .popup__wrapper{
+    padding: 16px 0;
+  }
+  #popup-delivery-point .points-flex .points-list__outter .points-list .point .price{
+    margin-left: 16px;
+  }
 }
 @media screen and (max-width: 767px){
   .checkout-blocks .checkout-block .inputs .input-wrap{
