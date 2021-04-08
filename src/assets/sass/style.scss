@@ -5448,5 +5448,157 @@ section.info .info-frame .info-content-wrapper.news-detail{
     margin-top: 32px;
   }
 }
+#popup-delivery-point{
+  .popup__wrapper .popup__content{
+    width: 1018px;
+    max-width: 100%;
+    max-height: none;
+  }
+  .points-nav{
+    display: flex;
+    margin-bottom: 16px;
+    a{
+      display: block;
+      line-height: 33px;
+      text-transform: uppercase;
+      margin-right: 30px;
+      text-decoration: underline;
+      &.active{
+        color: #FF5F00;
+        font-family: $gordita_bold;
+        text-decoration: none;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .points-flex{
+    display: flex;
+    justify-content: space-between;
+    .points-view{
+      width: 100%;
+      #pointsMap{
+        height: 362px;
+        position: relative;
+      }
+      .points-search{
+        margin-bottom: 16px;
+        input{
+          width: 100%;
+        }
+      }
+      .list-view,
+      .map-view{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+    }
+    .points-list__outter{
+      max-height: 362px;
+      overflow: hidden;
+      .mCSB_inside>.mCSB_container{
+        margin-right: 28px;
+      }
+      .mCSB_scrollTools .mCSB_draggerRail,
+      .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+        margin-right: 0;
+      }
+      .points-list{
+        .point{
+          margin-bottom: 8px;
+          border: 1px solid #E8E8E8;
+          padding: 8px 16px;
+          cursor: pointer;
+          &:hover{
+            border-color: #FF5F00;
+          }
+          &.selected{
+            border: 2px solid #FF5F00;
+            .name,.price{
+              color: #FF5F00;
+            }
+          }
+          .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+          .price{
+            width: 100px;
+            text-align: center;
+            font-family: $gordita_bold;
+            letter-spacing: 1px;
+            font-size: 14px;
+            line-height: 24px;
+          }
+          .name{
+            font-family: $gordita_bold;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            white-space: normal;
+          }
+          .address{
+            font-family: $gordita_regular;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            margin-top: 4px;
+            white-space: normal;
+          }
+        }
+      }
+    }
+    .point-meta{
+      white-space: normal;
+      border: 1px solid #E8E8E8;
+      padding: 16px;
+      width: 362px;
+      min-width: 362px;
+      margin-left: 16px;
+      .title{
+        margin-bottom: 16px;
+        font-family: $gordita_medium;
+        line-height: 12px;
+        font-size: 13px;
+      }
+      .point-rows{
+        margin-bottom: 16px;
+        p{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 4px;
+          font-size: 12px;
+          line-height: 22px;
+          .key{
+            color: #575656;
+          }
+          .val{
+            text-align: right;
+          }
+          &.description{
+            flex-direction: column;
+            .key{
+              margin-bottom: 5px;
+            }
+            .val{
+              text-align: left;
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .btn{
+        width: 100%;
+      }
+    }
+  }
+}
 
 //end checkout pages
