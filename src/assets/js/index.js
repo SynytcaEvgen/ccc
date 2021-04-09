@@ -712,9 +712,12 @@ function init() {
   $('.filter-active-items').on('click', '.close-filter-wrapper', function(e){
     let cPar = $(this).parents('.active-item'),
       wayCheck = cPar.attr('data-name'),
-      filterWrap = $('.filter-continer');
-     filterWrap.find('input[id=' + wayCheck + ']').prop('checked', false);
-     cPar.remove();
+      filterWrap = $('.filter-continer'),
+      clickIn = filterWrap.find('input[id=' + wayCheck + ']');
+    checkBoxEngine('.box-check');
+    
+    clickIn.prop('checked', false);
+    cPar.remove();
   });
   $('.filter-active-items').on('click', '.filter-active-reset-btn', function(e){
     let itemRem = $('.active-item'),
