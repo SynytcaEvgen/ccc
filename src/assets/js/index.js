@@ -401,11 +401,11 @@ function init() {
     addRemoveClass('section.info .container .info-frame .info-menu-wrapper', 'accordion');
     addRemoveClass_767('.gall-wrapp-main', 'load');
     if ($(window).width() <= (767 - withScrollBar())) {
-      sliceSentence('.discrption-goods p');
+      sliceSentence('.discrption-goods:not(.catalog-k) p');
       // return;
     }
   });
-  sliceSentence('.discrption-goods p');
+  sliceSentence('.discrption-goods:not(.catalog-k) p');
   menuAccordionMover();
   accEngine('.payment-items');
   validatorForm("#sign-in");

@@ -1057,7 +1057,8 @@ $color-price-sale: #E90000;
         font-size: 13px;
         line-height: 23px;
     }
-    .prod-card-container .discrption-goods{
+    .prod-card-container .discrption-goods,
+    .prod-card-container .discrption-goods.catalog-k{
       height: 40px;
       p{
         font-size: 12px;
@@ -1494,6 +1495,10 @@ $color-price-sale: #E90000;
    .registration-form .submit-btn{
      padding: 10px 0;
    }
+   .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper{
+        margin-bottom: 0;
+        max-height: 64px;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1576,10 +1581,6 @@ $color-price-sale: #E90000;
     .catalog .container .goods-gallery-block .goods-gallery-grid{
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 16px 4px;
-    }
-    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper{
-        margin-bottom: 0;
-        max-height: 64px;
     }
     .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .banner-wrapper .desc_banner .text_contetn{
         max-width: 105px;
