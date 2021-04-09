@@ -193,12 +193,14 @@ function init() {
   
   function checkBoxEngine(elem) {
     let count = 0;
+    console.log('this')
     $(elem).change(function () {
       if ($(this).prop('checked')) {
         count++;
       } else {
         count--;
       }
+       console.log('no-this')
       chechBtn(this, count);
       $(this).parentsUntil('.content-filter').next('.btn-wrapper').children('.state-select').children('.numb-select').children('span').html(count);
     });
@@ -511,12 +513,8 @@ function init() {
     }
   });
   initRangeSlider();
-  checkBoxEngine('.box-check.size');
-  checkBoxEngine('.box-check.color');
-  checkBoxEngine('.box-check.cat_f');
-  checkBoxEngine('.box-check.brand');
-  checkBoxEngine('.box-check.material');
-  checkBoxEngine('.box-check.h');
+
+  checkBoxEngine('.box-check');
   resetSelect('.content-filter.size .reser-select', '.box-check.size');
   resetSelect('.content-filter.color .reser-select', '.box-check.color');
   resetSelect('.content-filter.cat_f .reser-select', '.box-check.cat_f');
@@ -715,9 +713,9 @@ function init() {
       filterWrap = $('.filter-continer'),
       clickIn = filterWrap.find('input[id=' + wayCheck + ']');
     checkBoxEngine('.box-check');
-    
-    clickIn.prop('checked', false);
-    cPar.remove();
+      clickIn.prop('checked', false);
+      cPar.remove();
+      
   });
   $('.filter-active-items').on('click', '.filter-active-reset-btn', function(e){
     let itemRem = $('.active-item'),
