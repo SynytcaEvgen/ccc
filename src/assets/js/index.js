@@ -399,15 +399,12 @@ function init() {
     addRemoveClass('.info-frame .info-content-wrapper>.title','accordion-btn');
     addRemoveClass('section.info .container .info-frame .info-menu-wrapper', 'accordion');
     addRemoveClass_767('.gall-wrapp-main', 'load');
-    // addParentW('.discrption-goods', '.prod-card-container');
     if ($(window).width() <= (767 - withScrollBar())) {
       sliceSentence('.discrption-goods:not(.catalog-k) p');
-      // return;
     }
   });
   sliceSentence('.discrption-goods:not(.catalog-k) p');
   menuAccordionMover();
-  // addParentW('.discrption-goods', '.prod-card-container');
   accEngine('.payment-items');
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
@@ -685,15 +682,50 @@ function init() {
     $('.points-list .point.selected').removeClass('selected');
     $(this).addClass('selected')
   });
-  $('.mob-check-items .box-check:not(.color)').click(function () {
-    if ($(this).prop('checked')) {
-
-      $(this).parents('.mob-filter-items').children('.mob-filter-header').append('<span data-name='+ $(this).next().html()+'>(' + $(this).next().html() + ')</span>');
+  function addFilter(elem, _id, content, past) {
+    if ($(elem).prop('checked')) {
+        past.append(
+        '<div data-name=' + _id + ' class="active-item">' +
+        '<span class="name-filter">' + content + '</span>' +
+        '<div class="close-filter-wrapper">' +
+          '<svg class="close-filter">' +
+            '<use href="assets/sprite/sprite.svg#close"></use>' +
+          '</svg>' +
+        '</div>' +
+        '</div>');
       } else {
-      $(this).parents('.mob-filter-items').children('.mob-filter-header').find('span[data-name='+$(this).next().html()+']').remove();
+      past.find('div[data-name=' + _id + ']').remove();
       }
+  };
+  $('.filter-items > .box-check:not(.color)').click(function () {
+    let contCheck = $(this).next().html(),
+        picId = $(this).prop('id');
+        putThis = $(this).parents('.filter-continer').children('.filter-active-wrapper').children('.filter-active-items');
+        addFilter(this, picId, contCheck, putThis)
+  });
+  $('.filter-items > .box-check.color').click(function () {
+    let contColor = $(this).next().children('.color-name').html(),
+        colorId = $(this).prop('id');
+        putThisCol = $(this).parents('.filter-continer').children('.filter-active-wrapper').children('.filter-active-items');
+        addFilter(this, colorId, contColor, putThisCol);
+  });
+  $('.filter-active-items').on('click', '.close-filter-wrapper', function(e){
+    let cPar = $(this).parents('.active-item'),
+      wayCheck = cPar.attr('data-name'),
+      filterWrap = $('.filter-continer');
+     filterWrap.find('input[id=' + wayCheck + ']').prop('checked', false);
+     cPar.remove();
+  });
+  $('.filter-active-items').on('click', '.filter-active-reset-btn', function(e){
+    let itemRem = $('.active-item'),
+        filterCont = $('.filter-continer');
+    itemRem.remove();
+    filterCont.find('input').prop('checked', false);
+    
   });
 
+  
+  
 };
 
 

@@ -273,8 +273,8 @@ input.box-check {
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background-color: transparent;
     border: 1px solid $color_text;
     transition: 0.3s ease-in-out;
@@ -287,8 +287,8 @@ input.box-check {
     top: 50%;
     left: 0;
     transform: translate(0, -50%) scale(0);
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     color: $color_ivert;
     border: 1px solid transparent;
     display: flex;
@@ -476,7 +476,6 @@ label[data-color] {
       position: relative;
       margin: 0 auto;
       width: 346px;
-      max-height: 434px;
       padding: 16px;
       background-color: $color_ivert;
       .close-popup{
@@ -542,7 +541,7 @@ label[data-color] {
       .link_wrapper{
         text-align: center;
         padding-bottom: 24px;
-        padding-top: 10px;
+        padding-top: 12px;
         a{
           font-size: 12px;
           text-decoration: underline;
@@ -2626,7 +2625,7 @@ section.info {
       &.open{
         max-height: 100%;
         height: 100%;
-        // margin-bottom: -18px;
+        // margin-bottom: -5px;
         .filter-continer>.filter-item{
           align-content: flex-start;
           // height: 100%;
@@ -2925,9 +2924,11 @@ section.info {
         .filter-active-wrapper{
           display: flex;
           flex-wrap: wrap;
+          position: relative;
           .filter-active-items{
              display: flex;
              flex-wrap: wrap;
+             position: relative;
             .active-item{
              
               position: relative;
@@ -2943,18 +2944,21 @@ section.info {
                 font-size: 10px;
                 line-height: 16px;
               }
-              .close-filter{
+              .close-filter-wrapper{
                 cursor: pointer;
                 position: absolute;
                 top: 50%;
                 right: 0;
                 transform: translate(0, -50%);
                 margin-right: 6px;
-                stroke: $color_promo_bg;
-                transition: stroke 0.3s ease-in-out;
-                width: 20px;
-                height: 20px;
-                &:hover{
+                .close-filter{
+                  stroke: $color_promo_bg;
+                  transition: stroke 0.3s ease-in-out;
+                  width: 20px;
+                  height: 20px;
+                  vertical-align: middle;
+                }
+                &:hover .close-filter{
                   stroke: $color-action-h;
                   transition: stroke 0.3s ease-in-out;
                 }
@@ -2962,6 +2966,11 @@ section.info {
             }
           }
           .filter-active-reset-btn{
+            position: absolute;
+            right: 0;
+            top: 2px;
+            white-space: nowrap;
+            transform: translate(100%, 0);
             text-decoration: underline;
             font-family: $gordita_medium;
             font-weight: 500;
