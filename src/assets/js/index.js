@@ -311,7 +311,7 @@ function init() {
           $(".points-list__outter").mCustomScrollbar({
             theme:"my-theme"
           });
-          $(".account-orders__nav__var").mCustomScrollbar({
+          $(".account-orders__nav__var,.size-table").mCustomScrollbar({
             theme:"my-theme",
             axis: "x"
           });
@@ -681,6 +681,7 @@ function init() {
   $('.points-list .point').click(function (e) {
     $('.points-list .point.selected').removeClass('selected');
     $(this).addClass('selected')
+<<<<<<< HEAD
   });
   function addFilter(elem, _id, content, past) {
     if ($(elem).prop('checked')) {
@@ -729,6 +730,10 @@ function init() {
 
   
   
+=======
+  })
+  $('select').niceSelect();
+>>>>>>> contacts page, size table
 };
 
 
