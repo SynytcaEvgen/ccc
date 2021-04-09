@@ -713,16 +713,14 @@ function init() {
       wayCheck = cPar.attr('data-name'),
       filterWrap = $('.filter-continer'),
       clickIn = filterWrap.find('input[id=' + wayCheck + ']');
-    checkBoxEngine('.box-check');
-      clickIn.prop('checked', false);
+      clickIn.prop('checked', false).trigger('change');
       cPar.remove();
-      
   });
   $('.filter-active-items').on('click', '.filter-active-reset-btn', function(e){
     let itemRem = $('.active-item'),
         filterCont = $('.filter-continer');
     itemRem.remove();
-    filterCont.find('input').prop('checked', false);
+    filterCont.find('input').prop('checked', false).trigger('change');
     
   });
 };
