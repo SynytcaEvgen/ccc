@@ -2577,3 +2577,77 @@ $color-price-sale: #E90000;
     }
   }
 }
+//faq page end
+//find-shop
+@media screen and (max-width: 1199px){
+  .find-shop-columns{
+    flex-direction: column-reverse;
+  }
+  .find-shop-columns .map-wrapper{
+    margin-bottom: 24px;
+  }
+  .points,
+  .find-shop-columns .map-wrapper{
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+  }
+  .find-shop-columns .search-points .btn{
+    width: 18px;
+  }
+}
+//end find shop
+//contacts page
+@media screen and (max-width: 1199px){
+  .contacts-page-wrap{
+    width: auto;
+    .contacts-items{
+      flex-direction: column;
+      .social{
+        display: none;
+      }
+      .item{
+        margin-bottom: 8px;
+      }
+    }
+    .social-flex{
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .flex{
+        display: flex;
+        border: 1px solid #E8E8E8;
+        border-radius: 2px;
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          &+a{
+            border-left: 1px solid #E8E8E8;
+          }
+        }
+      }
+      svg{
+        fill: none;
+      }
+    }
+    .contacts-block{
+      margin-top: 24px;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .contacts-page-wrap .contacts-block .contacts-form{
+    flex-direction: column;
+  }
+  .contacts-page-wrap .contacts-block .contacts-form .input-wrap{
+    width: 100%;
+  }
+  .contacts-page-wrap .contacts-block .contacts-form .input-wrap:last-child{
+    margin-bottom: 0;
+  }
+}
+//end contacts page
