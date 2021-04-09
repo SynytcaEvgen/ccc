@@ -679,8 +679,8 @@ function init() {
   $('.points-list .point').click(function (e) {
     $('.points-list .point.selected').removeClass('selected');
     $(this).addClass('selected')
-<<<<<<< HEAD
   });
+  $('select').niceSelect();
   function addFilter(elem, _id, content, past) {
     if ($(elem).prop('checked')) {
         past.append(
@@ -725,13 +725,6 @@ function init() {
     filterCont.find('input').prop('checked', false);
     
   });
-
-  
-  
-=======
-  })
-  $('select').niceSelect();
->>>>>>> contacts page, size table
 };
 
 
