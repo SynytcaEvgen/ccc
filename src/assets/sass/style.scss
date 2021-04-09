@@ -406,6 +406,12 @@ label[data-color] {
     height: 1px;
     opacity: 0;
 }
+.line-clamp p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
 .promo_line {
   background-color: $color_promo_bg;
   max-height: 30px;
@@ -1661,11 +1667,11 @@ main section button{
       }
     }
     p{
-      color: $color-goods-des;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      //  word-break: break-all;
+       color: $color-goods-des;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden;
+       word-break: break-all;
       &:hover{
         color: $color-action-h;
       }
@@ -2918,25 +2924,40 @@ section.info {
         }
         .filter-active-wrapper{
           display: flex;
+          flex-wrap: wrap;
           .filter-active-items{
+             display: flex;
+             flex-wrap: wrap;
             .active-item{
+             
               position: relative;
               background-color: $color-bg-footer ;
               border-radius: 2px;
               padding: 4px 25px 4px 12px;
+              margin-right: 8px;
+              margin-bottom: 8px;
+              &:last-child{
+                margin-right: 0;
+              }
               .name-filter{
                 font-size: 10px;
                 line-height: 16px;
               }
               .close-filter{
+                cursor: pointer;
                 position: absolute;
                 top: 50%;
                 right: 0;
                 transform: translate(0, -50%);
                 margin-right: 6px;
                 stroke: $color_promo_bg;
+                transition: stroke 0.3s ease-in-out;
                 width: 20px;
                 height: 20px;
+                &:hover{
+                  stroke: $color-action-h;
+                  transition: stroke 0.3s ease-in-out;
+                }
               }
             }
           }
@@ -2945,6 +2966,7 @@ section.info {
             font-family: $gordita_medium;
             font-weight: 500;
             transition: 0.3s ease-in-out;
+            padding-left: 24px;
             &:hover{
               color: $color-action-h;
               transition: 0.3s ease-in-out;

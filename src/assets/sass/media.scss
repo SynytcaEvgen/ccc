@@ -1499,6 +1499,9 @@ $color-price-sale: #E90000;
         margin-bottom: 0;
         max-height: 64px;
     }
+    .line-clamp p {
+      -webkit-line-clamp: 2;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
