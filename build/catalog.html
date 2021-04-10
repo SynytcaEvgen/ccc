@@ -2283,7 +2283,8 @@
                </div>
                <div class="filter-wrapper">
                    <div class="descktop-filter-container">
-                    <div class="filter-continer">
+                    <form action="/" method="POST" class="vatalog-filter-form">
+                      <div class="filter-continer">
                         <div class="filter-item">
                             <div class="filter-items">
                                 <div class="filter-header">
@@ -2294,10 +2295,10 @@
                                 </div>
                                 <div class="content-filter">
                                     <div class="filter-item">
-                                        <div class="filter-items"><a href="">По алфавиту</a></div>
-                                        <div class="filter-items"><a href="">По популярности</a></div>
-                                        <div class="filter-items"><a href="">Цена по убыванию </a></div>
-                                        <div class="filter-items"><a href="">Цена по возрастанию</a></div>
+                                        <div class="filter-items"><a href="#">По алфавиту</a></div>
+                                        <div class="filter-items"><a href="#">По популярности</a></div>
+                                        <div class="filter-items"><a href="#">Цена по убыванию </a></div>
+                                        <div class="filter-items"><a href="#">Цена по возрастанию</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -2387,7 +2388,7 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
                                     
@@ -2436,7 +2437,7 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
                     
@@ -2480,7 +2481,7 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
                     
@@ -2640,7 +2641,7 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
                             
@@ -2684,7 +2685,7 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
                     
@@ -2724,39 +2725,34 @@
                                     <div class="btn-wrapper">
                                         <button class="filter-btn no-active">Применить</button>
                                         <div class="state-select">
-                                            <a href="#" class="reser-select">Очистить фильтр</a>
+                                            <a href="#" class="reset-select">Очистить фильтр</a>
                                             <span class="numb-select">(<span>0</span>)</span>
                                         </div>
-                    
                                     </div>
                                 </div>
                             </div>
                         </div>   
                         <div class="filter-active-wrapper">
                              <div class="filter-active-items">
-                                 <!-- <div class="active-item">
-                                     <span class="name-filter">Gino Rossi</span>
-                                     <svg class="close-filter">
-                                       <use href="assets/sprite/sprite.svg#close"></use>
-                                     </svg>
-                                 </div> -->
                                 <a href="#" onclick="return false" class="filter-active-reset-btn font-mini">Очистить фильты</a>
                              </div>
-                             
-                         </div>       
-                    </div>
-                      
-                    <div class="more-less-filter">
+                        </div>      
+                      </div> 
+                    </form> 
+                      <div class="more-less-filter">
                         <div class="more-filter active">
                             <p>Больше фильтров</p>
                         </div>
                         <div class="less-filter">
                             <p>Меньше фильтров</p>
                         </div>
-                    </div>
+                      </div>
+                    
+                    
                    </div>
-                   <div class="mobile-filter-container">
-                     <div class="sort-btn">
+                   <div class="mobile-filter">
+                    <form action="/" method="POST" class="mobile-filter-container">
+                       <div class="sort-btn">
                             <div class="filter-header">
                                 <p>Сортировка</p>
                                 <svg>
@@ -2777,8 +2773,8 @@
                                     <div class="filter-items"><a href="">Цена по возрастанию</a></div>
                                 </div>
                             </div>
-                     </div>
-                     <div class="filter-btn">
+                       </div>
+                       <div class="filter-btn">
                         <div class="filter-header">
                             <p>Фильтр</p>
                             <svg>
@@ -2799,11 +2795,11 @@
                                     </div>
                                     <div class="content-filter price-range">
                                         <div class="range-slider">
-                                            <input type="text" class="js-range-slider" value="" />
+                                            <input type="text" class="mob-range-slider" value="" />
                                         </div>
                                         <div class="extra-controls">
-                                            <div class="input-range-wrapper"><input type="text" class="js-input-from" value="0" /></div>
-                                            <div class="input-range-wrapper"><input type="text" class="js-input-to" value="0" /></div>
+                                            <div class="input-range-wrapper"><input type="text" class="mob-input-from" value="0" /></div>
+                                            <div class="input-range-wrapper"><input type="text" class="mob-input-to" value="0" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -3155,7 +3151,8 @@
                                 <button class="modal-submit no-active">Применить</button>
                             </div>
                         </div>
-                     </div>
+                       </div>
+                    </form>  
                    </div>
                </div> 
                <div class="catalog-wrapper">

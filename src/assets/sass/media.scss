@@ -595,6 +595,7 @@ $color-price-sale: #E90000;
                      border-bottom: 1px solid $color_line_dec;
                      max-height: 46px;
                      overflow: hidden;
+                     cursor: pointer;
                      &:first-child{
                          border-top: 1px solid $color_line_dec;
                      }
