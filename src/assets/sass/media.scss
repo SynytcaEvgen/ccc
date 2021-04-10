@@ -609,8 +609,8 @@ $color-price-sale: #E90000;
                        p{
                          font-family: $gordita_medium;
                        }
-                        &::after,
-                        &::before{
+                       &::after,
+                       &::before{
                             content: "";
                             background-color: $color_text;
                             position: absolute;
@@ -619,23 +619,38 @@ $color-price-sale: #E90000;
                             right: 0;
                             top: 50%;
                             transition: all 0.3s ease-in-out;     
-                        }
-                        &::before {
+                       }
+                       &::before {
                             transform: translate(0, -50%) rotate(0deg);
                             transition: all 0.3s ease-in-out;   
-                        }
-                        &::after {
+                       }
+                       &::after {
                           transform: translate(0, -50%) rotate(90deg);
                           transition: all 0.3s ease-in-out;
-                        }
-                        &.active::before{
+                       }
+                       &.active::before{
                             transform: rotate(180deg);
                             transition: all 0.3s ease-in-out; 
-                        }
-                        &.active::after{
+                       }
+                       &.active::after{
                             transform: rotate(0deg);
                             transition: all 0.3s ease-in-out;
-                        }
+                       }
+                       .mob-check-holder {
+                         overflow: hidden;
+                         flex-wrap: nowrap;
+                         display: none;
+                         margin-right: 20px;
+                         span{
+                           white-space: nowrap;
+                         }
+                         &::before{
+                           content: '(';
+                         }
+                         &::after{
+                           content: ')';
+                         }
+                       }
                    }
                    .content-filter{
                        padding-top: 36px;
