@@ -4080,6 +4080,13 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   }
 }
 
+.catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .prod-banner-wrapper .img-wrapper.personal-favorit {
+  @include adaptiv-height(347, 253);
+}
+section.info .container .info-frame .info-content-wrapper.personal-favorit {
+  padding-bottom: 48px;
+}
+
 //account pages end, end!
 
 //detail_start
