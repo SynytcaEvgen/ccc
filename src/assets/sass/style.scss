@@ -3389,6 +3389,9 @@ section.info .container .info-frame .info-content-wrapper{
    &.personal-orders{
      padding-bottom: 24px;
    }
+   &.personal-order{
+     padding-bottom: 48px;
+   }
 }
 
 
@@ -3828,6 +3831,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   .back-link{
     span{
       text-decoration: underline;
+      transition: .3s ease-in-out;
     }
     svg{
       position: relative;
@@ -3836,6 +3840,17 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
       transform: rotate(180deg);
       margin-right: 8px;
       stroke: #222;
+      transition: .3s ease-in-out;
+    }
+    &:hover{
+      span{
+        color: $color-action-h;
+        transition: .3s ease-in-out;
+      }
+      svg{
+        stroke: $color-action-h;
+        transition: .3s ease-in-out;
+      }
     }
   }
   .order-meta{
@@ -3959,6 +3974,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
         margin-right: 24px;
         img{
           max-width: 100%;
+          max-height: 100%;
         }
       }
       .col{
@@ -3969,7 +3985,8 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
           width: 286px;
           min-width: 286px;
           color: #32302E;
-          .p-name{
+          .p-name a{
+            display: block;
             font-family: $gordita_medium;
             font-size: 14px;
             line-height: 24px;
@@ -4587,6 +4604,7 @@ header{
      justify-content: space-between;
      align-items: center;
      padding-bottom: 4px;   
+     padding-top: 4px;
      &.active{
        opacity: 1;
        height: auto;

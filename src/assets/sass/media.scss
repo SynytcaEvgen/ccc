@@ -269,7 +269,6 @@ $maxWidth: 1920;
         bottom: 0;
         background-color: $color_ivert;
         width: 100%;
-        padding-top: 4px;
         .decs-goods{
             display: none;
         }
@@ -1599,6 +1598,21 @@ $maxWidth: 1920;
     .account-orders .orders-list .item{
       margin-bottom: 8px;
     }
+    .account-single-order .order-meta .meta-item+.meta-item{
+      margin-top: 16px;
+    }
+    .order-meta .meta-item button {
+      &.repeat-btn{
+        margin-bottom: 14px;
+      }
+      &.cancel-btn{
+        padding-bottom: 0;
+      }
+      padding: 10px 0;
+      .pay-btn{
+        padding: 10px 0;
+      }
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -2419,6 +2433,9 @@ $maxWidth: 1920;
         font-family: $gordita_medium;
       }
     }
+    .total{
+      margin-bottom: 0;
+    }
     .price-wrap{
       .price_new{
         line-height: 15px;
@@ -2463,6 +2480,7 @@ $maxWidth: 1920;
       border-top: 1px solid #E8E8E8;
       margin-top: 16px;
       font-size: 14px;
+      line-height: 24px;
     }
   }
   .account-single-order .order-total{
@@ -2472,6 +2490,10 @@ $maxWidth: 1920;
     width: 100px;
     min-width: 100px;
     margin-right: 16px;
+    height: 147px;
+    img{
+      max-height: 100%;
+    }
   }
   .account-single-order .product-rows .p-row .col .name{
     width: 100%;
