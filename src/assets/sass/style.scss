@@ -3335,7 +3335,7 @@ section.info .container .info-frame .info-content-wrapper.account-section{
       align-items: center;
       justify-content: space-between;
       border-bottom: 2px solid #f8f8f8;
-      padding: 8px 16px;
+      padding: 16px 16px 7px;
       .item-meta{
         white-space: normal;
       }
@@ -3350,7 +3350,7 @@ section.info .container .info-frame .info-content-wrapper.account-section{
       }
     }
     .item-action{
-      padding: 8px 16px;
+      padding: 10px 16px 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -3377,13 +3377,21 @@ section.info .container .info-frame .info-content-wrapper.account-section{
     color: #666666;
   }
 }
-section.info .container .info-frame .info-content-wrapper.presonal-info {
-  .presonal-info {
-    margin-bottom: 36px;
-  }
-  padding-bottom: 82px;
-
+section.info .container .info-frame .info-content-wrapper{
+   &.presonal-info {
+     .presonal-info {
+       margin-bottom: 36px;
+     }
+   
+     padding-bottom: 82px;
+   
+   }
+   &.personal-orders{
+     padding-bottom: 24px;
+   }
 }
+
+
 
 .account-info-form{
   .columns{
@@ -4044,6 +4052,9 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
       }
     }
   }
+  .prev-link svg{
+    transform: rotate(180deg);
+  }
   .next-link span,
   .prev-link span{
     display: inline-block;
@@ -4086,7 +4097,14 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
 section.info .container .info-frame .info-content-wrapper.personal-favorit {
   padding-bottom: 48px;
 }
-
+.info-menu-item.divider{
+  .info-menu-company{
+    .menu-items a{
+        text-decoration: underline;
+    }
+  }
+ 
+}
 //account pages end, end!
 
 //detail_start
