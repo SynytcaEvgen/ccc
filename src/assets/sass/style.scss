@@ -2294,6 +2294,7 @@ section.info {
       .info-content-wrapper {
         max-width: 975px;
         padding-bottom: 54px;
+        width: 100%;
         &.safety{
            padding-bottom: 24px;
          }
@@ -3376,6 +3377,13 @@ section.info .container .info-frame .info-content-wrapper.account-section{
     color: #666666;
   }
 }
+section.info .container .info-frame .info-content-wrapper.presonal-info {
+  .presonal-info {
+    margin-bottom: 36px;
+  }
+  padding-bottom: 82px;
+
+}
 
 .account-info-form{
   .columns{
@@ -3398,23 +3406,53 @@ section.info .container .info-frame .info-content-wrapper.account-section{
     }
     .input-wrap{
       margin-bottom: 22px;
-      .datepicker-here{
+      &.last-input{
+        margin-bottom: 16px;
+      }
+      &.i-email{
+        margin-bottom: 30px;
+      }
+      &.i-calendar{
         position: relative;
-        background-image: url(../img/calendar.png);
-        background-repeat: no-repeat;
-        background-position: calc(100% - 1px) 0;
+        .wrap-calendar{
+          position: absolute;
+          width: 16px;
+          height: 19px;
+          fill: $color_promo_bg;
+          top: 50%;
+          cursor: pointer;
+          right: 0;
+          transform: translate(0, -50%);
+          transition: .3s ease-in-out;
+          // pointer-events: none;
+          &:hover{
+            fill: $color-action-h;
+            transition: .3s ease-in-out;
+          }
+        }
+      }
+      label.error {
+        color: $color-error;
+        font-size: 11px;
+        line-height: 11px;
+        padding-top: 4px;
+      }
+
+      input.error {
+        border-color: $color-error;
       }
       label{
         display: block;
         font-size: 11px;
         line-height: 1;
         color: $color_goods-des;
-        margin-bottom: 6px;
+        margin-bottom: 2px;
         font-family: $gordita_regular;
       }
       input{
         width: 100%;
         display: block;
+        padding-bottom: 1px;
         &[type=date]{
           height: 24px;
         }
@@ -3422,6 +3460,7 @@ section.info .container .info-frame .info-content-wrapper.account-section{
       &.radio-wrap{
         display: flex;
         align-items: flex-end;
+        margin-bottom: 30px;
 
         .radio-label{
           position: relative;

@@ -158,6 +158,12 @@ function init() {
           required: true,
           minlength: 6,
         },
+        name: {
+          required: true,
+        },
+        last_name: {
+          required: true,
+        },
         psword_confirm: {
           required: true,
           minlength: 6,
@@ -505,6 +511,7 @@ function init() {
   validatorForm("#sign-in");
   validatorForm("#reset-pass");
   validatorForm("#registration-form");
+  validatorForm("#account-prersonal-data");
   $('.close-popup').click(function () {
     closePopUp('.popup.active');
   });
@@ -801,7 +808,28 @@ function init() {
     resPrice();
     haveAChild('.filter-active-items');
   });
-
+  $(".wrap-calendar").click(function () {
+    let hasFocus = $(this).prev().is(':focus');
+    console.log(hasFocus);
+    if (hasFocus) {
+      $(this).prev().blur();
+      console.log('remove focus')
+    } else {
+      $(this).prev().focus();
+      console.log('add focus')
+    }
+  });
+  $('.new-pass').change(function () {
+    if ($(this).val() != 0) {
+    $(this).attr('name', 'psword');
+    $('.check-pass').attr('name', 'psword_confirm');
+  } else {
+    $(this).removeAttr('name');
+    $('.check-pass').removeAttr('name');
+  }
+    
+  });
+  
 };
 
 

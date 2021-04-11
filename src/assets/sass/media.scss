@@ -1587,6 +1587,15 @@ $maxWidth: 1920;
     section.info .container .info-frame .info-content-wrapper.account-section {
       padding-bottom: 24px;
     }
+    .form-actions button{
+      padding: 9px 0;
+      &:first-child{
+        margin-bottom: 15px;
+      }
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1600,7 +1609,7 @@ $maxWidth: 1920;
         min-width: 300px;
         padding: 0;
     }
-    .promo-banner .banner-wrapper .content-wrapper{
+  .promo-banner .banner-wrapper .content-wrapper{
         bottom: 32px;
         top: unset;
         transform: translate(-50%, 0);
