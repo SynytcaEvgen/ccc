@@ -178,6 +178,14 @@ body {
   input:focus{
     color: $color_text
   }
+  a {
+    transition: .3s ease-in-out;
+
+    &:hover {
+      color: $color-action-h;
+      transition: 0.3s ease-in-out;
+    }
+  }
 }
 body 
 .line-decor {
@@ -3215,6 +3223,9 @@ section.info {
   z-index: 4;
 }
 //account pages here
+section.info .container .info-frame .info-content-wrapper.account-section{
+  padding-bottom: 48px;
+}
 .account-blocks{
   display: flex;
   flex-wrap: wrap;
@@ -3224,7 +3235,7 @@ section.info {
 .account-block{
   margin-left: 12px;
   margin-right: 12px;
-  margin-bottom: 24px;
+  // margin-bottom: 24px;
   background: #f8f8f8;
   border-radius: 2px;
   &.my-orders{
@@ -3280,7 +3291,7 @@ section.info {
           z-index: 2;
           background: rgba(255, 255, 255, 0.35);
           backdrop-filter: blur(4px);
-          span{
+          .show-more-link{
             text-transform: uppercase;
             font-family: $gordita_bold;
             font-size: 13px;
@@ -3288,8 +3299,10 @@ section.info {
           }
         }
         .img-wrapper {
-          max-width: unset;
-          max-height: unset;
+           max-width: 313px;
+          @include adaptiv-height(264, 253);
+          // line-height: 0;
+          // // overflow: hidden;
           img {
             object-fit: cover;
           }
@@ -3297,10 +3310,14 @@ section.info {
       }
       .descr-wrapper {
         width: 100%;
-        margin-bottom: 14px;
-        max-height: 46px;
+        max-height: 45px;
         overflow: hidden;
-        margin-top: 8px;
+        margin-top: 21px;
+        .discrption-goods.catalog-k{
+          &::after{
+            background-color: $color-bg-footer;
+          }
+        }
       }
     }
   }
@@ -3352,6 +3369,9 @@ section.info {
   line-height: 23px;
   font-family: $gordita_regular;
   margin:8px 0 16px;
+  &:last-child{
+    margin-bottom: 0;
+  }
   .key{
     color: #666666;
   }
