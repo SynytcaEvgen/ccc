@@ -2877,6 +2877,10 @@ $maxWidth: 1920;
       max-height: 355px;
       overflow: hidden;
       padding-bottom: 0;
+      transition: max-height 2s ease;
+      &.opened{
+        max-height: 2000px;
+      }
     }
     .action{
       display: block;

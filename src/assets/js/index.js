@@ -848,6 +848,10 @@ function init() {
   }
     
   });
+
+  $('.countries .show-all').click(function (){
+    $(this).parent().siblings('.row').toggleClass('opened')
+  })
   
 };
 
