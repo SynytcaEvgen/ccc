@@ -167,7 +167,7 @@ function init() {
         psword_confirm: {
           required: true,
           minlength: 6,
-          equalTo : "psword",
+          equalTo : "#person-pass",
         },
         email_n:"required EMAIL",
       },
@@ -841,6 +841,7 @@ function init() {
   $('.new-pass').change(function () {
     if ($(this).val() != 0) {
     $(this).attr('name', 'psword');
+    $(this).attr('id', 'person-pass');
     $('.check-pass').attr('name', 'psword_confirm');
   } else {
     $(this).removeAttr('name');

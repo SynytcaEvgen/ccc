@@ -2489,7 +2489,7 @@ section.info {
       overflow: hidden;
       transition: all 0.3s ease-in-out;
       p{
-        padding: 16px 0;
+        padding: 16px 0 8px;
         line-height: 25px;
         &.font-mini{
           line-height: 20px;
@@ -3734,6 +3734,9 @@ section.info .container .info-frame .info-content-wrapper{
     &.border-form{
       margin-bottom: 22px;
     }
+    &.spec_indent{
+      margin-bottom: 27px;
+    }
     label.error{
       color: $color-error;
       font-size: 11px;
@@ -3868,10 +3871,10 @@ section.info .container .info-frame .info-content-wrapper{
       &:before{
         content: '';
         position: absolute;
-        top: -2px;
+        top: 1px;
         left: 0;
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         background-color: transparent;
         border: 1px solid #222222;
       }
@@ -3879,11 +3882,11 @@ section.info .container .info-frame .info-content-wrapper{
         font-family: "Material Icons";
         content: '\e5ca';
         position: absolute;
-        top: -2px;
+        top: 1px;
         left: 0;
         transform: scale(0);
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         color: #fff;
         border: 1px solid transparent;
         display: flex;
