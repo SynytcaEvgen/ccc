@@ -2443,16 +2443,24 @@ section.info {
     border-bottom: 1px solid $color_line_dec;
     padding: 16px 0; 
     cursor: pointer;
+    .title{
+       
+    }
     &:first-child{
       border-top: 1px solid $color_line_dec;
     }
     &:hover .title{
         color: $color-action-h;
         transition: 0.3s ease-in-out;
+
     }
     .title{
       position: relative;
       transition: 0.3s ease-in-out;
+      font-size: 13px;
+      line-height: 23px;
+      font-family: $gordita_medium;
+      font-weight: 500;
       &::after,
       &::before{
           content: "";
@@ -2496,6 +2504,9 @@ section.info {
           font-size: 12px;
         }
       }
+      &.__faq p{
+        line-height: 23px;
+      }
       .pay-var{
          padding: 0 0 8px 0;
          justify-content: flex-start;
@@ -2536,7 +2547,7 @@ section.info {
       }
       .desc_banner{
         position: absolute;
-        top: 52%;
+        top: 51.2%;
         left: 50%;
         transform: translate(-20%, -60%);
         .text_contetn{
@@ -2967,39 +2978,7 @@ section.info {
                    }
                  }
                }
-               .range-slider{
-                 max-width: 100%;
-                 .irs--round{
-                   .irs{
-                     .irs-min,
-                     .irs-max,
-                     .irs-from,
-                     .irs-to,
-                     .irs--round,
-                     .irs-single{
-                       display: none;
-                     }  
-                   }
-                   .irs-handle{
-                     cursor: pointer;
-                     top: 5px;
-                     width: 12px;
-                     height: 12px;
-                     border: unset;
-                     background-color: $color-action-h;
-                     border-radius: 50%;
-                     box-shadow: unset;
-                   }   
-                   .irs-bar{
-                     height: 3px;
-                     background-color: $color-action-h;
-                     top: 10px;
-                   }
-                   .irs-line{
-                     top: 10px;
-                   }
-                 }
-               }
+             
                .btn-wrapper{
                  .filter-btn.price-range{
                    margin: 0;
@@ -3281,6 +3260,42 @@ section.info {
             }
           }
         }
+      }
+    }
+  }
+   .range-slider{
+    max-width: 100%;
+    .irs--round{
+      .irs{
+        .irs-min,
+        .irs-max,
+        .irs-from,
+        .irs-to,
+        .irs--round,
+        .irs-single{
+          display: none;
+        }  
+      }
+      .irs--round{
+         display: none;
+      }
+      .irs-handle{
+        cursor: pointer;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border: unset;
+        background-color: $color-action-h;
+        border-radius: 50%;
+        box-shadow: unset;
+      }   
+      .irs-bar{
+        height: 3px;
+        background-color: $color-action-h;
+        top: 10px;
+      }
+      .irs-line{
+        top: 10px;
       }
     }
   }
@@ -5942,6 +5957,8 @@ section.info .info-frame .info-content-wrapper.news-detail{
       font-family: $gordita_regular;
       a{
         text-decoration: underline;
+        font-size: 12px;
+        line-height: 22px;
       }
     }
     .btn{

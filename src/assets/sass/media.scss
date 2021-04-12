@@ -1620,6 +1620,12 @@ $maxWidth: 1920;
     .payment-wrapper .payment-items .paymeny-desc p{
       padding-bottom: 0px;
     }
+    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container:hover .descr-wrapper{
+      position: relative;
+      bottom: unset;
+      max-height: 65px;
+      margin-top: unset;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
