@@ -2770,3 +2770,171 @@ $maxWidth: 1920;
   }
 }
 //end contacts page
+//about page
+@media screen and (max-width: 1199px){
+  section.info .container .info-frame .info-content-wrapper.about{
+    max-width: calc(100% - 223px);
+    width: auto;
+  }
+  .about-page-wrapper .about-block .block-text.last .text{
+    width: 50%;
+    min-width: 50%;
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 900px){
+  section.info .container .info-frame .info-content-wrapper.about{
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .about-page-wrapper .about-block .countries .row .item{
+    width: 25%;
+  }
+  .about-page-wrapper .about-block .countries .row{
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px){
+  .about-page-wrapper .about-block .block-text{
+    img{
+      display: block;
+    }
+    flex-direction: column;
+    .primary{
+      width: 100%;
+      font-size: 13px;
+    }
+    .secondary{
+      width: 100%;
+    }
+  }
+  .about-page-wrapper .about-block{
+    .hidden-mob{
+      display: none;
+    }
+  }
+  .about-page-wrapper .about-block .block-image{
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+  .about-page-wrapper .about-block .block-image__text{
+    position: static;
+    padding: 0;
+    color: #222;
+    background-color: transparent;
+    img{
+      display: block;
+      margin-bottom: 16px;
+    }
+    .title{
+      margin-bottom: 16px;
+      font-family: $gordita_medium;
+      font-size: 22px;
+      line-height: 22px;
+    }
+    p{
+      color: #222;
+      font-family: $gordita_bold;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 0 16px;
+    }
+  }
+  .about-page-wrapper .about-block .block-title{
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: -8px;
+  }
+  .about-page-wrapper .about-block .countries .row .item{
+    width: 50%;
+    padding: 24px 0;
+  }
+  .about-page-wrapper .about-block .block-tables{
+    flex-direction: column;
+    margin-top: 8px;
+  }
+  .about-page-wrapper .about-block .block-tables .item{
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+  }
+  .about-page-wrapper .about-block .block-tables .item .item-head{
+    min-height: 102px;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+  }
+  .about-page-wrapper .about-block{
+    margin-bottom: 24px;
+  }
+  .about-page-wrapper .about-block .countries {
+    padding-bottom: 0;
+    .row{
+      max-height: 355px;
+      overflow: hidden;
+      padding-bottom: 0;
+    }
+    .action{
+      display: block;
+      padding: 16px 0 0;
+      text-align: center;
+      .show-all{
+        font-size: 13px;
+        text-decoration: underline;
+      }
+    }
+  }
+  .about-page-wrapper .about-block .block-text.last{
+    flex-direction: column-reverse;
+    .text{
+      width: auto;
+      margin: -13px -16px 0 28px;
+      background-color: #fff;
+      padding: 24px 16px 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+    img{
+      max-width: calc(100% + 32px);
+    }
+  }
+  section.info .container .info-frame .info-content-wrapper.about{
+    padding-bottom: 0;
+  }
+  .about-page-wrapper .about-block .block-image__text.infographic{
+    position: absolute;
+    background-color: rgba(0,0,0,.1);
+    .flex{
+      display: none;
+    }
+    .title{
+      color: #fff;
+      font-size: 22px;
+      line-height: 35px;
+      margin: 0;
+    }
+  }
+  .about-page-wrapper .about-block .visible-mob.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -16px;
+    margin-bottom: 21px;
+    .key{
+      font-family: $gordita_medium;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 4px;
+      display: block;
+    }
+    .val{
+      font-size: 22px;
+      line-height: 35px;
+      font-family: $gordita_bold;
+      small{
+        font-size: 16px;
+      }
+    }
+  }
+}
+//end about page

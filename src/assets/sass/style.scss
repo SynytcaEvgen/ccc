@@ -6164,3 +6164,188 @@ section.info .info-frame .info-content-wrapper.news-detail{
   }
 }
 //end size table
+//about page
+.about-page-wrapper{
+  white-space: normal;
+  .about-block{
+    margin-bottom: 32px;
+    .visible-mob{
+      display: none;
+    }
+    .block-image{
+      position: relative;
+      margin-bottom: 24px;
+      font-size: 0;
+      img{
+        width: 100%;
+      }
+      &__text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: rgba(0,0,0,0.1);
+        padding: 0 100px;
+        img{
+          display: none;
+        }
+        .title{
+          margin-bottom: 40px;
+          font-family: $gordita_bold;
+          font-size: 50px;
+          line-height: 60px;
+          text-align: center;
+        }
+        p{
+          font-size: 16px;
+          line-height: 26px;
+          font-family: $gordita_bold;
+          text-align: center;
+          color: #fff;
+        }
+        &.infographic{
+          .title{
+            font-size: 48px;
+            line-height: 78px;
+            margin-bottom: 30px;
+          }
+          .flex{
+            display: flex;
+            justify-content: center;
+            .item{
+              margin: 0 40px;
+              font-size: 0;
+              .key{
+                color: #fff;
+                font-family: $gordita_medium;
+                font-size: 16px;
+                line-height: 24px;
+                display: block;
+              }
+              .val{
+                display: block;
+                color: #fff;
+                font-family: $gordita_bold;
+                font-size: 50px;
+                line-height: 60px;
+                small{
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .block-title{
+      margin-bottom: 16px;
+      font-family: $gordita_medium;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .block-text{
+      display: flex;
+      justify-content: space-between;
+      .primary{
+        width: calc(50% - 8px);
+        font-size: 14px;
+        line-height: 24px;
+        font-family: $gordita_medium;
+        margin-bottom: 8px;
+      }
+      .secondary{
+        width: calc(50% - 8px);
+        font-size: 13px;
+        line-height: 23px;
+        font-family: $gordita_regular;
+        margin-bottom: 8px;
+      }
+      &.last{
+        align-items: center;
+        .text{
+          width: 479px;
+          min-width: 479px;
+          margin-right: 157px;
+          .title{
+            font-family: $gordita_medium;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+    .countries{
+      padding-bottom: 8px;
+      .action{
+        display: none;
+      }
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -8px;
+        .item{
+          width: 20%;
+          padding: 16px 0;
+          border-bottom: 1px solid #e8e8e8;
+          display: flex;
+          align-items: center;
+          padding-right: 16px;
+          p{
+            font-size: 13px;
+          }
+          img{
+            margin-right: 24px;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    .block-tables{
+      display: flex;
+      margin-right: -8px;
+      margin-left: -8px;
+      margin-top: 32px;
+      .item{
+        width: calc(33.333% - 16px);
+        margin-left: 8px;
+        margin-right: 8px;
+        .item-head{
+          padding: 24px 24px 32px;
+          background-color: #fafafa;
+          font-family: $gordita_medium;
+          font-size: 13px;
+          line-height: 23px;
+        }
+        .item-row{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 8px 24px;
+          font-family: $gordita_regular;
+          font-size: 13px;
+          line-height: 23px;
+          &+.item-row{
+            border-top: 1px solid #e8e8e8;
+          }
+        }
+      }
+    }
+  }
+}
+.info.overflow{
+  overflow: hidden;
+}
+section.info .container .info-frame .info-content-wrapper.about{
+  padding-bottom: 16px;
+}
+//end about page
