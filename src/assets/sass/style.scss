@@ -1465,17 +1465,22 @@ main section button{
        align-items: flex-start;
        .promo-items {          
          position: relative;
+         width: calc(50% - 14px);
          .promo-img {   
            position: relative;
            max-width: 636px;
            @include adaptiv-height(637, 343);
            background: rgba(0, 0, 0, 0.2);
            line-height: 0;
+           overflow: hidden;
+           display: flex;
+           align-items: center;
+           justify-content: center;
            img{
              position: relative;
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
+            //  width: 100%;
+            //  height: 100%;
+            //  object-fit: cover;
              z-index: -1;
            }       
          }
@@ -2203,10 +2208,21 @@ footer{
   }
   .container {
      .promo-items {
+       width: 50%;
         .promo-img {
           max-width: 642px;
-          max-height: 700px;
-          background: none;
+          @include adaptiv-height(700, 374);
+          margin: 0 auto;
+          background-color: $color-bg-footer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img{
+            width: unset;
+            height: unset;
+            object-fit: unset;
+            z-index: 0;
+          }
         }
      }
      .promo-text {

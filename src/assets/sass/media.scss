@@ -197,6 +197,12 @@ $maxWidth: 1920;
     .sec-buttom .wrapper-bottom{
         display: none;
     }
+    .promotion.hist .container .promo-items{
+      width: 100%;
+      .promo-img{
+        height: 100%;
+      }
+    }
     .mob_block {
        display: block;
        .pay-var{
@@ -252,9 +258,6 @@ $maxWidth: 1920;
     }
     .promotion .container .promo-wrapper .promo-items:first-child{
         margin-right: 0;
-    }
-    .promotion .container .promo-wrapper .promo-items{
-        width: 100%;
     }
     .promotion.hist .container .promo-text{
         max-width: 100%;
@@ -1010,14 +1013,14 @@ $maxWidth: 1920;
     section{
         overflow: hidden;
     }
-    .promotion .container .promo-wrapper{
-        flex-direction: column;
-    }
     .promotion .container .promo-wrapper .promo-items:first-child{
        margin-right: 0;
     }
     .promotion .container .promo-wrapper .promo-items:last-child{
         margin-left: 0;
+    }
+    .promotion .container .promo-wrapper{
+      flex-direction: column;
     }
     .promotion .container .promo-wrapper .promo-items {
         width: 100%;
@@ -1040,7 +1043,7 @@ $maxWidth: 1920;
         .promo-img{
             margin-bottom: 27px;
             max-width: 100%;
-            height: calc(100vw - 32px);
+            height: 100%;
             overflow: hidden;
         }
 
@@ -1172,9 +1175,7 @@ $maxWidth: 1920;
     .promotion.hist .container .promo-wrapper .promo-items .promo-img{
         margin-bottom: 0;
     }
-    .promotion .container .promo-wrapper .promo-items .promo-img img{
-        object-fit: cover;
-    }
+    
     .promotion.hist .container .promo-text .promo-t-wrapp{
         position: relative;
         top: -13px;
@@ -1806,14 +1807,16 @@ $maxWidth: 1920;
         margin-left: -15px;
       }
     }
+    .promotion .container .promo-wrapper .promo-items .promo-img img{
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
 }
 @media only screen and (max-width: 375px){
     .promotion.hist .container .promo-wrapper .promo-items .promo-img{
          height: 374px;
          width: 100%;
-    }
-    .promotion .container .promo-wrapper .promo-items .promo-img{
-         height: 343px;
     }
     .promotion.hist .container .promo-text .promo-text-goods .goods-wrapper .prod-card-container{
         margin: 0;
