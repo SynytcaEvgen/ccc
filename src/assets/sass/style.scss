@@ -2578,6 +2578,7 @@ section.info {
           align-items: center;
           cursor: pointer;
           &.no-active{
+            cursor: default;
             p{
               color: $color_line_dec;
             }
@@ -2720,6 +2721,7 @@ section.info {
               border-color: $color-goods-des;
               opacity: 0.5;
               cursor: not-allowed;
+              pointer-events: n;
             }
             svg{
                width: 16px;
@@ -2815,7 +2817,17 @@ section.info {
                    color: $color-action-h;
                    transition: 0.3s ease-in-out;
                  }
-               }            
+               } 
+               .no-active{
+                 .desc-check{
+                   opacity: 0.5;
+                   cursor: not-allowed;
+                   pointer-events: none;
+                   &::before{
+                     background-color: $color_line_dec;
+                   }
+                 }
+               }           
              }
              &.active{
                opacity: 1;
@@ -3198,6 +3210,8 @@ section.info {
                     height: 60px;
                     overflow: hidden;
                     line-height: 0;
+                    border: 1px solid transparent;
+                    transition: .3s ease-in-out;
                     img{
                       width: 100%;
                       height: 100%;
@@ -3208,6 +3222,11 @@ section.info {
                     }
                     &.select{
                       border: 1px solid $color_text;
+                       transition: .3s ease-in-out;
+                    }
+                    &:hover{
+                      border: 1px solid $color-action-h;
+                      transition: .3s ease-in-out;
                     }
                   }
                 }
