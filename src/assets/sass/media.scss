@@ -1603,6 +1603,9 @@ $maxWidth: 1920;
     }
     .account-orders .orders-list .item{
       margin-bottom: 8px;
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
     .account-single-order .order-meta .meta-item+.meta-item{
       margin-top: 16px;
@@ -1650,6 +1653,9 @@ $maxWidth: 1920;
     }
     .account-info-form .columns .input-wrap.radio-wrap{
       margin-bottom: 22px;
+    }
+    section.info .container .info-frame .info-content-wrapper.personal-orders{
+      padding-bottom: 24px;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -2029,7 +2035,7 @@ $maxWidth: 1920;
     padding: 0 18px;
   }
   .pagination{
-    padding: 8px 0 0;
+    padding: 36px 0 0;
     .counter{
       .text{
         display: inline-block;
