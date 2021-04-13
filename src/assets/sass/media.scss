@@ -1568,13 +1568,14 @@ $maxWidth: 1920;
      padding-bottom: 0;
    }
    .registration-form .input-wrap.border-end{
-     margin-bottom: 27px;
+     margin-bottom: 24px;
    }
    .registration-form .acceptance{
      margin-bottom: 24px;
    }
-   .registration-form .submit-btn{
+   .registration-form .form-actions .submit-btn {
      padding: 10px 0;
+     margin-bottom: 0;
    }
    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container .descr-wrapper{
         margin-bottom: 0;

@@ -881,6 +881,7 @@ function init() {
       $(this).parents('.form').find('input.accept_btn').addClass('no-active');
     }
   });
+  $('.phone_mask').mask('+7 (000) 000-00-00');
 };
 
 

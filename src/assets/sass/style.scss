@@ -1101,10 +1101,14 @@ main section button{
                  }
                  .promo-brand-wrapper{
                    display: flex;
-                   flex-direction: column;
                    align-items: center;
+                   overflow-x: scroll;
                    .brand-container{
                      padding-bottom: 16px;
+                     margin-right: 24px;
+                     &:last-child{
+                       margin-right: 0;
+                     }
                      p {
                        text-align: center;
                        a {
@@ -4511,7 +4515,7 @@ section.info .container .info-frame .info-content-wrapper.personal-favorit {
                border-radius: 2px;
                border: 1px solid $color_line_dec;
                width: 73px;
-               transition: .5s ease-in-out;
+              //  transition: .5s ease-in-out;
                cursor: pointer;
                display: flex;
                justify-content: center;
@@ -4521,8 +4525,8 @@ section.info .container .info-frame .info-content-wrapper.personal-favorit {
                  font-family: $gordita_regular;
                }
                &:hover{
-                 border-color: $color_text;
-                 transition: .5s ease-in-out;
+                 border-color: $color-action-h;
+                //  transition: .5s ease-in-out;
                  z-index: 4;
                }
                &.current{
@@ -6020,6 +6024,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
       font-size: 12px;
       line-height: 22px;
       font-family: $gordita_regular;
+      margin-right: 11px;
       a{
         text-decoration: underline;
         font-size: 12px;
