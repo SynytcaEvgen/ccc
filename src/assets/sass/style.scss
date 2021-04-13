@@ -5418,6 +5418,12 @@ section.info .info-frame .info-content-wrapper.news-detail{
         display: flex;
         justify-content: space-between;
         margin-bottom: 16px;
+        &:first-child{
+          margin-bottom: 10px;
+        }
+        &:last-child{
+          margin-bottom: 24px;
+        }
         span{
           line-height: 23px;
           font-size: 13px;
