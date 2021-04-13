@@ -516,7 +516,12 @@ label[data-color] {
         }
       }
       .form{
-
+        &.registration-form{
+          padding-bottom: 0;
+          .acceptance{
+            margin-bottom: 24px;
+          }
+        }
         .input_wrap{
           display: flex;
           flex-direction: column;
@@ -524,10 +529,14 @@ label[data-color] {
           &.end{
             padding: 0 0 24px;
           }
+          input.error{
+            border-color:#EB001B;
+          }
           label.error{
             color:#EB001B;
             font-size: 11px;
             line-height: 12px;
+            padding-top: 4px;
           }
         }
         .sub-input_wrap{
@@ -539,10 +548,20 @@ label[data-color] {
             padding: 10px 0;
             background-color: $color-action-h;
             border-radius: 2px;
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+            &.no-active{
+              opacity: 0.5;
+              transition: 0.3s ease-in-out;
+              pointer-events: none;
+              &:hover{
+                background-color: $color-action-h;
+              }
+            }
           }
           input:hover{
             background-color: $color-action;
-
+            transition: 0.3s ease-in-out;
           }
         }
       }
@@ -802,6 +821,7 @@ main section button{
           padding-left: 8px;
           width: 100%;
           position: relative;
+          overflow: hidden;
           svg{
             position: absolute;
             top: 2px;
@@ -1269,6 +1289,14 @@ main section button{
                    margin: 0 8px;
                    max-width: 230px;
                    max-height: 255px;
+                   border: 1px solid transparent;
+                   transition: 0.3s ease-in-out;
+                   overflow: hidden;
+                   line-height: 0;
+                   &:hover{
+                     border: 1px solid $color-action-h;
+                     transition: 0.3s ease-in-out;
+                   }
                  }
                  .brand {
                    text-align: center;
@@ -1278,8 +1306,10 @@ main section button{
                      line-height: 20px;
                      text-decoration: underline;
                      font-family: $gordita_medium; 
+                      transition: 0.3s ease-in-out;
                      &:hover{
                        color: $color-action-h;
+                        transition: 0.3s ease-in-out;
                      }
                    }
                    
@@ -2706,10 +2736,10 @@ section.info {
         display: none;
       }
     .filter-wrapper .descktop-filter-container{
-      margin: 16px 0;
+      // margin: 16px 0;
       display: flex;
       justify-content: space-between;
-      height: 45px;
+      height: 60px;
       position: relative;
       &.open{
         max-height: 100%;
@@ -2718,9 +2748,6 @@ section.info {
         .filter-continer>.filter-item{
           align-content: flex-start;
           // height: 100%;
-        }
-        .filter-continer>.filter-item>.filter-items{
-          margin-bottom: 24px;
         }
       }
       .filter-continer>{
@@ -2732,7 +2759,8 @@ section.info {
           flex-wrap: wrap;
          >.filter-items{
            margin-right: 24px;
-           margin-bottom: 24px;
+           margin-bottom: 8px;
+           margin-top: 16px;
            position: relative;
            .filter-header{
             display: block;
@@ -2772,6 +2800,10 @@ section.info {
             }
             &.select{
               border-color: $color_text;
+              ~.content-filter.active .filter-item{
+                opacity: 1;
+                transition: 0.3s ease-in-out;
+              }
             }
             &:hover{
               border-color: $color-goods-des;
@@ -2830,6 +2862,8 @@ section.info {
              }
              .filter-item{
                max-height: 200px;
+               opacity: 0.5;
+               transition: 0.3s ease-in-out;
               //  margin-bottom: 16px;
                .filter-items{
                  padding-bottom: 19px;
@@ -2993,6 +3027,7 @@ section.info {
           display: flex;
           flex-wrap: wrap;
           position: relative;
+          margin-top: 8px;
           .filter-active-items{
              display: none;
              flex-wrap: wrap;
@@ -3052,6 +3087,7 @@ section.info {
         
       }
       .more-less-filter{
+          margin-top: 13px;
           position: relative;
           display: inline-flex;
           justify-content: center;
@@ -3118,7 +3154,7 @@ section.info {
     }
     .catalog-wrapper{
       background-color: $color_ivert;
-      margin-top: -8px;
+      margin-top: 8px;
       position: relative;
       z-index: 4;
       .header-find-goods{

@@ -843,17 +843,21 @@ function init() {
     $(this).attr('name', 'psword');
     $(this).attr('id', 'person-pass');
     $('.check-pass').attr('name', 'psword_confirm');
-  } else {
-    $(this).removeAttr('name');
-    $('.check-pass').removeAttr('name');
-  }
-    
+    } else {
+      $(this).removeAttr('name');
+      $('.check-pass').removeAttr('name');
+    }
   });
-
-  $('.countries .show-all').click(function (){
+  $('.countries .show-all').click(function () {
     $(this).parent().siblings('.row').toggleClass('opened')
-  })
-  
+  });
+  $('.checkbox-label').change(function () {
+    if ($(this).children('.accept_check').prop('checked')) {
+      $(this).parents('.form').find('input.accept_btn').removeClass('no-active');
+    } else {
+      $(this).parents('.form').find('input.accept_btn').addClass('no-active');
+    }
+  });
 };
 
 
