@@ -5467,6 +5467,11 @@ section.info .info-frame .info-content-wrapper.news-detail{
           margin-left: 16px;
           vertical-align: middle;
           line-height: 1;
+          transition: .3s ease-in-out;
+          &:hover{
+            stroke: $color-action-h;
+            transition: .3s ease-in-out;
+          }
         }
         a{
           line-height: 22px;
@@ -5518,9 +5523,10 @@ section.info .info-frame .info-content-wrapper.news-detail{
           width: 80px;
           min-width: 80px;
           margin-right: 24px;
+          max-height: 117px;
           img{
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
           }
         }
         .col{
@@ -5593,6 +5599,12 @@ section.info .info-frame .info-content-wrapper.news-detail{
                 width: 16px;
                 height: 16px;
                 vertical-align: middle;
+                stroke: $color-goods-des;
+                transition: 0.3s ease-in-out;
+                &:hover{
+                  stroke: $color-action-h;
+                  transition: 0.3s ease-in-out
+                }
               }
           }
         }
