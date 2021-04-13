@@ -1510,9 +1510,14 @@ $maxWidth: 1920;
     // }
     section.info .container .info-frame .info-content-wrapper>.title{
         margin-bottom: 16px;
+        
     }
     section.info .container .info-frame .info-content-wrapper{
         padding-bottom: 24px;
+        &.personal-favorit,
+        &.personal-order{
+          padding-bottom: 24px;
+        }
     }
     section.info .container .info-frame .info-content-wrapper.news-detail{
         padding-bottom: 0;

@@ -354,13 +354,13 @@ function init() {
 
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
   };
-  function sliceSentence(elem) {
+  function sliceSentence(elem, addClass) {
     $(elem).each(function (index, value) {
       if ($(this).outerHeight() > $(this).parent().height()) {
-        $(this).parent().addClass('cut-word')
+        $(this).parent().addClass(addClass)
       } else {
-        if ($(this).parent().hasClass('cut-word')) {
-          $(this).parent().removeClass('cut-word');
+        if ($(this).parent().hasClass(addClass)) {
+          $(this).parent().removeClass(addClass);
         };
       };
     });
@@ -515,7 +515,8 @@ function init() {
     addRemoveClass_767('.gall-wrapp-main', 'load');
     ifShadow('.popup.active .size-table');
     if ($(window).width() <= (767 - withScrollBar())) {
-      sliceSentence('.discrption-goods:not(.catalog-k) p');
+      sliceSentence('.discrption-goods:not(.catalog-k) p', 'cut-word');
+      sliceSentence('.discrption-goods.catalog-k p', 'catalog-k');
     }
     if ($(window).width() <= (900 - withScrollBar())) {
       initRangeSlider('.mob-range-slider', '.mob-input-from', '.mob-input-to');
@@ -524,7 +525,8 @@ function init() {
     }
   });
   
-  sliceSentence('.discrption-goods:not(.catalog-k) p');
+  sliceSentence('.discrption-goods:not(.catalog-k) p', 'cut-word');
+  sliceSentence('.discrption-goods.catalog-k p', 'catalog-k');
   menuAccordionMover();
   accEngine('.payment-items');
   validatorForm("#sign-in");
