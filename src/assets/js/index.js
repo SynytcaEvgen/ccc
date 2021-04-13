@@ -151,6 +151,9 @@ function init() {
   $.validator.addMethod("EMAIL", function(value, element) {
       return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
   }, "Введите корректный электронный адрес");
+  $.validator.addMethod("PHONE", function(value, element) {
+      return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
+  }, "Введите коректный номер телефона");
   function validatorForm(elem) {
     $(elem).validate({
       rules: {
@@ -169,7 +172,9 @@ function init() {
           minlength: 6,
           equalTo : "#person-pass",
         },
-        email_n:"required EMAIL",
+        email_n: "required EMAIL",
+        email_pr: "EMAIL",
+        phone_ru: "PHONE",
       },
       messages: {
         psword: {
@@ -178,7 +183,7 @@ function init() {
         psword_confirm: {
           equalTo: "Пароли не совпадают",
           minlength: 'Минимальная длина пароля 6 символов'
-        }
+        },
       },
     });
   };
@@ -846,6 +851,20 @@ function init() {
     } else {
       $(this).removeAttr('name');
       $('.check-pass').removeAttr('name');
+    }
+  });
+  $('.valid-tel').change(function () {
+    if ($(this).val() != 0) {
+      $(this).attr('name', 'phone_ru');
+    } else {
+       $(this).removeAttr('name');
+    }
+  });
+  $('.valid-mail').change(function () {
+    if ($(this).val() != 0) {
+      $(this).attr('name', ' email_pr');
+    } else {
+      $(this).removeAttr('name');
     }
   });
   $('.countries .show-all').click(function () {

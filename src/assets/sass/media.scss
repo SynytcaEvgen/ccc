@@ -1634,7 +1634,18 @@ $maxWidth: 1920;
         padding: 8px 16px;
       }
     }
-    
+    .account-info-form .columns .input-wrap.last-input {
+       margin-bottom: 22px;
+    }
+    section.info .container .info-frame .info-content-wrapper.presonal-info{
+      padding-bottom: 24px;
+    }
+    section.info .container .info-frame .info-content-wrapper.presonal-info .presonal-info{
+      margin-bottom: 16px;
+    }
+    .account-info-form .columns .input-wrap.radio-wrap{
+      margin-bottom: 22px;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
