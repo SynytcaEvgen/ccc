@@ -1713,9 +1713,6 @@ $maxWidth: 1920;
         max-width: 105px;
        
     }
-    .catalog .container .goods-gallery-block .goods-gallery-grid .goods-items .prod-card-container:hover .prod-banner-wrapper{
-        margin-bottom: 72px;
-    }
     .catalog .container .nav-wrapper .sub-nav .sub-nav-item{
         overflow-x: scroll;
     }
@@ -2398,6 +2395,9 @@ $maxWidth: 1920;
     width: 50%;
     min-width: 50%;
     margin-right: 30px;
+  }
+  .account-block.my-orders{
+     margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 900px){

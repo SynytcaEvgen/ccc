@@ -2776,7 +2776,7 @@ section.info {
               border-color: $color-goods-des;
               opacity: 0.5;
               cursor: not-allowed;
-              pointer-events: n;
+              pointer-events: none;
             }
             svg{
                width: 16px;
@@ -2857,6 +2857,7 @@ section.info {
                    opacity: 0.5;
                    cursor: not-allowed;
                    transition: 0.5s ease-in-out;
+                   pointer-events: none;
                  }
                }
              }
@@ -2888,6 +2889,9 @@ section.info {
                      background-color: $color_line_dec;
                    }
                  }
+               }
+               &.with_check{
+                 opacity: 1;
                }           
              }
              &.active{
@@ -2895,6 +2899,7 @@ section.info {
                visibility: visible;
                transition: all 0.3s ease-in-out;
              }
+             
              &.color{
                .filter-item{
                  .filter-items{
