@@ -1626,6 +1626,15 @@ $maxWidth: 1920;
       max-height: 65px;
       margin-top: unset;
     }
+    .orders-list .item {
+      .item-header{
+        padding-top: 8px;
+      }
+      .item-action{
+        padding: 8px 16px;
+      }
+    }
+    
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -2396,8 +2405,11 @@ $maxWidth: 1920;
     min-width: 50%;
     margin-right: 30px;
   }
-  .account-block.my-orders{
+  .account-block{
      margin-bottom: 24px;
+     &:last-child{
+       margin-bottom: 0;
+     }
   }
 }
 @media screen and (max-width: 900px){
