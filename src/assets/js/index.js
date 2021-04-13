@@ -175,6 +175,7 @@ function init() {
         email_n: "required EMAIL",
         email_pr: "EMAIL",
         phone_ru: "PHONE",
+        phone_ru_req: "required PHONE",
       },
       messages: {
         psword: {
@@ -533,6 +534,7 @@ function init() {
   validatorForm("#reset-pass");
   validatorForm("#registration-form");
   validatorForm("#account-prersonal-data");
+  validatorForm("#faqForm");
   $('.close-popup').click(function () {
     closePopUp('.popup.active');
   });

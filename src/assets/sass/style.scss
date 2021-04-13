@@ -3536,9 +3536,15 @@ section.info .container .info-frame .info-content-wrapper{
      padding-bottom: 48px;
    }
 }
-
-
-
+label.error {
+  color: $color-error;
+  font-size: 11px;
+  line-height: 11px;
+  padding-top: 4px;
+}
+input.error {
+   border-color: $color-error;
+}
 .account-info-form{
   .columns{
     display: flex;
