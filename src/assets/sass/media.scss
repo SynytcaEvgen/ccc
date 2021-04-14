@@ -1751,6 +1751,9 @@ $maxWidth: 1920;
     .checkout-blocks .checkout-block .delivery-point.address{
       margin-bottom: 32px;
     }
+    .checkout-blocks .checkout-block .product-rows .p-row .thumb img{
+      max-height: 100%;
+    }
    
 }
 @media only screen and (max-width: 480px) {
@@ -2692,6 +2695,11 @@ $maxWidth: 1920;
   }
   #popup-delivery-point.popup .popup__wrapper{
       padding: 0;
+  }
+  .find-shop-columns .map-wrapper #pointsMap{
+      height: 350px;
+      margin-left: -16px;
+      margin-right: -16px;
   }
 }
 //end about page
