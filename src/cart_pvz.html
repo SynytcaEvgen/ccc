@@ -241,6 +241,7 @@
             iconContentOffset: [15, 15],
             balloonOffset: [-110, -65],
             balloonMaxWidth: 331,
+            balloonMaxHeight: 38,
             hideIconOnBalloonOpen: false
         });
         myMap.geoObjects.add(objectManager);
@@ -301,6 +302,10 @@
         margin-top: 7px;
         margin-right: 7px;
     }
+    [class*="-balloon__content"]{
+        max-height: 38px;
+    }
+    
     [class*="-balloon__tail"]{
         left: 158px;
     }

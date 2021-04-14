@@ -5871,6 +5871,8 @@ section.info .info-frame .info-content-wrapper.news-detail{
     width: 1018px;
     max-width: 100%;
     max-height: none;
+    padding-bottom: 10px;
+    padding-right: 20px;
   }
   .points-nav{
     display: flex;
@@ -5884,9 +5886,6 @@ section.info .info-frame .info-content-wrapper.news-detail{
       &.active{
         color: #FF5F00;
         font-family: $gordita_bold;
-        text-decoration: none;
-      }
-      &:hover{
         text-decoration: none;
       }
     }
@@ -5914,6 +5913,9 @@ section.info .info-frame .info-content-wrapper.news-detail{
         }
       }
     }
+    .ymaps-2-1-78-balloon .ymaps-2-1-78-balloon__layout .ymaps-2-1-78-balloon__content ymaps{
+         height: 20px;
+    }
     .points-list__outter{
       max-height: 362px;
       overflow: hidden;
@@ -5928,7 +5930,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
         .point{
           margin-bottom: 8px;
           border: 1px solid #E8E8E8;
-          padding: 8px 16px;
+          padding: 6px 16px;
           cursor: pointer;
           &:hover{
             border-color: #FF5F00;
@@ -5974,10 +5976,10 @@ section.info .info-frame .info-content-wrapper.news-detail{
     .point-meta{
       white-space: normal;
       border: 1px solid #E8E8E8;
-      padding: 16px;
+      padding: 10px 16px 22px;
       width: 362px;
       min-width: 362px;
-      margin-left: 16px;
+      margin-left: 20px;
       .title{
         margin-bottom: 16px;
         font-family: $gordita_medium;
@@ -5994,17 +5996,24 @@ section.info .info-frame .info-content-wrapper.news-detail{
           line-height: 22px;
           .key{
             color: #575656;
+            line-height: 22px;
+            font-size: 12px;
           }
           .val{
             text-align: right;
+            line-height: 22px;
+            font-size: 12px;
           }
           &.description{
             flex-direction: column;
             .key{
-              margin-bottom: 5px;
+              margin-bottom: 4px;
+              font-size: 12px;
             }
             .val{
               text-align: left;
+              line-height: 22px;
+              font-size: 12px;
             }
           }
           &:last-child{
