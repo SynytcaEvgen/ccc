@@ -1711,6 +1711,13 @@ $maxWidth: 1920;
                 padding-bottom: 2px;
               }
             }
+            &.delivery-radio,
+            &.pay-radio{
+              margin-top: 16px;
+            }
+          }
+          .acceptance.pay-met{
+            margin-bottom: 32px;
           }
         }
         .checkout-total__rows{

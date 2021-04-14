@@ -5670,7 +5670,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
         }
         input:checked+span{
           background: #E8E8E8;
-          border-color: #222;
+          border: 2px solid $color_text;
           color: #222;
         }
       }
@@ -5752,6 +5752,8 @@ section.info .info-frame .info-content-wrapper.news-detail{
       display: block;
       a{
         text-decoration: underline;
+        font-size: 11px;
+        line-height: 21px;
       }
       input{
         position: absolute;
@@ -5772,14 +5774,15 @@ section.info .info-frame .info-content-wrapper.news-detail{
         display: block;
         position: relative;
         padding-left: 29px;
-        line-height: 24px;
+        font-size: 11px;
+        line-height: 21px;
         &:before{
           content: '';
           position: absolute;
           top: 2px;
           left: 0;
-          width: 18px;
-          height: 18px;
+          width: 16px;
+          height: 16px;
           background-color: transparent;
           border: 1px solid #222222;
         }
@@ -5790,8 +5793,8 @@ section.info .info-frame .info-content-wrapper.news-detail{
           top: 2px;
           left: 0;
           transform: scale(0);
-          width: 18px;
-          height: 18px;
+          width: 16px;
+          height: 16px;
           color: #fff;
           border: 1px solid transparent;
           display: flex;
