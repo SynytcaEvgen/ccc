@@ -893,13 +893,6 @@ function init() {
        $(this).removeAttr('name');
     }
   });
-  $('.valid-mail').change(function () {
-    if ($(this).val() != 0) {
-      $(this).attr('name', ' email_pr');
-    } else {
-      $(this).removeAttr('name');
-    }
-  });
   $('.countries .show-all').click(function () {
     $(this).parent().siblings('.row').toggleClass('opened')
   });
@@ -910,7 +903,7 @@ function init() {
       $(this).parents('.form').find('input.accept_btn').addClass('no-active');
     }
   });
-  $('.phone_mask').mask('+7 (000) 000-00-00');
+  $('.phone_mask').mask('+0 (000) 000-00-00');
   $('.zip_mask').mask('000000');
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('button').addClass('mob_center')

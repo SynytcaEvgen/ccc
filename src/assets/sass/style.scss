@@ -1375,9 +1375,15 @@ main section button{
         a{
           .icon svg{
             stroke: $color-action-h;
+            transition: 0.3s ease;
           }
           .icon_title{
             color: $color-action-h;
+            transition: 0.3s ease;
+          }
+          .icon .icon_quantity.active::after{
+            background-color: $color-action-h;
+            transition: 0.3s ease;
           }
         }
       } 
@@ -1406,6 +1412,7 @@ main section button{
             left: 50%;
             z-index: -1;
             transform: translate(-50%, -50%);
+            transition: 0.3s ease;
           }
           &.active{
             transform: scale(1);
@@ -2675,16 +2682,17 @@ section.info {
           justify-content: center;
           align-items: center;
           padding: 0 36px;
-          p{
-            padding: 0 16px;
+          span{
+            padding: 0 5px;
           }
           span.active{
             text-decoration: underline;
             font-family: $gordita_medium;
           }
-          .mob-page{
-            display: none;
-          }
+          a span:hover{
+              color: $color-action-h;
+          } 
+          
         }
         .pagin-previous p{
           padding-left: 36px;
@@ -3388,9 +3396,11 @@ section.info .container .info-frame .info-content-wrapper.account-section{
   border-radius: 2px;
   &.my-orders{
     width: 625px;
+    margin-bottom: 24px;
   }
   &.my-info{
     width: 326px;
+    margin-bottom: 24px;
   }
   &.my-favorits{
     width: 100%;
@@ -4047,6 +4057,9 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
         padding: 16px;
         &>p{
           margin-bottom: 4px;
+          &:last-child{
+            margin-bottom: 0;
+          }
         }
         .pay-btn{
           border: none;
@@ -4278,6 +4291,19 @@ section.info .container .info-frame .info-content-wrapper.personal-favorit {
   }
  
 }
+.catalog-wrapper.personal-favorit{
+  .prod-card-container{
+    .prod-banner-wrapper{
+      .promo-wrapp{
+        .best-saler{
+          margin-top: -8px;
+          margin-left: -12px;
+        }
+      }
+    }
+  }
+}
+
 //account pages end, end!
 
 //detail_start

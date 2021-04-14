@@ -1737,7 +1737,10 @@ $maxWidth: 1920;
            }
         } 
       }
-    }   
+    }  
+    .cat-pagination-wrapper .pagination-container .pagin-numb span{
+      padding: 0 12px;
+    } 
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
