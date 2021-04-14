@@ -1671,6 +1671,10 @@ $maxWidth: 1920;
         .checkout-block{
           .title{
             font-size: 13px;
+            &.mob_center{
+               padding-top: 18px;
+               padding-bottom: 14px;
+             }
           }
           .product-rows .p-row {
             &:last-child{
@@ -1717,6 +1721,11 @@ $maxWidth: 1920;
              padding: 10px 0;
              &.mob_center{
                padding-top: 12px;
+             }
+           }
+           .coupon-form .flex [type=submit]{
+             &.mob_center{
+               padding-top: 2px;
              }
            }
         } 

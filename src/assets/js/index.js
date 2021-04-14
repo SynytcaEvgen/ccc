@@ -905,9 +905,9 @@ function init() {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('button').addClass('mob_center')
   } else {
-    // if ($('button').hasClass('mob_center')) {
-    //   $('button').removeClass('mob_center')
-    // } else { return };
+    if ($('button').hasClass('mob_center')) {
+      $('button').removeClass('mob_center')
+    } else { return };
   };
 };
 
