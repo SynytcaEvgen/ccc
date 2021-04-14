@@ -33,19 +33,37 @@
                         @@include('./part/card_prod.html')
                         @@include('./part/customer_info.html')
                         @@include('./part/customer_adresse.html')
-                        @@include('./part/delivery_method.html')
                         <div class="checkout-block">
-                            <div class="title">СПОСОБЫ ОПЛАТЫ</div>
-                            <div class="inputs pay-radio">
-                                <label class="radio-wrap"><input type="radio" checked name="payment_type"><span>БАНКОВСКОЙ КАРТОЙ НА САЙТЕ</span></label>
-                                <label class="radio-wrap"><input type="radio" name="payment_type"><span>ОПЛАТА ПРИ ПОЛУЧЕНИИ</span></label>
+                            <div class="title">СПОСОБЫ ДОСТАВКИ</div>
+                            <div class="inputs delivery-radio">
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОСТАМАТЫ И ПУНКТЫ ВЫДАЧИ ЗАКАЗОВ
+                                    </span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>КУРЬЕРОМ БЕЗ ПРИМЕРКИ И ЧАСТИЧНОГО
+                                        ВЫКУПА</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type" checked><span>КУРЬЕРОМ С ПРИМЕРКОЙ И
+                                        ЧАСТИЧНЫМ ВЫКУПОМ</span></label>
+                                <label class="radio-wrap"><input type="radio" name="delivery_type"><span>ПОЧТА РОССИИ</span></label>
                             </div>
-                            <div class="acceptance">
-                                <p><label class="checkbox-label"><input type="checkbox" name="accept" checked><span>Ознакомлен и соглашаюсь с <a
-                                        href="#">Политикой конфиденциальности</a></span></label></p>
-                                <p><label class="checkbox-label"><input type="checkbox" name="subscribe" checked><span>Подписаться на новости, акции и специальные предложения</span></label></p>
+                            <div class="delivery-meta">
+                                <p>Сроки доставки: 5-7 рабочих дней.</p>
+                                <p>Стоимость доставки: 500 ₽.</p>
+                            </div>
+                            <div class="delivery-point">
+                                <a href="#" class="btn theme-btn chose-point">Выбрать пункт выдачи заказов</a>
+                            </div>
+                            <div class="delivery-point address">
+                                <div class="input-wrap">
+                                    <input type="text" name="street" placeholder="Улица*">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" name="building" placeholder="Дом*">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" name="apartament" placeholder="Квартира/офис*">
+                                </div>
                             </div>
                         </div>
+                        @@include('./part/payment_method.html')
                     </form>
                 </div>
                 <div class="col">

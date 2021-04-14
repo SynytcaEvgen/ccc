@@ -5704,33 +5704,32 @@ section.info .info-frame .info-content-wrapper.news-detail{
         margin-bottom: 8px;
         font-size: 13px;
         line-height: 23px;
+        &:last-child{
+          margin-bottom: 16px;
+        }
+
       }
     }
     .delivery-point{
       margin-top: 8px;
       margin-bottom: 40px;
       display: flex;
-      margin-right: -8px;
-      margin-left: -8px;
+      // margin-right: -8px;
+      // margin-left: -8px;
       &.address{
         margin-top: 29px;
       }
+      .theme-btn {
+        padding: 0 34px;
+      }
       .input-wrap{
+        display: flex;
+        flex-direction: column;
         margin-right: 8px;
         margin-left: 8px;
         width: calc(25% - 16px);
         input{
           width: 100%;
-          &.invalid{
-            border-color: $color-price-sale;
-          }
-        }
-        .error-message{
-          font-family: $gordita_regular;
-          font-size: 11px;
-          line-height: 12px;
-          color: #EB001B;
-          margin-top: 4px;
         }
         &:first-child{
           width: calc(50% - 16px);

@@ -170,6 +170,16 @@ function init() {
         city: {
           required: true,
         },
+        street: {
+          required: true,
+        },
+        building: {
+          required: true,
+        },
+        apartament: {
+          required: true,
+        },
+
          zip: {
            required: true,
            minlength: 6,
