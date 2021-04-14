@@ -178,6 +178,9 @@ $maxWidth: 1920;
      max-width: unset;
      max-height: unset;
    }
+   .checkout-blocks .checkout-block .product-rows .p-row .thumb img{
+     max-height: unset;
+   }
   
 
 }
@@ -1658,6 +1661,66 @@ $maxWidth: 1920;
     section.info .container .info-frame .info-content-wrapper.personal-orders{
       padding-bottom: 24px;
     }
+    .checkout.info{
+      .section-title{
+         font-size: 13px;
+         line-height: 23px;
+         margin-bottom: 16px;
+      }
+      .checkout-blocks{
+        .checkout-block{
+          .title{
+            font-size: 13px;
+          }
+          .product-rows .p-row {
+            &:last-child{
+              border-bottom: unset;
+              padding-bottom: 0;
+            }
+            .thumb{
+              max-height: 200px;
+              overflow: hidden;
+              margin-right: 16px;
+            }
+            .p-summ {
+              margin-top: 10px;
+              .key,
+              .price{
+                font-size: 12px;
+                line-height: 15px;
+              }
+              .key{
+                width: unset;
+                margin-right: 34px;
+              }
+            }
+          }
+          .product-rows__header{
+            display: none;
+          }
+          .inputs {
+            .input-wrap{
+              &:first-child{
+                margin-top: 27px;
+              }
+              input{
+                padding-bottom: 2px;
+              }
+            }
+          }
+        }
+        .checkout-total__rows{
+          padding-bottom: 0;
+        }
+        .checkout-total{
+           .btn{
+            padding: 0;
+             line-height: 43px;
+           }
+        } 
+      }
+    } 
+      
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -2315,9 +2378,9 @@ $maxWidth: 1920;
     line-height: 21px;
     margin-bottom: 16px;
   }
-  .checkout-blocks .checkout-total__rows .ct-row{
-    margin-bottom: 10px;
-  }
+  // .checkout-blocks .checkout-total__rows .ct-row{
+  //   margin-bottom: 10px;
+  // }
   .checkout-blocks{
     padding-bottom: 24px;
   }

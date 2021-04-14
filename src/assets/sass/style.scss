@@ -5635,6 +5635,8 @@ section.info .info-frame .info-content-wrapper.news-detail{
       .input-wrap{
         margin-top: 39px;
         width: calc(50% - 12px);
+        display: flex;
+        flex-direction: column;
         input{
           width: 100%;
           font-size: 13px;

@@ -167,6 +167,18 @@ function init() {
         last_name: {
           required: true,
         },
+        city: {
+          required: true,
+        },
+         zip: {
+           required: true,
+           minlength: 6,
+           maxlength: 6,
+           digits: true,
+        },
+        last_name: {
+          required: true,
+        },
         psword_confirm: {
           required: true,
           minlength: 6,
@@ -185,6 +197,12 @@ function init() {
           equalTo: "Пароли не совпадают",
           minlength: 'Минимальная длина пароля 6 символов'
         },
+        zip: {
+          minlength:'Почтовый индекс состоит из 6 цифр',
+          maxlength: 'Почтовый индекс состоит из 6 цифр',
+          digits: 'Почтовый индекс состоит из 6 цифр',
+
+        }
       },
     });
   };
@@ -535,6 +553,7 @@ function init() {
   validatorForm("#registration-form");
   validatorForm("#account-prersonal-data");
   validatorForm("#faqForm");
+  validatorForm("#checkoutForm");
   $('.close-popup').click(function () {
     closePopUp('.popup.active');
   });
@@ -882,6 +901,7 @@ function init() {
     }
   });
   $('.phone_mask').mask('+7 (000) 000-00-00');
+  $('.zip_mask').mask('000000');
 };
 
 

@@ -2357,17 +2357,17 @@
                         <div class="checkout-block">
     <div class="title">ПОКУПАТЕЛЬ</div>
     <div class="inputs">
-        <div class="input-wrap"><input type="text" name="name" placeholder="Имя *"></div>
-        <div class="input-wrap"><input type="text" name="name" placeholder="Фамилия *"></div>
-        <div class="input-wrap"><input type="text" name="phone_ru_req" placeholder="Телефон *" class="phone_mask"></div>
-        <div class="input-wrap"><input type="text" name="email_n" placeholder="E-mail *"></div>
+        <div class="input-wrap"><input type="text" name="name" placeholder="Имя *" required></div>
+        <div class="input-wrap"><input type="text" name="last_name" placeholder="Фамилия *" required></div>
+        <div class="input-wrap"><input type="text" name="phone_ru_req" placeholder="Телефон *" class="phone_mask" required></div>
+        <div class="input-wrap"><input type="text" name="email_n" placeholder="E-mail *" required></div>
     </div>
 </div>
                         <div class="checkout-block">
     <div class="title">Адрес доставки</div>
     <div class="inputs">
-        <div class="input-wrap"><input type="text" name="city" placeholder="Город *"></div>
-        <div class="input-wrap"><input type="text" name="zip" placeholder="Индекс *"></div>
+        <div class="input-wrap"><input type="text" name="city" placeholder="Город *" required></div>
+        <div class="input-wrap"><input type="text" name="zip" class="zip_mask" placeholder="Индекс *" required></div>
     </div>
 </div>
                         <div class="checkout-block">
@@ -2412,7 +2412,7 @@
         <div class="flex"><input type="text" name="coupon" value="BAGS" placeholder="Купон"><input type="submit" value="ok"></div>
         <p class="form-message done">BAGS - купон активирован <a href="#"><svg><use href="assets/sprite/sprite.svg#close"></use></svg></a></p>
     </form>
-    <button type="button" class="btn">Оформить заказ</button>
+    <button type="submit" class="btn" form="checkoutForm" value="Submit">Оформить заказ</button>
 </div>
                 </div>
             </div>
