@@ -1741,6 +1741,17 @@ $maxWidth: 1920;
     .cat-pagination-wrapper .pagination-container .pagin-numb span{
       padding: 0 12px;
     } 
+    .checkout-blocks .checkout-block .delivery-point{
+      margin-bottom: 32px;
+    }
+    .checkout-blocks .checkout-block .delivery-point .input-wrap{
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .checkout-blocks .checkout-block .delivery-point.address{
+      margin-bottom: 32px;
+    }
+   
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -2373,9 +2384,9 @@ $maxWidth: 1920;
   .checkout-blocks .checkout-block .delivery-point{
     .btn{
       width: 100%;
-      margin-top: 16px;
-      margin-right: 8px;
-      margin-left: 8px;
+      // margin-top: 16px;
+      // margin-right: 8px;
+      // margin-left: 8px;
     }
   }
   .checkout-blocks .checkout-block .inputs.pay-radio .radio-wrap{
@@ -2409,8 +2420,11 @@ $maxWidth: 1920;
   }
   .checkout-blocks .checkout-block .delivery-point .input-wrap,
   .checkout-blocks .checkout-block .delivery-point .input-wrap:first-child{
-    width: calc(100% - 16px);
+    width: 100%;
     margin-bottom: 16px;
+  }
+  .checkout-blocks .checkout-block .delivery-point .input-wrap:last-child{
+    margin-bottom: 0;
   }
 }
 //checkout end!
@@ -2675,6 +2689,9 @@ $maxWidth: 1920;
         font-size: 16px;
       }
     }
+  }
+  #popup-delivery-point.popup .popup__wrapper{
+      padding: 0;
   }
 }
 //end about page
