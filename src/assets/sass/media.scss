@@ -1714,13 +1714,14 @@ $maxWidth: 1920;
         }
         .checkout-total{
            .btn{
-            padding: 0;
-             height: 43px;
+             padding: 10px 0;
+             &.mob_center{
+               padding-top: 12px;
+             }
            }
         } 
       }
-    } 
-      
+    }   
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{

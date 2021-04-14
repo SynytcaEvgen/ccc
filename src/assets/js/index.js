@@ -902,6 +902,13 @@ function init() {
   });
   $('.phone_mask').mask('+7 (000) 000-00-00');
   $('.zip_mask').mask('000000');
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('button').addClass('mob_center')
+  } else {
+    // if ($('button').hasClass('mob_center')) {
+    //   $('button').removeClass('mob_center')
+    // } else { return };
+  };
 };
 
 
