@@ -52,7 +52,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="info-content-wrapper">
+                    <div class="info-content-wrapper contacts_p">
                         <h1 class="title">Контакты</h1>
                         <div class="contacts-page-wrap">
                             <div class="contacts-items">
@@ -70,7 +70,7 @@
                                             <use href="assets/sprite/sprite.svg#contactsPhone"></use>
                                         </svg>
                                     </div>
-                                    <p><span>Телефон</span>+7-(945)-800-69-96</p>
+                                    <p><span>Телефон</span><a href="tel:79458006996">+7-(945)-800-69-96</a></p>
                                 </div>
                                 <div class="item">
                                     <div class="icon">
@@ -78,22 +78,22 @@
                                             <use href="assets/sprite/sprite.svg#contactsMail"></use>
                                         </svg>
                                     </div>
-                                    <p><span>Электронная почта</span>info@ccc.ru</p>
+                                    <p><span>Электронная почта</span> <a href="mailto:info@ccc.ru">info@ccc.ru</a></p>
                                 </div>
                                 <div class="item social">
                                     <div class="flex">
                                         <a href="#">
-                                            <svg width="10" height="20">
+                                            <svg width="10" height="20" class="cont-face">
                                                 <use href="assets/sprite/sprite.svg#contactsFb"></use>
                                             </svg>
                                         </a>
                                         <a href="#">
-                                            <svg width="18" height="18">
-                                                <use href="assets/sprite/sprite.svg#contactsInst"></use>
+                                            <svg width="18" height="18" class="cont-insta">
+                                                <use href="assets/sprite/sprite.svg#instagram"></use>
                                             </svg>
                                         </a>
                                         <a href="#">
-                                            <svg width="20" height="17">
+                                            <svg width="20" height="17" class="cont-youtube">
                                                 <use href="assets/sprite/sprite.svg#contactsYtb"></use>
                                             </svg>
                                         </a>
@@ -107,17 +107,17 @@
                                 <p>Мы в соц.сетях</p>
                                 <div class="flex">
                                     <a href="#">
-                                        <svg width="10" height="20">
+                                        <svg width="10" height="20" class="cont-face">
                                             <use href="assets/sprite/sprite.svg#contactsFb"></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg width="18" height="18">
-                                            <use href="assets/sprite/sprite.svg#contactsInst"></use>
+                                        <svg width="18" height="18" class="cont-insta">
+                                            <use href="assets/sprite/sprite.svg#instagram"></use>
                                         </svg>
                                     </a>
                                     <a href="#">
-                                        <svg width="20" height="17">
+                                        <svg width="20" height="17" class="cont-youtube">
                                             <use href="assets/sprite/sprite.svg#contactsYtb"></use>
                                         </svg>
                                     </a>
@@ -126,8 +126,8 @@
 
                             <div class="contacts-block">
                                 <div class="title">Обратная связь</div>
-                                <form action="/" method="post" class="contacts-form">
-                                    <div class="input-wrap"><input type="text" name="email" placeholder="E-mai*"></div>
+                                <form action="/" method="post" class="contacts-form" id="contacts_form">
+                                    <div class="input-wrap"><input type="text" name="email_n" placeholder="E-mai*"></div>
                                     <div class="input-wrap"><input type="text" name="subject" placeholder="Тема обращения*"></div>
                                     <div class="input-wrap"><textarea name="message" placeholder="Введите сообщение*"></textarea></div>
                                     <div class="input-wrap">
@@ -137,7 +137,7 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="contacts-block">
+                            <div class="contacts-block last_item">
                                 <div class="title">Юридическая информация</div>
                                 <p>ОГРН: 1234567891011</p>
                                 <p>ИНН: 1234567891</p>

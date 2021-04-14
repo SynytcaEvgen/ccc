@@ -173,6 +173,12 @@ function init() {
         street: {
           required: true,
         },
+        subject: {
+          required: true,
+        },
+        message: {
+          required: true,
+        },
         building: {
           required: true,
         },
@@ -564,6 +570,7 @@ function init() {
   validatorForm("#account-prersonal-data");
   validatorForm("#faqForm");
   validatorForm("#checkoutForm");
+  validatorForm("#contacts_form");
   $('.close-popup').click(function () {
     closePopUp('.popup.active');
   });
