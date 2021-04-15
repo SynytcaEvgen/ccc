@@ -877,10 +877,8 @@ function init() {
     console.log(hasFocus);
     if (hasFocus) {
       $(this).prev().blur();
-      console.log('remove focus')
     } else {
       $(this).prev().focus();
-      console.log('add focus')
     }
   });
   $('.new-pass').change(function () {
