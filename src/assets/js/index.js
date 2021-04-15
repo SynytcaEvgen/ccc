@@ -901,7 +901,8 @@ function init() {
     }
   });
   $('.countries .show-all').click(function () {
-    $(this).parent().siblings('.row').toggleClass('opened')
+    $('.countries .show-all').toggleClass('show');
+    $(this).parent().siblings('.row').toggleClass('opened');
   });
   $('.checkbox-label').change(function () {
     if ($(this).children('.accept_check').prop('checked')) {

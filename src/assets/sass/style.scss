@@ -6289,7 +6289,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
 //end contacts page
 //size table
 .size-table-wrap{
-  width: 975px;
+  // width: 975px;
   max-width: 100%;
   .brand-choose{
     .label{
@@ -6308,6 +6308,14 @@ section.info .info-frame .info-content-wrapper.news-detail{
         border: 1px solid #E8E8E8;
         box-sizing: border-box;
         border-radius: 2px;
+        &::after{
+          border-color: $color_promo_bg;
+          border-width: 1px;
+          width: 10px;
+          height: 10px;
+          top: 42%;
+          right: 18px;
+        }
       }
     }
     display: flex;
@@ -6317,7 +6325,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
   .table-nav{
     display: flex;
     border-bottom: 1px solid #e8e8e8;
-    margin-bottom: 9px;
+    margin-bottom: 11px;
     a{
       text-transform: uppercase;
       text-decoration: underline;
@@ -6337,7 +6345,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
   }
 }
 .size-table{
-  margin-right: -5px;
+  margin-right: 25px;
   margin-left: -5px;
   font-family: $gordita_regular;
   font-size: 12px;
@@ -6348,6 +6356,7 @@ section.info .info-frame .info-content-wrapper.news-detail{
       padding: 5px;
       line-height: 23px;
       text-align: center;
+      // max-width: 70px;
       &:first-child{
         text-align: left;
       }
@@ -6356,6 +6365,9 @@ section.info .info-frame .info-content-wrapper.news-detail{
       td{
         font-family: $gordita_medium;
       }
+    }
+    tr td:first-child{
+      width: 115px;
     }
   }
 }
@@ -6374,6 +6386,9 @@ section.info .info-frame .info-content-wrapper.news-detail{
     margin-bottom: 4px;
     font-size: 10px;
     line-height: 16px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 //end size table
@@ -6382,6 +6397,9 @@ section.info .info-frame .info-content-wrapper.news-detail{
   white-space: normal;
   .about-block{
     margin-bottom: 32px;
+    &:last-child .block-image{
+      margin-bottom: 32px;
+    }
     .visible-mob{
       display: none;
     }

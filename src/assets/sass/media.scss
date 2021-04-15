@@ -135,6 +135,9 @@ $maxWidth: 1920;
        height: unset;
        max-height: 262px;
    }
+   .size-table{
+     margin-right: -5px;
+   }
 }
 @media only screen and (max-width: 1199px) {
     .sec-top {          
@@ -1782,6 +1785,9 @@ $maxWidth: 1920;
      section.info .container .info-frame .info-content-wrapper.contacts_p{
        padding-bottom: 24px;
      }
+     .size-table table tr td:first-child{
+       width: 150px;
+     }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -2608,6 +2614,8 @@ $maxWidth: 1920;
     .primary{
       width: 100%;
       font-size: 13px;
+      line-height: 23px;
+      margin-bottom: 16px;
     }
     .secondary{
       width: 100%;
@@ -2649,7 +2657,7 @@ $maxWidth: 1920;
     margin-bottom: 16px;
     font-size: 14px;
     line-height: 24px;
-    margin-top: -8px;
+    // margin-top: -8px;
   }
   .about-page-wrapper .about-block .countries .row .item{
     width: 50%;
@@ -2662,6 +2670,9 @@ $maxWidth: 1920;
   .about-page-wrapper .about-block .block-tables .item{
     width: calc(100% - 16px);
     margin-bottom: 16px;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
   .about-page-wrapper .about-block .block-tables .item .item-head{
     min-height: 102px;
@@ -2671,6 +2682,12 @@ $maxWidth: 1920;
   }
   .about-page-wrapper .about-block{
     margin-bottom: 24px;
+    &:last-child .block-image{
+      margin-bottom: 25px;
+    }
+  }
+  .about-page-wrapper .about-block .block-text.last .text .title{
+      font-size: 14px;
   }
   .about-page-wrapper .about-block .countries {
     padding-bottom: 0;
@@ -2685,11 +2702,26 @@ $maxWidth: 1920;
     }
     .action{
       display: block;
-      padding: 16px 0 0;
+      padding: 17px 0 0;
       text-align: center;
+      background-color: $color_ivert;
+      margin-top: -1px;
+      position: relative;
+      z-index: 3;
       .show-all{
         font-size: 13px;
         text-decoration: underline;
+        transition: color .3s ease-in-out;
+        cursor: pointer;
+        display: none;
+        &:hover{
+          color: $color-action-h;
+          transition: color .3s ease-in-out;
+        }
+        &.show{
+          display: block;
+          transition:  transform .3s ease-in-out;
+        }
       }
     }
   }
@@ -2697,7 +2729,7 @@ $maxWidth: 1920;
     flex-direction: column-reverse;
     .text{
       width: auto;
-      margin: -13px -16px 0 28px;
+      // margin: -13px -16px 0 28px;
       background-color: #fff;
       padding: 24px 16px 0 24px;
       position: relative;
