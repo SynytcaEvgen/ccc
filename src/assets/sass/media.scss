@@ -2702,7 +2702,7 @@ $maxWidth: 1920;
     }
     .action{
       display: block;
-      padding: 17px 0 0;
+      padding: 17px 0 17px;
       text-align: center;
       background-color: $color_ivert;
       margin-top: -1px;
@@ -2713,14 +2713,24 @@ $maxWidth: 1920;
         text-decoration: underline;
         transition: color .3s ease-in-out;
         cursor: pointer;
-        display: none;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        transition: opacity 1.8s ease;
+        // display: none;
         &:hover{
           color: $color-action-h;
           transition: color .3s ease-in-out;
         }
         &.show{
-          display: block;
-          transition:  transform .3s ease-in-out;
+          // display: block;
+          transition: opacity 1.8s ease;
+          opacity: 1;
+          visibility: visible;
+          
         }
       }
     }
