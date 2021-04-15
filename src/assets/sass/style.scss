@@ -741,8 +741,10 @@ main section button{
       width: 24px;
       height: 24px;
       cursor: pointer;
+      transition: stroke 0.3s ease-in-out;
       &:hover{
           stroke: $color-action-h;
+          transition: stroke 0.3s ease-in-out;
         }
       &.close{
         right: 15px;
