@@ -2495,6 +2495,11 @@ section.info {
         color: $color-action-h;
         transition: 0.3s ease-in-out;
     }
+    &:hover .title::after,
+    &:hover .title::before{
+      background-color: $color-action-h;
+      transition: .3s ease-in-out;
+    }
     .title{
       position: relative;
       transition: 0.3s ease-in-out;
