@@ -6117,7 +6117,13 @@ section.info .info-frame .info-content-wrapper.news-detail{
         stroke: #222;
         fill:none;
         vertical-align: text-bottom;
+        transition: .3s ease-in-out;
+        &:hover{
+           stroke: $color-action-h;
+           transition: .3s ease-in-out;
+        }
       }
+      
     }
   }
   .points-list__outter{

@@ -494,7 +494,7 @@ function init() {
     let jin = document.querySelectorAll(intext);
     for (let i = 0; i < jin.length; i++) {
       jin[i].addEventListener('keydown', function(e){
-      if( e.key.match(/[0-9]/) ) return e.preventDefault();
+      if(!e.key.match(/^[A-zА-яЁё]/) ) return e.preventDefault();
      }); 
       jin[i].addEventListener('input', function(e){
        this.value = this.value.replace(/[0-9]/g, "");
