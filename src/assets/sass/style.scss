@@ -1679,18 +1679,17 @@ main section button{
       justify-content: space-between;
       padding: 8px 10px 0 8px;
       .best-saler {
-        background-color: $color_ivert;        
-        max-width: 38px;
         max-height: 20px;
         visibility: hidden;
         opacity: 0;
         span{
+          background-color: $color_ivert;  
           text-transform: uppercase;
           font-family: $gordita_bold;
           font-size: 10px;
           line-height: 1.6;
           padding: 2px 8px 2px;
-          display: block;
+          display: inline-block;
         }
       }
       .favorit{
@@ -3741,8 +3740,8 @@ textarea.error {
   }
 }
 .account-orders{
-  width: 975px;
-  max-width: 100%;
+  max-width: 975px;
+  // max-width: 100%;
   .account-orders__nav{
     display: flex;
     max-width: 100%;
@@ -3986,7 +3985,12 @@ textarea.error {
       background-color: $color-action;
       transition: .3s ease-in-out;
     }
+    &.no-active{
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
+  
 }
 section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   padding-top: 24px;

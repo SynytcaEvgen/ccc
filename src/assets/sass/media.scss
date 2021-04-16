@@ -1887,6 +1887,7 @@ $maxWidth: 1920;
     }
     .info-text.safety .covid-info-wrapper .measures-items{
         flex-direction: column;
+        max-width: 100%;
     }
     .info-text.safety .covid-info-wrapper .icon{
         text-align: center;

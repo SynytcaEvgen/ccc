@@ -151,8 +151,8 @@ function init() {
   $.validator.addMethod("EMAIL", function(value, element) {
       return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
   }, "Введите корректный электронный адрес");
-  $.validator.addMethod("PHONE", function(value, element) {
-      return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
+  $.validator.addMethod("PHONE", function (value, element) {
+    return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
   }, "Введите коректный номер телефона");
   function validatorForm(elem) {
     $(elem).validate({
@@ -480,6 +480,26 @@ function init() {
     } else {
       removeShadow(elem);
     }
+  };
+  function disableButton(inPut, form, btn) {
+    $(inPut).change(function () {
+       if ($(this).children('.accept_check').prop('checked')) {
+         $(this).parents(form).find(btn).removeClass('no-active');
+       } else {
+         $(this).parents(form).find(btn).addClass('no-active');
+       }
+    });
+  };
+  function onlyLetterInput(intext) {
+    let jin = document.querySelectorAll(intext);
+    for (let i = 0; i < jin.length; i++) {
+      jin[i].addEventListener('keydown', function(e){
+      if( e.key.match(/[0-9]/) ) return e.preventDefault();
+     }); 
+      jin[i].addEventListener('input', function(e){
+       this.value = this.value.replace(/[0-9]/g, "");
+      });
+    };
   };
   $('.features_items .search').click(function () {
     if ($(window).width() >= (900 - withScrollBar())) {
@@ -902,13 +922,8 @@ function init() {
     $('.countries .show-all').toggleClass('show');
     $(this).parent().siblings('.row').toggleClass('opened');
   });
-  $('.checkbox-label').change(function () {
-    if ($(this).children('.accept_check').prop('checked')) {
-      $(this).parents('.form').find('input.accept_btn').removeClass('no-active');
-    } else {
-      $(this).parents('.form').find('input.accept_btn').addClass('no-active');
-    }
-  });
+  disableButton(".checkbox-label", ".form", "input.accept_btn");
+  disableButton(".checkbox-label", "#registration-form", ".form-actions .submit-btn");
   $('.phone_mask').mask('+0 (000) 000-00-00');
   $('.zip_mask').mask('000000');
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -916,8 +931,16 @@ function init() {
   } else {
     if ($('button').hasClass('mob_center')) {
       $('button').removeClass('mob_center')
-    } else { return };
+    };
   };
+  $('#input_date').datepicker({
+    autoClose: true,
+  });
+  
+  onlyLetterInput('.only_letter')
+  
+
+  
 };
 
 
