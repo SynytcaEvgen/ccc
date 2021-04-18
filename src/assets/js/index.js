@@ -357,6 +357,7 @@ function init() {
         });
     });
   };
+  let textareaLineHeight=parseInt($(".textarea-wrapper textarea").css("line-height"));
   function rNumber(elem){
     return String(elem).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   };
@@ -378,7 +379,6 @@ function init() {
             theme:"my-theme",
             axis: "x"
           });
-          
         });
   })(jQuery);
   function come(elem) {
@@ -937,8 +937,10 @@ function init() {
     autoClose: true,
   });
   
-  onlyLetterInput('.only_letter')
-  
+  onlyLetterInput('.only_letter');
+  $(".textarea-wrapper").overlayScrollbars({
+    
+  });
 
   
 };

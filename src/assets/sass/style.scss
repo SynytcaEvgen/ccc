@@ -252,6 +252,29 @@ input.box-check {
     }
   }
 }
+// textarea{
+//   &::-webkit-scrollbar {
+//     width: 4px;
+//   }
+//   &::-webkit-scrollbar-track {
+//     background: $color-bg-footer;
+//     -webkit-border-radius: 1px;
+//     border-radius: 1px;
+//   }
+//   &::-webkit-scrollbar-thumb {
+//     -webkit-border-radius: 1px;
+//     border-radius: 11px;
+//     background: $color_menu_non;
+//   }
+// }
+textarea:root {
+  scrollbar-face-color: rgb(210, 210, 210);
+  /* Firefox 63 compatibility */
+  scrollbar-track-color: rgb(46, 54, 69);
+  /* Firefox 63 compatibility */
+  scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69);
+  scrollbar-width: thin;
+}
 .overlay{
   position: fixed;
   top: 0;
