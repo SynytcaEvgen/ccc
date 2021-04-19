@@ -827,13 +827,13 @@ function init() {
             success: function(response){
                 response = JSON.parse(response);
 
-                if(response.success) {
-                    if(need_delete) {
-                        button.removeClass('select');
-                    }else {
-                        button.addClass('select');
-                    }
-                }
+                // if(response.success) {
+                //     if(need_delete) {
+                //         button.removeClass('select');
+                //     }else {
+                //         button.addClass('select');
+                //     }
+                // }
             }
         });
   });
