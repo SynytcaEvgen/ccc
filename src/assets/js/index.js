@@ -938,11 +938,14 @@ function init() {
   });
   
   onlyLetterInput('.only_letter');
-  $(".textarea-wrapper").overlayScrollbars({
+  // $("textarea").overlayScrollbars({
+  //   textarea : {
+  //       dynWidth       : false,
+  //       // dynHeight      : true,
+  //       inheritedAttrs : ["style", "class"]
+  //   },
     
-  });
-
-  
+  // }); 
 };
 
 
