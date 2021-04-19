@@ -420,7 +420,7 @@ function init() {
         '<span class="name-filter">' + content + '</span>' +
         '<div class="close-filter-wrapper">' +
           '<svg class="close-filter">' +
-            '<use href="assets/sprite/sprite.svg#close"></use>' +
+            '<use href="/local/templates/main/assets/sprite/sprite.svg#close"></use>' +
           '</svg>' +
         '</div>' +
         '</div>');

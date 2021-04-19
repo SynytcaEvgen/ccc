@@ -344,92 +344,20 @@ label[data-color] {
        transform: translate(0, -50%);
        border: 1px solid $color_line_dec;
        border-radius: 1px;
-     }
-   }
-   .desc-check[data-color='beige'] .color-holder {
-     background-color: #E2D5C5;
-   }
-   .desc-check[data-color='white'] {
+    }
+}
+.desc-check[data-color] .color-holder {
+
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: -1px -1px;
+
+}
+.desc-check[data-color='white'] {
      &::after {
        color: $color_text;
      }
-     .color-holder {
-       background-color: $color_ivert;
-     }
-   }
-   .desc-check[data-color='burgundy'] .color-holder {
-     background-color: #6F011C;
-   }
-
-   .desc-check[data-color='black'] .color-holder {
-     background-color: #000;
-   }
-
-   .desc-check[data-color='brown'] .color-holder {
-     background-color: #9A5F13;
-   }
-
-   .desc-check[data-color='red'] .color-holder {
-     background-color: #C41728;
-   }
-
-   .desc-check[data-color='purple'] .color-holder {
-     background-color: #7E5F9A;
-   }
-
-   .desc-check[data-color='plumbaginous'] .color-holder {
-     background-color: #484B4B;
-   }
-
-   .desc-check[data-color='khaki'] .color-holder {
-     background-color: #C3B091;
-   }
-
-   .desc-check[data-color='mix'] .color-holder {
-     background-image: url(../img/mix-color.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-   }
-
-   .desc-check[data-color='blue'] .color-holder {
-     background-color: #3587EA;
-   }
-
-   .desc-check[data-color='olive'] .color-holder {
-     background-color: #988B09;
-   }
-
-   .desc-check[data-color='orange'] .color-holder {
-     background-color: #DF6127;
-   }
-
-   .desc-check[data-color='pink'] .color-holder {
-     background-color: #D73E85;
-   }
-
-   .desc-check[data-color='silver'] .color-holder {
-     background-color: #C9CACE;
-   }
-
-   .desc-check[data-color='gray'] .color-holder {
-     background-color: #B5B6BA;
-   }
-
-   .desc-check[data-color='turquoise'] .color-holder {
-     background-color: #4EA5C0;
-   }
-
-   .desc-check[data-color='green'] .color-holder {
-     background-color: #238053;
-   }
-
-   .desc-check[data-color='gold'] .color-holder {
-     background-color: #CAA231;
-   }
-
-   .desc-check[data-color='yellow'] .color-holder {
-     background-color: #F8B801;
-   }
+}
 .visually-hidden{
     clip: rect(0 0 0 0);
     z-index: -1;
@@ -2960,75 +2888,6 @@ section.info {
                        border-radius: 1px;
                      }
                    }
-                   .desc-check[data-color='beige'] .color-holder{
-                       background-color: #E2D5C5;
-                   }
-                   .desc-check[data-color='white'] {
-                     &::after{
-                       color: $color_text;
-                     }
-                     .color-holder {
-                       background-color: $color_ivert;
-                     }
-                   }
-                   .desc-check[data-color='beige'] .color-holder {
-                     background-color: #E2D5C5;
-                   }
-                   .desc-check[data-color='burgundy'] .color-holder {
-                     background-color: #6F011C;
-                   }
-                   .desc-check[data-color='black'] .color-holder {
-                     background-color: #000;
-                   }
-                   .desc-check[data-color='brown'] .color-holder {
-                     background-color:#9A5F13;
-                   }
-                   .desc-check[data-color='red'] .color-holder {
-                     background-color: #C41728;
-                   }
-                   .desc-check[data-color='purple'] .color-holder {
-                     background-color: #7E5F9A;
-                   }
-                   .desc-check[data-color='plumbaginous'] .color-holder {
-                     background-color: #484B4B;
-                   }
-                   .desc-check[data-color='khaki'] .color-holder {
-                     background-color: #C3B091;
-                   }
-                   .desc-check[data-color='mix'] .color-holder {
-                     background-image: url(../img/mix-color.png);
-                     background-size: contain;
-                   }
-                   .desc-check[data-color='blue'] .color-holder {
-                     background-color: #3587EA;
-                   }
-                   .desc-check[data-color='olive'] .color-holder {
-                     background-color: #988B09;
-                   }
-                   .desc-check[data-color='orange'] .color-holder {
-                     background-color: #DF6127;
-                   }
-                   .desc-check[data-color='pink'] .color-holder {
-                     background-color: #D73E85;
-                   }
-                   .desc-check[data-color='silver'] .color-holder {
-                     background-color: #C9CACE;
-                   }
-                   .desc-check[data-color='gray'] .color-holder {
-                     background-color:#B5B6BA;
-                   }
-                   .desc-check[data-color='turquoise'] .color-holder {
-                     background-color: #4EA5C0;
-                   }
-                   .desc-check[data-color='green'] .color-holder {
-                     background-color: #238053;
-                   }
-                   .desc-check[data-color='gold'] .color-holder {
-                     background-color: #CAA231;
-                   }
-                   .desc-check[data-color='yellow'] .color-holder {
-                     background-color: #F8B801;
-                   }
                  }
                }
              }
@@ -4021,7 +3880,7 @@ section.info .container .info-frame .info-menu-wrapper .info-menu-item.divider{
   border-top: 1px solid #E8E8E8;
 }
 .account-single-order{
-  width: 975px;
+  // width: 975px;
   max-width: 100%;
   .page-action{
     display: flex;
@@ -6537,6 +6396,13 @@ section.info .info-frame .info-content-wrapper.news-detail{
         margin-bottom: 8px;
       }
       &.last{
+        .img-wrapper{
+          width: 50%;
+          min-width: 50%;
+          img{
+            width: 100%;
+          }
+        }
         align-items: center;
         .text{
           width: 479px;

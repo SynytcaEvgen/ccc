@@ -105,6 +105,11 @@ $maxWidth: 1920;
     padding-right: 15px;
    }
 }
+@media only screen and (max-width: 1366px) {
+  .about-page-wrapper .about-block .block-text.last .text{
+    margin-right: 50px;
+  }
+}
 @media only screen and (max-width: 1300px) {
    .menu_items.active> {
       .sub_menu {
@@ -1791,6 +1796,13 @@ $maxWidth: 1920;
      .catalog-wrapper.personal-favorit .prod-card-container .prod-banner-wrapper .promo-wrapp .best-saler{
        margin-top: unset;
        margin-left: unset;
+     }
+     .about-page-wrapper .about-block .block-text.last .img-wrapper{
+       width: 100%;
+       margin-left: -32px;
+       img{
+         width: unset;
+       }
      }
 }
 @media only screen and (max-width: 480px) {
