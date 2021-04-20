@@ -74,6 +74,100 @@
                                 </div>
                             </div>
                             <div class="filter-items">
+                                <script type="text/javascript">
+                                    window.addEventListener("DOMContentLoaded", init);
+                                    function init() {
+                                        function withScrollBar() {
+                                            let popWrap = document.querySelector('main');
+                                            let wScroll = window.innerWidth - popWrap.offsetWidth;
+                                            return wScroll;
+                                        };
+                                        function rNumber(elem) {
+                                            return String(elem).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                                        };
+                                        let instance;
+                                        function initRangeSlider(slid, input1, input2) {
+                                            var $range = $(slid),
+                                                $inputFrom = $(input1),
+                                                $inputTo = $(input2),
+                                                min = 0,
+                                                max = 100000,
+                                                from = 0,
+                                                to = 0;
+                                            $range.ionRangeSlider({
+                                                skin: "round",
+                                                type: "double",
+                                                min: min,
+                                                max: max,
+                                                from: 0,
+                                                to: 100000,
+                                                onStart: updateInputs,
+                                                onChange: updateInputs,
+                                                onFinish: updateInputs
+
+                                            });
+                                            instance = $range.data("ionRangeSlider");
+                                            function updateInputs(data) {
+                                                from = data.from;
+                                                to = data.to;
+                                                if (from !== min || to !== max) {
+                                                    $('.filter-header.range').addClass('select')
+                                                } else {
+                                                    $('.filter-header.range').removeClass('select');
+                                                }
+                                                $inputFrom.prop("value", rNumber(from));
+                                                $inputTo.prop("value", rNumber(to));
+                                            }
+                                            $inputFrom.on("input", function () {
+                                                var val = $(this).prop("value").replace(/[^0-9]/g, '');
+                                                if (+val > max) {
+                                                    return $inputFrom.prop("value", rNumber(max));
+                                                }
+                                                $inputFrom.prop("value", val.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+
+                                                // validate
+                                                if (val < min) {
+                                                    val = min;
+                                                } else if (val > to) {
+                                                    val = to;
+                                                }
+
+                                                instance.update({
+                                                    from: val
+                                                });
+                                            });
+                                            $inputTo.on("input", function () {
+                                                var val = $(this).prop("value").replace(/[^0-9]/g, '');
+                                                if (+val > max) {
+                                                    return $inputTo.prop("value", rNumber(max));
+                                                }
+                                                $inputTo.prop("value", val.replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+
+                                                // validate
+                                                if (val < from) {
+                                                    val = from;
+                                                } else if (val > max) {
+                                                    val = max;
+                                                }
+                                                instance.update({
+                                                    to: val
+                                                });
+                                            });
+                                        };
+                                        if ($(window).width() <= (900 - withScrollBar())) {
+                                            initRangeSlider('.mob-range-slider', '.mob-input-from', '.mob-input-to');
+                                        } else {
+                                            initRangeSlider('.js-range-slider', '.js-input-from', '.js-input-to');
+                                        }
+                                        $(window).resize(function () {
+                                            if ($(window).width() <= (900 - withScrollBar())) {
+                                                initRangeSlider('.mob-range-slider', '.mob-input-from', '.mob-input-to');
+                                            } else {
+                                                initRangeSlider('.js-range-slider', '.js-input-from', '.js-input-to');
+                                            }
+                                        });
+                                    };
+                                </script>
                                 <div class="filter-header range">
                                     <p>Цена</p>
                                     <svg>
@@ -92,7 +186,7 @@
                                         <button class="filter-btn price-range">Применить</button>
                                     </div>
                                 </div>
-                    
+                                
                             </div>
                             <div class="filter-items">
                                 <div class="filter-header">
