@@ -1804,6 +1804,18 @@ $maxWidth: 1920;
          width: unset;
        }
      }
+     .info-text.safety .covid-info-wrapper .measures-items{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .info-text.safety .covid-info-wrapper .icon{
+        text-align: center;
+        padding-bottom: 8px;
+        padding-right: 0;
+    }
+     .info-text.safety .covid-info-wrapper .content .title{
+        text-align: center;
+    }
 }
 @media only screen and (max-width: 480px) {
     .promo-banner .banner-wrapper .img-wrapper{
@@ -1896,18 +1908,6 @@ $maxWidth: 1920;
     }
     .doods-detail .gallery-mob-container .items-grid img{
         object-fit: cover;
-    }
-    .info-text.safety .covid-info-wrapper .measures-items{
-        flex-direction: column;
-        max-width: 100%;
-    }
-    .info-text.safety .covid-info-wrapper .icon{
-        text-align: center;
-        padding-bottom: 8px;
-        padding-right: 0;
-    }
-    .info-text.safety .covid-info-wrapper .content .title{
-        text-align: center;
     }
     .info-text.career .infrom_text-wrapper .icon-inform {
         flex-direction: column;

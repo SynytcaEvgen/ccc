@@ -3203,6 +3203,7 @@ section.info {
       }
     }
   }
+
    .range-slider{
     max-width: 100%;
     .irs--round{
@@ -3238,6 +3239,9 @@ section.info {
         top: 10px;
       }
     }
+  }
+  .catalog-bottom-pager .header-find-goods {
+        display:none;
   }
 }
 .prod-slider.title.promo{
@@ -6106,7 +6110,6 @@ section.info .info-frame .info-content-wrapper.news-detail{
           transition: .3s ease-in-out;
         }
         .cont-youtube{
-          stroke: $color_promo_bg;
           fill: $color_promo_bg;
           transition: .3s ease-in-out;
         }
