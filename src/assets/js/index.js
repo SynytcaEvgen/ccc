@@ -421,14 +421,12 @@ function init() {
   function onlyLetterInput(intext) {
     let jin = document.querySelectorAll(intext);
     for (let i = 0; i < jin.length; i++) {
-      jin[i].addEventListener('keydown', function(e){
-        if (!e.key.match(/[A-zА-яЁё]/)) return e.preventDefault();
-     
-        
-     }); 
+    //   jin[i].addEventListener('keydown', function(e){
+        // if (!e.key.match(/[A-zА-яЁё ]/)) return e.preventDefault();
+    //  }); 
       jin[i].addEventListener('input', function(e){
-       this.value = this.value.replace(/[^A-zА-яЁёы]/g, "");
-       this.value = this.value.replace(/[.*_+?^${}()|[\]\\]/g, "");
+       this.value = this.value.replace(/\d/g, "");
+       this.value = this.value.replace(/[.*_~`+;₴$₽'":%#@!*?^$-=<>№{}()|[\]\\]/g, "");
       });
     };
   };
@@ -721,19 +719,19 @@ function init() {
       swiperGoods.slideTo(5, 0);
     });  
   } else { };
-  let favIcon = document.querySelectorAll('.favorit');
-  for (let i = 0; i < favIcon.length; i++) {
-    favIcon[i].addEventListener('click', function () {
-      this.classList.toggle('select');
-    });
-  };
+  // let favIcon = document.querySelectorAll('.favorit');
+  // for (let i = 0; i < favIcon.length; i++) {
+  //   favIcon[i].addEventListener('click', function () {
+  //     this.classList.toggle('select');
+  //   });
+  // };
   $('.size-holder .size-items').click(function () {
     $('.size-holder .size-items').removeClass('current');
     $(this).toggleClass('current');
   });
-  $('.add-to-favorit').click(function () {
-    $('.add-to-favorit').toggleClass('select');
-  });
+  // $('.add-to-favorit').click(function () {
+  //   $('.add-to-favorit').toggleClass('select');
+  // });
   $('.add_to_favorit').click(function(e){
         let button      = $(e.currentTarget)
         let prod_id     = button.data('product_id')
@@ -749,13 +747,13 @@ function init() {
             success: function(response){
                 response = JSON.parse(response);
 
-                // if(response.success) {
-                //     if(need_delete) {
-                //         button.removeClass('select');
-                //     }else {
-                //         button.addClass('select');
-                //     }
-                // }
+                if(response.success) {
+                    if(need_delete) {
+                        button.removeClass('select');
+                    }else {
+                        button.addClass('select');
+                    }
+                }
             }
         });
   });
