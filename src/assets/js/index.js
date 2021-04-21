@@ -428,6 +428,7 @@ function init() {
      }); 
       jin[i].addEventListener('input', function(e){
        this.value = this.value.replace(/[^A-zА-яЁёы]/g, "");
+       this.value = this.value.replace(/[.*_+?^${}()|[\]\\]/g, "");
       });
     };
   };
