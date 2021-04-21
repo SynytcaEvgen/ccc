@@ -757,7 +757,6 @@ function init() {
             }
         });
   });
-
   $('.decrease').click(function (e){
     var old = $(this).siblings('input').val();
     if (old > 1){
