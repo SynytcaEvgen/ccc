@@ -731,9 +731,15 @@ function init() {
     });  
   } else { };
   // let favIcon = document.querySelectorAll('.favorit');
+  // let count_fav1 = 0;
   // for (let i = 0; i < favIcon.length; i++) {
   //   favIcon[i].addEventListener('click', function () {
   //     this.classList.toggle('select');
+  //     let rrtt = document.querySelectorAll('.favorit.select');
+  //     console.log(rrtt.length)
+  //     if (rrtt.length == 0) {
+        
+  //     }
   //   });
   // };
   $('.size-holder .size-items').click(function () {
@@ -747,6 +753,8 @@ function init() {
         let button      = $(e.currentTarget)
         let prod_id     = button.data('product_id')
         let need_delete = (button.hasClass('select')) ? 1 : 0;
+        let fav_icon = $('.features_items .favorit .icon_quantity');
+        let parseToIn = parseInt(fav_icon.html());
 
         $.ajax({
             url: '/local/ajax/favorites.php',
@@ -758,11 +766,22 @@ function init() {
             success: function(response){
                 response = JSON.parse(response);
 
-                if(response.success) {
+                if(!response.success) {
                     if(need_delete) {
-                        button.removeClass('select');
+                      button.removeClass('select');
+                      parseToIn--;
+                      if (parseToIn == 0 || parseToIn < 0) {
+                        fav_icon.removeClass('active');
+                        parseToIn = 0;
+                      }
+                      fav_icon.html(parseToIn);
                     }else {
-                        button.addClass('select');
+                      button.addClass('select');
+                      parseToIn++;
+                      fav_icon.html(parseToIn);
+                      if (!parseToIn == 0  ) {
+                        fav_icon.addClass('active')
+                      }
                     }
                 }
             }
