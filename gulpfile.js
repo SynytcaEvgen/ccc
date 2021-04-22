@@ -94,7 +94,7 @@ gulp.task('style:build', function (done) {
         // }))
         .pipe(sass.sync().on("error", sass.logError))
         .pipe(prefixer())
-        .pipe(cssmin())
+        // .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({ stream: true }));
