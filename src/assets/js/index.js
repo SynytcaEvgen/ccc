@@ -232,19 +232,10 @@ function init() {
     let numberToFormat = document.querySelectorAll(elem);
     for (let i = 0; i < numberToFormat.length; i++ ) {
        let toNumb = +numberToFormat[i].innerHTML;
-       let formatNum = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', minimumFractionDigits: 0 }).format(toNumb);
-       numberToFormat[i].innerHTML = formatNum;
-    }
-  };
-  function goToCurrencyNot(elem) {
-    let numberToFormat = document.querySelectorAll(elem);
-    for (let i = 0; i < numberToFormat.length; i++ ) {
-       let toNumb = +numberToFormat[i].innerHTML;
        let formatNum = new Intl.NumberFormat('ru-RU').format(toNumb);
        numberToFormat[i].innerHTML = formatNum;
     }
   };
-  
   function checkBoxEngine(elem) {
     $(elem).change(function () {
       let selectCheck = $(this).parents('.content-filter').find('.numb-select span'),
@@ -578,12 +569,9 @@ function init() {
       $('main').css('padding', $('header').height() + 'px');
     }
   });
-  goToCurrency('.price:not(.price_catalog)');
-  goToCurrency('.price_new:not(.price_catalog)');
-  goToCurrency('.price_old:not(.price_catalog)');
-  goToCurrencyNot('.price.price_catalog');
-  goToCurrencyNot('.price_new.price_catalog');
-  goToCurrencyNot('.price_old.price_catalog');
+  goToCurrency('.price');
+  goToCurrency('.price_new');
+  goToCurrency('.price_old');
   $('.descktop-filter-container .filter-header').click(function () {
     if (!$(this).hasClass('active')) {
       $('.descktop-filter-container .filter-header').removeClass('active');
