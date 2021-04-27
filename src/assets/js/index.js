@@ -686,37 +686,20 @@ function init() {
       mobGallSlider.classList.remove('open');
       document.body.classList.remove('modal');
     });
-    
-    document.querySelector('#slide-1').addEventListener('click', function (e) {
-      e.preventDefault();
-      mobGallSlider.classList.add('open');
-      document.body.classList.add('modal');
-      swiperGoods.slideTo(1, 0);
+    function clickToSlide(elem) {
+      let elemNumb = elem.slice(-1);
+      document.querySelector(elem).addEventListener('click', function (e) {
+         e.preventDefault();
+         mobGallSlider.classList.add('open');
+         document.body.classList.add('modal');
+         swiperGoods.slideTo(elemNumb, 0);
       });
-    document.querySelector('#slide-2').addEventListener('click', function (e) {
-      e.preventDefault();
-      mobGallSlider.classList.add('open');
-      document.body.classList.add('modal');
-      swiperGoods.slideTo(2, 0);
+    };
+    clickToSlide('#slide-1');
+    $('[id*="slide-"]').each(function () {
+      let currSlide = '#' + $(this).attr('id');
+      clickToSlide(currSlide);
     });
-    document.querySelector('#slide-3').addEventListener('click', function (e) {
-      e.preventDefault();
-      mobGallSlider.classList.add('open');
-      document.body.classList.add('modal');
-      swiperGoods.slideTo(3, 0);
-    });
-    document.querySelector('#slide-4').addEventListener('click', function (e) {
-      e.preventDefault();
-      mobGallSlider.classList.add('open');
-      document.body.classList.add('modal');
-      swiperGoods.slideTo(4, 0);
-    });
-    document.querySelector('#slide-5').addEventListener('click', function (e) {
-      e.preventDefault();
-      mobGallSlider.classList.add('open');
-      document.body.classList.add('modal');
-      swiperGoods.slideTo(5, 0);
-    });  
   } else { };
   // let favIcon = document.querySelectorAll('.favorit');
   // let count_fav1 = 0;
@@ -889,6 +872,11 @@ function init() {
   $('.delivery-radio .radio-wrap input').click(function () {
     delF();
   });
+  if ($('.grid-row-two').children().length == 1) {
+    $('.grid-row-two').addClass('mode_one');
+  } if ($('.grid-row-two').children().length == 3){
+     $('.grid-row-two').addClass('mode_three');
+  };
 };
 
 

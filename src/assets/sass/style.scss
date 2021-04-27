@@ -4340,8 +4340,14 @@ section.info .container .info-frame .info-content-wrapper.contacts_p {
           }
           .grid-row-two {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap:16px;
+            &.mode_one{
+              grid-template-columns: repeat(1, 1fr);
+            }
+            &.mode_three{
+              grid-template-columns: repeat(3, 1fr);
+            }
           }
           .items-grid{
             cursor: pointer;
