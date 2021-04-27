@@ -4672,14 +4672,20 @@ section.info .container .info-frame .info-content-wrapper.contacts_p {
   line-height: 20px;
   font-size: 12px;
 }
-header{
-  .header-goods-wrapper{
+.header-goods-wrapper{
     background-color: $color_ivert;
     filter: drop-shadow(3px 10px 10px rgba(34, 34, 34, 0.1));
-    // position: relative;
-    z-index: 4;
-  }
-  .preview-header-goods{
+    z-index: 5;
+    background-color: $color_ivert;
+    
+    position: fixed;
+    width: 100%;
+    top: 137px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preview-header-goods{
      display: none;
      justify-content: space-between;
      align-items: center;
@@ -4690,7 +4696,8 @@ header{
        height: auto;
        overflow: visible;
        display: flex;
-       
+       width: 100%;
+       padding-bottom: 8px;
      }
     .decs-goods{
       display: flex;
@@ -4737,7 +4744,6 @@ header{
          }
        }
      }
-  }
 }
 //detail_end
 //account pages end
@@ -5630,12 +5636,28 @@ section.info .info-frame .info-content-wrapper.news-detail{
         font-size: 13px;
         line-height: 23px;
         &:last-child{
-          margin-bottom: 16px;
+          margin-bottom: 0px;
         }
-
       }
     }
-    .delivery-point{
+    .delivery_wrapp{
+      display: none;
+      width: 100%;
+      padding-bottom: 41px;
+      margin-right: 8px;
+      margin-left: 8px;
+      .address{
+        display: flex;
+        .input-wrap{
+          margin-right: 23px;
+          margin-top: 29px;
+        }
+      }
+      .delivery-point{
+        margin-top: 16px;
+      }
+    }
+    .radio-wrap .delivery-point{
       margin-top: 8px;
       margin-bottom: 40px;
       display: flex;

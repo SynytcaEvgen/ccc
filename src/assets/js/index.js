@@ -873,16 +873,22 @@ function init() {
   $('#input_date').datepicker({
     autoClose: true,
   });
-  
   onlyLetterInput('.only_letter');
-  // $("textarea").overlayScrollbars({
-  //   textarea : {
-  //       dynWidth       : false,
-  //       // dynHeight      : true,
-  //       inheritedAttrs : ["style", "class"]
-  //   },
-    
-  // }); 
+  function delF() {
+    $('.delivery_wrapp').css("display", "none")
+    $('.delivery_wrapp').each(function () {
+      let delIn = $(this);
+      $('.delivery-radio .radio-wrap input').each(function () {
+         if ($(this).attr('data-name') == delIn.attr('data-name') && $(this).prop('checked') ) {
+           $(delIn).css("display", "block");
+         };
+      })
+    });
+  }
+  delF();
+  $('.delivery-radio .radio-wrap input').click(function () {
+    delF();
+  });
 };
 
 

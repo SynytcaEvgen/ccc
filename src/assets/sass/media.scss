@@ -278,11 +278,13 @@ $maxWidth: 1920;
     }
 }
 @media only screen and (max-width: 1023px) {
-    header .header-goods-wrapper{
+    .header-goods-wrapper{
         position: fixed;
         bottom: 0;
         background-color: $color_ivert;
         width: 100%;
+        top: unset;
+        padding-top: 8px;
         .decs-goods{
             display: none;
         }
