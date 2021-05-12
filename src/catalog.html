@@ -104,7 +104,6 @@
                                                 onStart: updateInputs,
                                                 onChange: updateInputs,
                                                 onFinish: updateInputs
-
                                             });
                                             instance = $range.data("ionRangeSlider");
                                             function updateInputs(data) {
@@ -164,6 +163,18 @@
                                                 initRangeSlider('.mob-range-slider', '.mob-input-from', '.mob-input-to');
                                             } else {
                                                 initRangeSlider('.js-range-slider', '.js-input-from', '.js-input-to');
+                                            }
+                                        });
+                                        $('.filter-active-items').on('click', '.filter-active-reset-btn', function (e) {
+                                            instance.reset();
+                                            if ($(window).width() >= (900 - withScrollBar())) {
+                                                $('.js-input-from').val('0');
+                                                $('.js-input-to').val('100 000');
+                                                $('.filter-header.range').removeClass('select');
+                                            } else {
+                                                $('.mob-input-from').val('0');
+                                                $('.mob-input-to').val('100 000');
+                                                $('.filter-header.range').removeClass('select');
                                             }
                                         });
                                     };

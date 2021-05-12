@@ -543,31 +543,22 @@ label[data-color] {
           padding-bottom: 10px;
         }
         .icon-wrapper{
-          display: -webkit-box;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
           justify-content: center;
           .icon-items{
-            a:hover svg{
-              fill: $color-action-h;
+            a:hover i{
+             color: $color-action-h;
               transition: 0.3s ease;
             }
             margin: 0 8px;
             display: flex;
             align-items: center;
-            svg{
+            i{
               fill: $color_promo_bg;
               transition: 0.3s ease;
             }
-            .facebook{
-              width: 10px;
-              height: 20px;
-            }
-            .vk{
-              width: 23px;
-              height: 13px;
+            .ccc_icon-facebook{
+              font-size: 20px;
             }
           }
         }
@@ -5434,6 +5425,10 @@ section.info .info-frame .info-content-wrapper.news-detail{
       color: #fff;
       background-color: $color_action-h;
       border: none;
+      &.no-active{
+        opacity: 0.5;
+        pointer-events: none;
+      }
       &:hover{
         background-color: $color-action;
       }

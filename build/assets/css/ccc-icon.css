@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'ccc-icon';
+  src:  url('../fonts/ccc-icon/ccc-icon.eot?lhodp5');
+  src:  url('../fonts/ccc-icon/ccc-icon.eot?lhodp5#iefix') format('embedded-opentype'),
+    url('../fonts/ccc-icon/ccc-icon.ttf?lhodp5') format('truetype'),
+    url('../fonts/ccc-icon/ccc-icon.woff?lhodp5') format('woff'),
+    url('../fonts/ccc-icon/ccc-icon.svg?lhodp5#ccc-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ccc_icon-"], [class*=" ccc_icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ccc-icon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ccc_icon-vk:before {
+  content: "\e900";
+}
+.ccc_icon-facebook:before {
+  content: "\e901";
+}
