@@ -1169,12 +1169,18 @@ main section button{
     padding-top: 20px;
     .sub_menu_items {
       display: inline-block;
-      margin-right: 32px;
+      padding-left: 16px;
+      margin-left: -3px;
+      padding-right: 19px;
       border-bottom: 2px solid transparent;
       z-index: 6;
-      &:last-child> {
-        margin-right: 0;
-        a {
+      &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        >a {
           color: $color-action;
         }
       }
@@ -1185,7 +1191,9 @@ main section button{
       &:hover,
       &.active{
         position: static;
-        border-bottom: 2px solid $color_text;
+        >a{
+          border-bottom: 2px solid $color_text;
+        }
         .sub_sub_menu {
            display: flex;
            justify-content: space-between;
@@ -1270,8 +1278,11 @@ main section button{
         }
       }
       &.in-hover{
-        border-bottom: 2px solid $color-action-h;
+       
         color: $color-action-h;
+        >a{
+          border-bottom: 2px solid $color-action-h;
+        }
       }
       .sub_sub_menu{
         display: none;
