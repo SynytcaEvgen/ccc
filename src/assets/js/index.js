@@ -307,10 +307,10 @@ function init() {
         axis: "x"
       });
       $(".nice-select.wide .list").mCustomScrollbar({
-           theme:"my-theme"
+        theme:"my-theme"
       });
       $(".basket-preview-container .goods-item").mCustomScrollbar({
-           theme:"my-theme"
+        theme:"my-theme"
       });
     });
   })(jQuery);
