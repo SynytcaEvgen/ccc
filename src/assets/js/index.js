@@ -309,6 +309,9 @@ function init() {
       $(".nice-select.wide .list").mCustomScrollbar({
            theme:"my-theme"
       });
+      $(".basket-preview-container .goods-item").mCustomScrollbar({
+           theme:"my-theme"
+      });
     });
   })(jQuery);
   function come(elem) {
@@ -413,7 +416,7 @@ function init() {
   };
   function disableButton(inPut, form, btn) {
     $(inPut).change(function () {
-      if ($(this).children('.accept_check').prop('checked')) {
+      if ($(this).children('input').prop('checked') && $(this).children('input').hasClass('accept_check')) {
         $(this).parents(form).find(btn).removeClass('no-active');
       } else {
         $(this).parents(form).find(btn).addClass('no-active');

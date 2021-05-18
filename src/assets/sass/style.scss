@@ -744,15 +744,16 @@ main section button{
   }
   .goods-wrapper {
     .goods-item {
+      max-height: 240px;
+      overflow: hidden;
       .goods-items {
         border-bottom: 1px solid $color_line_dec;
         display: flex;
         flex-direction: row;
         padding: 0 0 18px;
         margin: 0 0 16px;
-        &:hover .goods-desc .titel{
-          color: $color-action-h;
-          transition: 0.3s ease;
+        &:last-child{
+          margin: 0px;
         }
         .img-wrapper {
           height: 90px;
@@ -791,6 +792,10 @@ main section button{
             font-size: 12px;
             padding-bottom: 3px;
             transition: 0.3s ease;
+            &:hover {
+              color: $color-action-h;
+              transition: 0.3s ease;
+            }
           }
           .details {
             display: flex;
@@ -839,7 +844,7 @@ main section button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 16px;
+    padding: 16px 0 16px;
     span{
       font-family: $gordita_medium;
     }
