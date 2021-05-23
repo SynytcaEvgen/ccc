@@ -152,7 +152,7 @@ function init() {
     return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
   }, "Введите корректный электронный адрес");
   $.validator.addMethod("PHONE", function (value, element) {
-    return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(value);
+    return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/.test(value);
   }, "Введите коректный номер телефона");
   function validatorForm(elem) {
     $(elem).validate({
