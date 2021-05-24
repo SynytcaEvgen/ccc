@@ -151,6 +151,9 @@ function init() {
   $.validator.addMethod("EMAIL", function (value, element) {
     return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
   }, "Введите корректный электронный адрес");
+  $.validator.addMethod("PASS", function (value, element) {
+    return this.optional(element) || /^[A-Za-z0-9\d=!\-@._*]*$/i.test(value);
+  }, "Не допустимы к использованию символы см. информацию о допустимых символах ниже");
   $.validator.addMethod("PHONE", function (value, element) {
     return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){11,14}(\s*)?$/.test(value);
   }, "Введите коректный номер телефона");
@@ -195,6 +198,7 @@ function init() {
         last_name: {
           required: true,
         },
+        psword: "PASS",
         psword_confirm: {
           required: true,
           minlength: 6,
@@ -833,7 +837,10 @@ function init() {
       $('.check-pass').attr('name', 'psword_confirm');
     } else {
       $(this).removeAttr('name');
+      $(this).removeClass('error');
       $('.check-pass').removeAttr('name');
+      $('.check-pass+label').css('display', 'none');
+      $('.new-pass+label').css('display', 'none');
     }
   });
   $('.valid-tel').change(function () {
