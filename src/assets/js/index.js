@@ -188,7 +188,6 @@ function init() {
         apartament: {
           required: true,
         },
-
         zip: {
           required: true,
           minlength: 6,
@@ -196,6 +195,9 @@ function init() {
           digits: true,
         },
         last_name: {
+          required: true,
+        },
+        accept: {
           required: true,
         },
         psword: "PASS",
@@ -210,6 +212,9 @@ function init() {
         phone_ru_req: "required PHONE",
       },
       messages: {
+        accept: {
+          required: 'Ознакомтесь с Политикой конфиденциальности'
+        },
         psword: {
           minlength: 'Минимальная длина пароля 6 символов'
         },
@@ -422,7 +427,7 @@ function init() {
     $(inPut).change(function () {
       if ($(this).children('input').prop('checked') && $(this).children('input').hasClass('accept_check')) {
         $(this).parents(form).find(btn).removeClass('no-active');
-      } else {
+      } else if($(this).children('input').hasClass('accept_check')){
         $(this).parents(form).find(btn).addClass('no-active');
       }
     });
