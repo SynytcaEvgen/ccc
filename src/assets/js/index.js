@@ -100,9 +100,9 @@ function init() {
   function accEngine(pick) {
     let acc = document.querySelectorAll(pick);
     for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.firstElementChild.classList.toggle("active");
-        let panel = this.firstElementChild.nextElementSibling;
+      acc[i].firstElementChild.addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {

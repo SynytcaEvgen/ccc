@@ -2457,8 +2457,6 @@ section.info {
 .payment-wrapper{
   .payment-items{
     border-bottom: 1px solid $color_line_dec;
-    padding: 16px 0;
-    cursor: pointer;
     &:first-child{
       border-top: 1px solid $color_line_dec;
     }
@@ -2478,6 +2476,8 @@ section.info {
       line-height: 23px;
       font-family: $gordita_medium;
       font-weight: 500;
+      padding: 16px 0;
+      cursor: pointer;
       &::after,
       &::before{
           content: "";
@@ -2514,7 +2514,7 @@ section.info {
       overflow: hidden;
       transition: all 0.3s ease-in-out;
       p{
-        padding: 16px 0 8px;
+        padding: 0 0 16px;
         line-height: 25px;
         &.font-mini{
           line-height: 20px;
