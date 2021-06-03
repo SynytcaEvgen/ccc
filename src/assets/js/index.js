@@ -321,6 +321,9 @@ function init() {
       $(".basket-preview-container .goods-item").mCustomScrollbar({
         theme:"my-theme"
       });
+      $(".sub_sub_menu .cat-wrapper").mCustomScrollbar({
+        theme:"my-theme"
+      });
     });
   })(jQuery);
   function come(elem) {

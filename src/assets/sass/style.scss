@@ -1214,8 +1214,12 @@ main section button{
            padding: 41px 0px 73px;
            z-index: 5;
            border-bottom: 1px solid $color_line_dec;
-           .cat-wrapper {
-             display: flex;
+           .cat-wrapper { 
+             max-height: 300px;
+             overflow-x: hidden;
+             .mCSB_container{
+               display: flex;
+             }
              .categ {
                min-width: 196px;
                margin-right: 16px;
